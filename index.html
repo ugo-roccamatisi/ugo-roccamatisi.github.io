@@ -38,24 +38,12 @@
     overflow-x: hidden;
   }
 
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1;
-  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(244, 247, 252, 0.95);
-    backdrop-filter: blur(12px);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    background: rgba(244, 247, 252, 0.95); backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
   .nav-logo { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--blue); letter-spacing: 0.05em; }
@@ -124,40 +112,21 @@
   /* PROJECTS */
   .projects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
 
-  .project-card {
-    background: var(--bg2);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    position: relative;
-    transition: border-color 0.3s, transform 0.2s;
-    text-decoration: none;
-    color: inherit;
-  }
+  .project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; position: relative; transition: border-color 0.3s; color: inherit; }
   .project-card:hover { border-color: var(--blue); }
 
-  .project-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem 2.25rem;
-  }
+  .project-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 2.25rem; }
 
   .project-footer {
     grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     margin: 0.5rem -2.25rem -2rem -2.25rem;
     padding: 0.9rem 2.25rem;
     border-top: 1px solid rgba(212, 96, 26, 0.2);
     color: var(--orange);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.2s;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    text-decoration: none; transition: background 0.2s;
     border-radius: 0 0 4px 4px;
   }
   .project-footer:hover { background: rgba(212, 96, 26, 0.05); }
@@ -166,83 +135,23 @@
 
   .project-footer-double {
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid; grid-template-columns: 1fr 1fr;
     margin: 0.5rem -2.25rem -2rem -2.25rem;
     border-top: 1px solid rgba(26, 111, 212, 0.15);
     border-radius: 0 0 4px 4px;
     overflow: hidden;
   }
   .project-footer-left {
-    grid-column: unset;
-    margin: 0;
-    border-radius: 0;
-    border-top: none;
+    grid-column: unset; margin: 0; border-radius: 0; border-top: none;
     border-right: 1px solid rgba(26, 111, 212, 0.15);
+    color: var(--blue);
   }
   .project-footer-right-item {
-    grid-column: unset;
-    margin: 0;
-    border-radius: 0;
-    border-top: none;
-  }
-  .project-footer-left,
-  .project-footer-right-item { color: var(--blue); }
-  .project-footer-left:hover,
-  .project-footer-right-item:hover { background: rgba(26, 111, 212, 0.05); }
+    grid-column: unset; margin: 0; border-radius: 0; border-top: none;
     color: var(--blue);
   }
   .project-footer-left:hover,
   .project-footer-right-item:hover { background: rgba(26, 111, 212, 0.05); }
-
-  .project-footer-half {
-    grid-column: span 1;
-    color: var(--blue);
-    border-top-color: rgba(26, 111, 212, 0.15);
-    margin-bottom: -2rem;
-  }
-  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
-  .project-footer-half:first-of-type { border-right: 1px solid rgba(26, 111, 212, 0.15); }
-  .project-footer-right { border-radius: 0 0 4px 0; }
-
-  .project-footer-double {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0.5rem -2.25rem -2rem -2.25rem;
-    border-top: 1px solid rgba(26, 111, 212, 0.15);
-    border-radius: 0 0 4px 4px;
-    overflow: hidden;
-  }
-  .project-footer-half {
-    grid-column: unset;
-    margin: 0;
-    border-radius: 0;
-    border-top: none;
-    border-right: 1px solid rgba(26, 111, 212, 0.15);
-    color: var(--blue);
-  }
-  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
-  .project-footer-right { border-right: none; }
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0.5rem -2.25rem -2rem -2.25rem;
-    border-top: 1px solid rgba(26, 111, 212, 0.15);
-    border-radius: 0 0 4px 4px;
-    overflow: hidden;
-  }
-  .project-footer-half {
-    grid-column: unset;
-    margin: 0;
-    border-radius: 0;
-    border-top: none;
-    border-right: 1px solid rgba(26, 111, 212, 0.15);
-    color: var(--blue);
-  }
-  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
-  .project-footer-half:hover .project-footer-icon { color: var(--blue); }
-  .project-footer-right { border-right: none; }
 
   .project-bullets { list-style: none; margin: 0.75rem 0 1.25rem; padding: 0; }
   .project-bullets li { font-size: 14px; color: var(--text-muted); line-height: 1.6; padding: 0.3rem 0 0.3rem 1.1rem; position: relative; border-bottom: 1px solid var(--border); }
@@ -250,14 +159,7 @@
   .project-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--blue); font-weight: 600; }
   .project-bullets li.orange::before { color: var(--orange); }
 
-  .project-result {
-    background: var(--bg3);
-    border-left: 2px solid var(--blue);
-    padding: 0.75rem 1rem;
-    border-radius: 0 4px 4px 0;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
+  .project-result { background: var(--bg3); border-left: 2px solid var(--blue); padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; font-size: 13px; color: var(--text-muted); }
   .project-result strong { color: #0d1f33; font-weight: 600; }
   .project-result.orange-border { border-left-color: var(--orange); }
 
@@ -270,8 +172,6 @@
   .project-partner { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
   .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); background: var(--bg3); padding: 3px 8px; border-radius: 2px; letter-spacing: 0.05em; }
-  .project-arrow { position: absolute; top: 1.75rem; right: 1.75rem; color: var(--border-bright); font-size: 18px; transition: color 0.2s, transform 0.2s; }
-  .project-card:hover .project-arrow { color: var(--blue); transform: translate(3px, -3px); }
 
   .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .skill-group-title { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.25rem; font-weight: 500; display: flex; align-items: center; gap: 0.75rem; }
@@ -289,7 +189,7 @@
   .contact-box p { color: var(--text-muted); margin-bottom: 2rem; }
   .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
 
-  footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); position: relative; z-index: 1; }
+  footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); }
 
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.visible { opacity: 1; transform: none; }
@@ -298,7 +198,8 @@
     .hero-inner, .about-grid, .skills-layout, .project-body { grid-template-columns: 1fr; gap: 1rem; }
     nav ul { gap: 1.5rem; }
     h1 { font-size: 2.4rem; }
-    .project-footer { margin: 1.5rem -1.5rem -1.5rem -1.5rem; padding: 0.9rem 1.5rem; }
+    .project-footer { margin: 0.5rem -1.5rem -2rem -1.5rem; padding: 0.9rem 1.5rem; }
+    .project-footer-double { margin: 0.5rem -1.5rem -2rem -1.5rem; }
   }
 </style>
 </head>
@@ -422,60 +323,60 @@
       <!-- PROJET 1 : PINN -->
       <div class="project-card reveal">
         <div class="project-body">
-        <div class="project-left">
-          <span class="project-type type-both">IA + Aéronautique</span>
-          <div class="project-title">PINN pour la prédiction thermique des freins</div>
-          <div class="project-partner">Airbus & Cranfield University · Févr. 2026 – présent (Mémoire de recherche)</div>
-          <ul class="project-bullets">
-            <li>Conception d'un réseau de neurones informé par la physique (PINN) intégrant les équations de la chaleur — conduction et convection — directement dans la fonction de perte, garantissant la cohérence physique du modèle même en dehors des données d'entraînement.</li>
-            <li>Nettoyage et normalisation de séries temporelles issues de bases de données expérimentales massives d'Airbus sur l'A320 : gestion des valeurs manquantes, alignement temporel, détection d'outliers.</li>
-            <li class="orange">Optimisation des hyperparamètres pour surpasser la précision des modèles de régression standards sur les phases critiques de freinage — là où la précision est la plus contrainte.</li>
-          </ul>
-        </div>
-        <div class="project-right">
-          <div class="project-result">
-            <strong>Approche :</strong> data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.
+          <div class="project-left">
+            <span class="project-type type-both">IA + Aéronautique</span>
+            <div class="project-title">PINN pour la prédiction thermique des freins</div>
+            <div class="project-partner">Airbus & Cranfield University · Févr. 2026 – présent (Mémoire de recherche)</div>
+            <ul class="project-bullets">
+              <li>Conception d'un réseau de neurones informé par la physique (PINN) intégrant les équations de la chaleur — conduction et convection — directement dans la fonction de perte, garantissant la cohérence physique du modèle même en dehors des données d'entraînement.</li>
+              <li>Nettoyage et normalisation de séries temporelles issues de bases de données expérimentales massives d'Airbus sur l'A320 : gestion des valeurs manquantes, alignement temporel, détection d'outliers.</li>
+              <li class="orange">Optimisation des hyperparamètres pour surpasser la précision des modèles de régression standards sur les phases critiques de freinage — là où la précision est la plus contrainte.</li>
+            </ul>
           </div>
-          <div class="project-tags">
-            <span class="tag">PyTorch</span>
-            <span class="tag">PINN</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">Airbus A320</span>
-            <span class="tag">Équations thermiques</span>
-            <span class="tag">Séries temporelles</span>
-            <span class="tag">Hyperparamètre tuning</span>
+          <div class="project-right">
+            <div class="project-result">
+              <strong>Approche :</strong> data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.
+            </div>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">PINN</span>
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Airbus A320</span>
+              <span class="tag">Équations thermiques</span>
+              <span class="tag">Séries temporelles</span>
+              <span class="tag">Hyperparamètre tuning</span>
+            </div>
           </div>
-        </div>
         </div><!-- /project-body -->
       </div>
 
-      <!-- PROJET 2 : BWB — avec bande mémoire -->
+      <!-- PROJET 2 : BWB -->
       <div class="project-card reveal">
         <div class="project-body">
-        <div class="project-left">
-          <span class="project-type type-aero">Aéronautique</span>
-          <div class="project-title">Conception d'un avion BWB à propulsion hydrogène</div>
-          <div class="project-partner">Cranfield University / Airbus · Oct. 2025 – Mai 2026 (Projet de groupe — 62 étudiants)</div>
-          <ul class="project-bullets">
-            <li class="orange">Responsable de l'intégration des moteurs et de la coordination de la CAO globale au sein d'une équipe internationale de 62 étudiants — point de convergence entre les sous-équipes structures, aérodynamique et propulsion.</li>
-            <li>Études de positionnement des turboréacteurs sur la configuration Blended Wing Body : compromis entre trainée d'interférence, accès maintenance et bruit en cabine.</li>
-            <li>Design aérodynamique de la nacelle et des inverseurs de poussée, analyse de conformité aux normes de certification EASA CS-25.</li>
-            <li>Rédaction du mémoire de projet et soutenance devant un jury d'experts de l'industrie aéronautique.</li>
-          </ul>
-        </div>
-        <div class="project-right">
-          <div class="project-result orange-border">
-            <strong>Contexte :</strong> La configuration BWB à hydrogène représente l'une des pistes les plus prometteuses pour décarboner l'aviation long-courrier. Ce projet en collaboration avec Airbus visait une faisabilité réaliste selon les standards industriels.
+          <div class="project-left">
+            <span class="project-type type-aero">Aéronautique</span>
+            <div class="project-title">Conception d'un avion BWB à propulsion hydrogène</div>
+            <div class="project-partner">Cranfield University / Airbus · Oct. 2025 – Mai 2026 (Projet de groupe — 62 étudiants)</div>
+            <ul class="project-bullets">
+              <li class="orange">Responsable de l'intégration des moteurs et de la coordination de la CAO globale au sein d'une équipe internationale de 62 étudiants — point de convergence entre les sous-équipes structures, aérodynamique et propulsion.</li>
+              <li>Études de positionnement des turboréacteurs sur la configuration Blended Wing Body : compromis entre trainée d'interférence, accès maintenance et bruit en cabine.</li>
+              <li>Design aérodynamique de la nacelle et des inverseurs de poussée, analyse de conformité aux normes de certification EASA CS-25.</li>
+              <li>Rédaction du mémoire de projet et soutenance devant un jury d'experts de l'industrie aéronautique.</li>
+            </ul>
           </div>
-          <div class="project-tags">
-            <span class="tag">Catia V5</span>
-            <span class="tag">3DEXPERIENCE</span>
-            <span class="tag">Aérodynamique nacelle</span>
-            <span class="tag">Propulsion H₂</span>
-            <span class="tag">EASA CS-25</span>
-            <span class="tag">Gestion de projet CAO</span>
+          <div class="project-right">
+            <div class="project-result orange-border">
+              <strong>Contexte :</strong> La configuration BWB à hydrogène représente l'une des pistes les plus prometteuses pour décarboner l'aviation long-courrier. Ce projet en collaboration avec Airbus visait une faisabilité réaliste selon les standards industriels.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Catia V5</span>
+              <span class="tag">3DEXPERIENCE</span>
+              <span class="tag">Aérodynamique nacelle</span>
+              <span class="tag">Propulsion H₂</span>
+              <span class="tag">EASA CS-25</span>
+              <span class="tag">Gestion de projet CAO</span>
+            </div>
           </div>
-        </div>
           <a href="memoire-BWB.pdf" target="_blank" class="project-footer" onclick="event.stopPropagation()">
             <span>📄 Lire le mémoire de projet</span>
             <span class="project-footer-icon">↗</span>
@@ -492,8 +393,8 @@
             <div class="project-partner">CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)</div>
             <ul class="project-bullets">
               <li>Pilotage du pôle « prédiction » au sein d'une équipe de 12 étudiants pour le développement d'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.</li>
-              <li>Fine-tuning de <strong>Llama 3</strong> pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
-              <li class="orange">Entraînement d'un modèle ML sur <strong>300 000 patients</strong> de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
+              <li>Fine-tuning de Llama 3 pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
+              <li class="orange">Entraînement d'un modèle ML sur 300 000 patients de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
             </ul>
           </div>
           <div class="project-right">
