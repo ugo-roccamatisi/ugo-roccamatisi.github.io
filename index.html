@@ -164,6 +164,86 @@
   .project-footer-icon { font-size: 16px; transition: transform 0.2s; }
   .project-footer:hover .project-footer-icon { transform: translate(3px, -3px); }
 
+  .project-footer-double {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem -2.25rem -2rem -2.25rem;
+    border-top: 1px solid rgba(26, 111, 212, 0.15);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+  }
+  .project-footer-left {
+    grid-column: unset;
+    margin: 0;
+    border-radius: 0;
+    border-top: none;
+    border-right: 1px solid rgba(26, 111, 212, 0.15);
+  }
+  .project-footer-right-item {
+    grid-column: unset;
+    margin: 0;
+    border-radius: 0;
+    border-top: none;
+  }
+  .project-footer-left,
+  .project-footer-right-item { color: var(--blue); }
+  .project-footer-left:hover,
+  .project-footer-right-item:hover { background: rgba(26, 111, 212, 0.05); }
+    color: var(--blue);
+  }
+  .project-footer-left:hover,
+  .project-footer-right-item:hover { background: rgba(26, 111, 212, 0.05); }
+
+  .project-footer-half {
+    grid-column: span 1;
+    color: var(--blue);
+    border-top-color: rgba(26, 111, 212, 0.15);
+    margin-bottom: -2rem;
+  }
+  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
+  .project-footer-half:first-of-type { border-right: 1px solid rgba(26, 111, 212, 0.15); }
+  .project-footer-right { border-radius: 0 0 4px 0; }
+
+  .project-footer-double {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem -2.25rem -2rem -2.25rem;
+    border-top: 1px solid rgba(26, 111, 212, 0.15);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+  }
+  .project-footer-half {
+    grid-column: unset;
+    margin: 0;
+    border-radius: 0;
+    border-top: none;
+    border-right: 1px solid rgba(26, 111, 212, 0.15);
+    color: var(--blue);
+  }
+  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
+  .project-footer-right { border-right: none; }
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem -2.25rem -2rem -2.25rem;
+    border-top: 1px solid rgba(26, 111, 212, 0.15);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+  }
+  .project-footer-half {
+    grid-column: unset;
+    margin: 0;
+    border-radius: 0;
+    border-top: none;
+    border-right: 1px solid rgba(26, 111, 212, 0.15);
+    color: var(--blue);
+  }
+  .project-footer-half:hover { background: rgba(26, 111, 212, 0.05); }
+  .project-footer-half:hover .project-footer-icon { color: var(--blue); }
+  .project-footer-right { border-right: none; }
+
   .project-bullets { list-style: none; margin: 0.75rem 0 1.25rem; padding: 0; }
   .project-bullets li { font-size: 14px; color: var(--text-muted); line-height: 1.6; padding: 0.3rem 0 0.3rem 1.1rem; position: relative; border-bottom: 1px solid var(--border); }
   .project-bullets li:last-child { border-bottom: none; }
@@ -406,30 +486,40 @@
       <!-- PROJET 3 : IA médicale -->
       <div class="project-card reveal">
         <div class="project-body">
-        <div class="project-left">
-          <span class="project-type type-ai">IA</span>
-          <div class="project-title">Faire parler les données médicales avec l'IA</div>
-          <div class="project-partner">CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)</div>
-          <ul class="project-bullets">
-            <li>Pilotage du pôle « prédiction » au sein d'une équipe de 12 étudiants pour le développement d'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.</li>
-            <li>Fine-tuning de <strong>Llama 3</strong> pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
-            <li class="orange">Entraînement d'un modèle ML sur <strong>300 000 patients</strong> de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
-          </ul>
-        </div>
-        <div class="project-right">
-          <div class="project-result">
-            <strong>Impact :</strong> L'outil vise à aider les équipes soignantes à anticiper les flux patients et à mieux planifier les ressources hospitalières — un enjeu clé pour les CHU à forte activité comme Lille.
+          <div class="project-left">
+            <span class="project-type type-ai">IA</span>
+            <div class="project-title">Faire parler les données médicales avec l'IA</div>
+            <div class="project-partner">CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)</div>
+            <ul class="project-bullets">
+              <li>Pilotage du pôle « prédiction » au sein d'une équipe de 12 étudiants pour le développement d'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.</li>
+              <li>Fine-tuning de <strong>Llama 3</strong> pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
+              <li class="orange">Entraînement d'un modèle ML sur <strong>300 000 patients</strong> de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
+            </ul>
           </div>
-          <div class="project-tags">
-            <span class="tag">Llama 3</span>
-            <span class="tag">Fine-tuning LLM</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">MIMIC-IV</span>
-            <span class="tag">API Python</span>
-            <span class="tag">NLP médical</span>
-            <span class="tag">ML prédictif</span>
+          <div class="project-right">
+            <div class="project-result">
+              <strong>Impact :</strong> L'outil vise à aider les équipes soignantes à anticiper les flux patients et à mieux planifier les ressources hospitalières — un enjeu clé pour les CHU à forte activité comme Lille.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Llama 3</span>
+              <span class="tag">Fine-tuning LLM</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">MIMIC-IV</span>
+              <span class="tag">API Python</span>
+              <span class="tag">NLP médical</span>
+              <span class="tag">ML prédictif</span>
+            </div>
           </div>
-        </div>
+          <div class="project-footer-double">
+            <a href="rapport-utilisateur.pdf" target="_blank" class="project-footer project-footer-left">
+              <span>📄 Rapport utilisateur</span>
+              <span class="project-footer-icon">↗</span>
+            </a>
+            <a href="rapport-technique.pdf" target="_blank" class="project-footer project-footer-right-item">
+              <span>📄 Rapport technique</span>
+              <span class="project-footer-icon">↗</span>
+            </a>
+          </div>
         </div><!-- /project-body -->
       </div>
 
