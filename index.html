@@ -302,7 +302,7 @@
       <div>
         <div class="stat-grid">
           <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Grandes écoles (double diplôme)</div></div>
-          <div class="stat-card"><div class="stat-num orange">4</div><div class="stat-label">Projets majeurs réalisés</div></div>
+          <div class="stat-card"><div class="stat-num orange">5</div><div class="stat-label">Projets majeurs réalisés</div></div>
           <div class="stat-card"><div class="stat-num">62</div><div class="stat-label">Étudiants dans l'équipe BWB</div></div>
           <div class="stat-card"><div class="stat-num orange">300k</div><div class="stat-label">Patients dans la base MIMIC-IV</div></div>
         </div>
@@ -424,7 +424,42 @@
         </div><!-- /project-body -->
       </div>
 
-      <!-- PROJET 4 : ICO -->
+      <!-- PROJET 4 : Prophet -->
+      <div class="project-card reveal">
+        <div class="project-body">
+          <div class="project-left">
+            <span class="project-type type-ai">IA</span>
+            <div class="project-title">Prédiction de consommation électrique avec Prophet</div>
+            <div class="project-partner">Projet personnel · Centrale Lille · 2025</div>
+            <ul class="project-bullets">
+              <li>Analyse exploratoire d'une série temporelle horaire sur 20 ans (1998–2018) couvrant plusieurs régions du réseau PJM Interconnection (est des États-Unis), entre 25 000 et 60 000 MW de consommation.</li>
+              <li>Décomposition de la série en tendance, saisonnalités multiples (journalière, hebdomadaire, annuelle) et résidus — identification d'une distribution bimodale liée aux pics estivaux (climatisation) et hivernaux (chauffage).</li>
+              <li class="orange">Entraînement du modèle Prophet de Meta sur la région PJME, évaluation par RMSE et MAE, puis amélioration des performances en intégrant les effets de jours fériés américains dans la fonction de perte.</li>
+            </ul>
+          </div>
+          <div class="project-right">
+            <div class="project-result">
+              <strong>Modèle :</strong> Prophet modélise la série comme y(t) = g(t) + s(t) + h(t) + ε — tendance, saisonnalités et effets calendaires — ce qui le rend particulièrement adapté aux données énergétiques à forte structure temporelle.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Prophet (Meta)</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Séries temporelles</span>
+              <span class="tag">Statsmodels</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Kaggle</span>
+              <span class="tag">EDA</span>
+            </div>
+          </div>
+          <a href="https://github.com/ton-username/ton-username.github.io/blob/main/prophet-energy.ipynb" target="_blank" class="project-footer project-footer-left" style="border-top-color: rgba(26,111,212,0.2); color: var(--blue);" onclick="event.stopPropagation()">
+            <span>📓 Voir le notebook</span>
+            <span class="project-footer-icon">↗</span>
+          </a>
+        </div><!-- /project-body -->
+      </div>
+
+      <!-- PROJET 5 : ICO -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
