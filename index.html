@@ -302,7 +302,7 @@
       <div>
         <div class="stat-grid">
           <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Grandes écoles (double diplôme)</div></div>
-          <div class="stat-card"><div class="stat-num orange">3</div><div class="stat-label">Projets majeurs réalisés</div></div>
+          <div class="stat-card"><div class="stat-num orange">4</div><div class="stat-label">Projets majeurs réalisés</div></div>
           <div class="stat-card"><div class="stat-num">62</div><div class="stat-label">Étudiants dans l'équipe BWB</div></div>
           <div class="stat-card"><div class="stat-num orange">300k</div><div class="stat-label">Patients dans la base MIMIC-IV</div></div>
         </div>
@@ -335,7 +335,7 @@
           </div>
           <div class="project-right">
             <div class="project-result">
-              <strong>Approche :</strong> data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.
+              <strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.
             </div>
             <div class="project-tags">
               <span class="tag">PyTorch</span>
@@ -421,6 +421,43 @@
               <span class="project-footer-icon">↗</span>
             </a>
           </div>
+        </div><!-- /project-body -->
+      </div>
+
+      <!-- PROJET 4 : ICO -->
+      <div class="project-card reveal">
+        <div class="project-body">
+          <div class="project-left">
+            <span class="project-type type-ai">IA</span>
+            <div class="project-title">Optimisation de tournées de véhicules par méta-heuristiques et Q-Learning</div>
+            <div class="project-partner">Centrale Lille — Électif Intelligence Collaborative · Mai 2025 (Projet de groupe — 6 étudiants)</div>
+            <ul class="project-bullets">
+              <li>Implémentation et comparaison de trois méta-heuristiques classiques sur le problème VRP (NP-difficile) : Recherche Tabu, Recuit Simulé et Algorithme Génétique — avec génération d'instances synthétiques reproductibles via Pydantic.</li>
+              <li>Développement d'un système multi-agents (SMA) à boucle Top-N : plusieurs planificateurs coopèrent à chaque itération, fusionnent leurs solutions et ne conservent que les N meilleures — réduisant le coût de 14 à 26 % selon la combinaison d'agents.</li>
+              <li class="orange">Conception d'un Q-Learning tabulaire avec opérateurs 2-opt en mode best-improvement : en s'appuyant sur une solution SA comme point de départ, l'agent atteint un coût final de 9 900 sur 100 clients — meilleure performance globale du projet.</li>
+              <li>Démo interactive Streamlit permettant de configurer les hyper-paramètres, visualiser les routes en temps réel et comparer tous les algorithmes via un benchmark commun.</li>
+            </ul>
+          </div>
+          <div class="project-right">
+            <div class="project-result">
+              <strong>Résultat :</strong> La stratégie gagnante est l'enchaînement Recuit Simulé → Q-Learning tabulaire : elle surpasse de ~1 600 unités le meilleur Tabu et de ~3 100 unités le meilleur SMA sur l'instance 100 clients.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Q-Learning</span>
+              <span class="tag">Tabu Search</span>
+              <span class="tag">Recuit Simulé</span>
+              <span class="tag">Algorithme génétique</span>
+              <span class="tag">Systèmes multi-agents</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Pydantic</span>
+              <span class="tag">Optimisation combinatoire</span>
+            </div>
+          </div>
+          <a href="rapport-ICO.pdf" target="_blank" class="project-footer project-footer-left" style="border-top-color: rgba(26,111,212,0.15);" onclick="event.stopPropagation()">
+            <span>📄 Lire le rapport</span>
+            <span class="project-footer-icon">↗</span>
+          </a>
         </div><!-- /project-body -->
       </div>
 
