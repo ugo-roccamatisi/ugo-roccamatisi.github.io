@@ -300,7 +300,7 @@
       <div>
         <div class="stat-grid">
           <div class="stat-card"><div class="stat-num">2</div><div class="stat-label" data-i18n="stat.schools">Grandes écoles (double diplôme)</div></div>
-          <div class="stat-card"><div class="stat-num orange">5</div><div class="stat-label" data-i18n="stat.projects">Projets majeurs réalisés</div></div>
+          <div class="stat-card"><div class="stat-num orange">6</div><div class="stat-label" data-i18n="stat.projects">Projets majeurs réalisés</div></div>
         </div>
       </div>
     </div>
@@ -365,6 +365,37 @@
         </div>
       </div>
 
+
+      <!-- PROJET 3 : SAAB Flight Analysis -->
+      <div class="project-card reveal">
+        <div class="project-body">
+          <div class="project-left">
+            <span class="project-type type-both" data-i18n="p6.type">IA + Aéronautique</span>
+            <div class="project-title" data-i18n="p6.title">Analyse de données de vol d'un SAAB à l'atterrissage</div>
+            <div class="project-partner" data-i18n="p6.partner">Cranfield University — IVHM · 2025–2026 (Projet personnel)</div>
+            <ul class="project-bullets">
+              <li data-i18n="p6.b1">Analyse de fiabilité de deux accéléromètres indépendants sur des données d'accélération longitudinale enregistrées lors d'une séquence d'atterrissage : QA/QC, détection des NaN, jitter d'horodatage et rééchantillonnage sur base temporelle uniforme.</li>
+              <li data-i18n="p6.b2">Caractérisation spectrale complète par méthode de Welch — densité spectrale de puissance (PSD), cohérence inter-capteurs, ratio spectral et spectrogramme — pour quantifier l'accord entre les deux voies de mesure et identifier les fréquences de vibration caractéristiques du train d'atterrissage.</li>
+              <li class="orange" data-i18n="p6.b3">Raffinement du moment de touché par détection de rupture à noyau RBF (bibliothèque ruptures) sur une fenêtre ±60 s, en combinant altitude radio, accélérations normale et longitudinale et leurs dérivées temporelles issues du FDR complet.</li>
+            </ul>
+          </div>
+          <div class="project-right">
+            <div class="project-result" data-i18n-html="p6.result"><strong>Approche :</strong> Pipeline en deux étapes — la Partie 1 fournit un horodatage de touché par analyse spectrale des accéléromètres, la Partie 2 l'affine par détection de changement de régime sur les données FDR complètes.</div>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Welch PSD</span><span class="tag">Cohérence spectrale</span><span class="tag">Change-point Detection</span><span class="tag">ruptures</span><span class="tag">FDR</span><span class="tag">Matplotlib</span>
+            </div>
+          </div>
+          <div class="project-footer-double">
+            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/Notebook1_personal.ipynb" target="_blank" class="project-footer project-footer-left" onclick="event.stopPropagation()">
+              <span data-i18n="p6.footer1">📓 Notebook — Partie 1</span><span class="project-footer-icon">↗</span>
+            </a>
+            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/Notebook2_personal.ipynb" target="_blank" class="project-footer project-footer-right-item" onclick="event.stopPropagation()">
+              <span data-i18n="p6.footer2">📓 Notebook — Partie 2</span><span class="project-footer-icon">↗</span>
+            </a>
+          </div>
+        </div><!-- /project-body -->
+      </div>
+
       <!-- PROJET 3 : FPDM -->
       <div class="project-card reveal">
         <div class="project-body">
@@ -414,7 +445,7 @@
               <span class="tag">Python</span><span class="tag">Prophet (Meta)</span><span class="tag">Pandas</span><span class="tag">Séries temporelles</span><span class="tag">Statsmodels</span><span class="tag">Scikit-learn</span><span class="tag">Kaggle</span><span class="tag">EDA</span>
             </div>
           </div>
-          <a href="https://github.com/ton-username/ton-username.github.io/blob/main/prophet-energy.ipynb" target="_blank" class="project-footer blue" onclick="event.stopPropagation()">
+          <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb" target="_blank" class="project-footer blue" onclick="event.stopPropagation()">
             <span data-i18n="p4.footer">📓 Voir le notebook</span>
             <span class="project-footer-icon">↗</span>
           </a>
@@ -561,6 +592,12 @@ const T = {
     'skills.label':'// 03 — Compétences','skills.h2':'Stack technique','skills.lead':'Un profil pluridisciplinaire qui couvre le logiciel, la simulation numérique et les systèmes aéronautiques.',
     'sg.ai':'Data Science & IA','sg.dev':'Développement','sg.eng':'Ingénierie & simulation','sg.aero':'Domaines aéronautiques',
     'contact.label':'// 04 — Contact','contact.h2':'Disponible dès septembre 2026','contact.p':'Stage de fin d\'études (6 mois) — Aéronautique, IA embarquée, simulation numérique. N\'hésitez pas à me contacter.','contact.cv':'CV (PDF)',
+    'p6.type':'IA + Aéronautique','p6.title':'Analyse de données de vol d\'un SAAB à l\'atterrissage','p6.partner':'Cranfield University — IVHM · 2025–2026 (Projet personnel)',
+    'p6.b1':'Analyse de fiabilité de deux accéléromètres indépendants sur des données d\'accélération longitudinale enregistrées lors d\'une séquence d\'atterrissage : QA/QC, détection des NaN, jitter d\'horodatage et rééchantillonnage sur base temporelle uniforme.',
+    'p6.b2':'Caractérisation spectrale complète par méthode de Welch — densité spectrale de puissance (PSD), cohérence inter-capteurs, ratio spectral et spectrogramme — pour quantifier l\'accord entre les deux voies de mesure et identifier les fréquences de vibration caractéristiques du train d\'atterrissage.',
+    'p6.b3':'Raffinement du moment de touché par détection de rupture à noyau RBF (bibliothèque ruptures) sur une fenêtre ±60 s, en combinant altitude radio, accélérations normale et longitudinale et leurs dérivées temporelles issues du FDR complet.',
+    'p6.result':'<strong>Approche :</strong> Pipeline en deux étapes — la Partie 1 fournit un horodatage de touché par analyse spectrale des accéléromètres, la Partie 2 l\'affine par détection de changement de régime sur les données FDR complètes.',
+    'p6.footer1':'📓 Notebook — Partie 1','p6.footer2':'📓 Notebook — Partie 2',
     'footer.text':'© 2026 — Ugo Roccamatisi · Ingénieur Aéronautique, Data Science & Simulation · Paris, France'
   },
   en: {
@@ -616,6 +653,12 @@ const T = {
     'skills.label':'// 03 — Skills','skills.h2':'Technical Stack','skills.lead':'A multidisciplinary profile covering software, numerical simulation, and aeronautical systems.',
     'sg.ai':'Data Science & AI','sg.dev':'Development','sg.eng':'Engineering & Simulation','sg.aero':'Aerospace Domains',
     'contact.label':'// 04 — Contact','contact.h2':'Available from September 2026','contact.p':'End-of-studies internship (6 months) — Aeronautics, embedded AI, numerical simulation. Feel free to get in touch.','contact.cv':'CV (PDF)',
+    'p6.type':'AI + Aerospace','p6.title':'Flight Data Analysis of a SAAB Aircraft During Landing','p6.partner':'Cranfield University — IVHM · 2025–2026 (Personal Project)',
+    'p6.b1':'Reliability analysis of two independent accelerometers on longitudinal acceleration data recorded during a landing sequence: QA/QC, NaN detection, timestamp jitter assessment, and resampling onto a uniform time base.',
+    'p6.b2':'Full spectral characterization using Welch\'s method — Power Spectral Density (PSD), inter-sensor coherence, spectral ratio, and spectrogram — to quantify agreement between the two measurement channels and identify characteristic landing gear vibration frequencies.',
+    'p6.b3':'Touchdown time refinement via RBF kernel change-point detection (ruptures library) on a ±60 s window, combining radio altitude, normal and longitudinal accelerations, and their time derivatives from the full FDR dataset.',
+    'p6.result':'<strong>Approach:</strong> Two-stage pipeline — Part 1 provides a touchdown timestamp via accelerometer spectral analysis, Part 2 refines it via regime change detection on the full FDR data.',
+    'p6.footer1':'📓 Notebook — Part 1','p6.footer2':'📓 Notebook — Part 2',
     'footer.text':'© 2026 — Ugo Roccamatisi · Aerospace Engineer, Data Science & Simulation · Paris, France'
   }
 };
