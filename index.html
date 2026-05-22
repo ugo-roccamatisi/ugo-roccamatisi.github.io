@@ -262,7 +262,7 @@
           <div class="section-label" style="margin-bottom:1rem" data-i18n="about.edu.label">// Formation</div>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-date">OCT. 2025 — SEPT. 2026</div>
+              <div class="timeline-date" data-i18n="tl.date.cranfield">OCT. 2025 — SEPT. 2026</div>
               <div class="timeline-school">Cranfield University — <span data-i18n="tl.cranfield.loc">Cranfield, Royaume-Uni</span></div>
               <div class="timeline-degree" data-i18n="tl.cranfield.deg">MSc in Aerospace Vehicle Design · option Aircraft Design · Double diplôme avec Centrale Lille</div>
               <div class="timeline-modules">
@@ -275,7 +275,7 @@
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-date">SEPT. 2023 — MARS 2027</div>
+              <div class="timeline-date" data-i18n="tl.date.centrale">SEPT. 2023 — MARS 2027</div>
               <div class="timeline-school">École Centrale de Lille — <span data-i18n="tl.centrale.loc">Villeneuve-d'Ascq, France</span></div>
               <div class="timeline-degree" data-i18n="tl.centrale.deg">Diplôme d'ingénieur généraliste — spécialisation Data Science & systèmes aéronautiques</div>
               <div class="timeline-modules">
@@ -289,7 +289,7 @@
               </div>
             </div>
             <div class="timeline-item">
-              <div class="timeline-date">SEPT. 2020 — JUILL. 2023</div>
+              <div class="timeline-date" data-i18n="tl.date.schweitzer">SEPT. 2020 — JUILL. 2023</div>
               <div class="timeline-school">Lycée Albert Schweitzer — <span data-i18n="tl.schweitzer.loc">Le Raincy, France</span></div>
               <div class="timeline-degree" data-i18n="tl.schweitzer.deg">Classe Préparatoire aux Grandes Écoles · filière PCSI / PC*</div>
               <div class="timeline-modules">
@@ -498,11 +498,11 @@
       <div>
         <div class="skill-group-title" data-i18n="sg.ai">Data Science & IA</div>
         <div class="skills-chips">
-          <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">SciPy</span><span class="chip">PINN</span><span class="chip">Deep Learning</span><span class="chip">LLM fine-tuning</span><span class="chip">ML prédictif</span>
+          <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">SciPy</span><span class="chip">PINN</span><span class="chip">Deep Learning</span><span class="chip" data-i18n="chip.llm">LLM fine-tuning</span><span class="chip" data-i18n="chip.ml">ML prédictif</span>
         </div>
         <div class="skill-group-title" style="margin-top:2rem" data-i18n="sg.dev">Développement</div>
         <div class="skills-chips">
-          <span class="chip">C / C++</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span><span class="chip">Systèmes embarqués</span>
+          <span class="chip">C / C++</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span><span class="chip" data-i18n="chip.embedded">Systèmes embarqués</span>
         </div>
       </div>
       <div>
@@ -512,7 +512,7 @@
         </div>
         <div class="skill-group-title orange-accent" style="margin-top:2rem" data-i18n="sg.aero">Domaines aéronautiques</div>
         <div class="skills-chips">
-          <span class="chip orange">Stabilité & contrôle</span><span class="chip orange">Structures composites</span><span class="chip orange">Maintenance prédictive</span><span class="chip orange">Aérodynamique</span><span class="chip orange">Transferts thermiques</span><span class="chip orange">Traitement du signal</span>
+          <span class="chip orange">Stabilité & contrôle</span><span class="chip orange" data-i18n="chip.composites">Structures composites</span><span class="chip orange" data-i18n="chip.maintenance">Maintenance prédictive</span><span class="chip orange" data-i18n="chip.aero">Aérodynamique</span><span class="chip orange" data-i18n="chip.thermal">Transferts thermiques</span><span class="chip orange" data-i18n="chip.signal">Traitement du signal</span>
         </div>
       </div>
     </div>
@@ -602,6 +602,12 @@ const T = {
     'p6.b3':'Raffinement du moment de touché par détection de rupture à noyau RBF (bibliothèque ruptures) sur une fenêtre ±60 s, en combinant altitude radio, accélérations normale et longitudinale et leurs dérivées temporelles issues du FDR complet.',
     'p6.result':'<strong>Approche :</strong> Pipeline en deux étapes — la Partie 1 fournit un horodatage de touché par analyse spectrale des accéléromètres, la Partie 2 l\'affine par détection de changement de régime sur les données FDR complètes.',
     'p6.footer1':'📓 Notebook — Partie 1','p6.footer2':'📓 Notebook — Partie 2',
+    'chip.ml':'ML prédictif','chip.llm':'LLM fine-tuning','chip.embedded':'Systèmes embarqués',
+    'chip.stability':'Stabilité & contrôle','chip.composites':'Structures composites','chip.maintenance':'Maintenance prédictive',
+    'chip.aero':'Aérodynamique','chip.thermal':'Transferts thermiques','chip.signal':'Traitement du signal',
+    'tl.date.cranfield':'OCT. 2025 — SEPT. 2026',
+    'tl.date.centrale':'SEPT. 2023 — MARS 2027',
+    'tl.date.schweitzer':'SEPT. 2020 — JUILL. 2023',
     'footer.text':'© 2026 — Ugo Roccamatisi · Ingénieur Aéronautique, Data Science & Simulation · Paris, France'
   },
   en: {
@@ -663,6 +669,12 @@ const T = {
     'p6.b3':'Touchdown time refinement via RBF kernel change-point detection (ruptures library) on a ±60 s window, combining radio altitude, normal and longitudinal accelerations, and their time derivatives from the full FDR dataset.',
     'p6.result':'<strong>Approach:</strong> Two-stage pipeline — Part 1 provides a touchdown timestamp via accelerometer spectral analysis, Part 2 refines it via regime change detection on the full FDR data.',
     'p6.footer1':'📓 Notebook — Part 1','p6.footer2':'📓 Notebook — Part 2',
+    'chip.ml':'Predictive ML','chip.llm':'LLM fine-tuning','chip.embedded':'Embedded Systems',
+    'chip.stability':'Stability & Control','chip.composites':'Composite Structures','chip.maintenance':'Predictive Maintenance',
+    'chip.aero':'Aerodynamics','chip.thermal':'Heat Transfer','chip.signal':'Signal Processing',
+    'tl.date.cranfield':'OCT. 2025 — SEPT. 2026',
+    'tl.date.centrale':'SEPT. 2023 — MAR. 2027',
+    'tl.date.schweitzer':'SEPT. 2020 — JULY 2023',
     'footer.text':'© 2026 — Ugo Roccamatisi · Aerospace Engineer, Data Science & Simulation · Paris, France'
   }
 };
