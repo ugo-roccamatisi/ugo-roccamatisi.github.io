@@ -144,6 +144,9 @@
   .project-footer-left { grid-column: unset; margin: 0; border-radius: 0; border-top: none; border-right: 1px solid rgba(26,111,212,0.15); color: var(--blue); }
   .project-footer-right-item { grid-column: unset; margin: 0; border-radius: 0; border-top: none; color: var(--blue); }
   .project-footer-left:hover, .project-footer-right-item:hover { background: rgba(26,111,212,0.05); }
+  .project-footer-left.green, .project-footer-right-item.green { color: #1a9e6a; border-color: rgba(26,158,106,0.2); }
+  .project-footer-left.green:hover, .project-footer-right-item.green:hover { background: rgba(26,158,106,0.06); }
+  .project-footer-double.green-border { border-top-color: rgba(26,158,106,0.2); }
 
   .project-bullets { list-style: none; margin: 0.75rem 0 1.25rem; padding: 0; }
   .project-bullets li { font-size: 14px; color: var(--text-muted); line-height: 1.6; padding: 0.3rem 0 0.3rem 1.1rem; position: relative; border-bottom: 1px solid var(--border); }
@@ -154,6 +157,7 @@
   .project-result { background: var(--bg3); border-left: 2px solid var(--blue); padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; font-size: 13px; color: var(--text-muted); }
   .project-result strong { color: var(--result-strong); font-weight: 600; }
   .project-result.orange-border { border-left-color: var(--orange); }
+  .project-result.green-border { border-left-color: #1a9e6a; }
 
   .project-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; padding: 3px 8px; border-radius: 2px; display: inline-block; }
   .type-ai { color: var(--blue); background: rgba(26,111,212,0.08); border: 1px solid rgba(26,111,212,0.2); }
@@ -330,7 +334,7 @@
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result" data-i18n-html="p1.result"><strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.</div>
+            <div class="project-result green-border" data-i18n-html="p1.result"><strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.</div>
             <div class="project-tags">
               <span class="tag">PyTorch</span><span class="tag">PINN</span><span class="tag">Deep Learning</span><span class="tag">Airbus A320</span><span class="tag">Équations thermiques</span><span class="tag">Séries temporelles</span><span class="tag">Hyperparamètre tuning</span>
             </div>
@@ -380,16 +384,16 @@
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result" data-i18n-html="p6.result"><strong>Approche :</strong> Pipeline en deux étapes — la Partie 1 fournit un horodatage de touché par analyse spectrale des accéléromètres, la Partie 2 l'affine par détection de changement de régime sur les données FDR complètes.</div>
+            <div class="project-result green-border" data-i18n-html="p6.result"><strong>Approche :</strong> Pipeline en deux étapes — la Partie 1 fournit un horodatage de touché par analyse spectrale des accéléromètres, la Partie 2 l'affine par détection de changement de régime sur les données FDR complètes.</div>
             <div class="project-tags">
               <span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">SciPy</span><span class="tag">Welch PSD</span><span class="tag">Cohérence spectrale</span><span class="tag">Change-point Detection</span><span class="tag">ruptures</span><span class="tag">FDR</span><span class="tag">Matplotlib</span>
             </div>
           </div>
-          <div class="project-footer-double">
-            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_sensor_spectral_analysis.ipynb" target="_blank" class="project-footer project-footer-left" onclick="event.stopPropagation()">
+          <div class="project-footer-double green-border">
+            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_sensor_spectral_analysis.ipynb" target="_blank" class="project-footer project-footer-left green" onclick="event.stopPropagation()">
               <span data-i18n="p6.footer1">📓 Notebook — Partie 1</span><span class="project-footer-icon">↗</span>
             </a>
-            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_touchdown_detection.ipynb" target="_blank" class="project-footer project-footer-right-item" onclick="event.stopPropagation()">
+            <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_touchdown_detection.ipynb" target="_blank" class="project-footer project-footer-right-item green" onclick="event.stopPropagation()">
               <span data-i18n="p6.footer2">📓 Notebook — Partie 2</span><span class="project-footer-icon">↗</span>
             </a>
           </div>
