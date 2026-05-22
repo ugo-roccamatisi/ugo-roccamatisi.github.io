@@ -8,18 +8,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f7fc;
-    --bg2: #ffffff;
-    --bg3: #eaf0f8;
-    --blue: #1a6fd4;
-    --blue-dim: #4a90d9;
-    --orange: #d4601a;
-    --orange-dim: #e07a3a;
-    --text: #1a2a3a;
-    --text-muted: #4a6480;
-    --text-dim: #8aa0b8;
-    --border: rgba(26, 111, 212, 0.15);
-    --border-bright: rgba(26, 111, 212, 0.35);
+    --bg: #f4f7fc; --bg2: #ffffff; --bg3: #eaf0f8;
+    --blue: #1a6fd4; --blue-dim: #4a90d9;
+    --orange: #d4601a; --orange-dim: #e07a3a;
+    --text: #1a2a3a; --text-muted: #4a6480; --text-dim: #8aa0b8;
+    --border: rgba(26,111,212,0.15); --border-bright: rgba(26,111,212,0.35);
+    --h-color: #0d1f33; --result-strong: #0d1f33;
+    --grid-color: rgba(26,111,212,0.055);
+    --nav-bg: rgba(244,247,252,0.95);
+  }
+  body.dark {
+    --bg: #080f1c; --bg2: #0d1728; --bg3: #111f35;
+    --blue: #5a9fe8; --blue-dim: #3a70b8;
+    --orange: #e07a3a; --orange-dim: #c05a2a;
+    --text: #c8ddf0; --text-muted: #6a8aaa; --text-dim: #2d4a65;
+    --border: rgba(90,159,232,0.18); --border-bright: rgba(90,159,232,0.38);
+    --h-color: #e8f4ff; --result-strong: #e8f4ff;
+    --grid-color: rgba(90,159,232,0.05);
+    --nav-bg: rgba(8,15,28,0.95);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,15 +33,11 @@
 
   body {
     background: var(--bg);
-    background-image:
-      linear-gradient(rgba(26, 111, 212, 0.055) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(26, 111, 212, 0.055) 1px, transparent 1px);
+    background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
     background-size: 72px 72px;
-    color: var(--text);
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    overflow-x: hidden;
+    color: var(--text); font-family: 'Rajdhani', sans-serif;
+    font-size: 16px; line-height: 1.6; overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
@@ -43,26 +45,42 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;
-    background: rgba(244, 247, 252, 0.95); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
+    background: var(--nav-bg); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border); transition: background 0.3s;
   }
   .nav-logo { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--blue); letter-spacing: 0.05em; }
   .nav-logo span { color: var(--orange); }
-  nav ul { list-style: none; display: flex; gap: 2.5rem; }
+  nav ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
   nav ul a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
   nav ul a:hover { color: var(--blue); }
+
+  .nav-controls { display: flex; align-items: center; gap: 0.5rem; }
+  .lang-btn {
+    background: none; border: none; font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.08em; color: var(--text-muted);
+    cursor: pointer; padding: 4px 7px; border-radius: 2px; transition: all 0.2s;
+  }
+  .lang-btn:hover, .lang-btn.active { color: var(--blue); }
+  .lang-btn.active { font-weight: 600; }
+  .lang-sep { color: var(--text-dim); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  .theme-btn {
+    background: none; border: 1px solid var(--border); border-radius: 2px;
+    font-size: 14px; cursor: pointer; padding: 3px 8px; margin-left: 0.25rem;
+    transition: border-color 0.2s; line-height: 1;
+  }
+  .theme-btn:hover { border-color: var(--blue); }
 
   #hero { min-height: 100vh; display: flex; align-items: center; padding: 6rem 0 4rem; }
   .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
   .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--orange); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
   .hero-tag::before { content: ''; display: block; width: 32px; height: 1px; background: var(--orange); }
-  h1 { font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 1rem; color: #0d1f33; }
+  h1 { font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 1rem; color: var(--h-color); }
   h1 em { font-style: normal; color: var(--blue); }
   .hero-sub { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2.5rem; font-weight: 400; max-width: 440px; }
   .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: all 0.2s; cursor: pointer; border: none; }
   .btn-primary { background: var(--blue); color: #fff; }
-  .btn-primary:hover { background: #2a7fe0; transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--blue-dim); transform: translateY(-1px); }
   .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border-bright); }
   .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
 
@@ -87,12 +105,13 @@
 
   section { padding: 6rem 0; position: relative; z-index: 1; }
   .section-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--orange); letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 0.75rem; }
-  h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; color: #0d1f33; letter-spacing: -0.01em; margin-bottom: 1rem; }
+  h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; color: var(--h-color); letter-spacing: -0.01em; margin-bottom: 1rem; }
   .section-lead { color: var(--text-muted); font-size: 1.05rem; max-width: 560px; margin-bottom: 3rem; line-height: 1.7; }
   .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--border-bright), transparent); }
 
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
   .about-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; font-size: 1rem; }
+  .about-text p strong { color: var(--text); }
   .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .stat-card { background: var(--bg2); border: 1px solid var(--border); padding: 1.25rem; border-radius: 4px; }
   .stat-num { font-size: 2rem; font-weight: 700; color: var(--blue); font-family: 'JetBrains Mono', monospace; line-height: 1; margin-bottom: 0.4rem; }
@@ -104,54 +123,27 @@
   .timeline-item { position: relative; margin-bottom: 2rem; }
   .timeline-item::before { content: ''; position: absolute; left: -1.5rem; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); border: 2px solid var(--bg); }
   .timeline-date { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 0.25rem; }
-  .timeline-school { font-size: 1rem; font-weight: 600; color: #0d1f33; margin-bottom: 0.15rem; }
+  .timeline-school { font-size: 1rem; font-weight: 600; color: var(--h-color); margin-bottom: 0.15rem; }
   .timeline-degree { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.6rem; }
   .timeline-modules { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
   .module-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); background: var(--bg3); border: 1px solid var(--border); padding: 2px 7px; border-radius: 2px; }
 
-  /* PROJECTS */
   .projects-grid { display: flex; flex-direction: column; gap: 1.5rem; }
-
   .project-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; position: relative; transition: border-color 0.3s; color: inherit; }
   .project-card:hover { border-color: var(--blue); }
-
   .project-body { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 2.25rem; }
 
-  .project-footer {
-    grid-column: 1 / -1;
-    display: flex; align-items: center; justify-content: space-between;
-    margin: 0.5rem -2.25rem -2rem -2.25rem;
-    padding: 0.9rem 2.25rem;
-    border-top: 1px solid rgba(212, 96, 26, 0.2);
-    color: var(--orange);
-    font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    text-decoration: none; transition: background 0.2s;
-    border-radius: 0 0 4px 4px;
-  }
-  .project-footer:hover { background: rgba(212, 96, 26, 0.05); }
+  .project-footer { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; margin: 0.5rem -2.25rem -2rem -2.25rem; padding: 0.9rem 2.25rem; border-top: 1px solid rgba(212,96,26,0.2); color: var(--orange); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; border-radius: 0 0 4px 4px; }
+  .project-footer:hover { background: rgba(212,96,26,0.05); }
+  .project-footer.blue { border-top-color: rgba(26,111,212,0.2); color: var(--blue); }
+  .project-footer.blue:hover { background: rgba(26,111,212,0.05); }
   .project-footer-icon { font-size: 16px; transition: transform 0.2s; }
-  .project-footer:hover .project-footer-icon { transform: translate(3px, -3px); }
+  .project-footer:hover .project-footer-icon { transform: translate(3px,-3px); }
 
-  .project-footer-double {
-    grid-column: 1 / -1;
-    display: grid; grid-template-columns: 1fr 1fr;
-    margin: 0.5rem -2.25rem -2rem -2.25rem;
-    border-top: 1px solid rgba(26, 111, 212, 0.15);
-    border-radius: 0 0 4px 4px;
-    overflow: hidden;
-  }
-  .project-footer-left {
-    grid-column: unset; margin: 0; border-radius: 0; border-top: none;
-    border-right: 1px solid rgba(26, 111, 212, 0.15);
-    color: var(--blue);
-  }
-  .project-footer-right-item {
-    grid-column: unset; margin: 0; border-radius: 0; border-top: none;
-    color: var(--blue);
-  }
-  .project-footer-left:hover,
-  .project-footer-right-item:hover { background: rgba(26, 111, 212, 0.05); }
+  .project-footer-double { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; margin: 0.5rem -2.25rem -2rem -2.25rem; border-top: 1px solid rgba(26,111,212,0.15); border-radius: 0 0 4px 4px; overflow: hidden; }
+  .project-footer-left { grid-column: unset; margin: 0; border-radius: 0; border-top: none; border-right: 1px solid rgba(26,111,212,0.15); color: var(--blue); }
+  .project-footer-right-item { grid-column: unset; margin: 0; border-radius: 0; border-top: none; color: var(--blue); }
+  .project-footer-left:hover, .project-footer-right-item:hover { background: rgba(26,111,212,0.05); }
 
   .project-bullets { list-style: none; margin: 0.75rem 0 1.25rem; padding: 0; }
   .project-bullets li { font-size: 14px; color: var(--text-muted); line-height: 1.6; padding: 0.3rem 0 0.3rem 1.1rem; position: relative; border-bottom: 1px solid var(--border); }
@@ -160,15 +152,14 @@
   .project-bullets li.orange::before { color: var(--orange); }
 
   .project-result { background: var(--bg3); border-left: 2px solid var(--blue); padding: 0.75rem 1rem; border-radius: 0 4px 4px 0; font-size: 13px; color: var(--text-muted); }
-  .project-result strong { color: #0d1f33; font-weight: 600; }
+  .project-result strong { color: var(--result-strong); font-weight: 600; }
   .project-result.orange-border { border-left-color: var(--orange); }
 
   .project-type { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; padding: 3px 8px; border-radius: 2px; display: inline-block; }
-  .type-ai { color: var(--blue); background: rgba(26, 111, 212, 0.08); border: 1px solid rgba(26, 111, 212, 0.2); }
-  .type-aero { color: var(--orange); background: rgba(212, 96, 26, 0.08); border: 1px solid rgba(212, 96, 26, 0.2); }
-  .type-both { color: #1a9e6a; background: rgba(26, 158, 106, 0.08); border: 1px solid rgba(26, 158, 106, 0.2); }
-
-  .project-title { font-size: 1.1rem; font-weight: 600; color: #0d1f33; margin-bottom: 0.25rem; }
+  .type-ai { color: var(--blue); background: rgba(26,111,212,0.08); border: 1px solid rgba(26,111,212,0.2); }
+  .type-aero { color: var(--orange); background: rgba(212,96,26,0.08); border: 1px solid rgba(212,96,26,0.2); }
+  .type-both { color: #1a9e6a; background: rgba(26,158,106,0.08); border: 1px solid rgba(26,158,106,0.2); }
+  .project-title { font-size: 1.1rem; font-weight: 600; color: var(--h-color); margin-bottom: 0.25rem; }
   .project-partner { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.08em; margin-bottom: 0.75rem; }
   .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
   .tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); background: var(--bg3); padding: 3px 8px; border-radius: 2px; letter-spacing: 0.05em; }
@@ -200,6 +191,7 @@
     h1 { font-size: 2.4rem; }
     .project-footer { margin: 0.5rem -1.5rem -2rem -1.5rem; padding: 0.9rem 1.5rem; }
     .project-footer-double { margin: 0.5rem -1.5rem -2rem -1.5rem; }
+    .nav-controls { gap: 0.25rem; }
   }
 </style>
 </head>
@@ -208,35 +200,41 @@
 <nav>
   <div class="nav-logo"><span>//</span> ugo.roccamatisi</div>
   <ul>
-    <li><a href="#about">Profil</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-i18n="nav.profile">Profil</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
+  <div class="nav-controls">
+    <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')">FR</button>
+    <span class="lang-sep">|</span>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+  </div>
 </nav>
 
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-tag">Ingénieur aéronautique & Data Science</div>
+        <div class="hero-tag" data-i18n="hero.tag">Ingénieur aéronautique & Data Science</div>
         <h1>Ugo <em>Rocca&shy;matisi</em></h1>
-        <p class="hero-sub">Double diplôme Centrale Lille & Cranfield University. Je travaille à l'intersection de la simulation numérique, de la modélisation et de l'intelligence artificielle — notamment sur des PINN appliqués aux données industrielles Airbus.</p>
+        <p class="hero-sub" data-i18n="hero.sub">Double diplôme Centrale Lille & Cranfield University. Je travaille à l'intersection de la simulation numérique, de la modélisation et de l'intelligence artificielle — notamment sur des PINN appliqués aux données industrielles Airbus.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">Voir mes projets →</a>
-          <a href="CVfr.pdf" class="btn btn-outline" target="_blank">Télécharger mon CV</a>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Voir mes projets →</a>
+          <a href="CVfr.pdf" class="btn btn-outline" target="_blank" data-i18n="hero.cta2">Télécharger mon CV</a>
         </div>
       </div>
       <div class="hud-panel">
-        <div class="hud-header"><span class="hud-dot"></span>profil.status — actif</div>
-        <div class="hud-row"><span class="hud-label">Formation</span><span class="hud-value">Centrale Lille + Cranfield</span></div>
-        <div class="hud-row"><span class="hud-label">Spécialité</span><span class="hud-value orange">IA & Aerospace Design</span></div>
-        <div class="hud-row"><span class="hud-label">Localisation</span><span class="hud-value">Paris, France 🇫🇷</span></div>
-        <div class="hud-row"><span class="hud-label">Recherche</span><span class="hud-value green">Stage fin d'études — sept. 2026 ✓</span></div>
-        <div class="hud-row"><span class="hud-label">Anglais</span><span class="hud-value">C1 — Duolingo 120</span></div>
+        <div class="hud-header"><span class="hud-dot"></span><span data-i18n="hud.status">profil.status — actif</span></div>
+        <div class="hud-row"><span class="hud-label" data-i18n="hud.l.edu">Formation</span><span class="hud-value">Centrale Lille + Cranfield</span></div>
+        <div class="hud-row"><span class="hud-label" data-i18n="hud.l.spec">Spécialité</span><span class="hud-value orange" data-i18n="hud.v.spec">IA & Aerospace Design</span></div>
+        <div class="hud-row"><span class="hud-label" data-i18n="hud.l.loc">Localisation</span><span class="hud-value">Paris, France 🇫🇷</span></div>
+        <div class="hud-row"><span class="hud-label" data-i18n="hud.l.seek">Recherche</span><span class="hud-value green" data-i18n="hud.v.seek">Stage fin d'études — sept. 2026 ✓</span></div>
+        <div class="hud-row"><span class="hud-label" data-i18n="hud.l.eng">Anglais</span><span class="hud-value">C1 — Duolingo 120</span></div>
         <div class="skill-bar-wrap">
           <div class="skill-bar-item"><div class="skill-bar-label"><span>Deep Learning / PINN</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
-          <div class="skill-bar-item"><div class="skill-bar-label"><span>Conception aéronautique</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
+          <div class="skill-bar-item"><div class="skill-bar-label"><span data-i18n="hud.bar.aero">Conception aéronautique</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:85%"></div></div></div>
           <div class="skill-bar-item"><div class="skill-bar-label"><span>Python / C++</span><span>92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:92%"></div></div></div>
           <div class="skill-bar-item"><div class="skill-bar-label"><span>CFD / Star-CCM+</span><span>78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:78%"></div></div></div>
         </div>
@@ -251,49 +249,49 @@
   <div class="container">
     <div class="about-grid reveal">
       <div class="about-text">
-        <div class="section-label">// 01 — Profil</div>
-        <h2>À la frontière de la physique et de l'IA</h2>
-        <p>Étudiant ingénieur en double diplôme à <strong>Centrale Lille</strong> et <strong>Cranfield University</strong>, je me spécialise dans l'application de l'intelligence artificielle aux systèmes aéronautiques complexes.</p>
-        <p>Mon travail de recherche porte sur les <strong>Physics-Informed Neural Networks (PINN)</strong> — des architectures Deep Learning qui intègrent les équations physiques directement dans la fonction de perte, appliquées à la prédiction thermique des freins de l'A320 sur données industrielles Airbus.</p>
-        <p>J'ai également piloté le pôle IA d'un projet hospitalier avec le CHU de Lille, et participé à la conception d'un avion BWB à propulsion hydrogène au sein d'une équipe internationale de 62 étudiants.</p>
-        <div style="margin-top: 2rem;">
-          <div class="section-label" style="margin-bottom:1rem">// Formation</div>
+        <div class="section-label" data-i18n="about.label">// 01 — Profil</div>
+        <h2 data-i18n="about.h2">À la frontière de la physique et de l'IA</h2>
+        <p data-i18n-html="about.p1">Étudiant ingénieur en double diplôme à <strong>Centrale Lille</strong> et <strong>Cranfield University</strong>, je me spécialise dans l'application de l'intelligence artificielle aux systèmes aéronautiques complexes.</p>
+        <p data-i18n-html="about.p2">Mon travail de recherche porte sur les <strong>Physics-Informed Neural Networks (PINN)</strong> — des architectures Deep Learning qui intègrent les équations physiques directement dans la fonction de perte, appliquées à la prédiction thermique des freins de l'A320 sur données industrielles Airbus.</p>
+        <p data-i18n="about.p3">J'ai également piloté le pôle IA d'un projet hospitalier avec le CHU de Lille, et participé à la conception d'un avion BWB à propulsion hydrogène au sein d'une équipe internationale de 62 étudiants.</p>
+        <div style="margin-top:2rem;">
+          <div class="section-label" style="margin-bottom:1rem" data-i18n="about.edu.label">// Formation</div>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-date">OCT. 2025 — SEPT. 2026</div>
-              <div class="timeline-school">Cranfield University — Cranfield, Royaume-Uni</div>
-              <div class="timeline-degree">MSc in Aerospace Vehicle Design · option Aircraft Design · Double diplôme avec Centrale Lille</div>
+              <div class="timeline-school">Cranfield University — <span data-i18n="tl.cranfield.loc">Cranfield, Royaume-Uni</span></div>
+              <div class="timeline-degree" data-i18n="tl.cranfield.deg">MSc in Aerospace Vehicle Design · option Aircraft Design · Double diplôme avec Centrale Lille</div>
               <div class="timeline-modules">
-                <span class="module-tag">Conception des systèmes aéronautiques</span>
-                <span class="module-tag">Stabilité & contrôle des aéronefs</span>
-                <span class="module-tag">Structures composites</span>
-                <span class="module-tag">Maintenance prédictive par ML</span>
-                <span class="module-tag">Analyses statistiques avancées</span>
-                <span class="module-tag">Mémoire de recherche industrielle</span>
+                <span class="module-tag" data-i18n="mod.c1">Conception des systèmes aéronautiques</span>
+                <span class="module-tag" data-i18n="mod.c2">Stabilité & contrôle des aéronefs</span>
+                <span class="module-tag" data-i18n="mod.c3">Structures composites</span>
+                <span class="module-tag" data-i18n="mod.c4">Maintenance prédictive par ML</span>
+                <span class="module-tag" data-i18n="mod.c5">Analyses statistiques avancées</span>
+                <span class="module-tag" data-i18n="mod.c6">Mémoire de recherche industrielle</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-date">SEPT. 2023 — MARS 2027</div>
-              <div class="timeline-school">École Centrale de Lille — Villeneuve-d'Ascq, France</div>
-              <div class="timeline-degree">Diplôme d'ingénieur généraliste — spécialisation Data Science & systèmes aéronautiques</div>
+              <div class="timeline-school">École Centrale de Lille — <span data-i18n="tl.centrale.loc">Villeneuve-d'Ascq, France</span></div>
+              <div class="timeline-degree" data-i18n="tl.centrale.deg">Diplôme d'ingénieur généraliste — spécialisation Data Science & systèmes aéronautiques</div>
               <div class="timeline-modules">
-                <span class="module-tag">Science des données & IA</span>
-                <span class="module-tag">Aérodynamique</span>
-                <span class="module-tag">Traitement du signal & théorie de Fourier</span>
-                <span class="module-tag">Programmation orientée objet</span>
-                <span class="module-tag">Systèmes embarqués</span>
-                <span class="module-tag">Transferts de chaleur et de masse</span>
-                <span class="module-tag">Optimisation & modélisation</span>
+                <span class="module-tag" data-i18n="mod.e1">Science des données & IA</span>
+                <span class="module-tag" data-i18n="mod.e2">Aérodynamique</span>
+                <span class="module-tag" data-i18n="mod.e3">Traitement du signal & théorie de Fourier</span>
+                <span class="module-tag" data-i18n="mod.e4">Programmation orientée objet</span>
+                <span class="module-tag" data-i18n="mod.e5">Systèmes embarqués</span>
+                <span class="module-tag" data-i18n="mod.e6">Transferts de chaleur et de masse</span>
+                <span class="module-tag" data-i18n="mod.e7">Optimisation & modélisation</span>
               </div>
             </div>
             <div class="timeline-item">
               <div class="timeline-date">SEPT. 2020 — JUILL. 2023</div>
-              <div class="timeline-school">Lycée Albert Schweitzer — Le Raincy, France</div>
-              <div class="timeline-degree">Classe Préparatoire aux Grandes Écoles · filière PCSI / PC*</div>
+              <div class="timeline-school">Lycée Albert Schweitzer — <span data-i18n="tl.schweitzer.loc">Le Raincy, France</span></div>
+              <div class="timeline-degree" data-i18n="tl.schweitzer.deg">Classe Préparatoire aux Grandes Écoles · filière PCSI / PC*</div>
               <div class="timeline-modules">
-                <span class="module-tag">Mathématiques avancées</span>
-                <span class="module-tag">Physique-chimie</span>
-                <span class="module-tag">Sciences de l'ingénieur</span>
+                <span class="module-tag" data-i18n="mod.s1">Mathématiques avancées</span>
+                <span class="module-tag" data-i18n="mod.s2">Physique-chimie</span>
+                <span class="module-tag" data-i18n="mod.s3">Sciences de l'ingénieur</span>
               </div>
             </div>
           </div>
@@ -301,8 +299,8 @@
       </div>
       <div>
         <div class="stat-grid">
-          <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Grandes écoles (double diplôme)</div></div>
-          <div class="stat-card"><div class="stat-num orange">5</div><div class="stat-label">Projets majeurs réalisés</div></div>
+          <div class="stat-card"><div class="stat-num">2</div><div class="stat-label" data-i18n="stat.schools">Grandes écoles (double diplôme)</div></div>
+          <div class="stat-card"><div class="stat-num orange">5</div><div class="stat-label" data-i18n="stat.projects">Projets majeurs réalisés</div></div>
         </div>
       </div>
     </div>
@@ -313,185 +311,141 @@
 
 <section id="projects">
   <div class="container">
-    <div class="section-label">// 02 — Projets</div>
-    <h2>Réalisations académiques</h2>
-    <p class="section-lead">Des projets à forte dimension industrielle, menés avec Airbus, le CHU de Lille et Cranfield University.</p>
+    <div class="section-label" data-i18n="proj.label">// 02 — Projets</div>
+    <h2 data-i18n="proj.h2">Réalisations académiques</h2>
+    <p class="section-lead" data-i18n="proj.lead">Des projets à forte dimension industrielle, menés avec Airbus, le CHU de Lille et Cranfield University.</p>
     <div class="projects-grid">
 
       <!-- PROJET 1 : PINN -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
-            <span class="project-type type-both">IA + Aéronautique</span>
-            <div class="project-title">PINN pour la prédiction thermique des freins</div>
-            <div class="project-partner">Airbus & Cranfield University · Févr. 2026 – présent (Mémoire de recherche)</div>
+            <span class="project-type type-both" data-i18n="p1.type">IA + Aéronautique</span>
+            <div class="project-title" data-i18n="p1.title">PINN pour la prédiction thermique des freins</div>
+            <div class="project-partner" data-i18n="p1.partner">Airbus & Cranfield University · Févr. 2026 – présent (Mémoire de recherche)</div>
             <ul class="project-bullets">
-              <li>Conception d'un réseau de neurones informé par la physique (PINN) intégrant les équations de la chaleur — conduction et convection — directement dans la fonction de perte, garantissant la cohérence physique du modèle même en dehors des données d'entraînement.</li>
-              <li>Nettoyage et normalisation de séries temporelles issues de bases de données expérimentales massives d'Airbus sur l'A320 : gestion des valeurs manquantes, alignement temporel, détection d'outliers.</li>
-              <li class="orange">Optimisation des hyperparamètres pour surpasser la précision des modèles de régression standards sur les phases critiques de freinage — là où la précision est la plus contrainte.</li>
+              <li data-i18n="p1.b1">Conception d'un réseau de neurones informé par la physique (PINN) intégrant les équations de la chaleur — conduction et convection — directement dans la fonction de perte, garantissant la cohérence physique du modèle même en dehors des données d'entraînement.</li>
+              <li data-i18n="p1.b2">Nettoyage et normalisation de séries temporelles issues de bases de données expérimentales massives d'Airbus sur l'A320 : gestion des valeurs manquantes, alignement temporel, détection d'outliers.</li>
+              <li class="orange" data-i18n="p1.b3">Optimisation des hyperparamètres pour surpasser la précision des modèles de régression standards sur les phases critiques de freinage — là où la précision est la plus contrainte.</li>
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result">
-              <strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.
-            </div>
+            <div class="project-result" data-i18n-html="p1.result"><strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.</div>
             <div class="project-tags">
-              <span class="tag">PyTorch</span>
-              <span class="tag">PINN</span>
-              <span class="tag">Deep Learning</span>
-              <span class="tag">Airbus A320</span>
-              <span class="tag">Équations thermiques</span>
-              <span class="tag">Séries temporelles</span>
-              <span class="tag">Hyperparamètre tuning</span>
+              <span class="tag">PyTorch</span><span class="tag">PINN</span><span class="tag">Deep Learning</span><span class="tag">Airbus A320</span><span class="tag">Équations thermiques</span><span class="tag">Séries temporelles</span><span class="tag">Hyperparamètre tuning</span>
             </div>
           </div>
-        </div><!-- /project-body -->
+        </div>
       </div>
 
       <!-- PROJET 2 : BWB -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
-            <span class="project-type type-aero">Aéronautique</span>
-            <div class="project-title">Conception d'un avion BWB à propulsion hydrogène</div>
-            <div class="project-partner">Cranfield University / Airbus · Oct. 2025 – Mai 2026 (Projet de groupe — 62 étudiants)</div>
+            <span class="project-type type-aero" data-i18n="p2.type">Aéronautique</span>
+            <div class="project-title" data-i18n="p2.title">Conception d'un avion BWB à propulsion hydrogène</div>
+            <div class="project-partner" data-i18n="p2.partner">Cranfield University / Airbus · Oct. 2025 – Mai 2026 (Projet de groupe — 62 étudiants)</div>
             <ul class="project-bullets">
-              <li class="orange">Responsable de l'intégration des moteurs et de la coordination de la CAO globale au sein d'une équipe internationale de 62 étudiants — point de convergence entre les sous-équipes structures, aérodynamique et propulsion.</li>
-              <li>Études de positionnement des turboréacteurs sur la configuration Blended Wing Body : compromis entre trainée d'interférence, accès maintenance et bruit en cabine.</li>
-              <li>Design aérodynamique de la nacelle et des inverseurs de poussée, analyse de conformité aux normes de certification EASA CS-25.</li>
-              <li>Rédaction du mémoire de projet et soutenance devant un jury d'experts de l'industrie aéronautique.</li>
+              <li class="orange" data-i18n="p2.b1">Responsable de l'intégration des moteurs et de la coordination de la CAO globale au sein d'une équipe internationale de 62 étudiants — point de convergence entre les sous-équipes structures, aérodynamique et propulsion.</li>
+              <li data-i18n="p2.b2">Études de positionnement des turboréacteurs sur la configuration Blended Wing Body : compromis entre trainée d'interférence, accès maintenance et bruit en cabine.</li>
+              <li data-i18n="p2.b3">Design aérodynamique de la nacelle et des inverseurs de poussée, analyse de conformité aux normes de certification EASA CS-25.</li>
+              <li data-i18n="p2.b4">Rédaction du mémoire de projet et soutenance devant un jury d'experts de l'industrie aéronautique.</li>
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result orange-border">
-              <strong>Contexte :</strong> La configuration BWB à hydrogène représente l'une des pistes les plus prometteuses pour décarboner l'aviation long-courrier. Ce projet en collaboration avec Airbus visait une faisabilité réaliste selon les standards industriels.
-            </div>
+            <div class="project-result orange-border" data-i18n-html="p2.result"><strong>Contexte :</strong> La configuration BWB à hydrogène représente l'une des pistes les plus prometteuses pour décarboner l'aviation long-courrier. Ce projet en collaboration avec Airbus visait une faisabilité réaliste selon les standards industriels.</div>
             <div class="project-tags">
-              <span class="tag">Catia V5</span>
-              <span class="tag">3DEXPERIENCE</span>
-              <span class="tag">Aérodynamique nacelle</span>
-              <span class="tag">Propulsion H₂</span>
-              <span class="tag">EASA CS-25</span>
-              <span class="tag">Gestion de projet CAO</span>
+              <span class="tag">Catia V5</span><span class="tag">3DEXPERIENCE</span><span class="tag">Aérodynamique nacelle</span><span class="tag">Propulsion H₂</span><span class="tag">EASA CS-25</span><span class="tag">Gestion de projet CAO</span>
             </div>
           </div>
           <a href="memoire-BWB.pdf" target="_blank" class="project-footer" onclick="event.stopPropagation()">
-            <span>📄 Lire le mémoire de projet</span>
+            <span data-i18n="p2.footer">📄 Lire le mémoire de projet</span>
             <span class="project-footer-icon">↗</span>
           </a>
-        </div><!-- /project-body -->
+        </div>
       </div>
 
-      <!-- PROJET 3 : IA médicale -->
+      <!-- PROJET 3 : FPDM -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
-            <span class="project-type type-ai">IA</span>
-            <div class="project-title">Faire parler les données médicales avec l'IA</div>
-            <div class="project-partner">CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)</div>
+            <span class="project-type type-ai" data-i18n="p3.type">IA</span>
+            <div class="project-title" data-i18n="p3.title">Faire parler les données médicales avec l'IA</div>
+            <div class="project-partner" data-i18n="p3.partner">CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)</div>
             <ul class="project-bullets">
-              <li>Pilotage du pôle « prédiction » au sein d'une équipe de 12 étudiants pour le développement d'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.</li>
-              <li>Fine-tuning de Llama 3 pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
-              <li class="orange">Entraînement d'un modèle ML sur 300 000 patients de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
+              <li data-i18n="p3.b1">Pilotage du pôle « prédiction » au sein d'une équipe de 12 étudiants pour le développement d'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.</li>
+              <li data-i18n="p3.b2">Fine-tuning de Llama 3 pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.</li>
+              <li class="orange" data-i18n="p3.b3">Entraînement d'un modèle ML sur 300 000 patients de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d'orientation post-hospitalisation.</li>
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result">
-              <strong>Impact :</strong> L'outil vise à aider les équipes soignantes à anticiper les flux patients et à mieux planifier les ressources hospitalières — un enjeu clé pour les CHU à forte activité comme Lille.
-            </div>
+            <div class="project-result" data-i18n-html="p3.result"><strong>Impact :</strong> L'outil vise à aider les équipes soignantes à anticiper les flux patients et à mieux planifier les ressources hospitalières — un enjeu clé pour les CHU à forte activité comme Lille.</div>
             <div class="project-tags">
-              <span class="tag">Llama 3</span>
-              <span class="tag">Fine-tuning LLM</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">MIMIC-IV</span>
-              <span class="tag">API Python</span>
-              <span class="tag">NLP médical</span>
-              <span class="tag">ML prédictif</span>
+              <span class="tag">Llama 3</span><span class="tag">Fine-tuning LLM</span><span class="tag">Scikit-learn</span><span class="tag">MIMIC-IV</span><span class="tag">API Python</span><span class="tag">NLP médical</span><span class="tag">ML prédictif</span>
             </div>
           </div>
           <div class="project-footer-double">
-            <a href="rapport-utilisateur.pdf" target="_blank" class="project-footer project-footer-left">
-              <span>📄 Rapport utilisateur</span>
-              <span class="project-footer-icon">↗</span>
+            <a href="rapport-utilisateur.pdf" target="_blank" class="project-footer project-footer-left" onclick="event.stopPropagation()">
+              <span data-i18n="p3.footer1">📄 Rapport utilisateur</span><span class="project-footer-icon">↗</span>
             </a>
-            <a href="rapport-technique.pdf" target="_blank" class="project-footer project-footer-right-item">
-              <span>📄 Rapport technique</span>
-              <span class="project-footer-icon">↗</span>
+            <a href="rapport-technique.pdf" target="_blank" class="project-footer project-footer-right-item" onclick="event.stopPropagation()">
+              <span data-i18n="p3.footer2">📄 Rapport technique</span><span class="project-footer-icon">↗</span>
             </a>
           </div>
-        </div><!-- /project-body -->
+        </div>
       </div>
 
       <!-- PROJET 4 : Prophet -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
-            <span class="project-type type-ai">IA</span>
-            <div class="project-title">Prédiction de consommation électrique avec Prophet</div>
-            <div class="project-partner">Projet personnel · Centrale Lille · 2025</div>
+            <span class="project-type type-ai" data-i18n="p4.type">IA</span>
+            <div class="project-title" data-i18n="p4.title">Prédiction de consommation électrique avec Prophet</div>
+            <div class="project-partner" data-i18n="p4.partner">Projet personnel · Centrale Lille · 2025</div>
             <ul class="project-bullets">
-              <li>Analyse exploratoire d'une série temporelle horaire sur 20 ans (1998–2018) couvrant plusieurs régions du réseau PJM Interconnection (est des États-Unis), entre 25 000 et 60 000 MW de consommation.</li>
-              <li>Décomposition de la série en tendance, saisonnalités multiples (journalière, hebdomadaire, annuelle) et résidus — identification d'une distribution bimodale liée aux pics estivaux (climatisation) et hivernaux (chauffage).</li>
-              <li class="orange">Entraînement du modèle Prophet de Meta sur la région PJME, évaluation par RMSE et MAE, puis amélioration des performances en intégrant les effets de jours fériés américains dans la fonction de perte.</li>
+              <li data-i18n="p4.b1">Analyse exploratoire d'une série temporelle horaire sur 20 ans (1998–2018) couvrant plusieurs régions du réseau PJM Interconnection (est des États-Unis), entre 25 000 et 60 000 MW de consommation.</li>
+              <li data-i18n="p4.b2">Décomposition de la série en tendance, saisonnalités multiples (journalière, hebdomadaire, annuelle) et résidus — identification d'une distribution bimodale liée aux pics estivaux (climatisation) et hivernaux (chauffage).</li>
+              <li class="orange" data-i18n="p4.b3">Entraînement du modèle Prophet de Meta sur la région PJME, évaluation par RMSE et MAE, puis amélioration des performances en intégrant les effets de jours fériés américains dans la fonction de perte.</li>
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result">
-              <strong>Modèle :</strong> Prophet modélise la série comme y(t) = g(t) + s(t) + h(t) + ε — tendance, saisonnalités et effets calendaires — ce qui le rend particulièrement adapté aux données énergétiques à forte structure temporelle.
-            </div>
+            <div class="project-result" data-i18n-html="p4.result"><strong>Modèle :</strong> Prophet modélise la série comme y(t) = g(t) + s(t) + h(t) + ε — tendance, saisonnalités et effets calendaires — ce qui le rend particulièrement adapté aux données énergétiques à forte structure temporelle.</div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Prophet (Meta)</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Séries temporelles</span>
-              <span class="tag">Statsmodels</span>
-              <span class="tag">Scikit-learn</span>
-              <span class="tag">Kaggle</span>
-              <span class="tag">EDA</span>
+              <span class="tag">Python</span><span class="tag">Prophet (Meta)</span><span class="tag">Pandas</span><span class="tag">Séries temporelles</span><span class="tag">Statsmodels</span><span class="tag">Scikit-learn</span><span class="tag">Kaggle</span><span class="tag">EDA</span>
             </div>
           </div>
-          <a href="https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb" target="_blank" class="project-footer" style="border-top-color: rgba(26,111,212,0.2); color: var(--blue);" onclick="event.stopPropagation()">
-            <span>📓 Voir le notebook</span>
+          <a href="https://github.com/ton-username/ton-username.github.io/blob/main/prophet-energy.ipynb" target="_blank" class="project-footer blue" onclick="event.stopPropagation()">
+            <span data-i18n="p4.footer">📓 Voir le notebook</span>
             <span class="project-footer-icon">↗</span>
           </a>
-        </div><!-- /project-body -->
+        </div>
       </div>
 
       <!-- PROJET 5 : ICO -->
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-left">
-            <span class="project-type type-ai">IA</span>
-            <div class="project-title">Optimisation de tournées de véhicules par méta-heuristiques et Q-Learning</div>
-            <div class="project-partner">Centrale Lille — Électif Intelligence Collaborative · Mai 2025 (Projet de groupe — 6 étudiants)</div>
+            <span class="project-type type-ai" data-i18n="p5.type">IA</span>
+            <div class="project-title" data-i18n="p5.title">Optimisation de tournées de véhicules par méta-heuristiques et Q-Learning</div>
+            <div class="project-partner" data-i18n="p5.partner">Centrale Lille — Électif Intelligence Collaborative · Mai 2025 (Projet de groupe — 6 étudiants)</div>
             <ul class="project-bullets">
-              <li>Implémentation et comparaison de trois méta-heuristiques classiques sur le problème VRP (NP-difficile) : Recherche Tabu, Recuit Simulé et Algorithme Génétique — avec génération d'instances synthétiques reproductibles via Pydantic.</li>
-              <li>Développement d'un système multi-agents (SMA) à boucle Top-N : plusieurs planificateurs coopèrent à chaque itération, fusionnent leurs solutions et ne conservent que les N meilleures — réduisant le coût de 14 à 26 % selon la combinaison d'agents.</li>
-              <li class="orange">Conception d'un Q-Learning tabulaire avec opérateurs 2-opt en mode best-improvement : en s'appuyant sur une solution SA comme point de départ, l'agent atteint un coût final de 9 900 sur 100 clients — meilleure performance globale du projet.</li>
-              <li>Démo interactive Streamlit permettant de configurer les hyper-paramètres, visualiser les routes en temps réel et comparer tous les algorithmes via un benchmark commun.</li>
+              <li data-i18n="p5.b1">Implémentation et comparaison de trois méta-heuristiques classiques sur le problème VRP (NP-difficile) : Recherche Tabu, Recuit Simulé et Algorithme Génétique — avec génération d'instances synthétiques reproductibles via Pydantic.</li>
+              <li data-i18n="p5.b2">Développement d'un système multi-agents (SMA) à boucle Top-N : plusieurs planificateurs coopèrent à chaque itération, fusionnent leurs solutions et ne conservent que les N meilleures — réduisant le coût de 14 à 26 % selon la combinaison d'agents.</li>
+              <li class="orange" data-i18n="p5.b3">Conception d'un Q-Learning tabulaire avec opérateurs 2-opt en mode best-improvement : en s'appuyant sur une solution SA comme point de départ, l'agent atteint un coût final de 9 900 sur 100 clients — meilleure performance globale du projet.</li>
+              <li data-i18n="p5.b4">Démo interactive Streamlit permettant de configurer les hyper-paramètres, visualiser les routes en temps réel et comparer tous les algorithmes via un benchmark commun.</li>
             </ul>
           </div>
           <div class="project-right">
-            <div class="project-result">
-              <strong>Résultat :</strong> La stratégie gagnante est l'enchaînement Recuit Simulé → Q-Learning tabulaire : elle surpasse de ~1 600 unités le meilleur Tabu et de ~3 100 unités le meilleur SMA sur l'instance 100 clients.
-            </div>
+            <div class="project-result" data-i18n-html="p5.result"><strong>Résultat :</strong> La stratégie gagnante est l'enchaînement Recuit Simulé → Q-Learning tabulaire : elle surpasse de ~1 600 unités le meilleur Tabu et de ~3 100 unités le meilleur SMA sur l'instance 100 clients.</div>
             <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Q-Learning</span>
-              <span class="tag">Tabu Search</span>
-              <span class="tag">Recuit Simulé</span>
-              <span class="tag">Algorithme génétique</span>
-              <span class="tag">Systèmes multi-agents</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Pydantic</span>
-              <span class="tag">Optimisation combinatoire</span>
+              <span class="tag">Python</span><span class="tag">Q-Learning</span><span class="tag">Tabu Search</span><span class="tag">Recuit Simulé</span><span class="tag">Algorithme génétique</span><span class="tag">Systèmes multi-agents</span><span class="tag">Streamlit</span><span class="tag">Pydantic</span><span class="tag">Optimisation combinatoire</span>
             </div>
           </div>
-          <a href="rapport-ICO.pdf" target="_blank" class="project-footer" style="border-top-color: rgba(26,111,212,0.2); color: var(--blue);" onclick="event.stopPropagation()">
-            <span>📄 Lire le rapport</span>
+          <a href="rapport-ICO.pdf" target="_blank" class="project-footer blue" onclick="event.stopPropagation()">
+            <span data-i18n="p5.footer">📄 Lire le rapport</span>
             <span class="project-footer-icon">↗</span>
           </a>
-        </div><!-- /project-body -->
+        </div>
       </div>
 
     </div>
@@ -502,26 +456,26 @@
 
 <section id="skills">
   <div class="container reveal">
-    <div class="section-label">// 03 — Compétences</div>
-    <h2>Stack technique</h2>
-    <p class="section-lead">Un profil pluridisciplinaire qui couvre le logiciel, la simulation numérique et les systèmes aéronautiques.</p>
+    <div class="section-label" data-i18n="skills.label">// 03 — Compétences</div>
+    <h2 data-i18n="skills.h2">Stack technique</h2>
+    <p class="section-lead" data-i18n="skills.lead">Un profil pluridisciplinaire qui couvre le logiciel, la simulation numérique et les systèmes aéronautiques.</p>
     <div class="skills-layout">
       <div>
-        <div class="skill-group-title">Data Science & IA</div>
+        <div class="skill-group-title" data-i18n="sg.ai">Data Science & IA</div>
         <div class="skills-chips">
           <span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">SciPy</span><span class="chip">PINN</span><span class="chip">Deep Learning</span><span class="chip">LLM fine-tuning</span><span class="chip">ML prédictif</span>
         </div>
-        <div class="skill-group-title" style="margin-top:2rem">Développement</div>
+        <div class="skill-group-title" style="margin-top:2rem" data-i18n="sg.dev">Développement</div>
         <div class="skills-chips">
           <span class="chip">C / C++</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Git / GitHub</span><span class="chip">Systèmes embarqués</span>
         </div>
       </div>
       <div>
-        <div class="skill-group-title orange-accent">Ingénierie & simulation</div>
+        <div class="skill-group-title orange-accent" data-i18n="sg.eng">Ingénierie & simulation</div>
         <div class="skills-chips">
           <span class="chip orange">Star-CCM+ (CFD)</span><span class="chip orange">Catia V5</span><span class="chip orange">SolidWorks</span><span class="chip orange">3DEXPERIENCE</span><span class="chip orange">COMSOL</span><span class="chip orange">Nastran & Patran (FEA)</span>
         </div>
-        <div class="skill-group-title orange-accent" style="margin-top:2rem">Domaines aéronautiques</div>
+        <div class="skill-group-title orange-accent" style="margin-top:2rem" data-i18n="sg.aero">Domaines aéronautiques</div>
         <div class="skills-chips">
           <span class="chip orange">Stabilité & contrôle</span><span class="chip orange">Structures composites</span><span class="chip orange">Maintenance prédictive</span><span class="chip orange">Aérodynamique</span><span class="chip orange">Transferts thermiques</span><span class="chip orange">Traitement du signal</span>
         </div>
@@ -535,30 +489,177 @@
 <section id="contact">
   <div class="container">
     <div class="contact-box reveal">
-      <div class="section-label" style="text-align:center">// 04 — Contact</div>
-      <h2>Disponible dès septembre 2026</h2>
-      <p>Stage de fin d'études (6 mois) — Aéronautique, IA embarquée, simulation numérique. N'hésitez pas à me contacter.</p>
+      <div class="section-label" style="text-align:center" data-i18n="contact.label">// 04 — Contact</div>
+      <h2 data-i18n="contact.h2">Disponible dès septembre 2026</h2>
+      <p data-i18n="contact.p">Stage de fin d'études (6 mois) — Aéronautique, IA embarquée, simulation numérique. N'hésitez pas à me contacter.</p>
       <div class="contact-links">
         <a href="mailto:ugo.roccamatisi@gmail.com" class="btn btn-primary">✉ ugo.roccamatisi@gmail.com</a>
         <a href="https://www.linkedin.com/in/ugo-roccamatisi/" class="btn btn-outline" target="_blank">LinkedIn</a>
         <a href="https://github.com/" class="btn btn-outline" target="_blank">GitHub</a>
-        <a href="CVfr.pdf" class="btn btn-outline" target="_blank">CV (PDF)</a>
+        <a href="CVfr.pdf" class="btn btn-outline" target="_blank" data-i18n="contact.cv">CV (PDF)</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>© 2026 — Ugo Roccamatisi · Ingénieur Aéronautique, Data Science & Simulation · Paris, France</span>
+  <span data-i18n="footer.text">© 2026 — Ugo Roccamatisi · Ingénieur Aéronautique, Data Science & Simulation · Paris, France</span>
 </footer>
 
 <script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+const T = {
+  fr: {
+    'nav.profile':'Profil','nav.projects':'Projets','nav.skills':'Compétences','nav.contact':'Contact',
+    'hero.tag':'Ingénieur aéronautique & Data Science',
+    'hero.sub':'Double diplôme Centrale Lille & Cranfield University. Je travaille à l\'intersection de la simulation numérique, de la modélisation et de l\'intelligence artificielle — notamment sur des PINN appliqués aux données industrielles Airbus.',
+    'hero.cta1':'Voir mes projets →','hero.cta2':'Télécharger mon CV',
+    'hud.status':'profil.status — actif','hud.l.edu':'Formation','hud.l.spec':'Spécialité','hud.v.spec':'IA & Aerospace Design','hud.l.loc':'Localisation','hud.l.seek':'Recherche','hud.v.seek':'Stage fin d\'études — sept. 2026 ✓','hud.l.eng':'Anglais','hud.bar.aero':'Conception aéronautique',
+    'about.label':'// 01 — Profil','about.h2':'À la frontière de la physique et de l\'IA',
+    'about.p1':'Étudiant ingénieur en double diplôme à <strong>Centrale Lille</strong> et <strong>Cranfield University</strong>, je me spécialise dans l\'application de l\'intelligence artificielle aux systèmes aéronautiques complexes.',
+    'about.p2':'Mon travail de recherche porte sur les <strong>Physics-Informed Neural Networks (PINN)</strong> — des architectures Deep Learning qui intègrent les équations physiques directement dans la fonction de perte, appliquées à la prédiction thermique des freins de l\'A320 sur données industrielles Airbus.',
+    'about.p3':'J\'ai également piloté le pôle IA d\'un projet hospitalier avec le CHU de Lille, et participé à la conception d\'un avion BWB à propulsion hydrogène au sein d\'une équipe internationale de 62 étudiants.',
+    'about.edu.label':'// Formation',
+    'tl.cranfield.loc':'Cranfield, Royaume-Uni','tl.cranfield.deg':'MSc in Aerospace Vehicle Design · option Aircraft Design · Double diplôme avec Centrale Lille',
+    'tl.centrale.loc':'Villeneuve-d\'Ascq, France','tl.centrale.deg':'Diplôme d\'ingénieur généraliste — spécialisation Data Science & systèmes aéronautiques',
+    'tl.schweitzer.loc':'Le Raincy, France','tl.schweitzer.deg':'Classe Préparatoire aux Grandes Écoles · filière PCSI / PC*',
+    'mod.c1':'Conception des systèmes aéronautiques','mod.c2':'Stabilité & contrôle des aéronefs','mod.c3':'Structures composites','mod.c4':'Maintenance prédictive par ML','mod.c5':'Analyses statistiques avancées','mod.c6':'Mémoire de recherche industrielle',
+    'mod.e1':'Science des données & IA','mod.e2':'Aérodynamique','mod.e3':'Traitement du signal & théorie de Fourier','mod.e4':'Programmation orientée objet','mod.e5':'Systèmes embarqués','mod.e6':'Transferts de chaleur et de masse','mod.e7':'Optimisation & modélisation',
+    'mod.s1':'Mathématiques avancées','mod.s2':'Physique-chimie','mod.s3':'Sciences de l\'ingénieur',
+    'stat.schools':'Grandes écoles (double diplôme)','stat.projects':'Projets majeurs réalisés',
+    'proj.label':'// 02 — Projets','proj.h2':'Réalisations académiques','proj.lead':'Des projets à forte dimension industrielle, menés avec Airbus, le CHU de Lille et Cranfield University.',
+    'p1.type':'IA + Aéronautique','p1.title':'PINN pour la prédiction thermique des freins','p1.partner':'Airbus & Cranfield University · Févr. 2026 – présent (Mémoire de recherche)',
+    'p1.b1':'Conception d\'un réseau de neurones informé par la physique (PINN) intégrant les équations de la chaleur — conduction et convection — directement dans la fonction de perte, garantissant la cohérence physique du modèle même en dehors des données d\'entraînement.',
+    'p1.b2':'Nettoyage et normalisation de séries temporelles issues de bases de données expérimentales massives d\'Airbus sur l\'A320 : gestion des valeurs manquantes, alignement temporel, détection d\'outliers.',
+    'p1.b3':'Optimisation des hyperparamètres pour surpasser la précision des modèles de régression standards sur les phases critiques de freinage — là où la précision est la plus contrainte.',
+    'p1.result':'<strong>Approche :</strong> Data-driven simulation — le modèle ne se contente pas d\'apprendre les données, il respecte les lois physiques sous-jacentes, ce qui le rend plus robuste et interprétable.',
+    'p2.type':'Aéronautique','p2.title':'Conception d\'un avion BWB à propulsion hydrogène','p2.partner':'Cranfield University / Airbus · Oct. 2025 – Mai 2026 (Projet de groupe — 62 étudiants)',
+    'p2.b1':'Responsable de l\'intégration des moteurs et de la coordination de la CAO globale au sein d\'une équipe internationale de 62 étudiants — point de convergence entre les sous-équipes structures, aérodynamique et propulsion.',
+    'p2.b2':'Études de positionnement des turboréacteurs sur la configuration Blended Wing Body : compromis entre trainée d\'interférence, accès maintenance et bruit en cabine.',
+    'p2.b3':'Design aérodynamique de la nacelle et des inverseurs de poussée, analyse de conformité aux normes de certification EASA CS-25.',
+    'p2.b4':'Rédaction du mémoire de projet et soutenance devant un jury d\'experts de l\'industrie aéronautique.',
+    'p2.result':'<strong>Contexte :</strong> La configuration BWB à hydrogène représente l\'une des pistes les plus prometteuses pour décarboner l\'aviation long-courrier. Ce projet en collaboration avec Airbus visait une faisabilité réaliste selon les standards industriels.',
+    'p2.footer':'📄 Lire le mémoire de projet',
+    'p3.type':'IA','p3.title':'Faire parler les données médicales avec l\'IA','p3.partner':'CHU de Lille & Sillage · Sept. 2023 – Févr. 2025 (Projet de groupe — 12 étudiants)',
+    'p3.b1':'Pilotage du pôle « prédiction » au sein d\'une équipe de 12 étudiants pour le développement d\'une application IA (API + interface utilisateur) de support à la prise en charge hospitalière.',
+    'p3.b2':'Fine-tuning de Llama 3 pour la structuration automatique de données médicales non structurées (comptes rendus, notes cliniques) en entrées exploitables par le modèle prédictif.',
+    'p3.b3':'Entraînement d\'un modèle ML sur 300 000 patients de la base MIMIC-IV, atteignant 70 % de précision sur la prédiction de durée de séjour et d\'orientation post-hospitalisation.',
+    'p3.result':'<strong>Impact :</strong> L\'outil vise à aider les équipes soignantes à anticiper les flux patients et à mieux planifier les ressources hospitalières — un enjeu clé pour les CHU à forte activité comme Lille.',
+    'p3.footer1':'📄 Rapport utilisateur','p3.footer2':'📄 Rapport technique',
+    'p4.type':'IA','p4.title':'Prédiction de consommation électrique avec Prophet','p4.partner':'Projet personnel · Centrale Lille · 2025',
+    'p4.b1':'Analyse exploratoire d\'une série temporelle horaire sur 20 ans (1998–2018) couvrant plusieurs régions du réseau PJM Interconnection (est des États-Unis), entre 25 000 et 60 000 MW de consommation.',
+    'p4.b2':'Décomposition de la série en tendance, saisonnalités multiples (journalière, hebdomadaire, annuelle) et résidus — identification d\'une distribution bimodale liée aux pics estivaux (climatisation) et hivernaux (chauffage).',
+    'p4.b3':'Entraînement du modèle Prophet de Meta sur la région PJME, évaluation par RMSE et MAE, puis amélioration des performances en intégrant les effets de jours fériés américains dans la fonction de perte.',
+    'p4.result':'<strong>Modèle :</strong> Prophet modélise la série comme y(t) = g(t) + s(t) + h(t) + ε — tendance, saisonnalités et effets calendaires — ce qui le rend particulièrement adapté aux données énergétiques à forte structure temporelle.',
+    'p4.footer':'📓 Voir le notebook',
+    'p5.type':'IA','p5.title':'Optimisation de tournées de véhicules par méta-heuristiques et Q-Learning','p5.partner':'Centrale Lille — Électif Intelligence Collaborative · Mai 2025 (Projet de groupe — 6 étudiants)',
+    'p5.b1':'Implémentation et comparaison de trois méta-heuristiques classiques sur le problème VRP (NP-difficile) : Recherche Tabu, Recuit Simulé et Algorithme Génétique — avec génération d\'instances synthétiques reproductibles via Pydantic.',
+    'p5.b2':'Développement d\'un système multi-agents (SMA) à boucle Top-N : plusieurs planificateurs coopèrent à chaque itération, fusionnent leurs solutions et ne conservent que les N meilleures — réduisant le coût de 14 à 26 % selon la combinaison d\'agents.',
+    'p5.b3':'Conception d\'un Q-Learning tabulaire avec opérateurs 2-opt en mode best-improvement : en s\'appuyant sur une solution SA comme point de départ, l\'agent atteint un coût final de 9 900 sur 100 clients — meilleure performance globale du projet.',
+    'p5.b4':'Démo interactive Streamlit permettant de configurer les hyper-paramètres, visualiser les routes en temps réel et comparer tous les algorithmes via un benchmark commun.',
+    'p5.result':'<strong>Résultat :</strong> La stratégie gagnante est l\'enchaînement Recuit Simulé → Q-Learning tabulaire : elle surpasse de ~1 600 unités le meilleur Tabu et de ~3 100 unités le meilleur SMA sur l\'instance 100 clients.',
+    'p5.footer':'📄 Lire le rapport',
+    'skills.label':'// 03 — Compétences','skills.h2':'Stack technique','skills.lead':'Un profil pluridisciplinaire qui couvre le logiciel, la simulation numérique et les systèmes aéronautiques.',
+    'sg.ai':'Data Science & IA','sg.dev':'Développement','sg.eng':'Ingénierie & simulation','sg.aero':'Domaines aéronautiques',
+    'contact.label':'// 04 — Contact','contact.h2':'Disponible dès septembre 2026','contact.p':'Stage de fin d\'études (6 mois) — Aéronautique, IA embarquée, simulation numérique. N\'hésitez pas à me contacter.','contact.cv':'CV (PDF)',
+    'footer.text':'© 2026 — Ugo Roccamatisi · Ingénieur Aéronautique, Data Science & Simulation · Paris, France'
+  },
+  en: {
+    'nav.profile':'Profile','nav.projects':'Projects','nav.skills':'Skills','nav.contact':'Contact',
+    'hero.tag':'Aerospace Engineer & Data Scientist',
+    'hero.sub':'Dual degree from Centrale Lille & Cranfield University. I work at the intersection of numerical simulation, modelling and artificial intelligence — particularly on PINNs applied to Airbus industrial data.',
+    'hero.cta1':'View my projects →','hero.cta2':'Download my CV',
+    'hud.status':'profile.status — active','hud.l.edu':'Education','hud.l.spec':'Specialty','hud.v.spec':'AI & Aerospace Design','hud.l.loc':'Location','hud.l.seek':'Seeking','hud.v.seek':'End-of-studies internship — Sept. 2026 ✓','hud.l.eng':'English','hud.bar.aero':'Aerospace Design',
+    'about.label':'// 01 — Profile','about.h2':'At the frontier of physics and AI',
+    'about.p1':'Engineering student pursuing a dual degree at <strong>Centrale Lille</strong> and <strong>Cranfield University</strong>, specializing in the application of artificial intelligence to complex aeronautical systems.',
+    'about.p2':'My research focuses on <strong>Physics-Informed Neural Networks (PINN)</strong> — Deep Learning architectures that integrate physical equations directly into the loss function, applied to brake thermal prediction on Airbus A320 industrial data.',
+    'about.p3':'I also led the AI team of a hospital project with CHU de Lille, and participated in the design of a hydrogen-powered BWB aircraft within an international team of 62 students.',
+    'about.edu.label':'// Education',
+    'tl.cranfield.loc':'Cranfield, United Kingdom','tl.cranfield.deg':'MSc in Aerospace Vehicle Design · Aircraft Design option · Dual degree with Centrale Lille',
+    'tl.centrale.loc':'Villeneuve-d\'Ascq, France','tl.centrale.deg':'General Engineering Degree — specialization in Data Science & Aeronautical Systems',
+    'tl.schweitzer.loc':'Le Raincy, France','tl.schweitzer.deg':'Preparatory Classes for Engineering Schools (CPGE) · PCSI / PC* track',
+    'mod.c1':'Aeronautical Systems Design','mod.c2':'Aircraft Stability & Control','mod.c3':'Composite Structures','mod.c4':'Predictive Maintenance via ML','mod.c5':'Advanced Statistical Analysis','mod.c6':'Industrial Research Thesis',
+    'mod.e1':'Data Science & AI','mod.e2':'Aerodynamics','mod.e3':'Signal Processing & Fourier Theory','mod.e4':'Object-Oriented Programming','mod.e5':'Embedded Systems','mod.e6':'Heat & Mass Transfer','mod.e7':'Optimization & Modelling',
+    'mod.s1':'Advanced Mathematics','mod.s2':'Physics & Chemistry','mod.s3':'Engineering Sciences',
+    'stat.schools':'Engineering schools (dual degree)','stat.projects':'Major projects completed',
+    'proj.label':'// 02 — Projects','proj.h2':'Academic Projects','proj.lead':'Industrially-driven projects, carried out with Airbus, CHU de Lille and Cranfield University.',
+    'p1.type':'AI + Aerospace','p1.title':'PINN for Brake Thermal Prediction','p1.partner':'Airbus & Cranfield University · Feb. 2026 – present (Research Thesis)',
+    'p1.b1':'Design of a Physics-Informed Neural Network (PINN) integrating heat transfer equations — conduction and convection — directly into the loss function, ensuring physical consistency even outside the training data range.',
+    'p1.b2':'Cleaning and normalization of time series from Airbus\'s massive A320 experimental database: handling missing values, temporal alignment, and outlier detection.',
+    'p1.b3':'Hyperparameter optimization to outperform standard regression models on critical braking phases — where precision is most constrained.',
+    'p1.result':'<strong>Approach:</strong> Data-driven simulation — the model does not merely learn from data; it respects the underlying physical laws, making it more robust and interpretable.',
+    'p2.type':'Aerospace','p2.title':'Design of a Hydrogen-Powered BWB Aircraft','p2.partner':'Cranfield University / Airbus · Oct. 2025 – May 2026 (Group Project — 62 students)',
+    'p2.b1':'Responsible for engine integration and overall CAD coordination within an international team of 62 students — convergence point between the structural, aerodynamic, and propulsion sub-teams.',
+    'p2.b2':'Turbofan engine positioning studies on the Blended Wing Body configuration: trade-off between interference drag, maintenance access, and cabin noise.',
+    'p2.b3':'Aerodynamic design of the nacelle and thrust reversers, compliance analysis with EASA CS-25 certification standards.',
+    'p2.b4':'Writing the project report and presenting solutions to a jury of aerospace industry experts.',
+    'p2.result':'<strong>Context:</strong> The hydrogen-powered BWB configuration is one of the most promising paths to decarbonize long-haul aviation. This Airbus-backed project aimed at realistic feasibility according to industrial standards.',
+    'p2.footer':'📄 Read the Project Report',
+    'p3.type':'AI','p3.title':'Making Medical Data Talk with AI','p3.partner':'CHU de Lille & Sillage · Sept. 2023 – Feb. 2025 (Group Project — 12 students)',
+    'p3.b1':'Led the "prediction" team within a group of 12 students to develop an AI application (API + user interface) for hospital patient management support.',
+    'p3.b2':'Fine-tuning of Llama 3 for automatic structuring of unstructured medical data (clinical reports, notes) into usable inputs for the predictive model.',
+    'p3.b3':'Training an ML model on 300,000 patients from the MIMIC-IV database, achieving 70% accuracy in predicting length of stay and post-hospitalization orientation.',
+    'p3.result':'<strong>Impact:</strong> The tool aims to help medical teams anticipate patient flows and better plan hospital resources — a key challenge for high-activity CHUs like Lille.',
+    'p3.footer1':'📄 User Report','p3.footer2':'📄 Technical Report',
+    'p4.type':'AI','p4.title':'Electricity Consumption Forecasting with Prophet','p4.partner':'Personal Project · Centrale Lille · 2025',
+    'p4.b1':'Exploratory analysis of a 20-year hourly time series (1998–2018) covering several regions of the PJM Interconnection network (eastern United States), between 25,000 and 60,000 MW of consumption.',
+    'p4.b2':'Decomposition of the series into trend, multiple seasonalities (daily, weekly, annual), and residuals — identification of a bimodal distribution linked to summer (air conditioning) and winter (heating) peaks.',
+    'p4.b3':'Training of Meta\'s Prophet model on the PJME region, evaluation by RMSE and MAE, then performance improvement by incorporating American holiday effects into the loss function.',
+    'p4.result':'<strong>Model:</strong> Prophet models the series as y(t) = g(t) + s(t) + h(t) + ε — trend, seasonalities and calendar effects — making it particularly well-suited for energy data with strong temporal structure.',
+    'p4.footer':'📓 View Notebook',
+    'p5.type':'AI','p5.title':'Vehicle Routing Optimization with Metaheuristics & Q-Learning','p5.partner':'Centrale Lille — Intelligence Collaborative Elective · May 2025 (Group Project — 6 students)',
+    'p5.b1':'Implementation and comparison of three classic metaheuristics on the NP-hard VRP problem: Tabu Search, Simulated Annealing, and Genetic Algorithm — with reproducible synthetic instance generation via Pydantic.',
+    'p5.b2':'Development of a Multi-Agent System (MAS) with a Top-N loop: multiple planners cooperate at each iteration, merge their solutions and keep only the N best — reducing cost by 14 to 26% depending on the agent combination.',
+    'p5.b3':'Design of a tabular Q-Learning agent with 2-opt best-improvement operators: using a Simulated Annealing solution as a starting point, the agent achieves a final cost of 9,900 on 100 clients — best overall performance of the project.',
+    'p5.b4':'Interactive Streamlit demo allowing hyper-parameter configuration, real-time route visualization and algorithm comparison via a shared benchmark.',
+    'p5.result':'<strong>Result:</strong> The winning strategy is the Simulated Annealing → tabular Q-Learning pipeline: it outperforms the best Tabu by ~1,600 units and the best MAS by ~3,100 units on the 100-client instance.',
+    'p5.footer':'📄 Read the Report',
+    'skills.label':'// 03 — Skills','skills.h2':'Technical Stack','skills.lead':'A multidisciplinary profile covering software, numerical simulation, and aeronautical systems.',
+    'sg.ai':'Data Science & AI','sg.dev':'Development','sg.eng':'Engineering & Simulation','sg.aero':'Aerospace Domains',
+    'contact.label':'// 04 — Contact','contact.h2':'Available from September 2026','contact.p':'End-of-studies internship (6 months) — Aeronautics, embedded AI, numerical simulation. Feel free to get in touch.','contact.cv':'CV (PDF)',
+    'footer.text':'© 2026 — Ugo Roccamatisi · Aerospace Engineer, Data Science & Simulation · Paris, France'
+  }
+};
+
+let currentLang = 'fr';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (T[lang][k] !== undefined) el.textContent = T[lang][k];
   });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.getAttribute('data-i18n-html');
+    if (T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+  });
+  localStorage.setItem('lang', lang);
+}
+
+function toggleTheme() {
+  const dark = document.body.classList.toggle('dark');
+  document.querySelector('.theme-btn').textContent = dark ? '☀️' : '🌙';
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Restore preferences
+(function() {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    document.querySelector('.theme-btn').textContent = '☀️';
+  }
+  const savedLang = localStorage.getItem('lang') || 'fr';
+  if (savedLang !== 'fr') setLang(savedLang);
+})();
 </script>
 </body>
 </html>
