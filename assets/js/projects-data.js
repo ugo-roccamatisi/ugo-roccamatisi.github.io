@@ -25,7 +25,7 @@ window.PROJECTS = [
       ],
       results: [
         "Précision de l'ordre de 3 °C au toucher sur les vols de validation.",
-        "PINN généralisant à des scénarios non vus (RMSE de 3 à 20 K sur 2 h).",
+        "PINN généralisant à des scénarios non vus (RMSE, erreur quadratique moyenne, de 3 à 20 K sur 2 h).",
         "Énergie de freinage identifiée à 2 % près à partir de 5 minutes d'un capteur bruité."
       ]
     },
@@ -42,7 +42,7 @@ window.PROJECTS = [
       ],
       results: [
         "Accuracy of about 3 °C at touchdown on validation flights.",
-        "PINN generalising to unseen scenarios (RMSE of 3 to 20 K over 2 h).",
+        "PINN generalising to unseen scenarios (RMSE, root mean square error, of 3 to 20 K over 2 h).",
         "Braking energy identified within 2% from 5 minutes of a noisy sensor."
       ]
     }
@@ -111,8 +111,8 @@ window.PROJECTS = [
       situation: "Données d'essai en vol du Saab 340 de Cranfield (8 minutes autour de l'atterrissage, ≈49 Hz) : deux accéléromètres indépendants, une centrale montée en galley et le capteur du centre de gravité de l'avion, qui ne racontent pas la même histoire, et un toucher invisible à l'œil nu dans l'accélération brute.",
       task: "Évaluer la fiabilité relative des deux capteurs par méthodes spectrales, puis dater précisément le toucher en fusionnant les canaux de l'enregistreur de vol (FDR).",
       actions: [
-        "Caractérisation spectrale (Welch, Δf ≈ 0,38 Hz) : PSD, cohérence inter-capteurs, spectrogrammes et RMS par bandes, révélant une amplification locale du capteur galley (jusqu'à 14 fois la puissance du capteur de référence en hautes fréquences).",
-        "Détection de rupture à noyau RBF (ruptures) sur quatre canaux standardisés : altitude radio, sa dérivée, accélérations normale et longitudinale, sur une fenêtre de ±60 s.",
+        "Caractérisation spectrale (méthode de Welch, résolution Δf ≈ 0,38 Hz) : densités spectrales de puissance (PSD), cohérence inter-capteurs, spectrogrammes et niveaux vibratoires RMS (valeur efficace) par bandes, révélant une amplification locale du capteur galley (jusqu'à 14 fois la puissance du capteur de référence en hautes fréquences).",
+        "Détection de rupture à noyau RBF (fonction de base radiale, bibliothèque ruptures) sur quatre canaux standardisés : altitude radio, sa dérivée, accélérations normale et longitudinale, sur une fenêtre de ±60 s.",
         "Analyse de sensibilité (sous-ensembles de canaux, balayage du paramètre du noyau) et réconciliation des deux estimations."
       ],
       results: [
@@ -127,8 +127,8 @@ window.PROJECTS = [
       situation: "Flight-test data from Cranfield's Saab 340 (8 minutes around landing, ≈49 Hz): two independent accelerometers, a galley-mounted IMU and the aircraft's centre-of-gravity sensor, telling different stories, and a touchdown invisible to the naked eye in the raw acceleration.",
       task: "Assess the relative reliability of both sensors with spectral methods, then precisely timestamp the touchdown by fusing flight data recorder (FDR) channels.",
       actions: [
-        "Spectral characterization (Welch, Δf ≈ 0.38 Hz): PSD, inter-sensor coherence, spectrograms and band-limited RMS, revealing local amplification at the galley sensor (up to 14 times the reference sensor's power at high frequencies).",
-        "RBF kernel change-point detection (ruptures) on four standardized channels: radio altitude, its derivative, normal and longitudinal accelerations, within a ±60 s window.",
+        "Spectral characterization (Welch's method, Δf ≈ 0.38 Hz resolution): power spectral densities (PSD), inter-sensor coherence, spectrograms and band-limited RMS (root mean square) vibration levels, revealing local amplification at the galley sensor (up to 14 times the reference sensor's power at high frequencies).",
+        "RBF (radial basis function) kernel change-point detection (ruptures library) on four standardized channels: radio altitude, its derivative, normal and longitudinal accelerations, within a ±60 s window.",
         "Sensitivity analysis (channel subsets, kernel parameter sweep) and reconciliation of the two estimates."
       ],
       results: [
@@ -238,7 +238,7 @@ window.PROJECTS = [
       title: "Prévision de consommation électrique",
       excerpt: "Prophet sur 20 ans de données horaires du réseau PJM : MAPE < 10 %.",
       meta: "Projet personnel · 2023",
-      situation: "Projet personnel : 20 ans de consommation électrique horaire du réseau PJM Interconnection (est des États-Unis, 25 000 à 60 000 MW), aux saisonnalités journalière, hebdomadaire et annuelle imbriquées.",
+      situation: "Projet personnel : 20 ans de consommation électrique horaire du réseau PJM Interconnection (Est des États-Unis, 25 000 à 60 000 MW), aux saisonnalités journalière, hebdomadaire et annuelle imbriquées.",
       task: "Construire une prévision robuste à ces saisonnalités multiples et aux effets calendaires, et l'évaluer rigoureusement.",
       actions: [
         "Analyse exploratoire complète et décomposition de la série en tendance, saisonnalités et résidus.",
@@ -246,7 +246,7 @@ window.PROJECTS = [
         "Comparaison contrôlée avec et sans jours fériés américains."
       ],
       results: [
-        "MAPE de 9,7 % sur l'année de test (RMSE ≈ 4 100 MW pour une consommation moyenne de 31 000 MW), sous le seuil des 10 % jugé excellent en prévision énergétique.",
+        "MAPE (erreur moyenne absolue en pourcentage) de 9,7 % sur l'année de test (RMSE ≈ 4 100 MW pour une consommation moyenne de 31 000 MW), sous le seuil des 10 % jugé excellent en prévision énergétique.",
         "Effet des jours fériés mesuré et documenté honnêtement : gain marginal, avec pistes d'amélioration identifiées (météo en régresseur externe, gradient boosting)."
       ]
     },
@@ -262,7 +262,7 @@ window.PROJECTS = [
         "Controlled comparison with and without US holidays."
       ],
       results: [
-        "MAPE of 9.7% on the test year (RMSE ≈ 4,100 MW for an average consumption of 31,000 MW), below the 10% threshold considered excellent in energy forecasting.",
+        "MAPE (mean absolute percentage error) of 9.7% on the test year (RMSE ≈ 4,100 MW for an average consumption of 31,000 MW), below the 10% threshold considered excellent in energy forecasting.",
         "Holiday effect measured and honestly documented: marginal gain, with identified improvements (weather as external regressor, gradient boosting)."
       ]
     }

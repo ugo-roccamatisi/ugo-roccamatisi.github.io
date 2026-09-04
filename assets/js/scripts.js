@@ -146,10 +146,32 @@ function closeModal() {
 }
 
 /* ===================== Initialisation ===================== */
+/* ===================== Visionneuse d'images (galeries) ===================== */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+function openLightbox(src) {
+  lightboxImg.src = src;
+  lightbox.classList.remove('hidden');
+  lightbox.classList.add('flex');
+}
+function closeLightbox() {
+  lightbox.classList.add('hidden');
+  lightbox.classList.remove('flex');
+  lightboxImg.src = '';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('modal-close').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (!lightbox.classList.contains('hidden')) closeLightbox(); else closeModal();
+  });
+  lightbox.addEventListener('click', closeLightbox);
+  document.getElementById('modal-content').addEventListener('click', e => {
+    const img = e.target.closest('.mgal-fig img');
+    if (img) openLightbox(img.src);
+  });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   setLang(LANG);
 });
