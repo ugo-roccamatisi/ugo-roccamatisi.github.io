@@ -16,8 +16,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="assets/js/tailwind-config.js?v=10"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=10">
+<script src="assets/js/tailwind-config.js?v=11"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 </head>
 <body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
 
@@ -58,10 +58,13 @@
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-3"><span data-i18n="about.h">À propos</span></h2>
     <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-10"></div>
-    <div class="max-w-3xl mx-auto text-zinc-600 leading-relaxed space-y-4 text-center">
+    <div class="about-grid max-w-5xl mx-auto">
+      <img src="images/portrait.jpg" alt="Ugo Roccamatisi" loading="lazy" class="about-photo" onerror="this.closest('.about-grid').classList.add('no-photo'); this.remove()">
+      <div class="about-txt text-zinc-600 leading-relaxed space-y-4">
       <p data-i18n-html="about.p1">Passionné de physique, je l'applique au domaine qui me fascine depuis toujours : l'aéronautique, dans lequel je suis diplômé d'un <b class="text-zinc-900">MSc in Aerospace Vehicle Design de Cranfield University</b>.</p>
       <p data-i18n-html="about.p2">À <b class="text-zinc-900">Centrale Lille</b>, j'ai construit un socle d'ingénieur généraliste et je m'y suis spécialisé en <b class="text-zinc-900">IA et data science</b>. Des compétences mises en pratique avec le CHU de Lille (application IA publiée à la conférence IEEE SMC), puis dans mon mémoire avec <b class="text-zinc-900">Airbus</b>, où modèle physique et PINN estiment la température des freins de l'A320.</p>
       <p data-i18n-html="about.p3">Actuellement en stage de maintenance prédictive chez <b class="text-zinc-900">Air France Industries KLM E&amp;M</b>, je recherche un <b class="text-zinc-900">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.</p>
+    </div>
     </div>
     <div class="mt-12 bg-white rounded-2xl border border-zinc-200 shadow-sm px-6 py-7">
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
@@ -190,7 +193,7 @@
   </div>
 </div>
 
-<script src="assets/js/projects-data.js?v=10"></script>
-<script src="assets/js/scripts.js?v=10"></script>
+<script src="assets/js/projects-data.js?v=11"></script>
+<script src="assets/js/scripts.js?v=11"></script>
 </body>
 </html>
