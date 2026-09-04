@@ -1,16 +1,5 @@
 /* Compléments au-dessus de Tailwind (composants récurrents) */
 
-.stat-card {
-  background: #fff;
-  border: 1px solid #e4e4e7;
-  border-radius: 0.9rem;
-  padding: 1.1rem 0.9rem;
-  text-align: center;
-}
-.dark .stat-card { background: #1A1A1A; border-color: #2c2c2e; }
-.stat-n { font-weight: 800; font-size: 1.45rem; color: #3B82F6; }
-.stat-l { font-size: 0.8rem; color: #71717a; margin-top: 0.2rem; line-height: 1.4; }
-.dark .stat-l { color: #a1a1aa; }
 
 .entry { border-left: 2px solid #e4e4e7; padding-left: 1rem; }
 .dark .entry { border-color: #2c2c2e; }
@@ -55,3 +44,36 @@
 .skill-card i { font-size: 44px; line-height: 1; }
 .skill-card .mono { font-weight: 800; font-size: 1.5rem; color: #3B82F6; line-height: 44px; }
 .dark .skill-card i.devicon-github-original { color: #fff; }
+
+/* Timeline (esprit ericwadkins, habillage dafalagi) */
+.tl { position: relative; list-style: none; max-width: 900px; margin: 0 auto; padding: 0; }
+.tl::before { content: ''; position: absolute; top: 10px; bottom: 10px; left: 50%; width: 2px; margin-left: -1px; background: #e4e4e7; }
+.dark .tl::before { background: #2c2c2e; }
+.tl-item { position: relative; margin-bottom: 3.2rem; min-height: 120px; }
+.tl-item::after { content: ''; display: table; clear: both; }
+.tl-panel { float: left; width: 42%; text-align: right; }
+.tl-item.inv .tl-panel { float: right; text-align: left; }
+.tl-badge {
+  position: absolute; left: 50%; width: 120px; height: 120px; margin-left: -60px;
+  border-radius: 50%; background: #fff; border: 4px solid #e4e4e7;
+  display: flex; align-items: center; justify-content: center; overflow: hidden; z-index: 2;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.dark .tl-badge { border-color: #2c2c2e; }
+.tl-badge img { width: 70%; height: 70%; object-fit: contain; position: relative; z-index: 2; background: #fff; }
+.tl-fb { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #3B82F6; text-align: center; line-height: 1.25; z-index: 1; }
+.tl-date { font-size: 0.85rem; font-weight: 700; color: #10B981; }
+.tl-org { font-weight: 700; font-size: 1.12rem; margin-top: 0.1rem; }
+.tl-sub { font-size: 0.92rem; color: #71717a; line-height: 1.65; margin-top: 0.25rem; }
+.dark .tl-sub { color: #a1a1aa; }
+.tl-cta { min-height: 130px; margin-bottom: 0; }
+.tl-cta .tl-badge { background: #101010; border-color: #3B82F6; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+.dark .tl-cta .tl-badge { background: #1A1A1A; }
+.tl-cta .tl-badge:hover { transform: scale(1.05); box-shadow: 0 8px 22px rgba(59,130,246,0.35); }
+.tl-cta-txt { color: #10B981; font-weight: 700; font-size: 0.82rem; text-align: center; line-height: 1.4; padding: 0.8rem; }
+@media (max-width: 760px) {
+  .tl::before { left: 46px; }
+  .tl-badge { left: 46px; width: 88px; height: 88px; margin-left: -44px; }
+  .tl-panel, .tl-item.inv .tl-panel { float: none; width: auto; text-align: left; margin-left: 108px; }
+  .tl-fb { font-size: 0.85rem; }
+}
