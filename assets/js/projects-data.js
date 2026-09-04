@@ -50,7 +50,7 @@ window.PROJECTS = [
   {
     id: "bwb",
     banner: "images/projects/bwb-1.png",
-    tech: ["Catia V5", "3DEXPERIENCE", "EASA CS-25"],
+    tech: ["SolidWorks", "3DEXPERIENCE", "Star-CCM+", "OpenVSP", "EASA CS-25"],
     links: [{ href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
       { src: "images/projects/bwb-2.png", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
@@ -65,7 +65,7 @@ window.PROJECTS = [
       situation: "Projet phare du MSc à Cranfield, appuyé par Airbus : concevoir un avion aile volante (Blended Wing Body) à propulsion hydrogène pour décarboner le long-courrier, en équipe internationale de 62 étudiants.",
       task: "Responsable de l'intégration moteurs : positionner la propulsion sur l'aile volante et tenir les exigences de certification, en collaboration étroite avec les autres pôles pour concilier les contraintes de chacun.",
       actions: [
-        "Positionnement des turboréacteurs, design de la nacelle et des inverseurs de poussée (Catia V5, 3DEXPERIENCE).",
+        "Positionnement des turboréacteurs, design de la nacelle et des inverseurs de poussée (SolidWorks, 3DEXPERIENCE).",
         "Arbitrages entre traînée d'interférence, accès maintenance et bruit en cabine.",
         "Analyse de conformité aux normes EASA CS-25, notamment au risque d'éclatement de rotor (rotor burst)."
       ],
@@ -81,7 +81,7 @@ window.PROJECTS = [
       situation: "Flagship MSc project at Cranfield, backed by Airbus: design a hydrogen-powered Blended Wing Body aircraft to decarbonize long-haul aviation, in an international team of 62 students.",
       task: "Engine integration lead: position the propulsion on the flying wing and meet certification requirements, working closely with the other teams to reconcile everyone's constraints.",
       actions: [
-        "Turbofan positioning, nacelle and thrust reverser design (Catia V5, 3DEXPERIENCE).",
+        "Turbofan positioning, nacelle and thrust reverser design (SolidWorks, 3DEXPERIENCE).",
         "Trade-offs between interference drag, maintenance access and cabin noise.",
         "Compliance analysis with EASA CS-25 standards, notably the rotor burst hazard."
       ],
@@ -100,39 +100,40 @@ window.PROJECTS = [
       { href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_touchdown_detection.ipynb", label_fr: "Notebook 2", label_en: "Notebook 2" }
     ],
     gallery: [
-      { src: "images/projects/saab-psd.png", fr: "PSD et cohérence inter-capteurs", en: "PSD and inter-sensor coherence" },
-      { src: "images/projects/saab-changepoint.png", fr: "Détection de rupture autour du toucher", en: "Change-point detection around touchdown" }
+      { src: "images/projects/saab-psd.png", fr: "PSD de Welch post-toucher : les deux capteurs comparés", en: "Post-touchdown Welch PSD: both sensors compared" },
+      { src: "images/projects/saab-spectro.png", fr: "Spectrogrammes temps-fréquence autour du toucher", en: "Time-frequency spectrograms around touchdown" },
+      { src: "images/projects/saab-changepoint.png", fr: "Détection de rupture RBF vs estimation par pic d'amplitude", en: "RBF change-point detection vs amplitude-peak estimate" }
     ],
     fr: {
       title: "Données de vol d'un SAAB à l'atterrissage",
-      excerpt: "Analyse spectrale et détection de rupture pour dater le toucher sur données FDR.",
+      excerpt: "Analyse spectrale et détection de rupture pour dater le toucher sur données FDR réelles.",
       meta: "Projet personnel, Cranfield (IVHM) · 2025 à 2026",
-      situation: "Dans le cadre du cours d'IVHM à Cranfield, données de vol réelles (FDR) d'un SAAB : deux accéléromètres qui ne s'accordent jamais, et un toucher invisible à l'œil nu dans l'accélération brute.",
-      task: "Établir d'abord la fiabilité des capteurs, puis dater précisément le moment du toucher.",
+      situation: "Données d'essai en vol du Saab 340 de Cranfield (8 minutes autour de l'atterrissage, ≈49 Hz) : deux accéléromètres indépendants, une centrale montée en galley et le capteur du centre de gravité de l'avion, qui ne racontent pas la même histoire, et un toucher invisible à l'œil nu dans l'accélération brute.",
+      task: "Évaluer la fiabilité relative des deux capteurs par méthodes spectrales, puis dater précisément le toucher en fusionnant les canaux de l'enregistreur de vol (FDR).",
       actions: [
-        "Caractérisation spectrale complète : méthode de Welch, PSD, cohérence inter-capteurs, spectrogramme.",
-        "Fusion de l'altitude radio, des accélérations et de leurs dérivées.",
-        "Détection de rupture à noyau RBF (ruptures) sur une fenêtre de ±60 s."
+        "Caractérisation spectrale (Welch, Δf ≈ 0,38 Hz) : PSD, cohérence inter-capteurs, spectrogrammes et RMS par bandes, révélant une amplification locale du capteur galley (jusqu'à 14 fois la puissance du capteur de référence en hautes fréquences).",
+        "Détection de rupture à noyau RBF (ruptures) sur quatre canaux standardisés : altitude radio, sa dérivée, accélérations normale et longitudinale, sur une fenêtre de ±60 s.",
+        "Analyse de sensibilité (sous-ensembles de canaux, balayage du paramètre du noyau) et réconciliation des deux estimations."
       ],
       results: [
-        "Toucher horodaté précisément et fréquences de vibration du train identifiées.",
-        "Deux notebooks publiés, consultables ci-dessous."
+        "Toucher daté à ±0,02 s de résolution, cohérent avec l'altitude radio à 0 ft, corrigeant d'environ 5 s l'estimation naïve par pic d'amplitude.",
+        "Fiabilité des capteurs quantifiée bande par bande, méthodologie entièrement reproductible (tables de paramètres dans les notebooks)."
       ]
     },
     en: {
       title: "SAAB flight data during landing",
-      excerpt: "Spectral analysis and change-point detection to timestamp touchdown from FDR data.",
+      excerpt: "Spectral analysis and change-point detection to timestamp touchdown from real FDR data.",
       meta: "Personal project, Cranfield (IVHM) · 2025 to 2026",
-      situation: "As part of the IVHM course at Cranfield, real flight data records (FDR) from a SAAB aircraft: two accelerometers that never quite agree, and a touchdown invisible to the naked eye in the raw acceleration.",
-      task: "First assess sensor reliability, then precisely timestamp the touchdown.",
+      situation: "Flight-test data from Cranfield's Saab 340 (8 minutes around landing, ≈49 Hz): two independent accelerometers, a galley-mounted IMU and the aircraft's centre-of-gravity sensor, telling different stories, and a touchdown invisible to the naked eye in the raw acceleration.",
+      task: "Assess the relative reliability of both sensors with spectral methods, then precisely timestamp the touchdown by fusing flight data recorder (FDR) channels.",
       actions: [
-        "Full spectral characterization: Welch's method, PSD, inter-sensor coherence, spectrogram.",
-        "Fusion of radio altitude, accelerations and their derivatives.",
-        "RBF kernel change-point detection (ruptures) within a ±60 s window."
+        "Spectral characterization (Welch, Δf ≈ 0.38 Hz): PSD, inter-sensor coherence, spectrograms and band-limited RMS, revealing local amplification at the galley sensor (up to 14 times the reference sensor's power at high frequencies).",
+        "RBF kernel change-point detection (ruptures) on four standardized channels: radio altitude, its derivative, normal and longitudinal accelerations, within a ±60 s window.",
+        "Sensitivity analysis (channel subsets, kernel parameter sweep) and reconciliation of the two estimates."
       ],
       results: [
-        "Touchdown precisely timestamped and landing-gear vibration frequencies identified.",
-        "Two published notebooks, available below."
+        "Touchdown timestamped at ±0.02 s resolution, consistent with radio altitude at 0 ft, correcting the naive amplitude-peak estimate by about 5 s.",
+        "Sensor reliability quantified band by band, with a fully reproducible methodology (parameter tables in the notebooks)."
       ]
     }
   },
@@ -229,39 +230,40 @@ window.PROJECTS = [
     tech: ["Python", "Prophet", "pandas"],
     links: [{ href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb", label_fr: "Notebook", label_en: "Notebook" }],
     gallery: [
-      { src: "images/projects/prophet-forecast.png", fr: "Prévision vs observations", en: "Forecast vs observations" },
-      { src: "images/projects/prophet-saison.png", fr: "Composantes saisonnières", en: "Seasonal components" }
+      { src: "images/projects/prophet-forecast.png", fr: "Mars 2017 : prédiction vs réalité", en: "March 2017: forecast vs reality" },
+      { src: "images/projects/prophet-histo.png", fr: "20 ans de données et zone de prévision", en: "20 years of data and the forecast zone" },
+      { src: "images/projects/prophet-saison.png", fr: "Composantes apprises : tendance et saisonnalités", en: "Learned components: trend and seasonalities" }
     ],
     fr: {
       title: "Prévision de consommation électrique",
-      excerpt: "Prophet sur 20 ans de données horaires du réseau PJM.",
+      excerpt: "Prophet sur 20 ans de données horaires du réseau PJM : MAPE < 10 %.",
       meta: "Projet personnel · 2023",
-      situation: "Projet personnel : 20 ans de consommation électrique horaire du réseau PJM Interconnection (est des États-Unis), aux saisonnalités imbriquées.",
-      task: "Construire une prévision robuste aux effets journaliers, hebdomadaires, annuels et calendaires.",
+      situation: "Projet personnel : 20 ans de consommation électrique horaire du réseau PJM Interconnection (est des États-Unis, 25 000 à 60 000 MW), aux saisonnalités journalière, hebdomadaire et annuelle imbriquées.",
+      task: "Construire une prévision robuste à ces saisonnalités multiples et aux effets calendaires, et l'évaluer rigoureusement.",
       actions: [
-        "Décomposition Prophet en tendance, saisonnalités et résidus.",
-        "Intégration des jours fériés américains au modèle.",
-        "Évaluation comparative en RMSE et MAE."
+        "Analyse exploratoire complète et décomposition de la série en tendance, saisonnalités et résidus.",
+        "Entraînement d'un modèle Prophet et évaluation sur une année de test (RMSE, MAE, MAPE).",
+        "Comparaison contrôlée avec et sans jours fériés américains."
       ],
       results: [
-        "Distribution bimodale mise en évidence (pics estivaux et hivernaux).",
-        "Gains nets de précision grâce aux jours fériés."
+        "MAPE de 9,7 % sur l'année de test (RMSE ≈ 4 100 MW pour une consommation moyenne de 31 000 MW), sous le seuil des 10 % jugé excellent en prévision énergétique.",
+        "Effet des jours fériés mesuré et documenté honnêtement : gain marginal, avec pistes d'amélioration identifiées (météo en régresseur externe, gradient boosting)."
       ]
     },
     en: {
       title: "Electricity consumption forecasting",
-      excerpt: "Prophet on 20 years of hourly PJM grid data.",
+      excerpt: "Prophet on 20 years of hourly PJM grid data: MAPE < 10%.",
       meta: "Personal project · 2023",
-      situation: "Personal project: 20 years of hourly electricity consumption from the PJM Interconnection grid (eastern US), with nested seasonalities.",
-      task: "Build a forecast robust to daily, weekly, annual and calendar effects.",
+      situation: "Personal project: 20 years of hourly electricity consumption from the PJM Interconnection grid (eastern US, 25,000 to 60,000 MW), with nested daily, weekly and annual seasonalities.",
+      task: "Build a forecast robust to these multiple seasonalities and calendar effects, and evaluate it rigorously.",
       actions: [
-        "Prophet decomposition into trend, seasonalities and residuals.",
-        "Incorporated US holidays into the model.",
-        "Comparative evaluation with RMSE and MAE."
+        "Full exploratory analysis and decomposition into trend, seasonalities and residuals.",
+        "Trained a Prophet model and evaluated it on a one-year test set (RMSE, MAE, MAPE).",
+        "Controlled comparison with and without US holidays."
       ],
       results: [
-        "Revealed a bimodal distribution (summer and winter peaks).",
-        "Clear accuracy gains from holiday effects."
+        "MAPE of 9.7% on the test year (RMSE ≈ 4,100 MW for an average consumption of 31,000 MW), below the 10% threshold considered excellent in energy forecasting.",
+        "Holiday effect measured and honestly documented: marginal gain, with identified improvements (weather as external regressor, gradient boosting)."
       ]
     }
   }
