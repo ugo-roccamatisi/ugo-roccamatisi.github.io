@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ugo Roccamatisi · Portfolio</title>
+<meta name="description" content="Portfolio d'Ugo Roccamatisi, élève-ingénieur Centrale Lille / Cranfield University. Modèles physiques et réseaux de neurones informés par la physique appliqués aux systèmes aéronautiques (Airbus A320, Air France Industries KLM).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ugo-roccamatisi.github.io/">
+<meta property="og:title" content="Ugo Roccamatisi · Portfolio">
+<meta property="og:description" content="Double diplôme Centrale Lille / Cranfield University. Modèles physiques et PINN appliqués aux systèmes aéronautiques.">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23101010'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='24' fill='%2310B981'>UR</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter bg-lightbg text-zinc-800 dark:bg-darkbg dark:text-zinc-100 transition-colors duration-300">
+
+<!-- ================= HEADER ================= -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-transform duration-300 bg-white/90 dark:bg-darkbg/90 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+  <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between gap-4">
+    <a href="#home" class="font-bold text-lg tracking-tight">Ugo <span class="text-accgreen">Roccamatisi</span></a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+      <a href="#about" class="hover:text-accblue transition-colors" data-i18n="nav.about">À propos</a>
+      <a href="#resume" class="hover:text-accblue transition-colors" data-i18n="nav.resume">Parcours</a>
+      <a href="#projects" class="hover:text-accblue transition-colors" data-i18n="nav.proj">Projets</a>
+      <a href="#contact" class="hover:text-accblue transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <div class="text-sm font-semibold">
+        <button data-lang="fr" onclick="setLang('fr')" class="lang-btn px-1 text-accblue">FR</button><span class="text-zinc-400">/</span><button data-lang="en" onclick="setLang('en')" class="lang-btn px-1 text-zinc-400">EN</button>
+      </div>
+      <button id="theme-toggle" aria-label="Basculer le thème" class="w-9 h-9 rounded-lg border border-zinc-300 dark:border-zinc-700 flex items-center justify-center hover:border-accblue transition-colors">
+        <svg id="icon-moon" class="w-4.5 h-4.5" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        <svg id="icon-sun" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-900"></div>
+  <img src="images/hero-bg.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70"></div>
+  <div class="relative z-10 px-5 py-28 max-w-3xl">
+    <p class="text-zinc-200 text-lg md:text-xl mb-3" data-i18n="hero.hi">Bonjour, je suis</p>
+    <h1 class="text-white font-extrabold tracking-tight text-4xl md:text-6xl mb-5">Ugo <span class="text-accgreen">Roccamatisi</span></h1>
+    <p class="text-zinc-200 text-base md:text-lg leading-relaxed mb-3" data-i18n="hero.tagline">Élève-ingénieur Centrale Lille &amp; Cranfield University. Modèles physiques et IA pour les systèmes aéronautiques.</p>
+    <p class="text-accgreen font-semibold text-sm uppercase tracking-wide mb-9" data-i18n="hero.avail">Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027</p>
+    <a href="#projects" class="inline-block bg-accblue hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors" data-i18n="hero.cta">Découvrir mes projets</a>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section id="about" class="py-24 reveal">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3"><span data-i18n="about.h">À propos</span></h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-10"></div>
+    <div class="max-w-3xl mx-auto text-zinc-600 dark:text-zinc-300 leading-relaxed space-y-4 text-center">
+      <p data-i18n-html="about.p1">Élève-ingénieur en double diplôme <b class="text-zinc-900 dark:text-white">Centrale Lille</b> / <b class="text-zinc-900 dark:text-white">Cranfield University</b>, je travaille là où la physique rencontre l'apprentissage : mon mémoire avec <b class="text-zinc-900 dark:text-white">Airbus</b> combine un modèle thermique calibré sur données de vol et des PINN pour estimer la température des freins de l'A320.</p>
+      <p data-i18n-html="about.p2">En stage de maintenance prédictive chez <b class="text-zinc-900 dark:text-white">Air France Industries KLM E&amp;M</b> d'octobre 2026 à mars 2027, je recherche un <b class="text-zinc-900 dark:text-white">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12">
+      <div class="stat-card"><div class="stat-n">≈ 3 °C</div><div class="stat-l" data-i18n="stat1">Précision du modèle freins A320</div></div>
+      <div class="stat-card"><div class="stat-n">62</div><div class="stat-l" data-i18n="stat2">Étudiants coordonnés (BWB)</div></div>
+      <div class="stat-card"><div class="stat-n">300 000</div><div class="stat-l" data-i18n="stat3">Patients analysés (MIMIC-IV)</div></div>
+      <div class="stat-card"><div class="stat-n">IEEE</div><div class="stat-l" data-i18n="stat4">Article publié (SMC)</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARCOURS ================= -->
+<section id="resume" class="py-24 bg-white dark:bg-darkcard/40 reveal">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="resume.h">Parcours</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-14"></div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl font-bold mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accblue"></span><span data-i18n="edu.h">Formation</span></h3>
+        <div class="space-y-6">
+          <div class="entry">
+            <div class="entry-date">2025 – 2026</div>
+            <div class="entry-title">Cranfield University</div>
+            <div class="entry-sub" data-i18n="edu1.s">MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.</div>
+          </div>
+          <div class="entry">
+            <div class="entry-date">2023 – 2027</div>
+            <div class="entry-title">École Centrale de Lille</div>
+            <div class="entry-sub" data-i18n="edu2.s">Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).</div>
+          </div>
+          <div class="entry">
+            <div class="entry-date">2020 – 2023</div>
+            <div class="entry-title" data-i18n="edu3.t">Classe préparatoire PCSI / PC*</div>
+            <div class="entry-sub" data-i18n="edu3.s">Lycée Albert Schweitzer, Le Raincy.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accgreen"></span><span data-i18n="exp.h">Expérience</span></h3>
+        <div class="entry">
+          <div class="entry-date">Oct. 2026 – Mars 2027</div>
+          <div class="entry-title">Air France Industries KLM E&amp;M</div>
+          <div class="entry-sub" data-i18n="exp1.s">Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.</div>
+        </div>
+        <h3 class="text-xl font-bold mt-10 mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-accblue"></span><span data-i18n="skills.h">Compétences</span></h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 gap-3" id="skill-tiles">
+          <div class="skill-tile"><i class="devicon-python-plain colored text-3xl"></i><span>Python</span></div>
+          <div class="skill-tile"><i class="devicon-pytorch-original colored text-3xl"></i><span>PyTorch</span></div>
+          <div class="skill-tile"><i class="devicon-tensorflow-original colored text-3xl"></i><span>TensorFlow</span></div>
+          <div class="skill-tile"><i class="devicon-scikitlearn-plain colored text-3xl"></i><span>scikit-learn</span></div>
+          <div class="skill-tile"><i class="devicon-pandas-plain colored text-3xl"></i><span>pandas</span></div>
+          <div class="skill-tile"><span class="tile-txt">SciPy</span><span>SciPy</span></div>
+          <div class="skill-tile"><span class="tile-txt">St</span><span>Streamlit</span></div>
+          <div class="skill-tile"><i class="devicon-cplusplus-plain colored text-3xl"></i><span>C / C++</span></div>
+          <div class="skill-tile"><i class="devicon-git-plain colored text-3xl"></i><span>Git</span></div>
+          <div class="skill-tile"><span class="tile-txt">V5</span><span>Catia V5</span></div>
+          <div class="skill-tile"><span class="tile-txt">CFD</span><span>Star-CCM+</span></div>
+          <div class="skill-tile"><span class="tile-txt">CO</span><span>COMSOL</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJETS ================= -->
+<section id="projects" class="py-24 reveal">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="proj.h">Projets</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-5"></div>
+    <p class="text-center text-zinc-500 dark:text-zinc-400 mb-12" data-i18n="proj.intro">Cliquez sur un projet pour le détail : contexte, contributions et documents.</p>
+    <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-24 bg-white dark:bg-darkcard/40 reveal">
+  <div class="max-w-3xl mx-auto px-5 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">Contact</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-8"></div>
+    <p class="text-zinc-600 dark:text-zinc-300 mb-9" data-i18n="contact.p">Je recherche un stage de fin d'études de 4 à 6 mois à partir d'avril 2027, en aéronautique, data science ou intelligence artificielle. Je réponds volontiers à toute question sur mes projets.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="mailto:ugo.roccamatisi@gmail.com" class="bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">ugo.roccamatisi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" class="border border-zinc-300 dark:border-zinc-700 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-8 text-center text-sm text-zinc-500 dark:text-zinc-500 border-t border-zinc-200 dark:border-zinc-800">
+  <span data-i18n="footer">© 2026 Ugo Roccamatisi · Paris, France</span>
+</footer>
+
+<!-- ================= MODALE PROJET ================= -->
+<div id="modal-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+  <div id="modal-box" class="bg-white dark:bg-darkcard rounded-2xl shadow-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto relative">
+    <button id="modal-close" aria-label="Fermer" class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-black/40 hover:bg-black/60 text-white flex items-center justify-center z-10">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script src="assets/js/projects-data.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
