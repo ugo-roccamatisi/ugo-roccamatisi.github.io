@@ -4,13 +4,13 @@
 window.PROJECTS = [
   {
     id: "btem",
-    banner: "images/btem-journee.png",
+    banner: "images/projects/btem-journee.png",
     tech: ["Python", "SciPy", "Nelder-Mead", "PyTorch", "Streamlit"],
     links: [],
     gallery: [
-      { src: "images/btem-journee.png", fr: "Journée complète : modèle vs capteur", en: "Full day: model vs sensor" },
-      { src: "images/btem-streamlit.png", fr: "Application Streamlit de prédiction", en: "Streamlit prediction app" },
-      { src: "images/pinn-param.png", fr: "PINN paramétrique vs solveur de référence", en: "Parametric PINN vs reference solver" }
+      { src: "images/projects/btem-journee.png", fr: "Journée complète : modèle vs capteur", en: "Full day: model vs sensor" },
+      { src: "images/projects/btem-streamlit.png", fr: "Application Streamlit de prédiction", en: "Streamlit prediction app" },
+      { src: "images/projects/pinn-param.png", fr: "PINN paramétrique vs solveur de référence", en: "Parametric PINN vs reference solver" }
     ],
     fr: {
       title: "Température des freins A320 : physique & PINN",
@@ -49,13 +49,13 @@ window.PROJECTS = [
   },
   {
     id: "bwb",
-    banner: "images/bwb-1.png",
+    banner: "images/projects/bwb-1.png",
     tech: ["Catia V5", "3DEXPERIENCE", "EASA CS-25"],
     links: [{ href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
-      { src: "images/bwb-1.png", fr: "L'équipe et la maquette du G-VEGA", en: "The team and the G-VEGA model" },
-      { src: "images/bwb-2.png", fr: "Intégration moteur et nacelle", en: "Engine and nacelle integration" },
-      { src: "images/bwb-3.png", fr: "Inverseurs de poussée", en: "Thrust reversers" }
+      { src: "images/projects/bwb-1.png", fr: "L'équipe et la maquette du G-VEGA", en: "The team and the G-VEGA model" },
+      { src: "images/projects/bwb-2.png", fr: "Intégration moteur et nacelle", en: "Engine and nacelle integration" },
+      { src: "images/projects/bwb-3.png", fr: "Inverseurs de poussée", en: "Thrust reversers" }
     ],
     fr: {
       title: "Avion BWB à propulsion hydrogène",
@@ -92,15 +92,15 @@ window.PROJECTS = [
   },
   {
     id: "saab",
-    banner: "images/saab-psd.png",
+    banner: "images/projects/saab-psd.png",
     tech: ["Python", "SciPy", "Welch", "ruptures"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_sensor_spectral_analysis.ipynb", label_fr: "Notebook 1", label_en: "Notebook 1" },
       { href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_touchdown_detection.ipynb", label_fr: "Notebook 2", label_en: "Notebook 2" }
     ],
     gallery: [
-      { src: "images/saab-psd.png", fr: "PSD et cohérence inter-capteurs", en: "PSD and inter-sensor coherence" },
-      { src: "images/saab-changepoint.png", fr: "Détection de rupture autour du toucher", en: "Change-point detection around touchdown" }
+      { src: "images/projects/saab-psd.png", fr: "PSD et cohérence inter-capteurs", en: "PSD and inter-sensor coherence" },
+      { src: "images/projects/saab-changepoint.png", fr: "Détection de rupture autour du toucher", en: "Change-point detection around touchdown" }
     ],
     fr: {
       title: "Données de vol d'un SAAB à l'atterrissage",
@@ -137,15 +137,15 @@ window.PROJECTS = [
   },
   {
     id: "chu",
-    banner: "images/chu-app.png",
+    banner: "images/projects/chu-app.png",
     tech: ["Llama 3", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
       { href: "rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
     gallery: [
-      { src: "images/chu-app.png", fr: "Interface de l'application", en: "Application interface" },
-      { src: "images/chu-resultats.png", fr: "Résultats du modèle prédictif", en: "Predictive model results" }
+      { src: "images/projects/chu-app.png", fr: "Interface de l'application", en: "Application interface" },
+      { src: "images/projects/chu-resultats.png", fr: "Résultats du modèle prédictif", en: "Predictive model results" }
     ],
     fr: {
       title: "Faire parler les données médicales avec l'IA",
@@ -182,12 +182,12 @@ window.PROJECTS = [
   },
   {
     id: "vrp",
-    banner: "images/vrp-routes.png",
+    banner: "images/projects/vrp-routes.png",
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
     links: [{ href: "rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
-      { src: "images/vrp-routes.png", fr: "Tournées optimisées (démo Streamlit)", en: "Optimized routes (Streamlit demo)" },
-      { src: "images/vrp-benchmark.png", fr: "Benchmark des algorithmes", en: "Algorithm benchmark" }
+      { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées (démo Streamlit)", en: "Optimized routes (Streamlit demo)" },
+      { src: "images/projects/vrp-benchmark.png", fr: "Benchmark des algorithmes", en: "Algorithm benchmark" }
     ],
     fr: {
       title: "Tournées de véhicules : méta-heuristiques & Q-Learning",
@@ -224,12 +224,12 @@ window.PROJECTS = [
   },
   {
     id: "prophet",
-    banner: "images/prophet-forecast.png",
+    banner: "images/projects/prophet-forecast.png",
     tech: ["Python", "Prophet", "pandas"],
     links: [{ href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb", label_fr: "Notebook", label_en: "Notebook" }],
     gallery: [
-      { src: "images/prophet-forecast.png", fr: "Prévision vs observations", en: "Forecast vs observations" },
-      { src: "images/prophet-saison.png", fr: "Composantes saisonnières", en: "Seasonal components" }
+      { src: "images/projects/prophet-forecast.png", fr: "Prévision vs observations", en: "Forecast vs observations" },
+      { src: "images/projects/prophet-saison.png", fr: "Composantes saisonnières", en: "Seasonal components" }
     ],
     fr: {
       title: "Prévision de consommation électrique",
