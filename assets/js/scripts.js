@@ -2,8 +2,7 @@
 const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
-    'hero.hi': 'Bonjour, je suis',
-    'hero.tagline': "Élève-ingénieur Centrale Lille & Cranfield University. Modèles physiques et IA pour les systèmes aéronautiques.",
+    'hero.tagline': "Ingénieur en aéronautique, data & IA.",
     'hero.avail': "Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027",
     'hero.cta': 'Découvrir mes projets',
     'about.h': 'À propos',
@@ -11,7 +10,7 @@ const T = {
     'about.p2': "En stage de maintenance prédictive chez <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> d'octobre 2026 à mars 2027, je recherche un <b class=\"text-zinc-900\">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.",
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
-    'resume.h': 'Parcours', 'tl.cta1': 'Avril 2027', 'tl.cta2': 'votre entreprise ?', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences',
+    'resume.h': 'Parcours', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences',
     'edu1.s': "MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.",
     'edu2.s': "Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).",
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -19,13 +18,12 @@ const T = {
     'proj.h': 'Projets',
     'proj.intro': "Cliquez sur un projet pour le détail : contexte, contributions et documents.",
     'proj.more': 'Voir le détail', 'modal.contrib': 'Contributions', 'modal.tech': 'Technologies',
-    'contact.p': "Je recherche un stage de fin d'études de 4 à 6 mois à partir d'avril 2027, en aéronautique, data science ou intelligence artificielle. Je réponds volontiers à toute question sur mes projets.",
+    'contact.p': "Contactez-moi par e-mail, LinkedIn ou par téléphone.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
-    'hero.hi': "Hello, I'm",
-    'hero.tagline': "Engineering student at Centrale Lille & Cranfield University. Physical models and AI for aeronautical systems.",
+    'hero.tagline': "Aeronautics, data & AI engineer.",
     'hero.avail': "End-of-studies internship · 4 to 6 months · from April 2027",
     'hero.cta': 'Explore my projects',
     'about.h': 'About',
@@ -33,7 +31,7 @@ const T = {
     'about.p2': "Interning in predictive maintenance at <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> from October 2026 to March 2027, I'm looking for a <b class=\"text-zinc-900\">4 to 6 month end-of-studies internship starting April 2027</b>.",
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
-    'resume.h': 'Resume', 'tl.cta1': 'April 2027', 'tl.cta2': 'your company?', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills',
+    'resume.h': 'Resume', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills',
     'edu1.s': "MSc in Aerospace Vehicle Design, Aircraft Design option. Thesis with Airbus.",
     'edu2.s': "General engineering degree. ML, optimization, self-study (inverse problems, Markov, statistics).",
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -41,7 +39,7 @@ const T = {
     'proj.h': 'Projects',
     'proj.intro': "Click a project for details: context, contributions and documents.",
     'proj.more': 'View details', 'modal.contrib': 'Contributions', 'modal.tech': 'Technologies',
-    'contact.p': "I'm looking for a 4 to 6 month end-of-studies internship starting April 2027, in aeronautics, data science or artificial intelligence. Happy to answer any question about my projects.",
+    'contact.p': "Reach me by e-mail, LinkedIn or phone.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
 };
