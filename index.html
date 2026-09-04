@@ -16,8 +16,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="assets/js/tailwind-config.js?v=8"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<script src="assets/js/tailwind-config.js?v=9"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=9">
 </head>
 <body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
 
@@ -59,8 +59,9 @@
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-3"><span data-i18n="about.h">À propos</span></h2>
     <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-10"></div>
     <div class="max-w-3xl mx-auto text-zinc-600 leading-relaxed space-y-4 text-center">
-      <p data-i18n-html="about.p1">Élève-ingénieur en double diplôme <b class="text-zinc-900">Centrale Lille</b> / <b class="text-zinc-900">Cranfield University</b>, je travaille là où la physique rencontre l'apprentissage : mon mémoire avec <b class="text-zinc-900">Airbus</b> combine un modèle thermique calibré sur données de vol et des PINN pour estimer la température des freins de l'A320.</p>
-      <p data-i18n-html="about.p2">En stage de maintenance prédictive chez <b class="text-zinc-900">Air France Industries KLM E&amp;M</b> d'octobre 2026 à mars 2027, je recherche un <b class="text-zinc-900">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.</p>
+      <p data-i18n-html="about.p1">Passionné de physique, je l'applique au domaine qui me fascine depuis toujours : l'aéronautique, dans lequel je suis diplômé d'un <b class="text-zinc-900">MSc in Aerospace Vehicle Design de Cranfield University</b>.</p>
+      <p data-i18n-html="about.p2">À <b class="text-zinc-900">Centrale Lille</b>, j'ai construit un socle d'ingénieur généraliste et je m'y suis spécialisé en <b class="text-zinc-900">IA et data science</b>. Des compétences mises en pratique avec le CHU de Lille (application IA publiée à la conférence IEEE SMC), puis dans mon mémoire avec <b class="text-zinc-900">Airbus</b>, où modèle physique et PINN estiment la température des freins de l'A320.</p>
+      <p data-i18n-html="about.p3">Actuellement en stage de maintenance prédictive chez <b class="text-zinc-900">Air France Industries KLM E&amp;M</b>, je recherche un <b class="text-zinc-900">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.</p>
     </div>
     <div class="mt-12 bg-white rounded-2xl border border-zinc-200 shadow-sm px-6 py-7">
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
@@ -79,50 +80,34 @@
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="resume.h">Parcours</h2>
     <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-16"></div>
-
-    <ul class="tl">
-      <li class="tl-item">
-        <div class="tl-badge"><svg viewBox="0 0 64 64" class="tl-atom" aria-hidden="true">
-          <g fill="none" stroke="#3B82F6" stroke-width="2">
-            <ellipse cx="32" cy="32" rx="26" ry="10.5"/>
-            <ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(60 32 32)"/>
-            <ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(120 32 32)"/>
-          </g>
-          <circle cx="32" cy="32" r="4.2" fill="#10B981"/>
-          <circle cx="55" cy="24" r="2.3" fill="#10B981"/>
-          <circle cx="14" cy="46" r="2.3" fill="#10B981"/>
-        </svg></div>
-        <div class="tl-panel">
-          <div class="tl-date">2020 – 2023</div>
-          <div class="tl-org" data-i18n="edu3.t">Classe préparatoire PCSI / PC*</div>
-          <div class="tl-sub" data-i18n="edu3.s">Lycée Albert Schweitzer, Le Raincy.</div>
+    <div class="gantt-card">
+      <div class="g-row g-head">
+        <div class="g-lab"></div>
+        <div class="g-track">
+          <span class="g-year" style="left:4.9%">2021</span><span class="g-year" style="left:19%">2022</span><span class="g-year" style="left:33.1%">2023</span><span class="g-year" style="left:47.2%">2024</span><span class="g-year" style="left:61.3%">2025</span><span class="g-year" style="left:75.3%">2026</span><span class="g-year" style="left:89.4%">2027</span>
         </div>
-      </li>
-      <li class="tl-item inv">
-        <div class="tl-badge"><span class="tl-fb">2023<br>2027</span><img src="images/logos/centrale-lille.png" alt="" onload=\"this.previousElementSibling.remove()\" onerror="this.style.display='none'"></div>
-        <div class="tl-panel">
-          <div class="tl-date">2023 – 2027</div>
-          <div class="tl-org">École Centrale de Lille</div>
-          <div class="tl-sub" data-i18n="edu2.s">Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).</div>
-        </div>
-      </li>
-      <li class="tl-item">
-        <div class="tl-badge"><span class="tl-fb">2025<br>2026</span><img src="images/logos/cranfield.png" alt="" onload=\"this.previousElementSibling.remove()\" onerror="this.style.display='none'"></div>
-        <div class="tl-panel">
-          <div class="tl-date">2025 – 2026</div>
-          <div class="tl-org">Cranfield University</div>
-          <div class="tl-sub" data-i18n="edu1.s">MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.</div>
-        </div>
-      </li>
-      <li class="tl-item inv">
-        <div class="tl-badge"><span class="tl-fb">2026<br>2027</span><img src="images/logos/air-france.png" alt="" onload=\"this.previousElementSibling.remove()\" onerror="this.style.display='none'"></div>
-        <div class="tl-panel">
-          <div class="tl-date">2026 – 2027</div>
-          <div class="tl-org">Air France Industries KLM E&amp;M</div>
-          <div class="tl-sub" data-i18n="exp1.s">Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.</div>
-        </div>
-      </li>
-    </ul>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b data-i18n="edu3.t">Classe préparatoire PCSI / PC*</b><span data-i18n="g1.d">Le Raincy · 2020 – 2023</span></div>
+        <div class="g-track"><div class="g-bar g-edu-light" style="left:0%;width:40.8%"></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>École Centrale de Lille</b><span data-i18n="g2.d">Diplôme d'ingénieur · 2023 – 2027</span></div>
+        <div class="g-track"><div class="g-bar g-edu" style="left:42.3%;width:56.3%"></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>Cranfield University</b><span data-i18n="g3.d">MSc, double diplôme · 2025 – 2026</span></div>
+        <div class="g-track"><div class="g-bar g-edu-dark" style="left:71.8%;width:12.7%"></div></div>
+      </div>
+      <div class="g-row">
+        <div class="g-lab"><b>Air France Industries KLM E&amp;M</b><span data-i18n="g4.d">Stage maintenance prédictive · oct. 2026 – mars 2027</span></div>
+        <div class="g-track"><div class="g-bar g-exp" style="left:85.9%;width:6.4%"></div></div>
+      </div>
+      <div class="g-legend">
+        <span><i class="g-dot g-edu"></i><span data-i18n="g.leg1">Formation</span></span>
+        <span><i class="g-dot g-exp"></i><span data-i18n="g.leg2">Expérience</span></span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -205,7 +190,7 @@
   </div>
 </div>
 
-<script src="assets/js/projects-data.js?v=8"></script>
-<script src="assets/js/scripts.js?v=8"></script>
+<script src="assets/js/projects-data.js?v=9"></script>
+<script src="assets/js/scripts.js?v=9"></script>
 </body>
 </html>
