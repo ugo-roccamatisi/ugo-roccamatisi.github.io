@@ -53,20 +53,21 @@ window.PROJECTS = [
     tech: ["Catia V5", "3DEXPERIENCE", "EASA CS-25"],
     links: [{ href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
-      { src: "images/projects/bwb-1.png", fr: "L'équipe et la maquette du G-VEGA", en: "The team and the G-VEGA model" },
-      { src: "images/projects/bwb-2.png", fr: "Intégration moteur et nacelle", en: "Engine and nacelle integration" },
-      { src: "images/projects/bwb-3.png", fr: "Inverseurs de poussée", en: "Thrust reversers" }
+      { src: "images/projects/bwb-2.png", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
+      { src: "images/projects/bwb-3.jpg", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
+      { src: "images/projects/bwb-4.jpg", fr: "Architecture structurale du G-VEGA", en: "G-VEGA structural layout" },
+      { src: "images/projects/bwb-5.png", fr: "Coupe : cabine, réservoirs hydrogène et moteur", en: "Cutaway: cabin, hydrogen tanks and engine" }
     ],
     fr: {
       title: "Avion BWB à propulsion hydrogène",
       excerpt: "Responsable intégration moteurs dans une équipe internationale de 62 étudiants.",
       meta: "Cranfield, appuyé par Airbus · projet de groupe (62) · oct. 2025 à mai 2026",
       situation: "Projet phare du MSc à Cranfield, appuyé par Airbus : concevoir un avion aile volante (Blended Wing Body) à propulsion hydrogène pour décarboner le long-courrier, en équipe internationale de 62 étudiants.",
-      task: "Responsable de l'intégration moteurs : positionner la propulsion sur une aile volante et tenir les exigences de certification.",
+      task: "Responsable de l'intégration moteurs : positionner la propulsion sur l'aile volante et tenir les exigences de certification, en collaboration étroite avec les autres pôles pour concilier les contraintes de chacun.",
       actions: [
         "Positionnement des turboréacteurs, design de la nacelle et des inverseurs de poussée (Catia V5, 3DEXPERIENCE).",
         "Arbitrages entre traînée d'interférence, accès maintenance et bruit en cabine.",
-        "Analyse de conformité aux normes EASA CS-25."
+        "Analyse de conformité aux normes EASA CS-25, notamment au risque d'éclatement de rotor (rotor burst)."
       ],
       results: [
         "Configuration défendue en soutenance devant un jury d'experts de l'industrie.",
@@ -78,11 +79,11 @@ window.PROJECTS = [
       excerpt: "Engine integration lead in an international team of 62 students.",
       meta: "Cranfield, backed by Airbus · group project (62) · Oct. 2025 to May 2026",
       situation: "Flagship MSc project at Cranfield, backed by Airbus: design a hydrogen-powered Blended Wing Body aircraft to decarbonize long-haul aviation, in an international team of 62 students.",
-      task: "Engine integration lead: position the propulsion on a flying wing and meet certification requirements.",
+      task: "Engine integration lead: position the propulsion on the flying wing and meet certification requirements, working closely with the other teams to reconcile everyone's constraints.",
       actions: [
         "Turbofan positioning, nacelle and thrust reverser design (Catia V5, 3DEXPERIENCE).",
         "Trade-offs between interference drag, maintenance access and cabin noise.",
-        "Compliance analysis with EASA CS-25 standards."
+        "Compliance analysis with EASA CS-25 standards, notably the rotor burst hazard."
       ],
       results: [
         "Configuration defended before a jury of industry experts.",
