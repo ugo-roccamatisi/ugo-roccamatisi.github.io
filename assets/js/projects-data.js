@@ -190,8 +190,9 @@ window.PROJECTS = [
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
     links: [{ href: "rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
-      { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées (démo Streamlit)", en: "Optimized routes (Streamlit demo)" },
-      { src: "images/projects/vrp-benchmark.png", fr: "Benchmark des algorithmes", en: "Algorithm benchmark" }
+      { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées par recherche tabou : une couleur par véhicule", en: "Routes optimized by tabu search: one colour per vehicle" },
+      { src: "images/projects/vrp-benchmark.png", fr: "Convergence du système multi-agents (instance à 40 clients)", en: "Multi-agent system convergence (40-client instance)" },
+      { src: "images/projects/vrp-qlearning.png", fr: "Entraînement du Q-Learning en direct dans la démo Streamlit", en: "Live Q-Learning training in the Streamlit demo" }
     ],
     fr: {
       title: "Tournées de véhicules : méta-heuristiques & Q-Learning",
@@ -205,8 +206,8 @@ window.PROJECTS = [
         "Enchaînement recuit simulé puis Q-Learning tabulaire avec opérateurs 2-opt, et démonstrateur Streamlit."
       ],
       results: [
-        "Coût réduit de 14 à 26 % selon les combinaisons d'agents.",
-        "Meilleure performance du projet sur l'instance à 100 clients."
+        "Système multi-agents Top-N réduisant le coût du pool initial de 7 à 26 % selon les combinaisons d'agents.",
+        "Stratégie gagnante : recuit simulé puis Q-Learning tabulaire (2-opt), environ 13 % de mieux que la meilleure méta-heuristique seule sur l'instance à 100 clients."
       ]
     },
     en: {
@@ -221,14 +222,13 @@ window.PROJECTS = [
         "Chained simulated annealing then tabular Q-Learning with 2-opt operators, plus a Streamlit demo."
       ],
       results: [
-        "Cost reduced by 14 to 26% depending on agent combinations.",
-        "Best performance of the project on the 100-client instance."
+        "Top-N multi-agent system reducing the initial pool cost by 7 to 26% depending on agent combinations.",
+        "Winning strategy: simulated annealing then tabular Q-Learning (2-opt), about 13% better than the best standalone metaheuristic on the 100-client instance."
       ]
     }
   },
   {
     id: "prophet",
-    fit: "contain",
     banner: "images/projects/pjm-map.png",
     tech: ["Python", "Prophet", "pandas"],
     links: [{ href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb", label_fr: "Notebook", label_en: "Notebook" }],
