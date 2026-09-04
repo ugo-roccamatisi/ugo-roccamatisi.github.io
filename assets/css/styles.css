@@ -50,14 +50,14 @@
 .gantt-card { background: #fff; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 2rem 2.2rem 1.6rem; max-width: 960px; margin: 0 auto; }
 .g-row { display: grid; grid-template-columns: 280px 1fr; align-items: center; gap: 1.2rem; padding: 0.6rem 0; }
 .g-head { padding-bottom: 0.2rem; }
-.g-lab { display: grid; grid-template-columns: 40px 1fr; gap: 0.75rem; align-items: center; }
+.g-lab { display: grid; grid-template-columns: 60px 1fr; gap: 0.85rem; align-items: center; }
 .g-txt { display: flex; flex-direction: column; line-height: 1.35; }
 .g-txt b { font-size: 0.93rem; font-weight: 700; color: #27272a; }
 .g-txt > span { font-size: 0.78rem; color: #71717a; }
-.g-logo { position: relative; width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid #e4e4e7; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
-.g-logo img { position: relative; z-index: 2; width: 74%; height: 74%; object-fit: contain; }
+.g-logo { position: relative; width: 60px; height: 60px; border-radius: 50%; background: #fff; border: 1px solid #e4e4e7; box-shadow: 0 3px 10px rgba(0,0,0,0.07); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.g-logo img { position: relative; z-index: 2; width: 82%; height: 82%; object-fit: contain; }
 .g-logo-svg svg { width: 66%; height: 66%; }
-.g-ini { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; color: #3B82F6; z-index: 1; }
+.g-ini { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.15rem; color: #3B82F6; z-index: 1; }
 .g-track {
   position: relative; height: 30px; background-color: #f7f7f8; border-radius: 999px;
   background-image: linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea);
@@ -83,8 +83,8 @@
 }
 
 /* A propos : portrait + texte (structure du template d'origine) */
-.about-grid { display: grid; grid-template-columns: 290px 1fr; gap: 3rem; align-items: center; }
-.about-photo { width: 290px; height: 340px; object-fit: cover; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: center; }
+.about-photo { width: 280px; height: 280px; object-fit: cover; border-radius: 50%; border: 6px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.14); }
 .about-grid.no-photo { grid-template-columns: 1fr; }
 .about-grid.no-photo .about-txt { max-width: 48rem; margin: 0 auto; text-align: center; }
 @media (max-width: 760px) {
