@@ -7,11 +7,11 @@ const T = {
     'hero.avail': "Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027",
     'hero.cta': 'Découvrir mes projets',
     'about.h': 'À propos',
-    'about.p1': "Élève-ingénieur en double diplôme <b class=\"text-zinc-900 dark:text-white\">Centrale Lille</b> / <b class=\"text-zinc-900 dark:text-white\">Cranfield University</b>, je travaille là où la physique rencontre l'apprentissage : mon mémoire avec <b class=\"text-zinc-900 dark:text-white\">Airbus</b> combine un modèle thermique calibré sur données de vol et des PINN pour estimer la température des freins de l'A320.",
-    'about.p2': "En stage de maintenance prédictive chez <b class=\"text-zinc-900 dark:text-white\">Air France Industries KLM E&M</b> d'octobre 2026 à mars 2027, je recherche un <b class=\"text-zinc-900 dark:text-white\">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.",
+    'about.p1': "Élève-ingénieur en double diplôme <b class=\"text-zinc-900\">Centrale Lille</b> / <b class=\"text-zinc-900\">Cranfield University</b>, je travaille là où la physique rencontre l'apprentissage : mon mémoire avec <b class=\"text-zinc-900\">Airbus</b> combine un modèle thermique calibré sur données de vol et des PINN pour estimer la température des freins de l'A320.",
+    'about.p2': "En stage de maintenance prédictive chez <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> d'octobre 2026 à mars 2027, je recherche un <b class=\"text-zinc-900\">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.",
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
-    'resume.h': 'Parcours', 'tl.cta': 'Avril 2027 : votre entreprise ?', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences',
+    'resume.h': 'Parcours', 'tl.cta1': 'Avril 2027', 'tl.cta2': 'votre entreprise ?', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences',
     'edu1.s': "MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.",
     'edu2.s': "Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).",
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -29,11 +29,11 @@ const T = {
     'hero.avail': "End-of-studies internship · 4 to 6 months · from April 2027",
     'hero.cta': 'Explore my projects',
     'about.h': 'About',
-    'about.p1': "A dual-degree engineering student at <b class=\"text-zinc-900 dark:text-white\">Centrale Lille</b> / <b class=\"text-zinc-900 dark:text-white\">Cranfield University</b>, I work where physics meets learning: my thesis with <b class=\"text-zinc-900 dark:text-white\">Airbus</b> combines a thermal model calibrated on flight data with PINNs to estimate A320 brake temperature.",
-    'about.p2': "Interning in predictive maintenance at <b class=\"text-zinc-900 dark:text-white\">Air France Industries KLM E&M</b> from October 2026 to March 2027, I'm looking for a <b class=\"text-zinc-900 dark:text-white\">4 to 6 month end-of-studies internship starting April 2027</b>.",
+    'about.p1': "A dual-degree engineering student at <b class=\"text-zinc-900\">Centrale Lille</b> / <b class=\"text-zinc-900\">Cranfield University</b>, I work where physics meets learning: my thesis with <b class=\"text-zinc-900\">Airbus</b> combines a thermal model calibrated on flight data with PINNs to estimate A320 brake temperature.",
+    'about.p2': "Interning in predictive maintenance at <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> from October 2026 to March 2027, I'm looking for a <b class=\"text-zinc-900\">4 to 6 month end-of-studies internship starting April 2027</b>.",
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
-    'resume.h': 'Resume', 'tl.cta': 'April 2027: your company?', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills',
+    'resume.h': 'Resume', 'tl.cta1': 'April 2027', 'tl.cta2': 'your company?', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills',
     'edu1.s': "MSc in Aerospace Vehicle Design, Aircraft Design option. Thesis with Airbus.",
     'edu2.s': "General engineering degree. ML, optimization, self-study (inverse problems, Markov, statistics).",
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -69,17 +69,6 @@ function setLang(lang) {
   renderProjects();
 }
 
-/* ===================== Thème clair / sombre ===================== */
-const rootEl = document.documentElement;
-function applyTheme(dark) {
-  rootEl.classList.toggle('dark', dark);
-  document.getElementById('icon-moon').classList.toggle('hidden', dark);
-  document.getElementById('icon-sun').classList.toggle('hidden', !dark);
-  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
-}
-let savedTheme = 'light'; // clair par défaut
-try { savedTheme = localStorage.getItem('theme') || 'light'; } catch (e) {}
-
 /* ===================== Header : se cache en descendant ===================== */
 let lastY = 0;
 const header = document.getElementById('site-header');
@@ -107,7 +96,7 @@ function renderProjects() {
       '<div class="proj-banner"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
       '<div class="p-5 flex flex-col grow">' +
         '<h3 class="font-bold leading-snug mb-2">' + t.title + '</h3>' +
-        '<p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4 grow">' + t.excerpt + '</p>' +
+        '<p class="text-sm text-zinc-500 leading-relaxed mb-4 grow">' + t.excerpt + '</p>' +
         '<button class="self-start bg-accblue hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors" data-open="' + p.id + '">' + T[LANG]['proj.more'] + '</button>' +
       '</div>';
     grid.appendChild(card);
@@ -130,15 +119,15 @@ function openModal(id) {
     '<div class="proj-banner" style="height:210px;border-radius:1rem 1rem 0 0;overflow:hidden"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="p-6 md:p-8">' +
       '<h3 class="text-xl md:text-2xl font-bold mb-1">' + t.title + '</h3>' +
-      '<p class="text-sm text-zinc-500 dark:text-zinc-400 mb-4">' + t.meta + '</p>' +
-      '<p class="text-zinc-600 dark:text-zinc-300 leading-relaxed mb-5">' + t.description + '</p>' +
+      '<p class="text-sm text-zinc-500 mb-4">' + t.meta + '</p>' +
+      '<p class="text-zinc-600 leading-relaxed mb-5">' + t.description + '</p>' +
       '<h4 class="font-semibold mb-2">' + T[LANG]['modal.contrib'] + '</h4>' +
-      '<ul class="list-disc pl-5 space-y-1.5 text-zinc-600 dark:text-zinc-300 text-sm leading-relaxed mb-5">' +
+      '<ul class="list-disc pl-5 space-y-1.5 text-zinc-600 text-sm leading-relaxed mb-5">' +
         t.contributions.map(c => '<li>' + c + '</li>').join('') +
       '</ul>' +
       '<h4 class="font-semibold mb-2">' + T[LANG]['modal.tech'] + '</h4>' +
       '<div class="flex flex-wrap gap-2 mb-5">' +
-        p.tech.map(x => '<span class="text-xs font-semibold bg-blue-50 text-accblue dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 px-2.5 py-1 rounded-full">' + x + '</span>').join('') +
+        p.tech.map(x => '<span class="text-xs font-semibold bg-blue-50 text-accblue border border-blue-200 px-2.5 py-1 rounded-full">' + x + '</span>').join('') +
       '</div>' +
       (links ? '<div class="flex flex-wrap gap-2">' + links + '</div>' : '') +
     '</div>';
@@ -154,8 +143,6 @@ function closeModal() {
 
 /* ===================== Initialisation ===================== */
 document.addEventListener('DOMContentLoaded', () => {
-  applyTheme(savedTheme === 'dark');
-  document.getElementById('theme-toggle').addEventListener('click', () => applyTheme(!rootEl.classList.contains('dark')));
   document.getElementById('modal-close').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
