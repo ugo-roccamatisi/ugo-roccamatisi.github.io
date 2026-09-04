@@ -18,7 +18,7 @@ const T = {
     'proj.h': 'Projets',
     'proj.intro': "Cliquez sur un projet pour le détail : contexte, contributions et documents.",
     'proj.more': 'Voir le détail', 'modal.contrib': 'Contributions', 'modal.tech': 'Technologies',
-    'contact.p': "Contactez-moi par e-mail, LinkedIn ou par téléphone.",
+    'contact.p': "Contactez-moi par e-mail ou sur LinkedIn.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
@@ -39,7 +39,7 @@ const T = {
     'proj.h': 'Projects',
     'proj.intro': "Click a project for details: context, contributions and documents.",
     'proj.more': 'View details', 'modal.contrib': 'Contributions', 'modal.tech': 'Technologies',
-    'contact.p': "Reach me by e-mail, LinkedIn or phone.",
+    'contact.p': "Reach me by e-mail or on LinkedIn.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
 };
