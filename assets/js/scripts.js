@@ -91,7 +91,7 @@ function renderProjects() {
     const card = document.createElement('article');
     card.className = 'proj-card';
     card.innerHTML =
-      '<div class="proj-banner"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
+      '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
       '<div class="p-5 flex flex-col grow">' +
         '<h3 class="font-bold leading-snug mb-2">' + t.title + '</h3>' +
         '<p class="text-sm text-zinc-500 leading-relaxed mb-4 grow">' + t.excerpt + '</p>' +
@@ -123,7 +123,7 @@ function openModal(id) {
     '<figure class="mgal-fig"><img src="' + g.src + '" alt="" loading="lazy" onerror="this.closest(\'figure\').remove()"><figcaption>' + (LANG === 'fr' ? g.fr : g.en) + '</figcaption></figure>'
   ).join('');
   document.getElementById('modal-content').innerHTML =
-    '<div class="proj-banner" style="height:210px;border-radius:1rem 1rem 0 0;overflow:hidden"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
+    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '" style="height:210px;border-radius:1rem 1rem 0 0;overflow:hidden"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="p-6 md:p-8">' +
       '<h3 class="text-xl md:text-2xl font-bold mb-1">' + t.title + '</h3>' +
       '<p class="text-sm text-zinc-500 mb-5">' + t.meta + '</p>' +

@@ -4,6 +4,7 @@
 window.PROJECTS = [
   {
     id: "btem",
+    fit: "contain",
     banner: "images/projects/btem-journee.png",
     tech: ["Python", "SciPy", "Nelder-Mead", "PyTorch", "Streamlit"],
     links: [],
@@ -93,7 +94,7 @@ window.PROJECTS = [
   },
   {
     id: "saab",
-    banner: "images/projects/saab-psd.png",
+    banner: "images/projects/saab-plane.jpg",
     tech: ["Python", "SciPy", "Welch", "ruptures"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/saab_landing_sensor_spectral_analysis.ipynb", label_fr: "Notebook 1", label_en: "Notebook 1" },
@@ -184,6 +185,7 @@ window.PROJECTS = [
   },
   {
     id: "vrp",
+    fit: "contain",
     banner: "images/projects/vrp-routes.png",
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
     links: [{ href: "rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
@@ -226,7 +228,8 @@ window.PROJECTS = [
   },
   {
     id: "prophet",
-    banner: "images/projects/prophet-forecast.png",
+    fit: "contain",
+    banner: "images/projects/pjm-map.png",
     tech: ["Python", "Prophet", "pandas"],
     links: [{ href: "https://github.com/ugo-roccamatisi/ugo-roccamatisi.github.io/blob/main/energy_prediction_portfolio.ipynb", label_fr: "Notebook", label_en: "Notebook" }],
     gallery: [
