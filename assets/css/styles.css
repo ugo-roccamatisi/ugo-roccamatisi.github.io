@@ -41,34 +41,32 @@
 .skill-card i { font-size: 44px; line-height: 1; }
 .skill-card .mono { font-weight: 800; font-size: 1.5rem; color: #3B82F6; line-height: 44px; }
 
-/* Timeline (esprit ericwadkins, habillage dafalagi) */
-.tl { position: relative; list-style: none; max-width: 900px; margin: 0 auto; padding: 0; }
-.tl::before { content: ''; position: absolute; top: 10px; bottom: 10px; left: 50%; width: 2px; margin-left: -1px; background: #e4e4e7; }
-.tl-item { position: relative; margin-bottom: 3.2rem; min-height: 120px; }
-.tl-item::after { content: ''; display: table; clear: both; }
-.tl-panel { float: left; width: 42%; text-align: right; }
-.tl-item.inv .tl-panel { float: right; text-align: left; }
-.tl-badge {
-  position: absolute; left: 50%; width: 120px; height: 120px; margin-left: -60px;
-  border-radius: 50%; background: #fff; border: 4px solid #e4e4e7;
-  display: flex; align-items: center; justify-content: center; overflow: hidden; z-index: 2;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-.tl-badge img { width: 70%; height: 70%; object-fit: contain; position: relative; z-index: 2; background: #fff; }
-.tl-fb { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; color: #3B82F6; text-align: center; line-height: 1.25; z-index: 1; }
-.tl-date { font-size: 0.85rem; font-weight: 700; color: #10B981; }
-.tl-org { font-weight: 700; font-size: 1.12rem; margin-top: 0.1rem; }
-.tl-sub { font-size: 0.92rem; color: #71717a; line-height: 1.65; margin-top: 0.25rem; }
-@media (max-width: 760px) {
-  .tl::before { left: 46px; }
-  .tl-badge { left: 46px; width: 88px; height: 88px; margin-left: -44px; }
-  .tl-panel, .tl-item.inv .tl-panel { float: none; width: auto; text-align: left; margin-left: 108px; }
-  .tl-fb { font-size: 0.85rem; }
-}
-
-/* Badge prépa : atome */
-.tl-atom { width: 68%; height: 68%; }
 
 /* Emplacement d'icône : logo optionnel (images/skills/) par-dessus le monogramme */
 .skill-ic { position: relative; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
 .skill-ic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; z-index: 2; }
+
+/* Parcours : frise a bandes paralleles (Gantt) */
+.gantt-card { background: #fff; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 2rem 2.2rem 1.6rem; max-width: 960px; margin: 0 auto; }
+.g-row { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 1.2rem; padding: 0.55rem 0; }
+.g-head { padding-bottom: 0.2rem; }
+.g-lab { display: flex; flex-direction: column; line-height: 1.35; }
+.g-lab b { font-size: 0.93rem; font-weight: 700; color: #27272a; }
+.g-lab span { font-size: 0.78rem; color: #71717a; }
+.g-track { position: relative; height: 26px; background: #f4f4f5; border-radius: 999px; }
+.g-head .g-track { background: none; height: 16px; }
+.g-year { position: absolute; transform: translateX(-50%); font-size: 0.72rem; font-weight: 600; color: #a1a1aa; }
+.g-bar { position: absolute; top: 0; height: 100%; border-radius: 999px; min-width: 14px; transition: filter 0.15s; }
+.g-bar:hover { filter: brightness(1.08); }
+.g-edu-light { background: #93C5FD; }
+.g-edu { background: #3B82F6; }
+.g-edu-dark { background: #1D4ED8; }
+.g-exp { background: #10B981; }
+.g-legend { display: flex; justify-content: flex-end; gap: 1.4rem; margin-top: 0.9rem; font-size: 0.78rem; color: #71717a; }
+.g-legend > span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.g-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+@media (max-width: 680px) {
+  .gantt-card { padding: 1.4rem 1.1rem 1.2rem; }
+  .g-row { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.7rem 0; }
+  .g-head { display: none; }
+}
