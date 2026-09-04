@@ -81,3 +81,13 @@
   .g-row { grid-template-columns: 1fr; gap: 0.35rem; padding: 0.7rem 0; }
   .g-head { display: none; }
 }
+
+/* A propos : portrait + texte (structure du template d'origine) */
+.about-grid { display: grid; grid-template-columns: 290px 1fr; gap: 3rem; align-items: center; }
+.about-photo { width: 290px; height: 340px; object-fit: cover; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+.about-grid.no-photo { grid-template-columns: 1fr; }
+.about-grid.no-photo .about-txt { max-width: 48rem; margin: 0 auto; text-align: center; }
+@media (max-width: 760px) {
+  .about-grid { grid-template-columns: 1fr; gap: 1.6rem; justify-items: center; }
+  .about-txt { text-align: center; }
+}
