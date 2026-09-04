@@ -48,13 +48,24 @@
 
 /* Parcours : frise a bandes paralleles (Gantt) */
 .gantt-card { background: #fff; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 2rem 2.2rem 1.6rem; max-width: 960px; margin: 0 auto; }
-.g-row { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 1.2rem; padding: 0.55rem 0; }
+.g-row { display: grid; grid-template-columns: 280px 1fr; align-items: center; gap: 1.2rem; padding: 0.6rem 0; }
 .g-head { padding-bottom: 0.2rem; }
-.g-lab { display: flex; flex-direction: column; line-height: 1.35; }
-.g-lab b { font-size: 0.93rem; font-weight: 700; color: #27272a; }
-.g-lab span { font-size: 0.78rem; color: #71717a; }
-.g-track { position: relative; height: 26px; background: #f4f4f5; border-radius: 999px; }
-.g-head .g-track { background: none; height: 16px; }
+.g-lab { display: grid; grid-template-columns: 40px 1fr; gap: 0.75rem; align-items: center; }
+.g-txt { display: flex; flex-direction: column; line-height: 1.35; }
+.g-txt b { font-size: 0.93rem; font-weight: 700; color: #27272a; }
+.g-txt > span { font-size: 0.78rem; color: #71717a; }
+.g-logo { position: relative; width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid #e4e4e7; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.g-logo img { position: relative; z-index: 2; width: 74%; height: 74%; object-fit: contain; }
+.g-logo-svg svg { width: 66%; height: 66%; }
+.g-ini { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; color: #3B82F6; z-index: 1; }
+.g-track {
+  position: relative; height: 30px; background-color: #f7f7f8; border-radius: 999px;
+  background-image: linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea), linear-gradient(#e7e7ea,#e7e7ea);
+  background-size: 1px 100%; background-repeat: no-repeat;
+  background-position: 4.9% 0, 19% 0, 33.1% 0, 47.2% 0, 61.3% 0, 75.3% 0, 89.4% 0;
+}
+.g-head .g-track { background: none; height: 22px; }
+.g-year::after { content: ''; display: block; width: 1px; height: 6px; background: #d4d4d8; margin: 3px auto 0; }
 .g-year { position: absolute; transform: translateX(-50%); font-size: 0.72rem; font-weight: 600; color: #a1a1aa; }
 .g-bar { position: absolute; top: 0; height: 100%; border-radius: 999px; min-width: 14px; transition: filter 0.15s; }
 .g-bar:hover { filter: brightness(1.08); }
