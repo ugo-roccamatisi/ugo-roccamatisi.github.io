@@ -190,7 +190,7 @@ window.PROJECTS = [
   {
     id: "chu",
     banner: "images/projects/chu-banner.png",
-    tech: ["Llama 3", "XGBoost", "scikit-learn", "MIMIC-IV"],
+    tech: ["Mistral 7B", "llama.cpp", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
       { href: "rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
@@ -207,13 +207,14 @@ window.PROJECTS = [
       situation: "Le CHU de Lille et le SIB, éditeur du dossier patient Sillage présent dans 80 % des hôpitaux français, veulent aider les équipes soignantes à anticiper les flux de patients. Projet de 18 mois en équipe de 12 étudiants.",
       task: "Piloter le pôle « prédiction » et transformer des données cliniques brutes en prévisions utiles aux soignants.",
       actions: [
-        "Fine-tuning de Llama 3 pour structurer automatiquement comptes rendus et notes cliniques.",
+        "Mise en place d'un LLM local (OpenHermes 2.5, Mistral 7B via llama.cpp) structurant automatiquement comptes rendus et notes cliniques en fiches exploitables.",
         "Entraînement d'un classifieur XGBoost (avec réduction PCA) prédisant la durée de séjour en 7 catégories, sur 300 000 patients de la base MIMIC-IV.",
         "Coordination du pôle et rédaction scientifique."
       ],
       results: [
-        "70 % de précision sur la durée de séjour et l'orientation post-hospitalisation.",
-        "Article publié à la conférence internationale IEEE SMC."
+        "Outil livré à l'hôpital pour mise en production, après 10 itérations avec le personnel médical et plus de 1 800 heures de travail cumulées.",
+        "Article publié à la conférence internationale IEEE SMC.",
+        "Code confidentiel à la demande des partenaires hospitaliers ; rapports utilisateur et technique consultables ci-dessous."
       ]
     },
     en: {
@@ -223,13 +224,14 @@ window.PROJECTS = [
       situation: "CHU de Lille and SIB, editor of the Sillage patient-record software used in 80% of French hospitals, want to help medical teams anticipate patient flows. An 18-month project in a team of 12 students.",
       task: "Lead the prediction team and turn raw clinical data into forecasts useful to caregivers.",
       actions: [
-        "Fine-tuned Llama 3 to automatically structure clinical reports and notes.",
+        "Deployed a local LLM (OpenHermes 2.5, Mistral 7B via llama.cpp) automatically structuring clinical reports and notes into usable records.",
         "Trained an XGBoost classifier (with PCA reduction) predicting length of stay in 7 categories, on 300,000 patients from the MIMIC-IV database.",
         "Coordinated the team and contributed to the scientific writing."
       ],
       results: [
-        "70% accuracy on length of stay and post-hospitalization orientation.",
-        "Paper published at the IEEE SMC international conference."
+        "Tool delivered to the hospital for production use, after 10 iterations with medical staff and over 1,800 hours of cumulative work.",
+        "Paper published at the IEEE SMC international conference.",
+        "Code kept confidential at the hospital partners' request; user and technical reports available below."
       ]
     }
   },
