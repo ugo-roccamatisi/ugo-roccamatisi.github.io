@@ -198,7 +198,12 @@ window.PROJECTS = [
     gallery: [
       { src: "images/projects/chu-prediction.png", fr: "Démo de bout en bout : texte clinique en entrée, durée de séjour prédite avec probabilités", en: "End-to-end demo: clinical text in, predicted length of stay with probabilities" },
       { src: "images/projects/chu-llm.png", fr: "Extraction structurée par le LLM : compte rendu médical vers JSON", en: "LLM structured extraction: medical report to JSON" },
-      { src: "images/projects/chu-mimic.png", fr: "Préparation des données MIMIC-IV : sélection des tables et colonnes", en: "MIMIC-IV data preparation: table and column selection" }
+      { src: "images/projects/chu-mimic.png", fr: "Préparation des données MIMIC-IV : sélection des tables et colonnes", en: "MIMIC-IV data preparation: table and column selection" },
+      { src: "images/projects/chu-dataset.png", fr: "Pipeline du pôle prédiction : de MIMIC-IV au dataset de 134 768 séjours en 7 catégories", en: "Prediction pipeline: from MIMIC-IV to a 134,768-stay dataset in 7 categories" },
+      { src: "images/projects/chu-results.png", fr: "Évaluation par classe : RNN vs XGBoost, précision globale de 0,73", en: "Per-class evaluation: RNN vs XGBoost, 0.73 overall accuracy" },
+      { src: "images/projects/chu-archi.png", fr: "Architecture du système : modules, API et bases de données", en: "System architecture: modules, API and databases" },
+      { video: "videos/demo-prediction-form.mp4", fr: "Démo : prédiction de la durée de séjour depuis le formulaire", en: "Demo: length-of-stay prediction from the form" },
+      { video: "videos/demo-ui.mp4", fr: "Démo : l'interface de l'application", en: "Demo: the application interface" }
     ],
     fr: {
       title: "Faire parler les données médicales avec l'IA",
@@ -212,6 +217,7 @@ window.PROJECTS = [
         "Coordination du pôle et rédaction scientifique."
       ],
       results: [
+        "Précision globale de 73 % sur la classification de la durée de séjour en 7 catégories (XGBoost, évalué sur 26 950 séjours).",
         "Outil livré à l'hôpital pour mise en production, après 10 itérations avec le personnel médical et plus de 1 800 heures de travail cumulées.",
         "Approche du projet publiée à la conférence internationale IEEE SMC (Vienne, 2025).",
         "Code confidentiel à la demande des partenaires hospitaliers ; rapports utilisateur et technique consultables ci-dessous."
@@ -229,6 +235,7 @@ window.PROJECTS = [
         "Coordinated the team and contributed to the scientific writing."
       ],
       results: [
+        "Overall accuracy of 73% on 7-category length-of-stay classification (XGBoost, evaluated on 26,950 stays).",
         "Tool delivered to the hospital for production use, after 10 iterations with medical staff and over 1,800 hours of cumulative work.",
         "Project approach published at the IEEE SMC international conference (Vienna, 2025).",
         "Code kept confidential at the hospital partners' request; user and technical reports available below."
