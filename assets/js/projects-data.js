@@ -188,7 +188,7 @@ window.PROJECTS = [
   },
   {
     id: "chu",
-    banner: "images/projects/chu-prediction.png",
+    banner: "images/projects/chu-banner.png",
     tech: ["Llama 3", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
