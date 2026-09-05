@@ -5,46 +5,52 @@ window.PROJECTS = [
   {
     id: "btem",
     fit: "contain",
-    banner: "images/projects/btem-journee.png",
+    banner: "images/projects/btem-stack.png",
     tech: ["Python", "SciPy", "Nelder-Mead", "PyTorch", "Streamlit"],
     links: [],
     gallery: [
-      { src: "images/projects/btem-journee.png", fr: "Journée complète : modèle vs capteur", en: "Full day: model vs sensor" },
-      { src: "images/projects/btem-streamlit.png", fr: "Application Streamlit de prédiction", en: "Streamlit prediction app" },
-      { src: "images/projects/pinn-param.png", fr: "PINN paramétrique vs solveur de référence", en: "Parametric PINN vs reference solver" }
+      { src: "images/projects/btem-stack.png", fr: "Géométrie modélisée : 5 stators et 4 rotors carbone, interfaces de friction et convection", en: "Modelled geometry: 5 carbon stators and 4 rotors, friction interfaces and convection" },
+      { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r) dans la pile, solveur axisymétrique de validation (données synthétiques)", en: "Temperature field T(z, r) in the stack, axisymmetric validation solver (synthetic data)" },
+      { src: "images/projects/btem-pinn-archi.png", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
+      { src: "images/projects/btem-day.png", fr: "Journée de rotations enchaînées : limite décollage 150 °C et convergence vers un cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and convergence to a limit cycle" },
+      { src: "images/projects/btem-inverse.png", fr: "Problème inverse : énergie de freinage identifiée à 2 % près depuis un capteur bruité", en: "Inverse problem: braking energy identified within 2% from a noisy sensor" }
     ],
     fr: {
       title: "Température des freins A320 : physique & PINN",
       excerpt: "Mémoire Airbus & Cranfield : modèle thermique calibré à ~3 °C, prolongé par des PINN.",
-      meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026",
+      meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026 · supervision : Dr Fakhre Ali",
       situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données de vol. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
       task: "Développer un modèle de prédiction complet, précis au toucher des roues malgré un capteur échantillonné à 30 secondes et un capteur de couple qui dérive.",
       actions: [
         "Conception d'un modèle thermique à paramètres localisés (14 nœuds) en Python, calibré par Nelder-Mead multi-départ sur essais en vol et vols commerciaux.",
         "Développement d'un outil complet : segmentation automatique des vols, détection du toucher, enveloppe de sensibilité, en ligne de commande et application Streamlit.",
-        "Extension personnelle : PINN paramétrique en PyTorch, puis résolution du problème inverse sur données synthétiques."
+        "Extension personnelle sur données synthétiques : PINN du problème direct au problème inverse (PyTorch), chaque échec documenté et la physique récalcitrante absorbée dans un ansatz analytique (fonction de Green, méthode des images)."
       ],
       results: [
         "Précision de l'ordre de 3 °C au toucher sur les vols de validation.",
-        "PINN généralisant à des scénarios non vus (RMSE, erreur quadratique moyenne, de 3 à 20 K sur 2 h).",
-        "Énergie de freinage identifiée à 2 % près à partir de 5 minutes d'un capteur bruité."
+        "PINN direct à ±2 K sur la fenêtre de freinage ; la version non linéaire capture un abaissement du pic de 49 K que le modèle linéaire manque.",
+        "PINN paramétrique unique validé sur des scénarios non vus (erreur bornée à ±15 K sur 2 h), enchaîné pour simuler une journée complète de rotations.",
+        "Problème inverse : énergie de freinage identifiée à 2 % près avec 5 minutes de capteur bruité, avec étude d'identifiabilité.",
+        "Présentation dédiée de deux heures des travaux devant le Dr Stephen King (Advanced Analytics, 41 ans chez Rolls-Royce en surveillance de l'état des moteurs) et le Pr Ian Jennions (directeur technique du centre IVHM de Cranfield), en complément de la soutenance."
       ]
     },
     en: {
       title: "A320 brake temperature: physics & PINNs",
       excerpt: "Airbus & Cranfield thesis: thermal model calibrated to ~3 °C, extended with PINNs.",
-      meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026",
+      meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026 · supervised by Dr Fakhre Ali",
       situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from flight data alone. Research thesis conducted at Cranfield University with Airbus support.",
       task: "Build a complete prediction model, accurate at touchdown despite a sensor sampled every 30 seconds and a drifting torque sensor.",
       actions: [
         "Designed a lumped-parameter thermal model (14 nodes) in Python, calibrated with multi-start Nelder-Mead on flight-test and commercial flights.",
         "Built a complete tool: automatic flight segmentation, touchdown detection, sensitivity envelope, as a command line and a Streamlit app.",
-        "Personal extension: parametric PINN in PyTorch, then inverse problem resolution on synthetic data."
+        "Personal extension on synthetic data: PINNs from the direct to the inverse problem (PyTorch), each failure documented and recalcitrant physics absorbed into an analytic ansatz (Green function, method of images)."
       ],
       results: [
         "Accuracy of about 3 °C at touchdown on validation flights.",
-        "PINN generalising to unseen scenarios (RMSE, root mean square error, of 3 to 20 K over 2 h).",
-        "Braking energy identified within 2% from 5 minutes of a noisy sensor."
+        "Direct PINN within ±2 K over the braking window; the nonlinear version captures a 49 K peak reduction the linear model misses.",
+        "A single parametric PINN validated on unseen scenarios (error bounded to ±15 K over 2 h), chained to simulate a full day of rotations.",
+        "Inverse problem: braking energy identified within 2% from 5 minutes of noisy sensor data, with an identifiability study.",
+        "Dedicated two-hour presentation of the work to Dr Stephen King (Advanced Analytics, 41 years at Rolls-Royce in engine health monitoring) and Prof. Ian Jennions (Technical Director of Cranfield's IVHM Centre), in addition to the thesis defence."
       ]
     }
   },
@@ -140,25 +146,26 @@ window.PROJECTS = [
   },
   {
     id: "chu",
-    banner: "images/projects/chu-app.png",
-    tech: ["Llama 3", "scikit-learn", "MIMIC-IV"],
+    banner: "images/projects/chu-prediction.png",
+    tech: ["Llama 3", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
       { href: "rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
     gallery: [
-      { src: "images/projects/chu-app.png", fr: "Interface de l'application", en: "Application interface" },
-      { src: "images/projects/chu-resultats.png", fr: "Résultats du modèle prédictif", en: "Predictive model results" }
+      { src: "images/projects/chu-prediction.png", fr: "Démo de bout en bout : texte clinique en entrée, durée de séjour prédite avec probabilités", en: "End-to-end demo: clinical text in, predicted length of stay with probabilities" },
+      { src: "images/projects/chu-llm.png", fr: "Extraction structurée par le LLM : compte rendu médical vers JSON", en: "LLM structured extraction: medical report to JSON" },
+      { src: "images/projects/chu-mimic.png", fr: "Préparation des données MIMIC-IV : sélection des tables et colonnes", en: "MIMIC-IV data preparation: table and column selection" }
     ],
     fr: {
       title: "Faire parler les données médicales avec l'IA",
       excerpt: "Publication IEEE SMC : IA d'aide à l'hôpital, 300 000 patients.",
       meta: "CHU de Lille & Sillage · projet de groupe (12) · sept. 2023 à févr. 2025",
-      situation: "Le CHU de Lille et l'éditeur du dossier patient Sillage veulent aider les équipes soignantes à anticiper les flux de patients. Projet de 18 mois en équipe de 12 étudiants.",
+      situation: "Le CHU de Lille et le SIB, éditeur du dossier patient Sillage présent dans 80 % des hôpitaux français, veulent aider les équipes soignantes à anticiper les flux de patients. Projet de 18 mois en équipe de 12 étudiants.",
       task: "Piloter le pôle « prédiction » et transformer des données cliniques brutes en prévisions utiles aux soignants.",
       actions: [
         "Fine-tuning de Llama 3 pour structurer automatiquement comptes rendus et notes cliniques.",
-        "Entraînement d'un modèle ML sur 300 000 patients de la base MIMIC-IV.",
+        "Entraînement d'un classifieur XGBoost (avec réduction PCA) prédisant la durée de séjour en 7 catégories, sur 300 000 patients de la base MIMIC-IV.",
         "Coordination du pôle et rédaction scientifique."
       ],
       results: [
@@ -170,11 +177,11 @@ window.PROJECTS = [
       title: "Making medical data talk with AI",
       excerpt: "IEEE SMC publication: AI for hospitals, 300,000 patients.",
       meta: "CHU de Lille & Sillage · group project (12) · Sept. 2023 to Feb. 2025",
-      situation: "CHU de Lille and the patient-record software company Sillage want to help medical teams anticipate patient flows. An 18-month project in a team of 12 students.",
+      situation: "CHU de Lille and SIB, editor of the Sillage patient-record software used in 80% of French hospitals, want to help medical teams anticipate patient flows. An 18-month project in a team of 12 students.",
       task: "Lead the prediction team and turn raw clinical data into forecasts useful to caregivers.",
       actions: [
         "Fine-tuned Llama 3 to automatically structure clinical reports and notes.",
-        "Trained an ML model on 300,000 patients from the MIMIC-IV database.",
+        "Trained an XGBoost classifier (with PCA reduction) predicting length of stay in 7 categories, on 300,000 patients from the MIMIC-IV database.",
         "Coordinated the team and contributed to the scientific writing."
       ],
       results: [
