@@ -191,6 +191,7 @@ window.PROJECTS = [
     tech: ["Mistral 7B", "llama.cpp", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
+      { href: "https://hal.science/hal-05289706", label_fr: "Article IEEE SMC (HAL)", label_en: "IEEE SMC paper (HAL)" },
       { href: "docs/rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
       { href: "docs/rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
@@ -212,7 +213,7 @@ window.PROJECTS = [
       ],
       results: [
         "Outil livré à l'hôpital pour mise en production, après 10 itérations avec le personnel médical et plus de 1 800 heures de travail cumulées.",
-        "Article publié à la conférence internationale IEEE SMC.",
+        "Approche du projet publiée à la conférence internationale IEEE SMC (Vienne, 2025).",
         "Code confidentiel à la demande des partenaires hospitaliers ; rapports utilisateur et technique consultables ci-dessous."
       ]
     },
@@ -229,7 +230,7 @@ window.PROJECTS = [
       ],
       results: [
         "Tool delivered to the hospital for production use, after 10 iterations with medical staff and over 1,800 hours of cumulative work.",
-        "Paper published at the IEEE SMC international conference.",
+        "Project approach published at the IEEE SMC international conference (Vienna, 2025).",
         "Code kept confidential at the hospital partners' request; user and technical reports available below."
       ]
     }
