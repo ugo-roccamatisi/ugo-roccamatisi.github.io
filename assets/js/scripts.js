@@ -2,7 +2,7 @@
 const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
-    'hero.tagline': "Ingénieur en aéronautique, data & IA.",
+    'hero.hello': 'Bonjour, je suis', 'hero.tagline': "Ingénieur en aéronautique, data & IA.",
     'hero.avail': "Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027",
     'hero.cta': 'Découvrir mes projets',
     'about.h': 'À propos',
@@ -23,7 +23,7 @@ const T = {
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
-    'hero.tagline': "Aeronautics, data & AI engineer.",
+    'hero.hello': "Hello, I'm", 'hero.tagline': "Aeronautics, data & AI engineer.",
     'hero.avail': "End-of-studies internship · 4 to 6 months · from April 2027",
     'hero.cta': 'Explore my projects',
     'about.h': 'About',
