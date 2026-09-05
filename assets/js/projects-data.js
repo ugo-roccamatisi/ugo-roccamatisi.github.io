@@ -6,56 +6,93 @@ window.PROJECTS = [
     id: "btem",
     fit: "contain",
     banner: "images/projects/btem-assembly.png",
-    tech: ["Python", "SciPy", "Nelder-Mead", "PyTorch", "Streamlit"],
+    tech: ["Python", "SciPy", "Nelder-Mead", "Streamlit"],
     links: [],
     gallery: [
       { src: "images/projects/btem-assembly.png", fr: "Ensemble roue-frein modélisé : vues en coupe, pile de disques S1-R4, tube de couple et capteur", en: "Modelled wheel-brake assembly: cross-sections, S1-R4 disc stack, torque tube and sensor" },
       { src: "images/projects/btem-network.png", fr: "Réseau thermique à 14 nœuds du mémoire : conduction, convection et rayonnement entre chaque composant", en: "The thesis' 14-node thermal network: conduction, convection and radiation between every component" },
-      { src: "images/projects/btem-mechanisms.png", fr: "Mécanismes de transfert thermique modélisés, phase par phase (roulement, taxi, parking)", en: "Modelled heat transfer mechanisms, phase by phase (roll-out, taxi, parking)" },
-      { src: "images/projects/btem-stack.png", fr: "Extension PINN — géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "PINN extension — 1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
-      { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r) dans la pile, solveur axisymétrique de validation (données synthétiques)", en: "Temperature field T(z, r) in the stack, axisymmetric validation solver (synthetic data)" },
-      { src: "images/projects/btem-pinn-archi.png", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
-      { src: "images/projects/btem-day.png", fr: "Journée de rotations enchaînées : limite décollage 150 °C et convergence vers un cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and convergence to a limit cycle" },
-      { src: "images/projects/btem-inverse.png", fr: "Problème inverse : énergie de freinage identifiée à 2 % près depuis un capteur bruité", en: "Inverse problem: braking energy identified within 2% from a noisy sensor" }
+      { src: "images/projects/btem-mechanisms.png", fr: "Mécanismes de transfert thermique modélisés, phase par phase (roulement, taxi, parking)", en: "Modelled heat transfer mechanisms, phase by phase (roll-out, taxi, parking)" }
     ],
     fr: {
-      title: "Température des freins A320 : physique & PINN",
-      excerpt: "Mémoire Airbus & Cranfield : modèle thermique calibré à ~3 °C, prolongé par des PINN.",
+      title: "Température des freins de l'A320 en service",
+      excerpt: "Mémoire Airbus & Cranfield : modèle thermique calibré à ~3 °C au toucher sur vols commerciaux.",
       meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026 · supervision : Dr Fakhre Ali",
       situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données enregistrées sur des vols commerciaux en service. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
       task: "Développer un modèle de prédiction complet sur les données de vols commerciaux d'A320 : un capteur de température échantillonné toutes les 30 secondes, et aucune mesure de couple de freinage, l'énergie devant être reconstruite par la cinématique.",
       actions: [
         "Conception d'un modèle thermique à paramètres localisés (14 nœuds) en Python, calibré par Nelder-Mead multi-départ en espace logarithmique, mis au point sur vols d'essai puis appliqué aux vols commerciaux.",
         "Reconstruction cinématique de l'énergie de freinage sans capteur de couple : bilan de forces sous-échantillonné au roulement d'atterrissage (inverseurs compris), énergie cinétique par phase de décélération au roulage ; sur les vols d'essai, correction de biais glissante du capteur de couple qui dérive.",
-        "Développement d'un outil complet : segmentation automatique des vols, détection du toucher, enveloppe de sensibilité, en ligne de commande et application Streamlit.",
-        "Extension personnelle sur données synthétiques : PINN du problème direct au problème inverse (PyTorch), chaque échec documenté et la physique récalcitrante absorbée dans un ansatz analytique (fonction de Green, méthode des images)."
+        "Industrialisation en un outil réutilisable : détection robuste du toucher, enveloppe de sensibilité, calibration transférable d'un jour de vol à l'autre."
       ],
       results: [
         "Précision de l'ordre de 3 °C au toucher sur les vols de validation.",
-        "PINN direct à ±2 K sur la fenêtre de freinage ; la version non linéaire capture un abaissement du pic de 49 K que le modèle linéaire manque.",
-        "PINN paramétrique unique validé sur des scénarios non vus (erreur bornée à ±15 K sur 2 h), enchaîné pour simuler une journée complète de rotations.",
-        "Problème inverse : énergie de freinage identifiée à 2 % près avec 5 minutes de capteur bruité, avec étude d'identifiabilité.",
+        "Pipeline complet livré : segmentation automatique des vols, calibration, prédiction sur la journée, en ligne de commande et application Streamlit.",
         "Présentation dédiée de deux heures des travaux devant le Dr Stephen King (Advanced Analytics, 41 ans chez Rolls-Royce en surveillance de l'état des moteurs) et le Pr Ian Jennions (directeur technique du centre IVHM de Cranfield), en complément de la soutenance."
       ]
     },
     en: {
-      title: "A320 brake temperature: physics & PINNs",
-      excerpt: "Airbus & Cranfield thesis: thermal model calibrated to ~3 °C, extended with PINNs.",
+      title: "In-service A320 brake temperature",
+      excerpt: "Airbus & Cranfield thesis: thermal model calibrated to ~3 °C at touchdown on commercial flights.",
       meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026 · supervised by Dr Fakhre Ali",
       situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from data recorded on in-service commercial flights alone. Research thesis conducted at Cranfield University with Airbus support.",
       task: "Build a complete prediction model on in-service A320 commercial flight data: a temperature sensor sampled every 30 seconds, and no brake torque measurement, so the braking energy must be reconstructed from kinematics.",
       actions: [
         "Designed a lumped-parameter thermal model (14 nodes) in Python, calibrated with multi-start Nelder-Mead in log-space, developed on flight tests then applied to commercial flights.",
         "Kinematic reconstruction of braking energy without a torque sensor: sub-stepped force balance during the landing roll (thrust reversers included), kinetic energy per deceleration phase while taxiing; on flight tests, rolling bias correction of the drifting torque sensor.",
-        "Built a complete tool: automatic flight segmentation, touchdown detection, sensitivity envelope, as a command line and a Streamlit app.",
-        "Personal extension on synthetic data: PINNs from the direct to the inverse problem (PyTorch), each failure documented and recalcitrant physics absorbed into an analytic ansatz (Green function, method of images)."
+        "Industrialised into a reusable tool: robust touchdown detection, sensitivity envelope, calibration transferable from one flight day to another."
       ],
       results: [
         "Accuracy of about 3 °C at touchdown on validation flights.",
-        "Direct PINN within ±2 K over the braking window; the nonlinear version captures a 49 K peak reduction the linear model misses.",
-        "A single parametric PINN validated on unseen scenarios (error bounded to ±15 K over 2 h), chained to simulate a full day of rotations.",
-        "Inverse problem: braking energy identified within 2% from 5 minutes of noisy sensor data, with an identifiability study.",
+        "Complete pipeline delivered: automatic flight segmentation, calibration, full-day prediction, as a command line and a Streamlit app.",
         "Dedicated two-hour presentation of the work to Dr Stephen King (Advanced Analytics, 41 years at Rolls-Royce in engine health monitoring) and Prof. Ian Jennions (Technical Director of Cranfield's IVHM Centre), in addition to the thesis defence."
+      ]
+    }
+  },
+  {
+    id: "pinn",
+    fit: "contain",
+    banner: "images/projects/btem-day.png",
+    tech: ["Python", "PyTorch", "PINN", "L-BFGS"],
+    links: [],
+    gallery: [
+      { src: "images/projects/btem-stack.png", fr: "Géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
+      { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r), solveur axisymétrique de validation", en: "Temperature field T(z, r), axisymmetric validation solver" },
+      { src: "images/projects/btem-pinn-archi.png", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
+      { src: "images/projects/btem-day.png", fr: "Journée de rotations enchaînées : limite décollage 150 °C et cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and limit cycle" },
+      { src: "images/projects/btem-inverse.png", fr: "Problème inverse : énergie identifiée à 2 % près depuis un capteur bruité", en: "Inverse problem: energy identified within 2% from a noisy sensor" }
+    ],
+    fr: {
+      title: "PINN pour la thermique d'une pile de freins",
+      excerpt: "Projet perso : du problème direct à l'inverse sur données synthétiques, ±2 K et énergie à 2 %.",
+      meta: "Projet personnel de recherche · été 2026",
+      situation: "Projet personnel mené en marge du mémoire : que peut réellement apporter un PINN (réseau de neurones informé par la physique) à la thermique d'une pile de freins d'A320, et où sont ses limites ? Terrain entièrement synthétique, donc publiable.",
+      task: "Construire la réponse de bout en bout, du problème direct au problème inverse, en documentant honnêtement chaque échec.",
+      actions: [
+        "Génération de la vérité terrain par volumes finis (1D axial, 9 disques), validée par un solveur axisymétrique 2D.",
+        "PINN à ansatz analytique (fonction de Green, méthode des images, série de cosinus) : le réseau n'apprend que ce qui résiste à l'analyse, physique non linéaire et paramètres inconnus.",
+        "Extensions successives : fenêtre longue, non-linéaire, paramétrique, journée complète de rotations, puis problème inverse avec étude d'identifiabilité."
+      ],
+      results: [
+        "PINN direct à ±2 K ; la version non linéaire capture un abaissement du pic de 49 K invisible au modèle linéaire.",
+        "PINN paramétrique unique borné à ±15 K sur 2 h sur des scénarios non vus, enchaîné en journée complète (limite décollage 150 °C, cycle limite).",
+        "Énergie de freinage identifiée à 2 % près avec 5 minutes de capteur bruité ; répartition convective diagnostiquée non identifiable depuis un capteur central."
+      ]
+    },
+    en: {
+      title: "PINNs for brake stack thermal modelling",
+      excerpt: "Personal project: from the direct to the inverse problem on synthetic data, ±2 K and energy within 2%.",
+      meta: "Personal research project · summer 2026",
+      situation: "Personal project alongside the thesis: what can a PINN (physics-informed neural network) really bring to the thermal modelling of an A320 brake stack, and where are its limits? Fully synthetic ground truth, hence publishable.",
+      task: "Build the answer end to end, from the direct to the inverse problem, honestly documenting every failure.",
+      actions: [
+        "Generated the ground truth with finite volumes (1D axial, 9 discs), validated by a 2D axisymmetric solver.",
+        "PINN with an analytic ansatz (Green function, method of images, cosine series): the network only learns what resists analysis, nonlinear physics and unknown parameters.",
+        "Successive extensions: long window, nonlinear, parametric, full day of rotations, then the inverse problem with an identifiability study."
+      ],
+      results: [
+        "Direct PINN within ±2 K; the nonlinear version captures a 49 K peak reduction invisible to the linear model.",
+        "A single parametric PINN bounded to ±15 K over 2 h on unseen scenarios, chained into a full day (150 °C takeoff limit, limit cycle).",
+        "Braking energy identified within 2% from 5 minutes of noisy sensor data; convective split diagnosed as unidentifiable from a central sensor."
       ]
     }
   },
