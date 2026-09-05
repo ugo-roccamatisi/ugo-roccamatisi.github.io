@@ -5,11 +5,14 @@ window.PROJECTS = [
   {
     id: "btem",
     fit: "contain",
-    banner: "images/projects/btem-stack.png",
+    banner: "images/projects/btem-assembly.png",
     tech: ["Python", "SciPy", "Nelder-Mead", "PyTorch", "Streamlit"],
     links: [],
     gallery: [
-      { src: "images/projects/btem-stack.png", fr: "Géométrie modélisée : 5 stators et 4 rotors carbone, interfaces de friction et convection", en: "Modelled geometry: 5 carbon stators and 4 rotors, friction interfaces and convection" },
+      { src: "images/projects/btem-assembly.png", fr: "Ensemble roue-frein modélisé : vues en coupe, pile de disques S1-R4, tube de couple et capteur", en: "Modelled wheel-brake assembly: cross-sections, S1-R4 disc stack, torque tube and sensor" },
+      { src: "images/projects/btem-network.png", fr: "Réseau thermique à 14 nœuds du mémoire : conduction, convection et rayonnement entre chaque composant", en: "The thesis' 14-node thermal network: conduction, convection and radiation between every component" },
+      { src: "images/projects/btem-mechanisms.png", fr: "Mécanismes de transfert thermique modélisés, phase par phase (roulement, taxi, parking)", en: "Modelled heat transfer mechanisms, phase by phase (roll-out, taxi, parking)" },
+      { src: "images/projects/btem-stack.png", fr: "Extension PINN — géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "PINN extension — 1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
       { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r) dans la pile, solveur axisymétrique de validation (données synthétiques)", en: "Temperature field T(z, r) in the stack, axisymmetric validation solver (synthetic data)" },
       { src: "images/projects/btem-pinn-archi.png", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
       { src: "images/projects/btem-day.png", fr: "Journée de rotations enchaînées : limite décollage 150 °C et convergence vers un cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and convergence to a limit cycle" },
@@ -19,10 +22,11 @@ window.PROJECTS = [
       title: "Température des freins A320 : physique & PINN",
       excerpt: "Mémoire Airbus & Cranfield : modèle thermique calibré à ~3 °C, prolongé par des PINN.",
       meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026 · supervision : Dr Fakhre Ali",
-      situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données de vol. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
-      task: "Développer un modèle de prédiction complet, précis au toucher des roues malgré un capteur échantillonné à 30 secondes et un capteur de couple qui dérive.",
+      situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données enregistrées sur des vols commerciaux en service. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
+      task: "Développer un modèle de prédiction complet sur les données de vols commerciaux d'A320 : un capteur de température échantillonné toutes les 30 secondes, et aucune mesure de couple de freinage, l'énergie devant être reconstruite par la cinématique.",
       actions: [
-        "Conception d'un modèle thermique à paramètres localisés (14 nœuds) en Python, calibré par Nelder-Mead multi-départ sur essais en vol et vols commerciaux.",
+        "Conception d'un modèle thermique à paramètres localisés (14 nœuds) en Python, calibré par Nelder-Mead multi-départ en espace logarithmique, mis au point sur vols d'essai puis appliqué aux vols commerciaux.",
+        "Reconstruction cinématique de l'énergie de freinage sans capteur de couple : bilan de forces sous-échantillonné au roulement d'atterrissage (inverseurs compris), énergie cinétique par phase de décélération au roulage ; sur les vols d'essai, correction de biais glissante du capteur de couple qui dérive.",
         "Développement d'un outil complet : segmentation automatique des vols, détection du toucher, enveloppe de sensibilité, en ligne de commande et application Streamlit.",
         "Extension personnelle sur données synthétiques : PINN du problème direct au problème inverse (PyTorch), chaque échec documenté et la physique récalcitrante absorbée dans un ansatz analytique (fonction de Green, méthode des images)."
       ],
@@ -38,10 +42,11 @@ window.PROJECTS = [
       title: "A320 brake temperature: physics & PINNs",
       excerpt: "Airbus & Cranfield thesis: thermal model calibrated to ~3 °C, extended with PINNs.",
       meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026 · supervised by Dr Fakhre Ali",
-      situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from flight data alone. Research thesis conducted at Cranfield University with Airbus support.",
-      task: "Build a complete prediction model, accurate at touchdown despite a sensor sampled every 30 seconds and a drifting torque sensor.",
+      situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from data recorded on in-service commercial flights alone. Research thesis conducted at Cranfield University with Airbus support.",
+      task: "Build a complete prediction model on in-service A320 commercial flight data: a temperature sensor sampled every 30 seconds, and no brake torque measurement, so the braking energy must be reconstructed from kinematics.",
       actions: [
-        "Designed a lumped-parameter thermal model (14 nodes) in Python, calibrated with multi-start Nelder-Mead on flight-test and commercial flights.",
+        "Designed a lumped-parameter thermal model (14 nodes) in Python, calibrated with multi-start Nelder-Mead in log-space, developed on flight tests then applied to commercial flights.",
+        "Kinematic reconstruction of braking energy without a torque sensor: sub-stepped force balance during the landing roll (thrust reversers included), kinetic energy per deceleration phase while taxiing; on flight tests, rolling bias correction of the drifting torque sensor.",
         "Built a complete tool: automatic flight segmentation, touchdown detection, sensitivity envelope, as a command line and a Streamlit app.",
         "Personal extension on synthetic data: PINNs from the direct to the inverse problem (PyTorch), each failure documented and recalcitrant physics absorbed into an analytic ansatz (Green function, method of images)."
       ],
