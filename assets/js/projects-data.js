@@ -100,7 +100,7 @@ window.PROJECTS = [
     id: "bwb",
     banner: "images/projects/bwb-1.png",
     tech: ["SolidWorks", "3DEXPERIENCE", "Star-CCM+", "OpenVSP", "EASA CS-25"],
-    links: [{ href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
       { src: "images/projects/bwb-2.png", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
       { src: "images/projects/bwb-3.jpg", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
@@ -192,6 +192,7 @@ window.PROJECTS = [
     banner: "images/projects/chu-banner.png",
     tech: ["Mistral 7B", "llama.cpp", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
+      { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
       { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
       { href: "rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
