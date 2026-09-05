@@ -45,10 +45,9 @@ const T = {
 };
 
 let LANG = 'fr';
-try { LANG = localStorage.getItem('lang') === 'en' ? 'en' : 'fr'; } catch (e) {}
+try { LANG = localStorage.getItem('lang') || 'fr'; } catch (e) {}
 
 function setLang(lang) {
-  lang = lang === 'en' ? 'en' : 'fr';
   LANG = lang;
   document.documentElement.setAttribute('lang', lang);
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -61,7 +60,6 @@ function setLang(lang) {
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const active = btn.getAttribute('data-lang') === lang;
-    btn.setAttribute('aria-pressed', String(active));
     btn.classList.toggle('text-accblue', active);
     btn.classList.toggle('text-zinc-400', !active);
   });
@@ -69,21 +67,35 @@ function setLang(lang) {
   renderProjects();
 }
 
+/* ===================== Header : se cache en descendant ===================== */
+let lastY = 0;
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('hidden-up', y > 120 && y > lastY);
+  lastY = y;
+}, { passive: true });
+
+/* ===================== Apparition au défilement ===================== */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+
 /* ===================== Cartes projets ===================== */
 function renderProjects() {
   const grid = document.getElementById('project-grid');
   if (!grid || !window.PROJECTS) return;
   grid.innerHTML = '';
-  window.PROJECTS.forEach((p, index) => {
+  window.PROJECTS.forEach(p => {
     const t = p[LANG];
     const card = document.createElement('article');
     card.className = 'proj-card';
     card.innerHTML =
       '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
-      '<div class="proj-body"><p class="project-meta">' + String(index + 1).padStart(2, '0') + ' / ' + t.meta + '</p>' +
+      '<div class="p-5 flex flex-col grow">' +
         '<h3 class="font-bold leading-snug mb-2">' + t.title + '</h3>' +
-        '<p class="proj-excerpt">' + t.excerpt + '</p>' +
-        '<button class="project-open" data-open="' + p.id + '">' + T[LANG]['proj.more'] + '<span aria-hidden="true">↗</span></button>' +
+        '<p class="text-sm text-zinc-500 leading-relaxed mb-4 grow">' + t.excerpt + '</p>' +
+        '<button class="self-start bg-accblue hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors" data-open="' + p.id + '">' + T[LANG]['proj.more'] + '</button>' +
       '</div>';
     grid.appendChild(card);
   });
@@ -94,14 +106,12 @@ function renderProjects() {
 
 /* ===================== Modale ===================== */
 const overlay = document.getElementById('modal-overlay');
-let returnFocus = null;
-let imageFocus = null;
 function openModal(id) {
   const p = window.PROJECTS.find(x => x.id === id);
   if (!p) return;
   const t = p[LANG];
   const links = (p.links || []).map(l =>
-    '<a href="' + l.href + '" target="_blank" rel="noopener noreferrer" class="bg-accblue hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">' + (LANG === 'fr' ? l.label_fr : l.label_en) + '</a>'
+    '<a href="' + l.href + '" target="_blank" class="bg-accblue hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">' + (LANG === 'fr' ? l.label_fr : l.label_en) + '</a>'
   ).join('');
   const star = [
     ['star.s', '<p class="star-p">' + t.situation + '</p>'],
@@ -115,7 +125,7 @@ function openModal(id) {
   document.getElementById('modal-content').innerHTML =
     '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '" style="height:210px;border-radius:1rem 1rem 0 0;overflow:hidden"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="p-6 md:p-8">' +
-      '<h3 id="project-title" class="text-xl md:text-2xl font-bold mb-1">' + t.title + '</h3>' +
+      '<h3 class="text-xl md:text-2xl font-bold mb-1">' + t.title + '</h3>' +
       '<p class="text-sm text-zinc-500 mb-5">' + t.meta + '</p>' +
       star +
       (gallery ? '<h4 class="font-semibold mb-3 mt-6">' + T[LANG]['modal.gallery'] + '</h4><div class="mgal">' + gallery + '</div>' : '') +
@@ -125,43 +135,29 @@ function openModal(id) {
       '</div>' +
       (links ? '<div class="flex flex-wrap gap-2">' + links + '</div>' : '') +
     '</div>';
-  returnFocus = document.activeElement;
   overlay.classList.remove('hidden');
   overlay.classList.add('flex');
   document.body.style.overflow = 'hidden';
-  document.getElementById('modal-box').scrollTop = 0;
-  document.getElementById('modal-close').focus();
-  document.querySelectorAll('.mgal-fig img').forEach(img => {
-    img.alt = img.nextElementSibling?.textContent || '';
-    img.tabIndex = 0;
-    img.setAttribute('role', 'button');
-    img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(img.src, img.alt); } });
-  });
 }
 function closeModal() {
   overlay.classList.add('hidden');
   overlay.classList.remove('flex');
   document.body.style.overflow = '';
-  returnFocus?.focus();
 }
 
 /* ===================== Initialisation ===================== */
 /* ===================== Visionneuse d'images (galeries) ===================== */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
-function openLightbox(src, alt = '') {
-  imageFocus = document.activeElement;
-  lightboxImg.alt = alt;
+function openLightbox(src) {
   lightboxImg.src = src;
   lightbox.classList.remove('hidden');
   lightbox.classList.add('flex');
-  document.getElementById('lightbox-close').focus();
 }
 function closeLightbox() {
   lightbox.classList.add('hidden');
   lightbox.classList.remove('flex');
-  lightboxImg.removeAttribute('src');
-  imageFocus?.focus();
+  lightboxImg.src = '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -174,20 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
   lightbox.addEventListener('click', closeLightbox);
   document.getElementById('modal-content').addEventListener('click', e => {
     const img = e.target.closest('.mgal-fig img');
-    if (img) openLightbox(img.src, img.alt);
+    if (img) openLightbox(img.src);
   });
-
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   setLang(LANG);
-  document.querySelectorAll('[data-lang]').forEach(btn => btn.setAttribute('aria-label', btn.dataset.lang === 'fr' ? 'Français' : 'English'));
-});
-
-// Keep keyboard navigation inside the active dialog.
-document.addEventListener('keydown', e => {
-  if (e.key !== 'Tab') return;
-  const active = !lightbox.classList.contains('hidden') ? lightbox : !overlay.classList.contains('hidden') ? overlay : null;
-  if (!active) return;
-  const items = [...active.querySelectorAll('button, a[href], [tabindex="0"]')];
-  const first = items[0], last = items[items.length - 1];
-  if (e.shiftKey && (document.activeElement === first || !active.contains(document.activeElement))) { e.preventDefault(); last?.focus(); }
-  else if (!e.shiftKey && (document.activeElement === last || !active.contains(document.activeElement))) { e.preventDefault(); first?.focus(); }
 });

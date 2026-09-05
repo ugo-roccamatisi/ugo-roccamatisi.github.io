@@ -10,17 +10,22 @@
 <meta property="og:title" content="Ugo Roccamatisi · Portfolio">
 <meta property="og:description" content="Double diplôme Centrale Lille / Cranfield University. Modèles physiques et PINN appliqués aux systèmes aéronautiques.">
 <meta property="og:locale" content="fr_FR">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/css/styles.css?v=38">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27><g stroke=%27%233B82F6%27 stroke-width=%273.5%27><path d=%27M14 14 50 22M14 14 50 42M14 32 50 22M14 32 50 42M14 50 50 42M14 50 50 22M50 22 58 32M50 42 58 32%27/></g><g fill=%27%2310B981%27><circle cx=%2714%27 cy=%2714%27 r=%277%27/><circle cx=%2714%27 cy=%2732%27 r=%277%27/><circle cx=%2714%27 cy=%2750%27 r=%277%27/><circle cx=%2750%27 cy=%2722%27 r=%277%27/><circle cx=%2750%27 cy=%2742%27 r=%277%27/></g><circle cx=%2758%27 cy=%2732%27 r=%275.5%27 fill=%27%233B82F6%27/></svg>"><g fill=%27none%27 stroke=%27%233B82F6%27 stroke-width=%274%27><ellipse cx=%2732%27 cy=%2732%27 rx=%2726%27 ry=%2710.5%27/><ellipse cx=%2732%27 cy=%2732%27 rx=%2726%27 ry=%2710.5%27 transform=%27rotate(60 32 32)%27/><ellipse cx=%2732%27 cy=%2732%27 rx=%2726%27 ry=%2710.5%27 transform=%27rotate(120 32 32)%27/></g><circle cx=%2732%27 cy=%2732%27 r=%276%27 fill=%27%2310B981%27/></svg>"><rect width='64' height='64' rx='14' fill='%23101010'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='24' fill='%2310B981'>UR</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js?v=37"></script>
+<link rel="stylesheet" href="assets/css/styles.css?v=37">
 </head>
-<body>
-<a class="skip-link" href="#projects">Aller aux projets</a>
+<body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
 
 <!-- ================= HEADER ================= -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-transform duration-300 bg-white/90 backdrop-blur border-b border-zinc-200">
   <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between gap-4">
     <a href="#home" class="font-bold text-lg tracking-tight">Ugo Roccamatisi</a>
-    <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-7 text-sm font-medium">
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
       <a href="#about" class="hover:text-accblue transition-colors" data-i18n="nav.about">À propos</a>
       <a href="#resume" class="hover:text-accblue transition-colors" data-i18n="nav.resume">Parcours</a>
       <a href="#skills" class="hover:text-accblue transition-colors" data-i18n="skills.h">Compétences</a>
@@ -36,29 +41,23 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<main>
-<section id="home" class="hero container">
-<div class="hero-copy"><p class="eyebrow">Centrale Lille &nbsp; / &nbsp; Cranfield University</p>
-<h1>Ugo<br><em>Roccamatisi.</em></h1>
-<p class="hero-tagline" data-i18n="hero.tagline">Ingénieur en aéronautique, data &amp; IA.</p>
-<a class="text-link" href="#projects"><span data-i18n="hero.cta">Découvrir mes projets</span><span aria-hidden="true">↗</span></a></div>
-<figure class="hero-image"><img src="images/hero-bg.jpg" alt="" fetchpriority="high" decoding="async"><figcaption>AÉRONAUTIQUE &nbsp; / &nbsp; DATA &amp; IA</figcaption></figure>
-<div class="availability"><span class="status-dot" aria-hidden="true"></span><p data-i18n="hero.avail">Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027</p><span class="location">Paris, France</span></div>
-</section>
-<section id="projects" class="py-24 bg-white reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <div class="section-heading"><span class="section-number">01 /</span><h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="proj.h">Projets</h2></div>
-    
-    
-    <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-900"></div>
+  <img src="images/hero-bg.jpg" alt="" decoding="async" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/65"></div>
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-left">
+    <h1 class="text-white font-extrabold tracking-tight text-5xl md:text-8xl leading-[1.05] mb-6">Ugo Roccamatisi</h1>
+    <p class="text-zinc-200 text-2xl md:text-3xl leading-relaxed mb-4" data-i18n="hero.tagline">Ingénieur en aéronautique, data &amp; IA.</p>
+    <p class="text-accgreen font-semibold text-base md:text-lg uppercase tracking-wide mb-10" data-i18n="hero.avail">Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027</p>
+    <a href="#projects" class="inline-block bg-accblue hover:bg-blue-600 text-white font-semibold px-7 py-3.5 rounded-lg transition-colors" data-i18n="hero.cta">Découvrir mes projets</a>
   </div>
 </section>
 
 <!-- ================= À PROPOS ================= -->
 <section id="about" class="py-24 reveal">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="section-heading"><span class="section-number">02 /</span><h2 class="text-3xl md:text-4xl font-bold text-center mb-3"><span data-i18n="about.h">À propos</span></h2></div>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3"><span data-i18n="about.h">À propos</span></h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-10"></div>
     <div class="about-grid max-w-5xl mx-auto">
       <img src="images/portrait.jpg" alt="Ugo Roccamatisi" loading="lazy" class="about-photo" onerror="this.closest('.about-grid').classList.add('no-photo'); this.remove()">
       <div class="about-txt text-zinc-600 leading-relaxed space-y-4">
@@ -82,8 +81,8 @@
 <!-- ================= PARCOURS ================= -->
 <section id="resume" class="py-24 bg-white reveal">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="section-heading"><span class="section-number">03 /</span><h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="resume.h">Parcours</h2></div>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="resume.h">Parcours</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-16"></div>
     <div class="gantt-card">
       <div class="g-row g-head">
         <div class="g-lab"></div>
@@ -116,43 +115,43 @@
 </section>
 
 
-<!-- Compétences -->
+<!-- ================= COMPÉTENCES<!-- ================= COMPÉTENCES ================= -->
 <section id="skills" class="py-24 reveal">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="section-heading"><span class="section-number">04 /</span><h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="skills.h">Compétences</h2></div>
-    
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="skills.h">Compétences</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-14"></div>
     <div class="grid md:grid-cols-3 gap-x-10 gap-y-12">
       <div>
         <h3 class="text-center text-xl font-bold text-accgreen mb-7" data-i18n="sg1">Data Science &amp; IA</h3>
         <div class="grid grid-cols-2 gap-4">
-          <div class="skill-card">Python</div>
-          <div class="skill-card">PyTorch</div>
-          <div class="skill-card">TensorFlow</div>
-          <div class="skill-card">scikit-learn</div>
-          <div class="skill-card">pandas</div>
-          <div class="skill-card">SciPy</div>
-          <div class="skill-card">Streamlit</div>
+          <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+          <div class="skill-card"><i class="devicon-pytorch-original colored"></i><span>PyTorch</span></div>
+          <div class="skill-card"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+          <div class="skill-card"><i class="devicon-scikitlearn-plain colored"></i><span>scikit-learn</span></div>
+          <div class="skill-card"><i class="devicon-pandas-plain colored"></i><span>pandas</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">Sp</span><img src="images/skills/scipy.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>SciPy</span></div>
+          <div class="skill-card"><i class="devicon-streamlit-plain colored"></i><span>Streamlit</span></div>
         </div>
       </div>
       <div>
         <h3 class="text-center text-xl font-bold text-accgreen mb-7" data-i18n="sg2">Développement</h3>
         <div class="grid grid-cols-2 gap-4">
-          <div class="skill-card">C / C++</div>
-          <div class="skill-card">JavaScript</div>
-          <div class="skill-card">SQL</div>
-          <div class="skill-card">Git</div>
-          <div class="skill-card">GitHub</div>
+          <div class="skill-card"><i class="devicon-cplusplus-plain colored"></i><span>C / C++</span></div>
+          <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+          <div class="skill-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>SQL</span></div>
+          <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+          <div class="skill-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
         </div>
       </div>
       <div>
         <h3 class="text-center text-xl font-bold text-accgreen mb-7" data-i18n="sg3">Ingénierie &amp; simulation</h3>
         <div class="grid grid-cols-2 gap-4">
-          <div class="skill-card">Catia V5</div>
-          <div class="skill-card">SolidWorks</div>
-          <div class="skill-card">3DEXPERIENCE</div>
-          <div class="skill-card">Star-CCM+</div>
-          <div class="skill-card">COMSOL</div>
-          <div class="skill-card">Nastran &amp; Patran</div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">V5</span><img src="images/skills/catia.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>Catia V5</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">SW</span><img src="images/skills/solidworks.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>SolidWorks</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">3DX</span><img src="images/skills/3dexperience.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>3DEXPERIENCE</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">CFD</span><img src="images/skills/starccm.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>Star-CCM+</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">CO</span><img src="images/skills/comsol.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>COMSOL</span></div>
+          <div class="skill-card"><span class="skill-ic"><span class="mono">FEA</span><img src="images/skills/nastran.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span>Nastran &amp; Patran</span></div>
         </div>
       </div>
     </div>
@@ -160,29 +159,35 @@
 </section>
 
 <!-- ================= PROJETS ================= -->
-
+<section id="projects" class="py-24 bg-white reveal">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="proj.h">Projets</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-5"></div>
+    <p class="text-center text-zinc-500 mb-12" data-i18n="proj.intro">Cliquez sur un projet pour le détail : contexte, contributions et documents.</p>
+    <div id="project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="py-24 reveal">
   <div class="max-w-3xl mx-auto px-5 text-center">
-    <div class="section-heading"><span class="section-number">05 /</span><h2 class="text-3xl md:text-4xl font-bold mb-3">Contact</h2></div>
-    
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">Contact</h2>
+    <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-8"></div>
     <p class="text-zinc-600 mb-9" data-i18n="contact.p">Je recherche un stage de fin d'études de 4 à 6 mois à partir d'avril 2027, en aéronautique, data science ou intelligence artificielle. Je réponds volontiers à toute question sur mes projets.</p>
     <div class="flex flex-wrap justify-center gap-3">
       <a href="mailto:ugo.roccamatisi@gmail.com" class="bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">ugo.roccamatisi@gmail.com</a>
-      <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" rel="noopener noreferrer" class="border border-zinc-300 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" class="border border-zinc-300 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors">LinkedIn</a>
     </div>
   </div>
 </section>
 
-</main>
 <footer class="py-8 text-center text-sm text-zinc-500 border-t border-zinc-200">
   <span data-i18n="footer">© 2026 Ugo Roccamatisi · Paris, France</span>
 </footer>
 
 <!-- ================= MODALE PROJET ================= -->
 <div id="modal-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-  <div id="modal-box" role="dialog" aria-modal="true" aria-labelledby="project-title" tabindex="-1" class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto relative">
+  <div id="modal-box" class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[88vh] overflow-y-auto relative">
     <button id="modal-close" aria-label="Fermer" class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-black/40 hover:bg-black/60 text-white flex items-center justify-center z-10">✕</button>
     <div id="modal-content"></div>
   </div>
@@ -190,11 +195,11 @@
 
 
 <!-- ================= VISIONNEUSE D'IMAGES ================= -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu" tabindex="-1" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm cursor-zoom-out">
-  <button id="lightbox-close" aria-label="Fermer">×</button><img id="lightbox-img" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+<div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm cursor-zoom-out">
+  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
 </div>
 
-<script src="assets/js/projects-data.js?v=38"></script>
-<script src="assets/js/scripts.js?v=38"></script>
+<script src="assets/js/projects-data.js?v=37"></script>
+<script src="assets/js/scripts.js?v=37"></script>
 </body>
 </html>
