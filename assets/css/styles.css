@@ -44,8 +44,8 @@
 
 
 /* Emplacement d'icône : logo optionnel (images/skills/) par-dessus le monogramme */
-.skill-ic { position: relative; min-width: 44px; height: 48px; max-width: 150px; display: flex; align-items: center; justify-content: center; }
-.skill-ic img { position: absolute; inset: 0; margin: auto; max-width: 150px; height: 48px; width: auto; object-fit: contain; background: #fff; z-index: 2; }
+.skill-ic { position: relative; min-width: 44px; height: 48px; display: flex; align-items: center; justify-content: center; }
+.skill-ic img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-height: 48px; max-width: 130px; width: auto; height: auto; object-fit: contain; background: #fff; padding: 0 4px; z-index: 2; }
 
 /* Parcours : frise a bandes paralleles (Gantt) */
 .gantt-card { background: #fff; border-radius: 1.15rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08); padding: 2rem 2.2rem 1.6rem; max-width: 960px; margin: 0 auto; }
