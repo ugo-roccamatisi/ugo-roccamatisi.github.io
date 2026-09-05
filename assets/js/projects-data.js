@@ -102,7 +102,7 @@ window.PROJECTS = [
     tech: ["SolidWorks", "3DEXPERIENCE", "Star-CCM+", "OpenVSP", "EASA CS-25"],
     links: [{ href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
-      { src: "images/projects/bwb-2.png", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
+      { src: "images/projects/bwb-2.jpg", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
       { src: "images/projects/bwb-3.jpg", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
       { src: "images/projects/bwb-4.jpg", fr: "Architecture structurale du G-VEGA", en: "G-VEGA structural layout" },
       { src: "images/projects/bwb-5.png", fr: "Coupe : cabine, réservoirs hydrogène et moteur", en: "Cutaway: cabin, hydrogen tanks and engine" }
