@@ -119,9 +119,12 @@ function openModal(id) {
     ['star.a', '<ul class="star-ul">' + t.actions.map(x => '<li>' + x + '</li>').join('') + '</ul>'],
     ['star.r', '<ul class="star-ul">' + t.results.map(x => '<li>' + x + '</li>').join('') + '</ul>']
   ].map(([k, body]) => '<div class="star-block"><span class="star-lbl">' + T[LANG][k] + '</span>' + body + '</div>').join('');
-  const gallery = (p.gallery || []).map(g =>
-    '<figure class="mgal-fig"><img src="' + g.src + '" alt="" loading="lazy" onerror="this.closest(\'figure\').remove()"><figcaption>' + (LANG === 'fr' ? g.fr : g.en) + '</figcaption></figure>'
-  ).join('');
+  const gallery = (p.gallery || []).map(g => {
+    const media = g.video
+      ? '<video controls preload="metadata" playsinline onerror="this.closest(\'figure\').remove()"><source src="' + g.video + '" type="video/mp4"></video>'
+      : '<img src="' + g.src + '" alt="" loading="lazy" onerror="this.closest(\'figure\').remove()">';
+    return '<figure class="mgal-fig">' + media + '<figcaption>' + (LANG === 'fr' ? g.fr : g.en) + '</figcaption></figure>';
+  }).join('');
   document.getElementById('modal-content').innerHTML =
     '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '" style="height:210px;border-radius:1rem 1rem 0 0;overflow:hidden"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="p-6 md:p-8">' +
