@@ -105,3 +105,6 @@
 .mgal-fig img:hover { border-color: #3B82F6; }
 .mgal-fig figcaption { font-size: 0.76rem; color: #71717a; margin-top: 0.3rem; line-height: 1.4; }
 @media (max-width: 560px) { .mgal { grid-template-columns: 1fr; } .mgal-fig img { height: auto; } }
+
+/* Modules clés sous les formations de la frise */
+.g-mod { display: block; font-size: 0.72rem; color: #a1a1aa; line-height: 1.45; margin-top: 0.15rem; max-width: 34ch; }
