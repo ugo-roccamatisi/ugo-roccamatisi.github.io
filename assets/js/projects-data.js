@@ -53,7 +53,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/btem-day.png",
     tech: ["Python", "PyTorch", "PINN", "L-BFGS"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/pinn-brake-stack", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/pinn-brake-stack", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "rapport-PINN.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
       { src: "images/projects/btem-stack.png", fr: "Géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
       { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r), solveur axisymétrique de validation", en: "Temperature field T(z, r), axisymmetric validation solver" },
@@ -145,9 +145,7 @@ window.PROJECTS = [
     banner: "images/projects/saab-plane.jpg",
     tech: ["Python", "SciPy", "Welch", "ruptures"],
     links: [
-      { href: "https://github.com/ugo-roccamatisi/saab-landing-analysis", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
-      { href: "https://github.com/ugo-roccamatisi/saab-landing-analysis/blob/main/saab_landing_sensor_spectral_analysis.ipynb", label_fr: "Notebook 1", label_en: "Notebook 1" },
-      { href: "https://github.com/ugo-roccamatisi/saab-landing-analysis/blob/main/saab_landing_touchdown_detection.ipynb", label_fr: "Notebook 2", label_en: "Notebook 2" }
+      { href: "https://github.com/ugo-roccamatisi/saab-landing-analysis", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }
     ],
     gallery: [
       { src: "images/projects/saab-psd.png", fr: "PSD de Welch post-toucher : les deux capteurs comparés", en: "Post-touchdown Welch PSD: both sensors compared" },
@@ -284,7 +282,7 @@ window.PROJECTS = [
     id: "prophet",
     banner: "images/projects/pjm-map.png",
     tech: ["Python", "Prophet", "pandas"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/energy-forecasting-prophet", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "https://github.com/ugo-roccamatisi/energy-forecasting-prophet/blob/main/energy_prediction_portfolio.ipynb", label_fr: "Notebook", label_en: "Notebook" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/energy-forecasting-prophet", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
       { src: "images/projects/prophet-forecast.png", fr: "Mars 2017 : prédiction vs réalité", en: "March 2017: forecast vs reality" },
       { src: "images/projects/prophet-histo.png", fr: "20 ans de données et zone de prévision", en: "20 years of data and the forecast zone" },
