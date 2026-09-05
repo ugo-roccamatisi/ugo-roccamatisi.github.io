@@ -100,7 +100,7 @@ window.PROJECTS = [
     id: "bwb",
     banner: "images/projects/bwb-1.png",
     tech: ["SolidWorks", "3DEXPERIENCE", "Star-CCM+", "OpenVSP", "EASA CS-25"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft/blob/main/report/memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
       { src: "images/projects/bwb-2.png", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
       { src: "images/projects/bwb-3.jpg", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
@@ -193,8 +193,8 @@ window.PROJECTS = [
     tech: ["Mistral 7B", "llama.cpp", "XGBoost", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
-      { href: "rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
-      { href: "rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
+      { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai/blob/main/report/rapport-utilisateur.pdf", label_fr: "Rapport utilisateur", label_en: "User report" },
+      { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai/blob/main/report/rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
     gallery: [
       { src: "images/projects/chu-prediction.png", fr: "Démo de bout en bout : texte clinique en entrée, durée de séjour prédite avec probabilités", en: "End-to-end demo: clinical text in, predicted length of stay with probabilities" },
@@ -241,7 +241,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/vrp-routes.png",
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics/blob/main/report/rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
       { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées par recherche tabou : une couleur par véhicule", en: "Routes optimized by tabu search: one colour per vehicle" },
       { src: "images/projects/vrp-benchmark.png", fr: "Convergence du système multi-agents (instance à 40 clients)", en: "Multi-agent system convergence (40-client instance)" },
