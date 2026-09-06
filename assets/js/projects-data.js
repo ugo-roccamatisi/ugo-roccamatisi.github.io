@@ -247,7 +247,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/vrp-routes.png",
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
-    links: [{ href: "https://vrp-metaheuristics.streamlit.app", label_fr: "Démo en ligne", label_en: "Live demo" }, { href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
       { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées par recherche tabou : une couleur par véhicule", en: "Routes optimized by tabu search: one colour per vehicle" },
       { src: "images/projects/vrp-benchmark.png", fr: "Convergence du système multi-agents (instance à 40 clients)", en: "Multi-agent system convergence (40-client instance)" },
