@@ -256,7 +256,7 @@ window.PROJECTS = [
     fr: {
       title: "Tournées de véhicules : méta-heuristiques & Q-Learning",
       excerpt: "Recuit simulé puis Q-Learning : la meilleure performance sur le VRP à 100 clients.",
-      meta: "Centrale Lille · projet de groupe (6) · mai 2025",
+      meta: "Centrale Lille · projet de groupe (6) · févr. à avr. 2025",
       situation: "Électif Intelligence Collaborative à Centrale Lille : le problème de tournées de véhicules (VRP), NP-difficile, en équipe de 6.",
       task: "Comparer équitablement méta-heuristiques, système multi-agents et apprentissage par renforcement.",
       actions: [
@@ -272,7 +272,7 @@ window.PROJECTS = [
     en: {
       title: "Vehicle routing: metaheuristics & Q-Learning",
       excerpt: "Simulated annealing then Q-Learning: best performance on the 100-client VRP.",
-      meta: "Centrale Lille · group project (6) · May 2025",
+      meta: "Centrale Lille · group project (6) · Feb. to Apr. 2025",
       situation: "Collaborative Intelligence elective at Centrale Lille: the NP-hard vehicle routing problem (VRP), in a team of 6.",
       task: "Fairly compare metaheuristics, a multi-agent system and reinforcement learning.",
       actions: [
