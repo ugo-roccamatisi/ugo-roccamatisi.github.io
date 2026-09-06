@@ -188,7 +188,7 @@ window.PROJECTS = [
   {
     id: "chu",
     banner: "images/projects/chu-banner.png",
-    tech: ["Mistral 7B", "llama.cpp", "XGBoost", "scikit-learn", "MIMIC-IV"],
+    tech: ["Mistral 7B", "llama.cpp", "XGBoost", "TensorFlow", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
       { href: "https://hal.science/hal-05289706", label_fr: "Article IEEE SMC (HAL)", label_en: "IEEE SMC paper (HAL)" },
@@ -213,7 +213,7 @@ window.PROJECTS = [
       task: "Piloter le pôle « prédiction » et transformer des données cliniques brutes en prévisions utiles aux soignants.",
       actions: [
         "Mise en place d'un LLM local (OpenHermes 2.5, Mistral 7B via llama.cpp) structurant automatiquement comptes rendus et notes cliniques en fiches exploitables.",
-        "Entraînement d'un classifieur XGBoost (avec réduction PCA) prédisant la durée de séjour en 7 catégories, sur 300 000 patients de la base MIMIC-IV.",
+        "Entraînement d'un classifieur XGBoost (avec réduction PCA) prédisant la durée de séjour en 7 catégories, sur 300 000 patients de la base MIMIC-IV, benchmarké face à un réseau récurrent (TensorFlow).",
         "Coordination du pôle et rédaction scientifique."
       ],
       results: [
@@ -231,7 +231,7 @@ window.PROJECTS = [
       task: "Lead the prediction team and turn raw clinical data into forecasts useful to caregivers.",
       actions: [
         "Deployed a local LLM (OpenHermes 2.5, Mistral 7B via llama.cpp) automatically structuring clinical reports and notes into usable records.",
-        "Trained an XGBoost classifier (with PCA reduction) predicting length of stay in 7 categories, on 300,000 patients from the MIMIC-IV database.",
+        "Trained an XGBoost classifier (with PCA reduction) predicting length of stay in 7 categories, on 300,000 patients from the MIMIC-IV database, benchmarked against a recurrent network (TensorFlow).",
         "Coordinated the team and contributed to the scientific writing."
       ],
       results: [
