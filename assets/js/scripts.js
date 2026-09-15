@@ -3,11 +3,10 @@ const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
     'hero.tagline': "Ingénieur en aéronautique, data & IA.",
-    'hero.avail': "Stage de fin d'études · 4 à 6 mois · à partir d'avril 2027",
-    'hero.cta': 'Découvrir mes projets',
+        'hero.cta': 'Découvrir mes projets',
     'about.h': 'À propos',
     'about.p1': "Passionné de physique, je l'applique au domaine qui me fascine depuis toujours : l'aéronautique, dans lequel je suis diplômé d'un <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design de Cranfield University</b>.",
-    'about.p2': "À <b class=\"text-zinc-900\">Centrale Lille</b>, j'ai construit un socle d'ingénieur généraliste et je m'y suis spécialisé en <b class=\"text-zinc-900\">IA et data science</b>. Des compétences mises en pratique avec le CHU de Lille (application IA publiée à la conférence IEEE SMC), puis dans mon mémoire avec <b class=\"text-zinc-900\">Airbus</b>, où modèle physique et PINN (réseaux de neurones informés par la physique) estiment la température des freins de l'A320.", 'about.p3': "Actuellement en stage de maintenance prédictive chez <b class=\"text-zinc-900\">Air France Industries KLM E&M</b>, je recherche un <b class=\"text-zinc-900\">stage de fin d'études de 4 à 6 mois à partir d'avril 2027</b>.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
+    'about.p2': "À <b class=\"text-zinc-900\">Centrale Lille</b>, j'ai construit un socle d'ingénieur généraliste et je m'y suis spécialisé en <b class=\"text-zinc-900\">IA et data science</b>. Des compétences mises en pratique avec le CHU de Lille (application IA publiée à la conférence IEEE SMC), puis dans mon mémoire avec <b class=\"text-zinc-900\">Airbus</b>, où modèle physique et PINN (réseaux de neurones informés par la physique) estiment la température des freins de l'A320.", 'about.p3': "Actuellement en stage de data analyst et maintenance prédictive chez <b class=\"text-zinc-900\">Air France Industries KLM E&M</b>.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
     'resume.h': 'Parcours', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences',
@@ -18,17 +17,16 @@ const T = {
     'proj.h': 'Projets',
     'proj.intro': "Cliquez sur un projet pour le détail : contexte, contributions et documents.",
     'proj.more': 'Voir le détail', 'modal.tech': 'Technologies', 'modal.gallery': 'Aperçu', 'star.s': 'Situation', 'star.t': 'Tâche', 'star.a': 'Actions', 'star.r': 'Résultats',
-    'contact.p': "Contactez-moi par e-mail ou sur LinkedIn.",
+    'contact.p': "Une question sur mes projets, une proposition, une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
     'hero.tagline': "Aeronautics, data & AI engineer.",
-    'hero.avail': "End-of-studies internship · 4 to 6 months · from April 2027",
-    'hero.cta': 'Explore my projects',
+        'hero.cta': 'Explore my projects',
     'about.h': 'About',
     'about.p1': "Passionate about physics, I apply it to the field that has always fascinated me: aeronautics, in which I hold an <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design from Cranfield University</b>.",
-    'about.p2': "At <b class=\"text-zinc-900\">Centrale Lille</b>, I built a broad engineering foundation and specialized in <b class=\"text-zinc-900\">AI and data science</b>. Skills put into practice with CHU de Lille (an AI application published at the IEEE SMC conference), then in my thesis with <b class=\"text-zinc-900\">Airbus</b>, where a physical model and PINNs (physics-informed neural networks) estimate A320 brake temperature.", 'about.p3': "Currently interning in predictive maintenance at <b class=\"text-zinc-900\">Air France Industries KLM E&M</b>, I'm looking for a <b class=\"text-zinc-900\">4 to 6 month end-of-studies internship starting April 2027</b>.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
+    'about.p2': "At <b class=\"text-zinc-900\">Centrale Lille</b>, I built a broad engineering foundation and specialized in <b class=\"text-zinc-900\">AI and data science</b>. Skills put into practice with CHU de Lille (an AI application published at the IEEE SMC conference), then in my thesis with <b class=\"text-zinc-900\">Airbus</b>, where a physical model and PINNs (physics-informed neural networks) estimate A320 brake temperature.", 'about.p3': "Currently a data analyst and predictive maintenance intern at <b class=\"text-zinc-900\">Air France Industries KLM E&M</b>.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
     'resume.h': 'Resume', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills',
@@ -39,7 +37,7 @@ const T = {
     'proj.h': 'Projects',
     'proj.intro': "Click a project for details: context, contributions and documents.",
     'proj.more': 'View details', 'modal.tech': 'Technologies', 'modal.gallery': 'Preview', 'star.s': 'Situation', 'star.t': 'Task', 'star.a': 'Actions', 'star.r': 'Results',
-    'contact.p': "Reach me by e-mail or on LinkedIn.",
+    'contact.p': "A question about my projects, a proposal, a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
 };
