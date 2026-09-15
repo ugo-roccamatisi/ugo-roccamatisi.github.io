@@ -7,7 +7,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/btem-assembly.png",
     tech: ["Python", "SciPy", "Nelder-Mead", "Streamlit"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/master-thesis-brake-temperature-estimation-model", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [],
     gallery: [
       { src: "images/projects/btem-assembly.png", fr: "Ensemble roue-frein modélisé : vues en coupe, pile de disques S1-R4, tube de couple et capteur", en: "Modelled wheel-brake assembly: cross-sections, S1-R4 disc stack, torque tube and sensor" },
       { src: "images/projects/btem-network.png", fr: "Réseau thermique à 14 nœuds du mémoire : conduction, convection et rayonnement entre chaque composant", en: "The thesis' 14-node thermal network: conduction, convection and radiation between every component" },
