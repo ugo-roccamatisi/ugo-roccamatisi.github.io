@@ -90,33 +90,60 @@
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-3" data-i18n="resume.h">Parcours</h2>
     <div class="w-14 h-1 bg-accgreen mx-auto rounded mb-16"></div>
-    <div class="gantt-card">
-      <div class="g-row g-head">
-        <div class="g-lab"></div>
-        <div class="g-track">
-          <span class="g-year" style="left:4.9%">2021</span><span class="g-year" style="left:19%">2022</span><span class="g-year" style="left:33.1%">2023</span><span class="g-year" style="left:47.2%">2024</span><span class="g-year" style="left:61.3%">2025</span><span class="g-year" style="left:75.3%">2026</span><span class="g-year" style="left:89.4%">2027</span>
+    <div class="timeline" aria-label="Frise chronologique du parcours">
+      <article class="timeline-item timeline-education">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <time class="timeline-date">2020 — 2023</time>
+        <div class="timeline-card">
+          <div class="timeline-logo g-logo-svg"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#3B82F6" stroke-width="3"><ellipse cx="32" cy="32" rx="26" ry="10.5"/><ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(120 32 32)"/></g><circle cx="32" cy="32" r="4.5" fill="#10B981"/></svg></div>
+          <div class="timeline-content">
+            <span class="timeline-type" data-i18n="g.leg1">Formation</span>
+            <h3 data-i18n="edu3.t">Classe préparatoire PCSI / PC*</h3>
+            <p class="timeline-place">Le Raincy</p>
+          </div>
         </div>
-      </div>
-      <div class="g-row">
-        <div class="g-lab"><span class="g-logo g-logo-svg"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#3B82F6" stroke-width="3"><ellipse cx="32" cy="32" rx="26" ry="10.5"/><ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="26" ry="10.5" transform="rotate(120 32 32)"/></g><circle cx="32" cy="32" r="4.5" fill="#10B981"/></svg></span><span class="g-txt"><b data-i18n="edu3.t">Classe préparatoire PCSI / PC*</b><span data-i18n="g1.d">Le Raincy · 2020 – 2023</span></span></div>
-        <div class="g-track"><div class="g-bar g-edu-light" style="left:0%;width:40.8%"></div></div>
-      </div>
-      <div class="g-row">
-        <div class="g-lab"><span class="g-logo"><span class="g-ini">C</span><img src="images/logos/centrale-lille.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span class="g-txt"><b>École Centrale de Lille</b><span data-i18n="g2.d">Diplôme d'ingénieur · 2023 – 2027</span><span class="g-mod" data-i18n="g2.m">Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet</span></span></div>
-        <div class="g-track"><div class="g-bar g-edu" style="left:42.3%;width:56.3%"></div></div>
-      </div>
-      <div class="g-row">
-        <div class="g-lab"><span class="g-logo"><span class="g-ini">Cr</span><img src="images/logos/cranfield.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span class="g-txt"><b>Cranfield University</b><span data-i18n="g3.d">MSc, double diplôme · 2025 – 2026</span><span class="g-mod" data-i18n="g3.m">Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites</span></span></div>
-        <div class="g-track"><div class="g-bar g-edu-dark" style="left:71.8%;width:12.7%"></div></div>
-      </div>
-      <div class="g-row">
-        <div class="g-lab"><span class="g-logo"><span class="g-ini">AF</span><img src="images/logos/air-france.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></span><span class="g-txt"><b>Air France Industries KLM E&amp;M</b><span data-i18n="g4.d">Stage maintenance prédictive · oct. 2026 – mars 2027</span></span></div>
-        <div class="g-track"><div class="g-bar g-exp" style="left:85.9%;width:6.4%"></div></div>
-      </div>
-      <div class="g-legend">
-        <span><i class="g-dot g-edu"></i><span data-i18n="g.leg1">Formation</span></span>
-        <span><i class="g-dot g-exp"></i><span data-i18n="g.leg2">Expérience</span></span>
-      </div>
+      </article>
+
+      <article class="timeline-item timeline-education">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <time class="timeline-date">2023 — 2027</time>
+        <div class="timeline-card">
+          <div class="timeline-logo"><span class="g-ini">C</span><img src="images/logos/centrale-lille.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-content">
+            <span class="timeline-type" data-i18n="g.leg1">Formation</span>
+            <h3>École Centrale de Lille</h3>
+            <p class="timeline-place" data-i18n="g2.degree">Diplôme d'ingénieur</p>
+            <p class="timeline-details" data-i18n="g2.m">Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item timeline-education">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <time class="timeline-date">2025 — 2026</time>
+        <div class="timeline-card">
+          <div class="timeline-logo"><span class="g-ini">Cr</span><img src="images/logos/cranfield.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-content">
+            <span class="timeline-type" data-i18n="g.leg1">Formation</span>
+            <h3>Cranfield University</h3>
+            <p class="timeline-place" data-i18n="g3.degree">MSc · Double diplôme</p>
+            <p class="timeline-details" data-i18n="g3.m">Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item timeline-experience">
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <time class="timeline-date" data-i18n="g4.date">Oct. 2026 — Mars 2027</time>
+        <div class="timeline-card">
+          <div class="timeline-logo"><span class="g-ini">AF</span><img src="images/logos/air-france.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-content">
+            <span class="timeline-type" data-i18n="g.leg2">Expérience</span>
+            <h3>Air France Industries KLM E&amp;M</h3>
+            <p class="timeline-place" data-i18n="g4.role">Stage · Maintenance prédictive</p>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
