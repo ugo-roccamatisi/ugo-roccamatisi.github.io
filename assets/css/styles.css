@@ -65,10 +65,10 @@
 .timeline-meta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.45rem 0.75rem; margin-bottom: 0.45rem; }
 .timeline-type { display: inline-flex; padding: 0.18rem 0.55rem; border-radius: 999px; background: #eff6ff; color: #2563eb; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .timeline-experience .timeline-type { background: #ecfdf5; color: #059669; }
-.timeline-date { display: inline-flex; align-items: center; gap: 0.42rem; padding: 0.3rem 0.66rem; border: 1px solid #dbeafe; border-radius: 999px; background: linear-gradient(180deg, #fff, #f8fbff); color: #1d4ed8; box-shadow: 0 2px 8px rgba(59,130,246,0.08); font-size: 0.75rem; font-weight: 750; font-variant-numeric: tabular-nums; letter-spacing: 0.015em; white-space: nowrap; }
-.timeline-date::before { content: ''; width: 0.42rem; height: 0.42rem; border-radius: 50%; background: #60a5fa; box-shadow: 0 0 0 3px #dbeafe; }
-.timeline-experience .timeline-date { border-color: #d1fae5; background: linear-gradient(180deg, #fff, #f3fdf8); color: #047857; box-shadow: 0 2px 8px rgba(16,185,129,0.08); }
-.timeline-experience .timeline-date::before { background: #34d399; box-shadow: 0 0 0 3px #d1fae5; }
+.timeline-date { display: inline-flex; align-items: center; gap: 0.42rem; padding: 0.3rem 0.66rem; border: 1px solid #e4e4e7; border-radius: 999px; background: #fafafa; color: #52525b; font-size: 0.75rem; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: 0.015em; white-space: nowrap; }
+.timeline-date::before { content: ''; width: 0.38rem; height: 0.38rem; border-radius: 50%; background: #60a5fa; }
+.timeline-experience .timeline-date { border-color: #e4e4e7; background: #fafafa; color: #52525b; }
+.timeline-experience .timeline-date::before { background: #34d399; }
 .timeline-content h3 { color: #18181b; font-size: 1.05rem; font-weight: 750; line-height: 1.35; }
 .timeline-place { margin-top: 0.16rem; color: #52525b; font-size: 0.86rem; font-weight: 500; }
 .timeline-details { max-width: 68ch; margin-top: 0.55rem; color: #71717a; font-size: 0.78rem; line-height: 1.55; }
