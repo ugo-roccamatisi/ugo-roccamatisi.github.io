@@ -37,8 +37,7 @@ section[id] { scroll-margin-top: 72px; }
 .proj-body h3 { margin-top: 0.78rem; color: #18181b; font-size: 1.05rem; font-weight: 780; line-height: 1.32; letter-spacing: -0.015em; }
 .proj-card-featured h3 { min-height: 3.45rem; font-size: 1.3rem; }
 .proj-card-compact h3 { min-height: 2.75rem; }
-.proj-contribution { min-height: 2.3rem; margin-top: 0.55rem; overflow: hidden; color: #71717a; font-size: 0.76rem; line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.proj-contribution span { margin-right: 0.35rem; color: #3f3f46; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.035em; text-transform: uppercase; }
+.proj-contribution { min-height: 2.3rem; margin-top: 0.55rem; overflow: hidden; color: #71717a; font-size: 0.8rem; line-height: 1.5; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .proj-outcome { display: grid; grid-template-columns: 5.1rem minmax(0,1fr); align-items: center; gap: 0.7rem; margin-top: 0.9rem; padding-top: 0.8rem; border-top: 1px solid #e4e4e7; }
 .proj-outcome > span { color: #059669; font-size: 0.57rem; font-weight: 800; letter-spacing: 0.075em; line-height: 1.35; text-transform: uppercase; }
 .proj-outcome > div { min-width: 0; display: flex; align-items: baseline; gap: 0.55rem; }
