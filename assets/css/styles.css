@@ -52,11 +52,15 @@ section[id] { scroll-margin-top: 72px; }
 
 /* Compétences : trois domaines lisibles, sans mur de logos */
 .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid #d4d4d8; border-bottom: 1px solid #d4d4d8; }
-.skill-group { position: relative; padding: 2rem 2rem 2.2rem; border-right: 1px solid #e4e4e7; }
+.skill-group { position: relative; padding: 1.7rem 1.35rem 1.8rem; border-right: 1px solid #e4e4e7; }
 .skill-group:last-child { border-right: 0; }
 .skill-index { color: #3b82f6; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; }
 .skill-group h3 { margin-top: 1.3rem; color: #18181b; font-size: 1.08rem; font-weight: 750; line-height: 1.35; }
-.skill-group p { margin-top: 0.7rem; color: #71717a; font-size: 0.88rem; line-height: 1.7; }
+.tool-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0.5rem; margin-top: 1.15rem; }
+.tool-chip { min-width: 0; min-height: 44px; display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.58rem; border: 1px solid #e4e4e7; border-radius: 0.65rem; background: #fafafa; color: #3f3f46; font-size: 0.72rem; font-weight: 650; line-height: 1.2; }
+.tool-chip i { width: 25px; flex: 0 0 25px; font-size: 24px; text-align: center; }
+.tool-image { width: 27px; height: 27px; flex: 0 0 27px; display: flex; align-items: center; justify-content: center; }
+.tool-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
 /* Parcours : frise verticale responsive */
 .timeline { position: relative; max-width: 820px; margin: 0 auto; padding: 0.5rem 0; }
@@ -100,7 +104,12 @@ section[id] { scroll-margin-top: 72px; }
   .skill-group { padding: 1.5rem 0.25rem; border-right: 0; border-bottom: 1px solid #e4e4e7; }
   .skill-group:last-child { border-bottom: 0; }
   .skill-group h3 { margin-top: 0.7rem; }
+  .tool-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .other-projects-head { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
+}
+
+@media (max-width: 520px) {
+  .tool-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 
 /* A propos : portrait + texte (structure du template d'origine) */
