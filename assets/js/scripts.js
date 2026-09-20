@@ -6,7 +6,7 @@ const T = {
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
     'hero.proof': 'Stage ingénieur data analyst et maintenance prédictive Air France — École Centrale de Lille, Cranfield University',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
-    'about.h': 'À propos', 'about.kicker': 'Profil', 'about.publication': 'Publication scientifique · IEEE SMC 2025',
+    'about.h': 'À propos', 'about.kicker': 'Profil',
     'about.p1': "Diplômé du <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b class=\"text-zinc-900\">Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class=\"text-zinc-900\">Airbus</b> et aux flux hospitaliers avec le <b class=\"text-zinc-900\">CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "À partir d'octobre 2026, je rejoins <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> en stage de data analyse et maintenance prédictive.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
@@ -19,7 +19,7 @@ const T = {
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
-    'contact.kicker': 'Échangeons', 'contact.p': "Stage chez Air France Industries d’octobre 2026 à mars 2027. Disponible pour de nouvelles opportunités à partir d’avril 2027.",
+    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
@@ -28,7 +28,7 @@ const T = {
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
     'hero.proof': 'Data analyst and predictive maintenance engineering internship at Air France — Centrale Lille, Cranfield University',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
-    'about.h': 'About', 'about.kicker': 'Profile', 'about.publication': 'Scientific publication · IEEE SMC 2025',
+    'about.h': 'About', 'about.kicker': 'Profile',
     'about.p1': "A graduate of the <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b class=\"text-zinc-900\">Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b class=\"text-zinc-900\">Airbus</b> and to hospital flows with <b class=\"text-zinc-900\">CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "From October 2026, I will join <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> as a data analysis and predictive maintenance intern.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
@@ -41,7 +41,7 @@ const T = {
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
     'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
-    'contact.kicker': 'Let’s talk', 'contact.p': "Internship at Air France Industries from October 2026 to March 2027. Available for new opportunities from April 2027.",
+    'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
 };
@@ -134,8 +134,7 @@ function projectCard(p, featured) {
     '<div class="proj-body">' +
       '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span><span class="proj-role">' + meta.role + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
-      (meta.contribution ? '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' : '') +
-      (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '') +
+      (meta.contribution ? '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' : (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '')) +
       '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
       '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
     '</div>';
