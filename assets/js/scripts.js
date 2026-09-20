@@ -88,32 +88,32 @@ const observer = new IntersectionObserver(entries => {
 /* ===================== Cartes projets ===================== */
 const PROJECT_META = {
   btem: {
-    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', metric: 'Erreur de prédiction d’environ 3 °C au toucher' },
-    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', metric: 'Prediction error of about 3 °C at touchdown' }
+    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', value: '≈ 3 °C', outcome: 'd’erreur de prédiction au toucher' },
+    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', value: '≈ 3 °C', outcome: 'prediction error at touchdown' }
   },
   pinn: {
-    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', metric: 'Précision de ±2 K ; énergie identifiée à 2 % près' },
-    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', metric: '±2 K accuracy; energy identified within 2%' }
+    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', value: '±2 K', outcome: 'sur le modèle direct · énergie identifiée à 2 % près' },
+    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', value: '±2 K', outcome: 'on the direct model · energy identified within 2%' }
   },
   saab: {
-    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', metric: 'Détection du toucher avec une résolution de ±0,02 s' },
-    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', metric: 'Touchdown detection with ±0.02 s resolution' }
+    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', value: '±0,02 s', outcome: 'de résolution sur la détection du toucher' },
+    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', value: '±0.02 s', outcome: 'touchdown detection resolution' }
   },
   chu: {
-    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', metric: '73 % de précision sur 26 950 séjours de test' },
-    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', metric: '73% accuracy across 26,950 test stays' }
+    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
+    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', value: '73%', outcome: 'accuracy across 26,950 test stays' }
   },
   bwb: {
-    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', metric: 'Intégration propulsion au sein d’une équipe internationale de 62' },
-    en: { category: 'Aircraft design', role: 'Engine integration lead', metric: 'Propulsion integration within an international team of 62' }
+    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', value: '62', outcome: 'étudiants dans l’équipe internationale' },
+    en: { category: 'Aircraft design', role: 'Engine integration lead', value: '62', outcome: 'students in the international team' }
   },
   vrp: {
-    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', metric: 'Coût réduit d’environ 13 % face à la meilleure méthode de référence' },
-    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', metric: 'About 13% lower cost than the strongest reference method' }
+    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', value: '−13 %', outcome: 'sur le coût face à la meilleure référence' },
+    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', value: '−13%', outcome: 'cost versus the strongest reference method' }
   },
   prophet: {
-    fr: { category: 'Séries temporelles', role: 'Projet personnel', metric: 'MAPE de 9,7 % sur une année complète de test' },
-    en: { category: 'Time series', role: 'Personal project', metric: '9.7% MAPE over a full test year' }
+    fr: { category: 'Séries temporelles', role: 'Projet personnel', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
+    en: { category: 'Time series', role: 'Personal project', value: '9.7%', outcome: 'MAPE over a full test year' }
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
@@ -131,12 +131,11 @@ function projectCard(p, featured) {
   card.innerHTML =
     '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
     '<div class="proj-body">' +
-      '<span class="proj-category">' + meta.category + '</span>' +
+      '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span><span class="proj-role">' + meta.role + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
-      '<p class="proj-role">' + meta.role + '</p>' +
-      '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><strong>' + meta.metric + '</strong></div>' +
       (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '') +
-      '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).join(' · ') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
+      '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
+      '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
     '</div>';
   const activate = () => {
     lastFocused = card;

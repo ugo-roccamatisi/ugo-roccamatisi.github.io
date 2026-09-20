@@ -15,7 +15,7 @@ window.PROJECTS = [
     ],
     fr: {
       title: "Température des freins de l'A320 en service",
-      excerpt: "Mémoire Airbus & Cranfield : modèle thermique calibré à ~3 °C au toucher sur vols commerciaux.",
+      excerpt: "Modèle thermique à 14 nœuds, calibré et validé sur des données de vols commerciaux d’A320.",
       meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026 · supervision : Dr Fakhre Ali",
       situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données enregistrées sur des vols commerciaux en service. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
       task: "Développer un modèle de prédiction complet sur les données de vols commerciaux d'A320 : un capteur de température échantillonné toutes les 30 secondes, et aucune mesure de couple de freinage, l'énergie devant être reconstruite par la cinématique.",
@@ -32,7 +32,7 @@ window.PROJECTS = [
     },
     en: {
       title: "In-service A320 brake temperature",
-      excerpt: "Airbus & Cranfield thesis: thermal model calibrated to ~3 °C at touchdown on commercial flights.",
+      excerpt: "A 14-node thermal model calibrated and validated on in-service A320 commercial flight data.",
       meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026 · supervised by Dr Fakhre Ali",
       situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from data recorded on in-service commercial flights alone. Research thesis conducted at Cranfield University with Airbus support.",
       task: "Build a complete prediction model on in-service A320 commercial flight data: a temperature sensor sampled every 30 seconds, and no brake torque measurement, so the braking energy must be reconstructed from kinematics.",
@@ -63,7 +63,7 @@ window.PROJECTS = [
     ],
     fr: {
       title: "PINN pour la thermique d'une pile de freins",
-      excerpt: "Projet perso : du problème direct à l'inverse sur données synthétiques, ±2 K et énergie à 2 %.",
+      excerpt: "Du problème direct au problème inverse, avec une vérité terrain numérique entièrement maîtrisée.",
       meta: "Projet personnel de recherche · été 2026",
       situation: "Projet personnel mené en marge du mémoire : que peut réellement apporter un PINN (réseau de neurones informé par la physique) à la thermique d'une pile de freins d'A320, et où sont ses limites ? Terrain entièrement synthétique, donc publiable.",
       task: "Construire la réponse de bout en bout, du problème direct au problème inverse, en documentant honnêtement chaque échec.",
@@ -80,7 +80,7 @@ window.PROJECTS = [
     },
     en: {
       title: "PINNs for brake stack thermal modelling",
-      excerpt: "Personal project: from the direct to the inverse problem on synthetic data, ±2 K and energy within 2%.",
+      excerpt: "From the direct to the inverse problem, using fully controlled numerical ground truth.",
       meta: "Personal research project · summer 2026",
       situation: "Personal project alongside the thesis: what can a PINN (physics-informed neural network) really bring to the thermal modelling of an A320 brake stack, and where are its limits? Fully synthetic ground truth, hence publishable.",
       task: "Build the answer end to end, from the direct to the inverse problem, honestly documenting every failure.",
@@ -154,7 +154,7 @@ window.PROJECTS = [
     ],
     fr: {
       title: "Données de vol d'un SAAB à l'atterrissage",
-      excerpt: "Analyse spectrale et détection de rupture pour dater le toucher sur données FDR réelles.",
+      excerpt: "Analyse spectrale et détection de rupture appliquées à des données FDR réelles.",
       meta: "Projet personnel, Cranfield (IVHM) · 2025 à 2026",
       situation: "Données d'essai en vol du Saab 340 de Cranfield (8 minutes autour de l'atterrissage, ≈49 Hz) : deux accéléromètres indépendants, une centrale montée en galley et le capteur du centre de gravité de l'avion, qui ne racontent pas la même histoire, et un toucher invisible à l'œil nu dans l'accélération brute.",
       task: "Évaluer la fiabilité relative des deux capteurs par méthodes spectrales, puis dater précisément le toucher en fusionnant les canaux de l'enregistreur de vol (FDR).",
@@ -170,7 +170,7 @@ window.PROJECTS = [
     },
     en: {
       title: "SAAB flight data during landing",
-      excerpt: "Spectral analysis and change-point detection to timestamp touchdown from real FDR data.",
+      excerpt: "Spectral analysis and change-point detection applied to real FDR data.",
       meta: "Personal project, Cranfield (IVHM) · 2025 to 2026",
       situation: "Flight-test data from Cranfield's Saab 340 (8 minutes around landing, ≈49 Hz): two independent accelerometers, a galley-mounted IMU and the aircraft's centre-of-gravity sensor, telling different stories, and a touchdown invisible to the naked eye in the raw acceleration.",
       task: "Assess the relative reliability of both sensors with spectral methods, then precisely timestamp the touchdown by fusing flight data recorder (FDR) channels.",
@@ -207,7 +207,7 @@ window.PROJECTS = [
     ],
     fr: {
       title: "Faire parler les données médicales avec l'IA",
-      excerpt: "Publication IEEE SMC : IA d'aide à l'hôpital, 300 000 patients.",
+      excerpt: "Chaîne locale de structuration clinique et de prévision des durées de séjour hospitalier.",
       meta: "CHU de Lille & Sillage · projet de groupe (12) · sept. 2023 à févr. 2025",
       situation: "Le CHU de Lille et le SIB, éditeur du dossier patient Sillage présent dans 80 % des hôpitaux français, veulent aider les équipes soignantes à anticiper les flux de patients. Projet de 18 mois en équipe de 12 étudiants.",
       task: "Piloter le pôle « prédiction » et transformer des données cliniques brutes en prévisions utiles aux soignants.",
@@ -225,7 +225,7 @@ window.PROJECTS = [
     },
     en: {
       title: "Making medical data talk with AI",
-      excerpt: "IEEE SMC publication: AI for hospitals, 300,000 patients.",
+      excerpt: "Local pipeline for clinical data structuring and hospital length-of-stay prediction.",
       meta: "CHU de Lille & Sillage · group project (12) · Sept. 2023 to Feb. 2025",
       situation: "CHU de Lille and SIB, editor of the Sillage patient-record software used in 80% of French hospitals, want to help medical teams anticipate patient flows. An 18-month project in a team of 12 students.",
       task: "Lead the prediction team and turn raw clinical data into forecasts useful to caregivers.",
