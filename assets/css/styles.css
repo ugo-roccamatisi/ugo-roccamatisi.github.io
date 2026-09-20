@@ -52,11 +52,10 @@ section[id] { scroll-margin-top: 72px; }
 /* Header masqué en défilement descendant */
 #site-header.hidden-up { transform: translateY(-100%); }
 
-/* Compétences : outils visuels et domaines d'expertise */
-.skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); border: 1px solid #d4d4d8; border-radius: 1rem; overflow: hidden; background: #fff; }
+/* Compétences : outils visuels */
+.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border: 1px solid #d4d4d8; border-radius: 1rem; overflow: hidden; background: #fff; }
 .skill-group { position: relative; padding: 1.7rem 1.35rem 1.8rem; border-right: 1px solid #e4e4e7; }
-.skill-group:nth-child(-n+2) { border-bottom: 1px solid #e4e4e7; }
-.skill-group:nth-child(even) { border-right: 0; }
+.skill-group:last-child { border-right: 0; }
 .skill-index { color: #3b82f6; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; }
 .skill-group h3 { margin-top: 1.3rem; color: #18181b; font-size: 1.08rem; font-weight: 750; line-height: 1.35; }
 .tool-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0.5rem; margin-top: 1.15rem; }
@@ -64,8 +63,6 @@ section[id] { scroll-margin-top: 72px; }
 .tool-chip i { width: 25px; flex: 0 0 25px; font-size: 24px; text-align: center; }
 .tool-image { width: 27px; height: 27px; flex: 0 0 27px; display: flex; align-items: center; justify-content: center; }
 .tool-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.tool-monogram { width: 27px; height: 27px; flex: 0 0 27px; display: inline-flex; align-items: center; justify-content: center; border-radius: 0.4rem; background: #eaf2ff; color: #2563eb; font-size: 0.55rem; font-weight: 850; letter-spacing: -0.02em; }
-.skill-group-domains .tool-monogram { background: #ecfdf5; color: #047857; }
 
 /* Parcours : frise centrale alternée */
 .timeline { position: relative; max-width: 1060px; margin: 0 auto; padding: 0.5rem 0; }
