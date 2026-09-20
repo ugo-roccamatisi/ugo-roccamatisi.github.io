@@ -11,13 +11,13 @@ const T = {
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class=\"text-zinc-900\">Airbus</b> et aux flux hospitaliers avec le <b class=\"text-zinc-900\">CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "À partir d'octobre 2026, je rejoins <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> en stage de data analyse et maintenance prédictive.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
-    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, XGBoost, TensorFlow', 'skills.modeling': 'SciPy, optimisation, PINN, problèmes inverses, séries temporelles, traitement du signal', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc · Double diplôme', 'g4.date': 'Oct. 2026 — Mars 2027', 'g4.role': 'Stage · Maintenance prédictive',
+    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.domains_h': 'Domaines aéronautiques', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, XGBoost, TensorFlow', 'skills.modeling': 'SciPy, optimisation, PINN, problèmes inverses, séries temporelles, traitement du signal', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc · Double diplôme', 'g4.date': 'Oct. 2026 — Mars 2027', 'g4.role': 'Stage · Maintenance prédictive',
     'edu1.s': "MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.",
     'edu2.s': "Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).",
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
-    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision',
+    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
     'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Aperçu', 'case.results': 'Résultats clés', 'case.problem': 'Problème', 'case.role': 'Ma contribution', 'case.approach': 'Méthode',
     'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition, une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -33,13 +33,13 @@ const T = {
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b class=\"text-zinc-900\">Airbus</b> and to hospital flows with <b class=\"text-zinc-900\">CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "From October 2026, I will join <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> as a data analysis and predictive maintenance intern.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
-    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, XGBoost, TensorFlow', 'skills.modeling': 'SciPy, optimisation, PINNs, inverse problems, time series, signal processing', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc · Double degree', 'g4.date': 'Oct. 2026 — Mar. 2027', 'g4.role': 'Internship · Predictive maintenance',
+    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.domains_h': 'Aeronautical domains', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, XGBoost, TensorFlow', 'skills.modeling': 'SciPy, optimisation, PINNs, inverse problems, time series, signal processing', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc · Double degree', 'g4.date': 'Oct. 2026 — Mar. 2027', 'g4.role': 'Internship · Predictive maintenance',
     'edu1.s': "MSc in Aerospace Vehicle Design, Aircraft Design option. Thesis with Airbus.",
     'edu2.s': "General engineering degree. ML, optimization, self-study (inverse problems, Markov, statistics).",
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
-    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting',
+    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
     'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Preview', 'case.results': 'Key results', 'case.problem': 'Problem', 'case.role': 'My contribution', 'case.approach': 'Approach',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal, a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -88,32 +88,32 @@ const observer = new IntersectionObserver(entries => {
 /* ===================== Cartes projets ===================== */
 const PROJECT_META = {
   btem: {
-    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', metric: '≈ 3 °C au toucher' },
-    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', metric: '≈ 3 °C at touchdown' }
+    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', metric: 'Erreur de prédiction d’environ 3 °C au toucher' },
+    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', metric: 'Prediction error of about 3 °C at touchdown' }
   },
   pinn: {
-    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', metric: '±2 K · énergie à 2 %' },
-    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', metric: '±2 K · energy within 2%' }
+    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', metric: 'Précision de ±2 K ; énergie identifiée à 2 % près' },
+    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', metric: '±2 K accuracy; energy identified within 2%' }
   },
   saab: {
-    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', metric: 'Toucher daté à ±0,02 s' },
-    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', metric: 'Touchdown within ±0.02 s' }
+    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', metric: 'Détection du toucher avec une résolution de ±0,02 s' },
+    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', metric: 'Touchdown detection with ±0.02 s resolution' }
   },
   chu: {
-    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', metric: '73 % · 300 000 patients' },
-    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', metric: '73% · 300,000 patients' }
+    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', metric: '73 % de précision sur 26 950 séjours de test' },
+    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', metric: '73% accuracy across 26,950 test stays' }
   },
   bwb: {
-    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', metric: 'Équipe internationale de 62' },
-    en: { category: 'Aircraft design', role: 'Engine integration lead', metric: 'International team of 62' }
+    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', metric: 'Intégration propulsion au sein d’une équipe internationale de 62' },
+    en: { category: 'Aircraft design', role: 'Engine integration lead', metric: 'Propulsion integration within an international team of 62' }
   },
   vrp: {
-    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', metric: '≈ 13 % de mieux' },
-    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', metric: '≈ 13% improvement' }
+    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', metric: 'Coût réduit d’environ 13 % face à la meilleure méthode de référence' },
+    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', metric: 'About 13% lower cost than the strongest reference method' }
   },
   prophet: {
-    fr: { category: 'Séries temporelles', role: 'Projet personnel', metric: 'MAPE 9,7 %' },
-    en: { category: 'Time series', role: 'Personal project', metric: '9.7% MAPE' }
+    fr: { category: 'Séries temporelles', role: 'Projet personnel', metric: 'MAPE de 9,7 % sur une année complète de test' },
+    en: { category: 'Time series', role: 'Personal project', metric: '9.7% MAPE over a full test year' }
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
@@ -134,7 +134,7 @@ function projectCard(p, featured) {
       '<span class="proj-category">' + meta.category + '</span>' +
       '<h3>' + t.title + '</h3>' +
       '<p class="proj-role">' + meta.role + '</p>' +
-      '<strong class="proj-metric">' + meta.metric + '</strong>' +
+      '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><strong>' + meta.metric + '</strong></div>' +
       (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '') +
       '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).join(' · ') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
     '</div>';
