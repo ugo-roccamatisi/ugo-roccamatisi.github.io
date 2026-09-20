@@ -12,7 +12,7 @@
 
 /* Introduction et titres */
 section[id] { scroll-margin-top: 72px; }
-.section-light { background: #fff; }
+.section-light { background: #f8fafc; }
 .section-tint { background: #eef2f7; border-top: 1px solid #dbe3ec; border-bottom: 1px solid #dbe3ec; }
 .hero-eyebrow { margin-bottom: 1rem; color: #93c5fd; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .hero-color-wash { background: linear-gradient(90deg,rgba(29,78,216,0.32) 0%,rgba(37,99,235,0.14) 38%,rgba(37,99,235,0) 72%); }
