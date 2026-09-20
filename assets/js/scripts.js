@@ -134,7 +134,7 @@ function projectCard(p, featured) {
     '<div class="proj-body">' +
       '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
-      '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' +
+      '<p class="proj-contribution">' + meta.contribution + '</p>' +
       '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
       '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
     '</div>';
