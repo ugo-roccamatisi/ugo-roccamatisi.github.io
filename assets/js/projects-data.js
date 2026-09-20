@@ -153,7 +153,7 @@ window.PROJECTS = [
       { src: "images/projects/saab-changepoint.png", fr: "Détection de rupture RBF vs estimation par pic d'amplitude", en: "RBF change-point detection vs amplitude-peak estimate" }
     ],
     fr: {
-      title: "Données de vol d'un SAAB à l'atterrissage",
+      title: "Détection du toucher d’un SAAB par analyse des données de vol",
       excerpt: "Analyse spectrale et détection de rupture appliquées à des données FDR réelles.",
       meta: "Projet personnel, Cranfield (IVHM) · 2025 à 2026",
       situation: "Données d'essai en vol du Saab 340 de Cranfield (8 minutes autour de l'atterrissage, ≈49 Hz) : deux accéléromètres indépendants, une centrale montée en galley et le capteur du centre de gravité de l'avion, qui ne racontent pas la même histoire, et un toucher invisible à l'œil nu dans l'accélération brute.",
@@ -169,7 +169,7 @@ window.PROJECTS = [
       ]
     },
     en: {
-      title: "SAAB flight data during landing",
+      title: "SAAB touchdown detection from flight data",
       excerpt: "Spectral analysis and change-point detection applied to real FDR data.",
       meta: "Personal project, Cranfield (IVHM) · 2025 to 2026",
       situation: "Flight-test data from Cranfield's Saab 340 (8 minutes around landing, ≈49 Hz): two independent accelerometers, a galley-mounted IMU and the aircraft's centre-of-gravity sensor, telling different stories, and a touchdown invisible to the naked eye in the raw acceleration.",
