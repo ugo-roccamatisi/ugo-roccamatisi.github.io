@@ -18,7 +18,7 @@ const T = {
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
-    'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats clés', 'case.problem': 'Problème', 'case.role': 'Ma contribution', 'case.approach': 'Méthode',
+    'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions',
     'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition, une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
@@ -40,7 +40,7 @@ const T = {
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
-    'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Key results', 'case.problem': 'Problem', 'case.role': 'My contribution', 'case.approach': 'Approach',
+    'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal, a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
@@ -104,8 +104,8 @@ const PROJECT_META = {
     en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', value: '73%', outcome: 'accuracy across 26,950 test stays' }
   },
   bwb: {
-    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', value: '62', outcome: 'étudiants dans l’équipe internationale' },
-    en: { category: 'Aircraft design', role: 'Engine integration lead', value: '62', outcome: 'students in the international team' }
+    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', value: '62', outcome: 'étudiants dans une équipe internationale' },
+    en: { category: 'Aircraft design', role: 'Engine integration lead', value: '62', outcome: 'students in an international team' }
   },
   vrp: {
     fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', value: '−13 %', outcome: 'sur le coût face à la meilleure référence' },
@@ -176,11 +176,11 @@ function openModal(id) {
     '<a href="' + l.href + '" target="_blank" rel="noopener noreferrer" class="case-link">' + (LANG === 'fr' ? l.label_fr : l.label_en) + '</a>'
   ).join('');
   const caseStudy = [
-    ['case.results', '<ul class="star-ul result-list">' + t.results.map(x => '<li>' + x + '</li>').join('') + '</ul>'],
-    ['case.problem', '<p class="star-p">' + t.situation + '</p>'],
-    ['case.role', '<p class="star-p">' + t.task + '</p>'],
-    ['case.approach', '<ul class="star-ul">' + t.actions.map(x => '<li>' + x + '</li>').join('') + '</ul>']
-  ].map(([k, body], index) => '<section class="case-block' + (index === 0 ? ' case-results' : '') + '"><h4>' + T[LANG][k] + '</h4>' + body + '</section>').join('');
+    ['case.problem', '<p class="star-p">' + t.situation + '</p>', ''],
+    ['case.role', '<p class="star-p">' + t.task + '</p>', ''],
+    ['case.approach', '<ul class="star-ul">' + t.actions.map(x => '<li>' + x + '</li>').join('') + '</ul>', ''],
+    ['case.results', '<ul class="star-ul result-list">' + t.results.map(x => '<li>' + x + '</li>').join('') + '</ul>', ' case-results']
+  ].map(([k, body, className]) => '<section class="case-block' + className + '"><h4>' + T[LANG][k] + '</h4>' + body + '</section>').join('');
   const gallery = (p.gallery || []).filter(g => g.video || g.src !== p.banner).map(g => {
     const caption = LANG === 'fr' ? g.fr : g.en;
     const media = g.video
