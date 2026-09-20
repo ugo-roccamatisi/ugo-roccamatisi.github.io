@@ -6,7 +6,7 @@ const T = {
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
     'hero.proof': 'Stage ingénieur data analyst et maintenance prédictive Air France — École Centrale de Lille, Cranfield University',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
-    'about.h': 'À propos', 'about.kicker': 'Profil',
+    'about.h': 'À propos', 'about.kicker': 'Profil', 'about.publication': 'Publication scientifique · IEEE SMC 2025',
     'about.p1': "Diplômé du <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b class=\"text-zinc-900\">Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class=\"text-zinc-900\">Airbus</b> et aux flux hospitaliers avec le <b class=\"text-zinc-900\">CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "À partir d'octobre 2026, je rejoins <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> en stage de data analyse et maintenance prédictive.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
@@ -18,8 +18,8 @@ const T = {
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
-    'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions',
-    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition, une collaboration ? Écrivez-moi, je réponds volontiers.",
+    'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
+    'contact.kicker': 'Échangeons', 'contact.p': "Stage chez Air France Industries d’octobre 2026 à mars 2027. Disponible pour de nouvelles opportunités à partir d’avril 2027.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
@@ -28,7 +28,7 @@ const T = {
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
     'hero.proof': 'Data analyst and predictive maintenance engineering internship at Air France — Centrale Lille, Cranfield University',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
-    'about.h': 'About', 'about.kicker': 'Profile',
+    'about.h': 'About', 'about.kicker': 'Profile', 'about.publication': 'Scientific publication · IEEE SMC 2025',
     'about.p1': "A graduate of the <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b class=\"text-zinc-900\">Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b class=\"text-zinc-900\">Airbus</b> and to hospital flows with <b class=\"text-zinc-900\">CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "From October 2026, I will join <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> as a data analysis and predictive maintenance intern.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
@@ -40,8 +40,8 @@ const T = {
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
-    'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions',
-    'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal, a collaboration? Write to me, I'll be glad to answer.",
+    'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
+    'contact.kicker': 'Let’s talk', 'contact.p': "Internship at Air France Industries from October 2026 to March 2027. Available for new opportunities from April 2027.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   }
 };
@@ -88,8 +88,8 @@ const observer = new IntersectionObserver(entries => {
 /* ===================== Cartes projets ===================== */
 const PROJECT_META = {
   btem: {
-    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', value: '≈ 3 °C', outcome: 'd’erreur de prédiction au toucher' },
-    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', value: '≈ 3 °C', outcome: 'prediction error at touchdown' }
+    fr: { category: 'Aéronautique · Modélisation', role: 'Mémoire Airbus & Cranfield', contribution: 'Conception du modèle thermique, calibration et pipeline de prédiction', value: '≈ 3 °C', outcome: 'd’erreur de prédiction au toucher' },
+    en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', contribution: 'Thermal model design, calibration and prediction pipeline', value: '≈ 3 °C', outcome: 'prediction error at touchdown' }
   },
   pinn: {
     fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', value: '±2 K', outcome: 'sur le modèle direct · énergie identifiée à 2 % près' },
@@ -100,12 +100,12 @@ const PROJECT_META = {
     en: { category: 'Flight data · Signal', role: 'Reproducible analysis', value: '±0.02 s', outcome: 'touchdown detection resolution' }
   },
   chu: {
-    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
-    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', value: '73%', outcome: 'accuracy across 26,950 test stays' }
+    fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', contribution: 'Pilotage du pôle prédiction et développement du classifieur', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
+    en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', contribution: 'Prediction team leadership and classifier development', value: '73%', outcome: 'accuracy across 26,950 test stays' }
   },
   bwb: {
-    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', value: '62', outcome: 'étudiants dans une équipe internationale' },
-    en: { category: 'Aircraft design', role: 'Engine integration lead', value: '62', outcome: 'students in an international team' }
+    fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', contribution: 'Intégration propulsive, conception de la nacelle et conformité CS-25', value: '62', outcome: 'étudiants dans une équipe internationale' },
+    en: { category: 'Aircraft design', role: 'Engine integration lead', contribution: 'Propulsion integration, nacelle design and CS-25 compliance', value: '62', outcome: 'students in an international team' }
   },
   vrp: {
     fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', value: '−13 %', outcome: 'sur le coût face à la meilleure référence' },
@@ -118,6 +118,7 @@ const PROJECT_META = {
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['bwb', 'vrp', 'prophet'];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
 
 function projectCard(p, featured) {
   const t = p[LANG];
@@ -133,6 +134,7 @@ function projectCard(p, featured) {
     '<div class="proj-body">' +
       '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span><span class="proj-role">' + meta.role + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
+      (meta.contribution ? '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' : '') +
       (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '') +
       '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
       '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
@@ -172,6 +174,11 @@ function openModal(id) {
   currentProjectId = id;
   const t = p[LANG];
   const meta = PROJECT_META[id][LANG];
+  const projectIndex = PROJECT_ORDER.indexOf(id);
+  const previousId = PROJECT_ORDER[(projectIndex - 1 + PROJECT_ORDER.length) % PROJECT_ORDER.length];
+  const nextId = PROJECT_ORDER[(projectIndex + 1) % PROJECT_ORDER.length];
+  const previousProject = window.PROJECTS.find(x => x.id === previousId);
+  const nextProject = window.PROJECTS.find(x => x.id === nextId);
   const links = (p.links || []).map(l =>
     '<a href="' + l.href + '" target="_blank" rel="noopener noreferrer" class="case-link">' + (LANG === 'fr' ? l.label_fr : l.label_en) + '</a>'
   ).join('');
@@ -203,6 +210,11 @@ function openModal(id) {
         '<div class="case-resources-row"><div><span class="case-resource-label">' + T[LANG]['modal.tech'] + '</span><div class="case-tech">' + p.tech.map(x => '<span>' + x + '</span>').join('') + '</div></div>' +
         (links ? '<div class="case-links">' + links + '</div>' : '') + '</div>' +
       '</footer>' +
+      '<nav class="case-navigation" aria-label="Navigation entre les projets">' +
+        '<button type="button" class="case-nav-btn case-nav-prev" data-project-nav="' + previousId + '"><span>← ' + T[LANG]['case.prev'] + '</span><strong>' + previousProject[LANG].title + '</strong></button>' +
+        '<button type="button" class="case-nav-back" data-project-close>' + T[LANG]['case.back'] + '</button>' +
+        '<button type="button" class="case-nav-btn case-nav-next" data-project-nav="' + nextId + '"><span>' + T[LANG]['case.next'] + ' →</span><strong>' + nextProject[LANG].title + '</strong></button>' +
+      '</nav>' +
     '</div>';
   overlay.classList.remove('hidden');
   overlay.classList.add('flex');
@@ -283,6 +295,15 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('hashchange', syncProjectHash);
   lightbox.addEventListener('click', closeLightbox);
   document.getElementById('modal-content').addEventListener('click', e => {
+    const projectNav = e.target.closest('[data-project-nav]');
+    if (projectNav) {
+      location.hash = '#project=' + projectNav.dataset.projectNav;
+      return;
+    }
+    if (e.target.closest('[data-project-close]')) {
+      closeModal();
+      return;
+    }
     const img = e.target.closest('.mgal-fig img');
     if (img) openLightbox(img.src);
   });
