@@ -19,9 +19,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="assets/js/tailwind-config.js?v=59"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=59">
+<link rel="stylesheet" href="assets/css/styles.css?v=60">
 </head>
 <body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
 
@@ -30,8 +31,8 @@
   <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between gap-4">
     <a href="#home" class="font-bold text-lg tracking-tight">Ugo Roccamatisi</a>
     <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Navigation principale">
-      <a href="#projects" class="hover:text-accblue transition-colors" data-i18n="nav.proj">Projets</a>
       <a href="#about" class="hover:text-accblue transition-colors" data-i18n="nav.about">À propos</a>
+      <a href="#projects" class="hover:text-accblue transition-colors" data-i18n="nav.proj">Projets</a>
       <a href="#resume" class="hover:text-accblue transition-colors" data-i18n="nav.resume">Parcours</a>
       <a href="#skills" class="hover:text-accblue transition-colors" data-i18n="skills.h">Compétences</a>
       <a href="#contact" class="hover:text-accblue transition-colors">Contact</a>
@@ -46,8 +47,8 @@
     </div>
   </div>
   <nav id="mobile-nav" class="mobile-nav md:hidden" aria-label="Navigation mobile" hidden>
-    <a href="#projects" data-i18n="nav.proj">Projets</a>
     <a href="#about" data-i18n="nav.about">À propos</a>
+    <a href="#projects" data-i18n="nav.proj">Projets</a>
     <a href="#resume" data-i18n="nav.resume">Parcours</a>
     <a href="#skills" data-i18n="skills.h">Compétences</a>
     <a href="#contact">Contact</a>
@@ -68,21 +69,6 @@
       <a href="#projects" class="inline-flex bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.cta">Voir mes projets</a>
       <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="inline-flex border border-white/50 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.github">Voir mon GitHub</a>
     </div>
-  </div>
-</section>
-
-<!-- ================= PROJETS ================= -->
-<section id="projects" class="py-20 bg-white reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <p class="section-kicker" data-i18n="proj.kicker">Sélection</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-i18n="proj.h">Projets</h2>
-    <p class="text-center text-zinc-500 max-w-2xl mx-auto mb-12" data-i18n="proj.intro">Des études de cas concrètes, de la modélisation physique à l'IA appliquée.</p>
-    <div id="featured-project-grid" class="grid md:grid-cols-2 gap-6"></div>
-    <div class="other-projects-head">
-      <h3 data-i18n="proj.other">Autres projets</h3>
-      <span data-i18n="proj.other_intro">Optimisation, conception aéronautique et prévision</span>
-    </div>
-    <div id="other-project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
   </div>
 </section>
 
@@ -111,8 +97,23 @@
   </div>
 </section>
 
+<!-- ================= PROJETS ================= -->
+<section id="projects" class="py-20 bg-white reveal">
+  <div class="max-w-6xl mx-auto px-5">
+    <p class="section-kicker" data-i18n="proj.kicker">Sélection</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-i18n="proj.h">Projets</h2>
+    <p class="text-center text-zinc-500 max-w-2xl mx-auto mb-12" data-i18n="proj.intro">Des études de cas concrètes, de la modélisation physique à l'IA appliquée.</p>
+    <div id="featured-project-grid" class="grid md:grid-cols-2 gap-6"></div>
+    <div class="other-projects-head">
+      <h3 data-i18n="proj.other">Autres projets</h3>
+      <span data-i18n="proj.other_intro">Optimisation, conception aéronautique et prévision</span>
+    </div>
+    <div id="other-project-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+  </div>
+</section>
+
 <!-- ================= PARCOURS ================= -->
-<section id="resume" class="py-20 bg-white reveal">
+<section id="resume" class="py-20 reveal">
   <div class="max-w-6xl mx-auto px-5">
     <p class="section-kicker" data-i18n="resume.kicker">Formation &amp; expérience</p>
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-14" data-i18n="resume.h">Parcours</h2>
@@ -184,7 +185,7 @@
 
 
 <!-- ================= COMPÉTENCES ================= -->
-<section id="skills" class="py-20 reveal">
+<section id="skills" class="py-20 bg-white reveal">
   <div class="max-w-6xl mx-auto px-5">
     <p class="section-kicker" data-i18n="skills.kicker">Boîte à outils</p>
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="skills.h">Compétences</h2>
@@ -192,17 +193,38 @@
       <article class="skill-group">
         <span class="skill-index">01</span>
         <h3 data-i18n="sg1">Data Science &amp; IA</h3>
-        <p data-i18n="skills.data">Python, PyTorch, scikit-learn, pandas, XGBoost, TensorFlow</p>
+        <div class="tool-grid">
+          <span class="tool-chip"><i class="devicon-python-plain colored"></i>Python</span>
+          <span class="tool-chip"><i class="devicon-pytorch-original colored"></i>PyTorch</span>
+          <span class="tool-chip"><i class="devicon-tensorflow-original colored"></i>TensorFlow</span>
+          <span class="tool-chip"><i class="devicon-scikitlearn-plain colored"></i>scikit-learn</span>
+          <span class="tool-chip"><i class="devicon-pandas-plain colored"></i>pandas</span>
+          <span class="tool-chip"><i class="devicon-streamlit-plain colored"></i>Streamlit</span>
+        </div>
       </article>
       <article class="skill-group">
         <span class="skill-index">02</span>
-        <h3 data-i18n="skills.modeling_h">Modélisation &amp; calcul scientifique</h3>
-        <p data-i18n="skills.modeling">SciPy, optimisation, PINN, problèmes inverses, séries temporelles, traitement du signal</p>
+        <h3 data-i18n="skills.modeling_h">Modélisation &amp; développement</h3>
+        <div class="tool-grid">
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/scipy.png" alt="" loading="lazy"></span>SciPy</span>
+          <span class="tool-chip"><i class="devicon-cplusplus-plain colored"></i>C / C++</span>
+          <span class="tool-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="tool-chip"><i class="devicon-azuresqldatabase-plain colored"></i>SQL</span>
+          <span class="tool-chip"><i class="devicon-git-plain colored"></i>Git</span>
+          <span class="tool-chip"><i class="devicon-github-original"></i>GitHub</span>
+        </div>
       </article>
       <article class="skill-group">
         <span class="skill-index">03</span>
         <h3 data-i18n="sg3">Ingénierie &amp; simulation</h3>
-        <p data-i18n="skills.engineering">CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, Nastran/Patran</p>
+        <div class="tool-grid">
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/catia.png" alt="" loading="lazy"></span>CATIA V5</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/solidworks.png" alt="" loading="lazy"></span>SolidWorks</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/3dexperience.png" alt="" loading="lazy"></span>3DEXPERIENCE</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/starccm.png" alt="" loading="lazy"></span>Star-CCM+</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/comsol.png" alt="" loading="lazy"></span>COMSOL</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/nastran.png" alt="" loading="lazy"></span>Nastran/Patran</span>
+        </div>
       </article>
     </div>
   </div>
@@ -241,6 +263,6 @@
 </div>
 
 <script src="assets/js/projects-data.js?v=59"></script>
-<script src="assets/js/scripts.js?v=59"></script>
+<script src="assets/js/scripts.js?v=60"></script>
 </body>
 </html>
