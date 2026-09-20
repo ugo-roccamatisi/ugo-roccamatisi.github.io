@@ -92,12 +92,12 @@ const PROJECT_META = {
     en: { category: 'Aeronautics · Modelling', role: 'Airbus & Cranfield thesis', contribution: 'Thermal model design, calibration and prediction pipeline', value: '≈ 3 °C', outcome: 'prediction error at touchdown' }
   },
   pinn: {
-    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', value: '±2 K', outcome: 'sur le modèle direct · énergie identifiée à 2 % près' },
-    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', value: '±2 K', outcome: 'on the direct model · energy identified within 2%' }
+    fr: { category: 'IA scientifique · Thermique', role: 'Projet personnel de recherche', contribution: 'Développement des PINN direct, paramétrique et inverse, avec étude d’identifiabilité', value: '±2 K', outcome: 'sur le modèle direct · énergie identifiée à 2 % près' },
+    en: { category: 'Scientific AI · Thermal', role: 'Personal research project', contribution: 'Direct, parametric and inverse PINN development, including identifiability analysis', value: '±2 K', outcome: 'on the direct model · energy identified within 2%' }
   },
   saab: {
-    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', value: '±0,02 s', outcome: 'de résolution sur la détection du toucher' },
-    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', value: '±0.02 s', outcome: 'touchdown detection resolution' }
+    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', contribution: 'Analyse spectrale, fusion des capteurs et détection de rupture', value: '±0,02 s', outcome: 'de résolution sur la détection du toucher' },
+    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', contribution: 'Spectral analysis, sensor fusion and change-point detection', value: '±0.02 s', outcome: 'touchdown detection resolution' }
   },
   chu: {
     fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', contribution: 'Pilotage du pôle prédiction et développement du classifieur', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
@@ -108,12 +108,12 @@ const PROJECT_META = {
     en: { category: 'Aircraft design', role: 'Engine integration lead', contribution: 'Propulsion integration, nacelle design and CS-25 compliance', value: '62', outcome: 'students in an international team' }
   },
   vrp: {
-    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', value: '−13 %', outcome: 'sur le coût face à la meilleure référence' },
-    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', value: '−13%', outcome: 'cost versus the strongest reference method' }
+    fr: { category: 'Optimisation · Reinforcement Learning', role: 'Projet en équipe de 6', contribution: 'Benchmark reproductible et développement du Q-Learning avec opérateurs 2-opt', value: '−13 %', outcome: 'sur le coût face à la meilleure référence' },
+    en: { category: 'Optimisation · Reinforcement Learning', role: 'Six-person team project', contribution: 'Reproducible benchmark and Q-Learning development with 2-opt operators', value: '−13%', outcome: 'cost versus the strongest reference method' }
   },
   prophet: {
-    fr: { category: 'Séries temporelles', role: 'Projet personnel', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
-    en: { category: 'Time series', role: 'Personal project', value: '9.7%', outcome: 'MAPE over a full test year' }
+    fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: 'Préparation de 20 ans de données, entraînement et évaluation du modèle Prophet', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
+    en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
@@ -132,9 +132,9 @@ function projectCard(p, featured) {
   card.innerHTML =
     '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
     '<div class="proj-body">' +
-      '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span><span class="proj-role">' + meta.role + '</span></div>' +
+      '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
-      (meta.contribution ? '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' : (featured ? '<p class="proj-excerpt">' + t.excerpt + '</p>' : '')) +
+      '<p class="proj-contribution"><span>' + T[LANG]['proj.contribution'] + '</span>' + meta.contribution + '</p>' +
       '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
       '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
     '</div>';
