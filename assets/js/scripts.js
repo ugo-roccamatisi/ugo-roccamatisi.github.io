@@ -153,7 +153,7 @@ function projectCard(p, featured) {
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', T[LANG]['proj.more'] + ' : ' + t.title);
   card.innerHTML =
-    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + (p.courseMark ? ' proj-banner-course' : '') + '">' + (p.courseMark ? '<span class="course-mark" aria-hidden="true">' + p.courseMark + '</span>' : '<img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()">') + '</div>' +
+    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
     '<div class="proj-body">' +
       '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
@@ -221,7 +221,7 @@ function openModal(id) {
     return '<figure class="mgal-fig">' + media + '<figcaption>' + caption + '</figcaption></figure>';
   }).join('');
   document.getElementById('modal-content').innerHTML =
-    '<div class="case-hero proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + (p.courseMark ? ' proj-banner-course' : '') + '">' + (p.courseMark ? '<span class="course-mark" aria-hidden="true">' + p.courseMark + '</span>' : '<img src="' + p.banner + '" alt="" onerror="this.remove()">') + '</div>' +
+    '<div class="case-hero proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="case-content">' +
       '<header class="case-intro"><span class="proj-category">' + meta.category + '</span>' +
         '<h3 id="modal-title">' + t.title + '</h3>' +
