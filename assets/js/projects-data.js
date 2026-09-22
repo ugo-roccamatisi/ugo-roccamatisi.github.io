@@ -376,5 +376,197 @@ window.PROJECTS = [
         "Holiday effect measured and honestly documented: marginal gain, with identified improvements (weather as external regressor, gradient boosting)."
       ]
     }
+  },
+  {
+    "id": "lab-decision",
+    "courseMark": "DA",
+    "tech": [
+      "Python",
+      "scikit-learn",
+      "Jupyter"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/ugo-roccamatisi/TP_decision_apprentissage",
+        "label_fr": "Dépôt GitHub",
+        "label_en": "GitHub repo"
+      }
+    ],
+    "fr": {
+      "title": "Décision et apprentissage",
+      "excerpt": "Régression, classification, arbres de décision et ACP sur quatre notebooks.",
+      "meta": "Centrale Lille · 4 travaux pratiques",
+      "situation": "Série de 4 travaux pratiques en décision et apprentissage.",
+      "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
+      "actions": [
+        "Régression linéaire, ridge et Lasso avec validation croisée.",
+        "Classification par régression logistique, KNN, arbres et forêts aléatoires.",
+        "ACP et reconstruction de visages Olivetti."
+      ],
+      "results": [
+        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
+        "Les résultats et graphiques sont enregistrés dans les notebooks."
+      ]
+    },
+    "en": {
+      "title": "Decision and learning",
+      "excerpt": "Regression, classification, decision trees and PCA across four notebooks.",
+      "meta": "Centrale Lille · 4 lab notebooks",
+      "situation": "A 4-part series of academic lab notebooks.",
+      "task": "Complete the notebooks, explain the methods and verify that they run.",
+      "actions": [
+        "Linear, ridge and Lasso regression with cross-validation.",
+        "Logistic regression, KNN, decision trees and random forests.",
+        "PCA and Olivetti face reconstruction."
+      ],
+      "results": [
+        "4 corrected and executed notebooks with the required resources.",
+        "Outputs and plots are saved in the notebooks."
+      ]
+    }
+  },
+  {
+    "id": "lab-estimation",
+    "courseMark": "ES",
+    "tech": [
+      "Python",
+      "EM",
+      "KDE"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/ugo-roccamatisi/TP_estimation_statistique",
+        "label_fr": "Dépôt GitHub",
+        "label_en": "GitHub repo"
+      }
+    ],
+    "fr": {
+      "title": "Estimation statistique",
+      "excerpt": "Mélanges gaussiens, algorithme EM et estimation de densité par noyaux.",
+      "meta": "Centrale Lille · 2 travaux pratiques",
+      "situation": "Série de 2 travaux pratiques en estimation statistique.",
+      "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
+      "actions": [
+        "Estimation d'un mélange gaussien par EM et sélection par BIC.",
+        "Histogrammes et estimateurs à noyaux en une et deux dimensions.",
+        "Visualisation de densités et génération d'images de chiffres."
+      ],
+      "results": [
+        "2 notebooks corrigés et exécutés avec les ressources nécessaires.",
+        "Les résultats et graphiques sont enregistrés dans les notebooks."
+      ]
+    },
+    "en": {
+      "title": "Statistical estimation",
+      "excerpt": "Gaussian mixtures, EM and kernel density estimation.",
+      "meta": "Centrale Lille · 2 lab notebooks",
+      "situation": "A 2-part series of academic lab notebooks.",
+      "task": "Complete the notebooks, explain the methods and verify that they run.",
+      "actions": [
+        "Gaussian-mixture estimation with EM and BIC selection.",
+        "Histograms and kernel estimators in one and two dimensions.",
+        "Density plots and generation of digit images."
+      ],
+      "results": [
+        "2 corrected and executed notebooks with the required resources.",
+        "Outputs and plots are saved in the notebooks."
+      ]
+    }
+  },
+  {
+    "id": "lab-advanced",
+    "courseMark": "EA",
+    "tech": [
+      "Python",
+      "Monte Carlo",
+      "MCMC"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/ugo-roccamatisi/TP_estimation_avancee",
+        "label_fr": "Dépôt GitHub",
+        "label_en": "GitHub repo"
+      }
+    ],
+    "fr": {
+      "title": "Estimation statistique avancée",
+      "excerpt": "Monte Carlo, inférence bayésienne, Bayesian LASSO et LDA.",
+      "meta": "Centrale Lille · 4 travaux pratiques",
+      "situation": "Série de 4 travaux pratiques en estimation statistique avancée.",
+      "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
+      "actions": [
+        "Simulation, acceptation-rejet et Monte Carlo.",
+        "Régression logistique bayésienne par Metropolis-Hastings et Bayesian LASSO par Gibbs.",
+        "Inférence variationnelle pour le modèle LDA."
+      ],
+      "results": [
+        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
+        "Les résultats et graphiques sont enregistrés dans les notebooks."
+      ]
+    },
+    "en": {
+      "title": "Advanced statistical estimation",
+      "excerpt": "Monte Carlo, Bayesian inference, Bayesian LASSO and LDA.",
+      "meta": "Centrale Lille · 4 lab notebooks",
+      "situation": "A 4-part series of academic lab notebooks.",
+      "task": "Complete the notebooks, explain the methods and verify that they run.",
+      "actions": [
+        "Simulation, rejection sampling and Monte Carlo.",
+        "Bayesian logistic regression with Metropolis-Hastings and Bayesian LASSO with Gibbs sampling.",
+        "Variational inference for the LDA model."
+      ],
+      "results": [
+        "4 corrected and executed notebooks with the required resources.",
+        "Outputs and plots are saved in the notebooks."
+      ]
+    }
+  },
+  {
+    "id": "lab-optimisation",
+    "courseMark": "OP",
+    "tech": [
+      "Python",
+      "BFGS",
+      "ISTA"
+    ],
+    "links": [
+      {
+        "href": "https://github.com/ugo-roccamatisi/TP_optimisation",
+        "label_fr": "Dépôt GitHub",
+        "label_en": "GitHub repo"
+      }
+    ],
+    "fr": {
+      "title": "Optimisation",
+      "excerpt": "Gradient, Newton, optimisation sous contraintes et régularisation L1.",
+      "meta": "Centrale Lille · 4 travaux pratiques",
+      "situation": "Série de 4 travaux pratiques en optimisation.",
+      "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
+      "actions": [
+        "Méthodes de gradient, recherche linéaire d'Armijo, Newton et BFGS.",
+        "Conditions KKT, points intérieurs et algorithme d'Uzawa.",
+        "Gradient stochastique et seuillage doux avec ISTA."
+      ],
+      "results": [
+        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
+        "Les résultats et graphiques sont enregistrés dans les notebooks."
+      ]
+    },
+    "en": {
+      "title": "Optimization",
+      "excerpt": "Gradient descent, Newton's method, constrained optimization and L1 regularization.",
+      "meta": "Centrale Lille · 4 lab notebooks",
+      "situation": "A 4-part series of academic lab notebooks.",
+      "task": "Complete the notebooks, explain the methods and verify that they run.",
+      "actions": [
+        "Gradient methods, Armijo line search, Newton and BFGS.",
+        "KKT conditions, interior-point methods and Uzawa's algorithm.",
+        "Stochastic gradient and soft thresholding with ISTA."
+      ],
+      "results": [
+        "4 corrected and executed notebooks with the required resources.",
+        "Outputs and plots are saved in the notebooks."
+      ]
+    }
   }
 ];
