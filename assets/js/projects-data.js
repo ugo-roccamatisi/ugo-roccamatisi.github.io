@@ -243,6 +243,54 @@ window.PROJECTS = [
     }
   },
   {
+    id: "rsp",
+    banner: "images/projects/rsp-overview.png",
+    tech: ["Python", "SciPy", "PyWavelets", "Jupyter", "NumPy"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/signal-representations-and-inverse-problems", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/rsp-spectrogram.png", fr: "Analyse temps-fréquence : spectrogramme d'un enregistrement d'oiseau", en: "Time-frequency analysis: spectrogram of a bird recording" },
+      { src: "images/projects/rsp-wavelet.png", fr: "Décomposition en ondelettes 2D d'une image", en: "2D wavelet decomposition of an image" },
+      { src: "images/projects/rsp-source-separation.png", fr: "Séparation aveugle de sources : détection des directions de mélange dans le plan temps-fréquence", en: "Blind source separation: mixture-direction detection in the time-frequency plane" },
+      { src: "images/projects/rsp-inpainting.png", fr: "Inpainting variationnel : reconstruction progressive à partir de 10 % des pixels", en: "Variational inpainting: progressive reconstruction from 10% of the pixels" }
+    ],
+    fr: {
+      title: "Représentation des signaux et problèmes inverses",
+      excerpt: "Quatre notebooks reproductibles : analyse temps-fréquence, ondelettes, séparation de sources et reconstruction d'images.",
+      meta: "Centrale Lille · module scientifique · 2026",
+      situation: "Le module relie quatre familles de méthodes souvent étudiées séparément : représentations temps-fréquence, ondelettes, séparation aveugle de sources et résolution de problèmes inverses en imagerie. Les supports initiaux devaient être complétés et rendus entièrement reproductibles.",
+      task: "Reconstruire et corriger les quatre travaux pratiques, expliciter les choix numériques et livrer des notebooks capables de s'exécuter de bout en bout dans un environnement documenté.",
+      actions: [
+        "Analyse de Fourier à court terme (STFT) sur signaux audio, chirps et fréquences proches, avec étude du compromis entre résolution temporelle et fréquentielle.",
+        "Décomposition en ondelettes discrète et stationnaire pour le débruitage d'images ; séparation parcimonieuse de sources par regroupement angulaire et masques temps-fréquence binaires.",
+        "Résolution de problèmes de débruitage et d'inpainting par descente de gradient et projection, puis fiabilisation de l'ensemble : chemins relatifs, graines aléatoires fixes, ressources locales et environnement épinglé."
+      ],
+      results: [
+        "Débruitage par ondelettes : PSNR porté de 22,0 dB pour l'image bruitée à 27,9 dB avec la DWT et 29,0 dB avec la SWT.",
+        "Séparation de trois sources à partir de deux mélanges : 93,5 % des coefficients temps-fréquence significatifs correctement attribués.",
+        "Problèmes inverses : 29,5 dB en débruitage de Tikhonov et 24,4 dB en inpainting à partir de seulement 10 % des pixels.",
+        "Dépôt public bilingue avec quatre notebooks exécutés intégralement sans erreur et des instructions de reproduction."
+      ]
+    },
+    en: {
+      title: "Signal representations and inverse problems",
+      excerpt: "Four reproducible notebooks covering time-frequency analysis, wavelets, source separation and image reconstruction.",
+      meta: "Centrale Lille · scientific module · 2026",
+      situation: "The module connects four families of methods that are often studied separately: time-frequency representations, wavelets, blind source separation and inverse problems in imaging. The initial material had to be completed and made fully reproducible.",
+      task: "Rebuild and correct the four lab notebooks, explain the numerical choices and deliver notebooks that run end to end in a documented environment.",
+      actions: [
+        "Short-time Fourier analysis (STFT) on audio signals, chirps and closely spaced frequencies, including the time-frequency resolution trade-off.",
+        "Discrete and stationary wavelet decompositions for image denoising; sparse source separation through angular clustering and binary time-frequency masks.",
+        "Denoising and inpainting through gradient descent and projection, followed by project-wide reproducibility work: relative paths, fixed random seeds, local resources and a pinned environment."
+      ],
+      results: [
+        "Wavelet denoising: PSNR improved from 22.0 dB for the noisy image to 27.9 dB with DWT and 29.0 dB with SWT.",
+        "Three sources separated from two mixtures, with 93.5% of significant time-frequency coefficients assigned correctly.",
+        "Inverse problems: 29.5 dB for Tikhonov denoising and 24.4 dB for inpainting from only 10% of the pixels.",
+        "Public bilingual repository with four notebooks executed end to end without errors and documented reproduction steps."
+      ]
+    }
+  },
+  {
     id: "vrp",
     fit: "contain",
     banner: "images/projects/vrp-routes.png",
