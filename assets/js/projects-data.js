@@ -394,7 +394,7 @@ window.PROJECTS = [
     ],
     "fr": {
       "title": "Décision et apprentissage",
-      "excerpt": "Régression, classification, arbres de décision et ACP sur quatre notebooks.",
+      "excerpt": "Chiffres 3/5 : KNN à 97 % sur 400 images de test ; ACP et régression régularisée.",
       "meta": "Centrale Lille · 4 travaux pratiques",
       "situation": "Série de 4 travaux pratiques en décision et apprentissage.",
       "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
@@ -404,13 +404,15 @@ window.PROJECTS = [
         "ACP et reconstruction de visages Olivetti."
       ],
       "results": [
-        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
-        "Les résultats et graphiques sont enregistrés dans les notebooks."
+        "Classification des chiffres 3 et 5 : le KNN atteint 97,0 % de bonnes réponses sur 400 images de test, contre 93,75 % pour la régression logistique (25 erreurs, visibles dans la matrice).",
+        "Régression ridge : α ≈ 1,09 choisi sur cinq plis ; MSE test 0,5219 contre 0,5402 sans pénalité sur ce découpage.",
+        "ACP des visages Olivetti : 123 composantes conservent 95,04 % de la variance ; l'erreur de reconstruction décroît de 0,0048 à 0,00013 entre 10 et 300 composantes.",
+        "Sur Iris, un arbre entraîné avec les pétales atteint 96,7 % sur le jeu de test, contre 60,0 % avec les sépales seuls."
       ]
     },
     "en": {
       "title": "Decision and learning",
-      "excerpt": "Regression, classification, decision trees and PCA across four notebooks.",
+      "excerpt": "Digits 3/5: KNN at 97% on 400 test images; PCA and regularized regression.",
       "meta": "Centrale Lille · 4 lab notebooks",
       "situation": "A 4-part series of academic lab notebooks.",
       "task": "Complete the notebooks, explain the methods and verify that they run.",
@@ -420,10 +422,21 @@ window.PROJECTS = [
         "PCA and Olivetti face reconstruction."
       ],
       "results": [
-        "4 corrected and executed notebooks with the required resources.",
-        "Outputs and plots are saved in the notebooks."
+        "Digit 3 vs 5 classification: KNN reaches 97.0% accuracy on 400 test images, versus 93.75% for logistic regression (25 errors shown in the confusion matrix).",
+        "Ridge regression: α ≈ 1.09 selected with five-fold cross-validation; test MSE 0.5219 versus 0.5402 without regularization on this split.",
+        "Olivetti face PCA: 123 components retain 95.04% of the variance; reconstruction MSE falls from 0.0048 to 0.00013 between 10 and 300 components.",
+        "On Iris, a tree using petal features reaches 96.7% test accuracy, versus 60.0% using sepal features alone."
       ]
-    }
+    },
+    "banner": "images/projects/decision-confusion.webp",
+    "fit": "contain",
+    "gallery": [
+      {
+        "src": "images/projects/decision-ridge.webp",
+        "fr": "Choix du paramètre ridge par validation croisée : α ≈ 1,09.",
+        "en": "Ridge penalty chosen by cross-validation: α ≈ 1.09."
+      }
+    ]
   },
   {
     "id": "lab-estimation",
@@ -442,7 +455,7 @@ window.PROJECTS = [
     ],
     "fr": {
       "title": "Estimation statistique",
-      "excerpt": "Mélanges gaussiens, algorithme EM et estimation de densité par noyaux.",
+      "excerpt": "Mélange gaussien à deux composantes retenu par BIC sur 272 observations.",
       "meta": "Centrale Lille · 2 travaux pratiques",
       "situation": "Série de 2 travaux pratiques en estimation statistique.",
       "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
@@ -452,13 +465,15 @@ window.PROJECTS = [
         "Visualisation de densités et génération d'images de chiffres."
       ],
       "results": [
-        "2 notebooks corrigés et exécutés avec les ressources nécessaires.",
-        "Les résultats et graphiques sont enregistrés dans les notebooks."
+        "Sur les 272 observations Old Faithful, le BIC retient deux composantes gaussiennes : 832,59, contre 844,12 pour trois ; une vraisemblance plus élevée seule ne suffit pas à choisir K.",
+        "Avec K = 2, la log-vraisemblance de l'algorithme EM passe de −745,817 à −385,461 et les poids estimés sont 0,644 et 0,356.",
+        "L'estimation à noyaux montre l'effet du paramètre de lissage h : h = 0,1 suit le bruit des données, tandis que h = 2 masque la bimodalité de la distribution simulée.",
+        "La densité estimée par noyau gaussien est normalisée numériquement : intégrale ≈ 0,99974 sur la grille de vérification."
       ]
     },
     "en": {
       "title": "Statistical estimation",
-      "excerpt": "Gaussian mixtures, EM and kernel density estimation.",
+      "excerpt": "BIC selects a two-component Gaussian mixture on 272 observations.",
       "meta": "Centrale Lille · 2 lab notebooks",
       "situation": "A 2-part series of academic lab notebooks.",
       "task": "Complete the notebooks, explain the methods and verify that they run.",
@@ -468,10 +483,21 @@ window.PROJECTS = [
         "Density plots and generation of digit images."
       ],
       "results": [
-        "2 corrected and executed notebooks with the required resources.",
-        "Outputs and plots are saved in the notebooks."
+        "On 272 Old Faithful observations, BIC selects two Gaussian components: 832.59 versus 844.12 for three; a higher likelihood alone does not justify adding a component.",
+        "For K = 2, the EM log-likelihood rises from −745.817 to −385.461, with estimated mixture weights of 0.644 and 0.356.",
+        "Kernel estimation illustrates bandwidth h: h = 0.1 tracks sampling noise, while h = 2 obscures the bimodality of the simulated distribution.",
+        "The Gaussian kernel density is numerically normalized: integral ≈ 0.99974 on the verification grid."
       ]
-    }
+    },
+    "banner": "images/projects/estimation-bic.webp",
+    "fit": "contain",
+    "gallery": [
+      {
+        "src": "images/projects/estimation-kde.webp",
+        "fr": "Estimation à noyaux : un lissage trop faible fait apparaître du bruit ; trop fort efface les deux modes.",
+        "en": "Kernel estimation: too little smoothing adds noise; too much hides the two modes."
+      }
+    ]
   },
   {
     "id": "lab-advanced",
@@ -490,7 +516,7 @@ window.PROJECTS = [
     ],
     "fr": {
       "title": "Estimation statistique avancée",
-      "excerpt": "Monte Carlo, inférence bayésienne, Bayesian LASSO et LDA.",
+      "excerpt": "Événement rare : variance divisée par ≈139 avec l'échantillonnage d'importance.",
       "meta": "Centrale Lille · 4 travaux pratiques",
       "situation": "Série de 4 travaux pratiques en estimation statistique avancée.",
       "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
@@ -500,13 +526,15 @@ window.PROJECTS = [
         "Inférence variationnelle pour le modèle LDA."
       ],
       "results": [
-        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
-        "Les résultats et graphiques sont enregistrés dans les notebooks."
+        "Estimation d'une probabilité rare P(Z > 3) : l'échantillonnage d'importance réduit la variance d'environ 139 fois par rapport au Monte Carlo standard, sur 1 000 répétitions de 10 000 tirages.",
+        "La chaîne Metropolis-Hastings pour la régression logistique donne une moyenne a posteriori du coefficient de −2,309 et un intervalle crédible à 95 % [−3,596 ; −1,260] dans l'expérience du notebook.",
+        "Avec le Bayesian LASSO, augmenter λ de 1 à 100 réduit la norme L1 de la moyenne des coefficients de 1,698 à 0,601.",
+        "Le modèle LDA apprend huit thèmes sur 11 314 documents ; 65,5 % des documents ont un thème dont la part dépasse 50 %."
       ]
     },
     "en": {
       "title": "Advanced statistical estimation",
-      "excerpt": "Monte Carlo, Bayesian inference, Bayesian LASSO and LDA.",
+      "excerpt": "Rare event: importance sampling cuts estimator variance by about 139×.",
       "meta": "Centrale Lille · 4 lab notebooks",
       "situation": "A 4-part series of academic lab notebooks.",
       "task": "Complete the notebooks, explain the methods and verify that they run.",
@@ -516,10 +544,21 @@ window.PROJECTS = [
         "Variational inference for the LDA model."
       ],
       "results": [
-        "4 corrected and executed notebooks with the required resources.",
-        "Outputs and plots are saved in the notebooks."
+        "For the rare event P(Z > 3), importance sampling reduces estimator variance by about 139 times compared with standard Monte Carlo, over 1,000 repeats of 10,000 draws.",
+        "The Metropolis-Hastings logistic-regression chain yields a coefficient posterior mean of −2.309 and a 95% credible interval [−3.596, −1.260] in the notebook experiment.",
+        "For Bayesian LASSO, increasing λ from 1 to 100 reduces the L1 norm of the mean coefficients from 1.698 to 0.601.",
+        "The LDA model learns eight topics from 11,314 documents; 65.5% of documents have a topic share above 50%."
       ]
-    }
+    },
+    "banner": "images/projects/advanced-importance.webp",
+    "fit": "contain",
+    "gallery": [
+      {
+        "src": "images/projects/advanced-lda.webp",
+        "fr": "LDA : distribution de la part du thème dominant sur 11 314 documents et nombre de thèmes au-dessus de 20 %.",
+        "en": "LDA: dominant-topic share across 11,314 documents and number of topics above 20%."
+      }
+    ]
   },
   {
     "id": "lab-optimisation",
@@ -538,7 +577,7 @@ window.PROJECTS = [
     ],
     "fr": {
       "title": "Optimisation",
-      "excerpt": "Gradient, Newton, optimisation sous contraintes et régularisation L1.",
+      "excerpt": "Uzawa, BFGS et L1 : 62 poids actifs sur 100 pour λ = 2 dans l'exercice.",
       "meta": "Centrale Lille · 4 travaux pratiques",
       "situation": "Série de 4 travaux pratiques en optimisation.",
       "task": "Compléter les notebooks, expliquer les méthodes et vérifier leur exécution.",
@@ -548,13 +587,15 @@ window.PROJECTS = [
         "Gradient stochastique et seuillage doux avec ISTA."
       ],
       "results": [
-        "4 notebooks corrigés et exécutés avec les ressources nécessaires.",
-        "Les résultats et graphiques sont enregistrés dans les notebooks."
+        "Sur un problème avec contraintes, l'algorithme d'Uzawa converge vers x* = (0,5 ; √3/2) avec des contraintes actives et un écart d'objectif de l'ordre de 10⁻¹⁵ dans l'exécution.",
+        "L'approximation BFGS atteint le point (1,1) en 55 itérations sur l'exemple de Newton, avec un écart final de 1,18 × 10⁻¹⁰.",
+        "La pénalisation L1 rend les coefficients parcimonieux : pour λ = 2, 62 poids sur 100 restent non nuls ; pour λ = 5, aucun ne reste non nul dans cet exercice.",
+        "Sur le réseau de classification NumPy, λ = 0,001 garde 141 poids non nuls sur 152, avec 80,5 % de précision test contre 82,5 % sans pénalité ; ces scores sont propres à cette simulation."
       ]
     },
     "en": {
       "title": "Optimization",
-      "excerpt": "Gradient descent, Newton's method, constrained optimization and L1 regularization.",
+      "excerpt": "Uzawa, BFGS and L1: 62 of 100 active weights at λ = 2 in the exercise.",
       "meta": "Centrale Lille · 4 lab notebooks",
       "situation": "A 4-part series of academic lab notebooks.",
       "task": "Complete the notebooks, explain the methods and verify that they run.",
@@ -564,9 +605,20 @@ window.PROJECTS = [
         "Stochastic gradient and soft thresholding with ISTA."
       ],
       "results": [
-        "4 corrected and executed notebooks with the required resources.",
-        "Outputs and plots are saved in the notebooks."
+        "On a constrained problem, Uzawa converges to x* = (0.5, √3/2) with active constraints and an objective gap on the order of 10⁻¹⁵ in this run.",
+        "The BFGS approximation reaches (1,1) in 55 iterations on the Newton example, with a final distance of 1.18 × 10⁻¹⁰.",
+        "L1 penalization yields sparse weights: for λ = 2, 62 of 100 weights remain nonzero; at λ = 5, none remain nonzero in this exercise.",
+        "In the NumPy classifier, λ = 0.001 keeps 141 of 152 weights nonzero with 80.5% test accuracy versus 82.5% without the penalty; these scores belong to this simulation."
       ]
-    }
+    },
+    "banner": "images/projects/optimisation-constraints.webp",
+    "fit": "contain",
+    "gallery": [
+      {
+        "src": "images/projects/optimisation-l1.webp",
+        "fr": "Régularisation L1 d'un réseau NumPy : perte, poids non nuls et précision test selon λ.",
+        "en": "L1 regularization of a NumPy network: loss, nonzero weights and test accuracy by λ."
+      }
+    ]
   }
 ];

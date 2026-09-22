@@ -121,10 +121,22 @@ const PROJECT_META = {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: 'Préparation de 20 ans de données, entraînement et évaluation du modèle Prophet', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
   },
-  "lab-decision": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Regression, classification, decision trees and PCA across four notebooks.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Régression linéaire, ridge et Lasso avec validation croisée.","Classification par régression logistique, KNN, arbres et forêts aléatoires.","ACP et reconstruction de visages Olivetti."], value: '4 labs', outcome: 'executed notebooks' } },
-  "lab-estimation": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Gaussian mixtures, EM and kernel density estimation.", value: '2 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Estimation d'un mélange gaussien par EM et sélection par BIC.","Histogrammes et estimateurs à noyaux en une et deux dimensions.","Visualisation de densités et génération d'images de chiffres."], value: '2 labs', outcome: 'executed notebooks' } },
-  "lab-advanced": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Monte Carlo, Bayesian inference, Bayesian LASSO and LDA.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Simulation, acceptation-rejet et Monte Carlo.","Régression logistique bayésienne par Metropolis-Hastings et Bayesian LASSO par Gibbs.","Inférence variationnelle pour le modèle LDA."], value: '4 labs', outcome: 'executed notebooks' } },
-  "lab-optimisation": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Gradient descent, Newton's method, constrained optimization and L1 regularization.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Méthodes de gradient, recherche linéaire d'Armijo, Newton et BFGS.","Conditions KKT, points intérieurs et algorithme d'Uzawa.","Gradient stochastique et seuillage doux avec ISTA."], value: '4 labs', outcome: 'executed notebooks' } }
+  "lab-decision": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Chiffres 3/5 : KNN à 97 % sur 400 images de test ; ACP et régression régularisée.", value: "97 %", outcome: "de bonnes réponses sur les chiffres 3/5 avec KNN" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Digits 3/5: KNN at 97% on 400 test images; PCA and regularized regression.", value: "97%", outcome: "test accuracy on digits 3/5 with KNN" }
+  },
+  "lab-estimation": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Mélange gaussien à deux composantes retenu par BIC sur 272 observations.", value: "K = 2", outcome: "composantes retenues par BIC (832,59)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "BIC selects a two-component Gaussian mixture on 272 observations.", value: "K = 2", outcome: "components selected by BIC (832.59)" }
+  },
+  "lab-advanced": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Événement rare : variance divisée par ≈139 avec l'échantillonnage d'importance.", value: "×139", outcome: "de réduction de variance (Monte Carlo)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Rare event: importance sampling cuts estimator variance by about 139×.", value: "×139", outcome: "lower Monte Carlo estimator variance" }
+  },
+  "lab-optimisation": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Uzawa, BFGS et L1 : 62 poids actifs sur 100 pour λ = 2 dans l'exercice.", value: "62/100", outcome: "poids non nuls à λ = 2 (L1)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Uzawa, BFGS and L1: 62 of 100 active weights at λ = 2 in the exercise.", value: "62/100", outcome: "nonzero weights at λ = 2 (L1)" }
+  }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
