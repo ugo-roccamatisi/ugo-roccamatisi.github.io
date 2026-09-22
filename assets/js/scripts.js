@@ -17,7 +17,7 @@ const T = {
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
-    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
+    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
     'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -39,7 +39,7 @@ const T = {
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
-    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
+    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Signal processing, optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
     'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -103,6 +103,10 @@ const PROJECT_META = {
     fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', contribution: 'Pilotage du pôle prédiction et développement du classifieur', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
     en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', contribution: 'Prediction team leadership and classifier development', value: '73%', outcome: 'accuracy across 26,950 test stays' }
   },
+  rsp: {
+    fr: { category: 'Traitement du signal · Problèmes inverses', role: 'Projet académique, Centrale Lille', contribution: 'Reconstruction, correction et validation de quatre notebooks scientifiques', value: '4 labs', outcome: 'reproductibles, exécutés de bout en bout' },
+    en: { category: 'Signal processing · Inverse problems', role: 'Academic project, Centrale Lille', contribution: 'Rebuilding, correcting and validating four scientific notebooks', value: '4 labs', outcome: 'reproducible and executed end to end' }
+  },
   bwb: {
     fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', contribution: 'Intégration propulsive, conception de la nacelle et conformité CS-25', value: '62', outcome: 'étudiants dans une équipe internationale' },
     en: { category: 'Aircraft design', role: 'Engine integration lead', contribution: 'Propulsion integration, nacelle design and CS-25 compliance', value: '62', outcome: 'students in an international team' }
@@ -117,7 +121,7 @@ const PROJECT_META = {
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
-const OTHER_PROJECTS = ['bwb', 'vrp', 'prophet'];
+const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
 const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
 
 function projectCard(p, featured) {
