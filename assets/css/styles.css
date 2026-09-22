@@ -207,3 +207,8 @@ section[id] { scroll-margin-top: 72px; }
   .mgal { grid-template-columns: 1fr; }
   .mgal-fig img { height: auto; max-height: 260px; }
 }
+
+/* Visuels typographiques des séries de travaux pratiques */
+.proj-banner-course { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #10253f 0%, #214f86 60%, #2e88af 100%); }
+.proj-banner-course .course-mark { display: block; color: #fff; font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.065em; line-height: 1; opacity: 0.94; }
+.case-hero.proj-banner-course .course-mark { font-size: clamp(5rem, 14vw, 9rem); }

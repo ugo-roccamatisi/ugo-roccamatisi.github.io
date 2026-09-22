@@ -18,6 +18,7 @@ const T = {
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
+    'proj.academic': 'Travaux pratiques', 'proj.academic_intro': 'Statistiques, apprentissage et optimisation · Centrale Lille', 'proj.academic_pending': 'Les dépôts sont créés ; les notebooks seront visibles après leur mise en ligne.',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
     'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -40,6 +41,7 @@ const T = {
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Signal processing, optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
+    'proj.academic': 'Coursework', 'proj.academic_intro': 'Statistics, machine learning and optimization · Centrale Lille', 'proj.academic_pending': 'The repositories are ready; notebooks will appear once uploaded.',
     'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -118,11 +120,16 @@ const PROJECT_META = {
   prophet: {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: 'Préparation de 20 ans de données, entraînement et évaluation du modèle Prophet', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
-  }
+  },
+  "lab-decision": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Regression, classification, decision trees and PCA across four notebooks.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Régression linéaire, ridge et Lasso avec validation croisée.","Classification par régression logistique, KNN, arbres et forêts aléatoires.","ACP et reconstruction de visages Olivetti."], value: '4 labs', outcome: 'executed notebooks' } },
+  "lab-estimation": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Gaussian mixtures, EM and kernel density estimation.", value: '2 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Estimation d'un mélange gaussien par EM et sélection par BIC.","Histogrammes et estimateurs à noyaux en une et deux dimensions.","Visualisation de densités et génération d'images de chiffres."], value: '2 labs', outcome: 'executed notebooks' } },
+  "lab-advanced": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Monte Carlo, Bayesian inference, Bayesian LASSO and LDA.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Simulation, acceptation-rejet et Monte Carlo.","Régression logistique bayésienne par Metropolis-Hastings et Bayesian LASSO par Gibbs.","Inférence variationnelle pour le modèle LDA."], value: '4 labs', outcome: 'executed notebooks' } },
+  "lab-optimisation": { fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Notebooks corrigés et expliqués', contribution: "Gradient descent, Newton's method, constrained optimization and L1 regularization.", value: '4 TP', outcome: 'notebooks exécutés' }, en: { category: 'Coursework · Centrale Lille', role: 'Corrected and explained notebooks', contribution: ["Méthodes de gradient, recherche linéaire d'Armijo, Newton et BFGS.","Conditions KKT, points intérieurs et algorithme d'Uzawa.","Gradient stochastique et seuillage doux avec ISTA."], value: '4 labs', outcome: 'executed notebooks' } }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
-const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
+const ACADEMIC_PROJECTS = ['lab-decision', 'lab-estimation', 'lab-advanced', 'lab-optimisation'];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS, ...ACADEMIC_PROJECTS];
 
 function projectCard(p, featured) {
   const t = p[LANG];
@@ -134,7 +141,7 @@ function projectCard(p, featured) {
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', T[LANG]['proj.more'] + ' : ' + t.title);
   card.innerHTML =
-    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
+    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + (p.courseMark ? ' proj-banner-course' : '') + '">' + (p.courseMark ? '<span class="course-mark" aria-hidden="true">' + p.courseMark + '</span>' : '<img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()">') + '</div>' +
     '<div class="proj-body">' +
       '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span></div>' +
       '<h3>' + t.title + '</h3>' +
@@ -157,12 +164,15 @@ function projectCard(p, featured) {
 function renderProjects() {
   const featuredGrid = document.getElementById('featured-project-grid');
   const otherGrid = document.getElementById('other-project-grid');
-  if (!featuredGrid || !otherGrid || !window.PROJECTS) return;
+  const academicGrid = document.getElementById('academic-project-grid');
+  if (!featuredGrid || !otherGrid || !academicGrid || !window.PROJECTS) return;
   featuredGrid.innerHTML = '';
   otherGrid.innerHTML = '';
+  academicGrid.innerHTML = '';
   const byId = id => window.PROJECTS.find(p => p.id === id);
   FEATURED_PROJECTS.map(byId).filter(Boolean).forEach(p => featuredGrid.appendChild(projectCard(p, true)));
   OTHER_PROJECTS.map(byId).filter(Boolean).forEach(p => otherGrid.appendChild(projectCard(p, false)));
+  ACADEMIC_PROJECTS.map(byId).filter(Boolean).forEach(p => academicGrid.appendChild(projectCard(p, false)));
 }
 
 /* ===================== Modale ===================== */
@@ -199,7 +209,7 @@ function openModal(id) {
     return '<figure class="mgal-fig">' + media + '<figcaption>' + caption + '</figcaption></figure>';
   }).join('');
   document.getElementById('modal-content').innerHTML =
-    '<div class="case-hero proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
+    '<div class="case-hero proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + (p.courseMark ? ' proj-banner-course' : '') + '">' + (p.courseMark ? '<span class="course-mark" aria-hidden="true">' + p.courseMark + '</span>' : '<img src="' + p.banner + '" alt="" onerror="this.remove()">') + '</div>' +
     '<div class="case-content">' +
       '<header class="case-intro"><span class="proj-category">' + meta.category + '</span>' +
         '<h3 id="modal-title">' + t.title + '</h3>' +
