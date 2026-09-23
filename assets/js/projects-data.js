@@ -5,13 +5,13 @@ window.PROJECTS = [
   {
     id: "btem",
     fit: "contain",
-    banner: "images/projects/btem-assembly.png",
+    banner: "images/projects/btem-assembly.webp",
     tech: ["Python", "SciPy", "Nelder-Mead", "Streamlit"],
     links: [{ href: "https://github.com/ugo-roccamatisi/master-thesis-brake-temperature-estimation-model", label_fr: "Code public assaini", label_en: "Sanitized public code" }],
     gallery: [
-      { src: "images/projects/btem-assembly.png", fr: "Ensemble roue-frein modélisé : vues en coupe, pile de disques S1-R4, tube de couple et capteur", en: "Modelled wheel-brake assembly: cross-sections, S1-R4 disc stack, torque tube and sensor" },
-      { src: "images/projects/btem-network.png", fr: "Réseau thermique à 14 nœuds du mémoire : conduction, convection et rayonnement entre chaque composant", en: "The thesis' 14-node thermal network: conduction, convection and radiation between every component" },
-      { src: "images/projects/btem-mechanisms.png", fr: "Mécanismes de transfert thermique modélisés, phase par phase (roulement, taxi, parking)", en: "Modelled heat transfer mechanisms, phase by phase (roll-out, taxi, parking)" }
+      { src: "images/projects/btem-assembly.webp", fr: "Ensemble roue-frein modélisé : vues en coupe, pile de disques S1-R4, tube de couple et capteur", en: "Modelled wheel-brake assembly: cross-sections, S1-R4 disc stack, torque tube and sensor" },
+      { src: "images/projects/btem-network.webp", fr: "Réseau thermique à 14 nœuds du mémoire : conduction, convection et rayonnement entre chaque composant", en: "The thesis' 14-node thermal network: conduction, convection and radiation between every component" },
+      { src: "images/projects/btem-mechanisms.webp", fr: "Mécanismes de transfert thermique modélisés, phase par phase (roulement, taxi, parking)", en: "Modelled heat transfer mechanisms, phase by phase (roll-out, taxi, parking)" }
     ],
     fr: {
       title: "Température des freins de l'A320 en service",
@@ -51,15 +51,15 @@ window.PROJECTS = [
   {
     id: "pinn",
     fit: "contain",
-    banner: "images/projects/btem-day.png",
+    banner: "images/projects/btem-day.webp",
     tech: ["Python", "PyTorch", "PINN", "L-BFGS"],
     links: [{ href: "https://github.com/ugo-roccamatisi/pinn-brake-stack", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/rapport-PINN.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
-      { src: "images/projects/btem-stack.png", fr: "Géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
-      { src: "images/projects/btem-2d.png", fr: "Champ de température T(z, r), solveur axisymétrique de validation", en: "Temperature field T(z, r), axisymmetric validation solver" },
-      { src: "images/projects/btem-pinn-archi.png", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
-      { src: "images/projects/btem-day.png", fr: "Journée de rotations enchaînées : limite décollage 150 °C et cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and limit cycle" },
-      { src: "images/projects/btem-inverse.png", fr: "Problème inverse : énergie identifiée à 2 % près depuis un capteur bruité", en: "Inverse problem: energy identified within 2% from a noisy sensor" }
+      { src: "images/projects/btem-stack.webp", fr: "Géométrie 1D : 5 stators et 4 rotors, interfaces de friction et convection", en: "1D geometry: 5 stators and 4 rotors, friction interfaces and convection" },
+      { src: "images/projects/btem-2d.webp", fr: "Champ de température T(z, r), solveur axisymétrique de validation", en: "Temperature field T(z, r), axisymmetric validation solver" },
+      { src: "images/projects/btem-pinn-archi.webp", fr: "Architecture du PINN : ansatz analytique + réseau, pertes auto-équilibrées", en: "PINN architecture: analytic ansatz + network, self-balanced losses" },
+      { src: "images/projects/btem-day.webp", fr: "Journée de rotations enchaînées : limite décollage 150 °C et cycle limite", en: "A day of chained rotations: 150 °C takeoff limit and limit cycle" },
+      { src: "images/projects/btem-inverse.webp", fr: "Problème inverse : énergie identifiée à 2 % près depuis un capteur bruité", en: "Inverse problem: energy identified within 2% from a noisy sensor" }
     ],
     fr: {
       title: "PINN pour la thermique d'une pile de freins",
@@ -98,14 +98,14 @@ window.PROJECTS = [
   },
   {
     id: "bwb",
-    banner: "images/projects/bwb-1.png",
+    banner: "images/projects/bwb-1.webp",
     tech: ["SolidWorks", "3DEXPERIENCE", "Star-CCM+", "OpenVSP", "EASA CS-25"],
     links: [{ href: "https://github.com/ugo-roccamatisi/bwb-hydrogen-aircraft", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/memoire-BWB.pdf", label_fr: "Mémoire de projet", label_en: "Project report" }],
     gallery: [
-      { src: "images/projects/bwb-2.jpg", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
-      { src: "images/projects/bwb-3.jpg", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
-      { src: "images/projects/bwb-4.jpg", fr: "Architecture structurale du G-VEGA", en: "G-VEGA structural layout" },
-      { src: "images/projects/bwb-5.png", fr: "Coupe : cabine, réservoirs hydrogène et moteur", en: "Cutaway: cabin, hydrogen tanks and engine" }
+      { src: "images/projects/bwb-2.webp", fr: "Coupe du turboréacteur BW-25", en: "BW-25 turbofan cross-section" },
+      { src: "images/projects/bwb-3.webp", fr: "Nacelle et soufflante", en: "Nacelle and fan" },
+      { src: "images/projects/bwb-4.webp", fr: "Architecture structurale du G-VEGA", en: "G-VEGA structural layout" },
+      { src: "images/projects/bwb-5.webp", fr: "Coupe : cabine, réservoirs hydrogène et moteur", en: "Cutaway: cabin, hydrogen tanks and engine" }
     ],
     fr: {
       title: "Avion BWB à propulsion hydrogène",
@@ -142,15 +142,15 @@ window.PROJECTS = [
   },
   {
     id: "saab",
-    banner: "images/projects/saab-plane.jpg",
+    banner: "images/projects/saab-plane.webp",
     tech: ["Python", "SciPy", "Welch", "ruptures"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/saab-landing-analysis", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }
     ],
     gallery: [
-      { src: "images/projects/saab-psd.png", fr: "PSD de Welch post-toucher : les deux capteurs comparés", en: "Post-touchdown Welch PSD: both sensors compared" },
-      { src: "images/projects/saab-spectro.png", fr: "Spectrogrammes temps-fréquence autour du toucher", en: "Time-frequency spectrograms around touchdown" },
-      { src: "images/projects/saab-changepoint.png", fr: "Détection de rupture RBF vs estimation par pic d'amplitude", en: "RBF change-point detection vs amplitude-peak estimate" }
+      { src: "images/projects/saab-psd.webp", fr: "PSD de Welch post-toucher : les deux capteurs comparés", en: "Post-touchdown Welch PSD: both sensors compared" },
+      { src: "images/projects/saab-spectro.webp", fr: "Spectrogrammes temps-fréquence autour du toucher", en: "Time-frequency spectrograms around touchdown" },
+      { src: "images/projects/saab-changepoint.webp", fr: "Détection de rupture RBF vs estimation par pic d'amplitude", en: "RBF change-point detection vs amplitude-peak estimate" }
     ],
     fr: {
       title: "Détection du toucher d’un SAAB par analyse des données de vol",
@@ -187,7 +187,7 @@ window.PROJECTS = [
   },
   {
     id: "chu",
-    banner: "images/projects/chu-banner.png",
+    banner: "images/projects/chu-banner.webp",
     tech: ["Mistral 7B", "llama.cpp", "XGBoost", "TensorFlow", "scikit-learn", "MIMIC-IV"],
     links: [
       { href: "https://github.com/ugo-roccamatisi/fpdm-hospital-ai", label_fr: "Dépôt GitHub", label_en: "GitHub repo" },
@@ -196,12 +196,12 @@ window.PROJECTS = [
       { href: "docs/rapport-technique.pdf", label_fr: "Rapport technique", label_en: "Technical report" }
     ],
     gallery: [
-      { src: "images/projects/chu-prediction.png", fr: "Démo de bout en bout : texte clinique en entrée, durée de séjour prédite avec probabilités", en: "End-to-end demo: clinical text in, predicted length of stay with probabilities" },
-      { src: "images/projects/chu-llm.png", fr: "Extraction structurée par le LLM : compte rendu médical vers JSON", en: "LLM structured extraction: medical report to JSON" },
-      { src: "images/projects/chu-mimic.png", fr: "Préparation des données MIMIC-IV : sélection des tables et colonnes", en: "MIMIC-IV data preparation: table and column selection" },
-      { src: "images/projects/chu-dataset.png", fr: "Pipeline du pôle prédiction : de MIMIC-IV au dataset de 134 768 séjours en 7 catégories", en: "Prediction pipeline: from MIMIC-IV to a 134,768-stay dataset in 7 categories" },
-      { src: "images/projects/chu-results.png", fr: "Évaluation par classe : RNN vs XGBoost, précision globale de 0,73", en: "Per-class evaluation: RNN vs XGBoost, 0.73 overall accuracy" },
-      { src: "images/projects/chu-archi.png", fr: "Architecture du système : modules, API et bases de données", en: "System architecture: modules, API and databases" },
+      { src: "images/projects/chu-prediction.webp", fr: "Démo de bout en bout : texte clinique en entrée, durée de séjour prédite avec probabilités", en: "End-to-end demo: clinical text in, predicted length of stay with probabilities" },
+      { src: "images/projects/chu-llm.webp", fr: "Extraction structurée par le LLM : compte rendu médical vers JSON", en: "LLM structured extraction: medical report to JSON" },
+      { src: "images/projects/chu-mimic.webp", fr: "Préparation des données MIMIC-IV : sélection des tables et colonnes", en: "MIMIC-IV data preparation: table and column selection" },
+      { src: "images/projects/chu-dataset.webp", fr: "Pipeline du pôle prédiction : de MIMIC-IV au dataset de 134 768 séjours en 7 catégories", en: "Prediction pipeline: from MIMIC-IV to a 134,768-stay dataset in 7 categories" },
+      { src: "images/projects/chu-results.webp", fr: "Évaluation par classe : RNN vs XGBoost, précision globale de 0,73", en: "Per-class evaluation: RNN vs XGBoost, 0.73 overall accuracy" },
+      { src: "images/projects/chu-archi.webp", fr: "Architecture du système : modules, API et bases de données", en: "System architecture: modules, API and databases" },
       { video: "videos/demo-prediction-form.mp4", fr: "Démo : prédiction de la durée de séjour depuis le formulaire", en: "Demo: length-of-stay prediction from the form" },
       { video: "videos/demo-ui.mp4", fr: "Démo : l'interface de l'application", en: "Demo: the application interface" }
     ],
@@ -244,14 +244,14 @@ window.PROJECTS = [
   },
   {
     id: "rsp",
-    banner: "images/projects/rsp-overview.png",
+    banner: "images/projects/rsp-overview.webp",
     tech: ["Python", "SciPy", "PyWavelets", "Jupyter", "NumPy"],
     links: [{ href: "https://github.com/ugo-roccamatisi/signal-representations-and-inverse-problems", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
-      { src: "images/projects/rsp-spectrogram.png", fr: "Analyse temps-fréquence : spectrogramme d'un enregistrement d'oiseau", en: "Time-frequency analysis: spectrogram of a bird recording" },
-      { src: "images/projects/rsp-wavelet.png", fr: "Décomposition en ondelettes 2D d'une image", en: "2D wavelet decomposition of an image" },
-      { src: "images/projects/rsp-source-separation.png", fr: "Séparation aveugle de sources : détection des directions de mélange dans le plan temps-fréquence", en: "Blind source separation: mixture-direction detection in the time-frequency plane" },
-      { src: "images/projects/rsp-inpainting.png", fr: "Inpainting variationnel : reconstruction progressive à partir de 10 % des pixels", en: "Variational inpainting: progressive reconstruction from 10% of the pixels" }
+      { src: "images/projects/rsp-spectrogram.webp", fr: "Analyse temps-fréquence : spectrogramme d'un enregistrement d'oiseau", en: "Time-frequency analysis: spectrogram of a bird recording" },
+      { src: "images/projects/rsp-wavelet.webp", fr: "Décomposition en ondelettes 2D d'une image", en: "2D wavelet decomposition of an image" },
+      { src: "images/projects/rsp-source-separation.webp", fr: "Séparation aveugle de sources : détection des directions de mélange dans le plan temps-fréquence", en: "Blind source separation: mixture-direction detection in the time-frequency plane" },
+      { src: "images/projects/rsp-inpainting.webp", fr: "Inpainting variationnel : reconstruction progressive à partir de 10 % des pixels", en: "Variational inpainting: progressive reconstruction from 10% of the pixels" }
     ],
     fr: {
       title: "Représentation des signaux et problèmes inverses",
@@ -293,13 +293,13 @@ window.PROJECTS = [
   {
     id: "vrp",
     fit: "contain",
-    banner: "images/projects/vrp-routes.png",
+    banner: "images/projects/vrp-routes.webp",
     tech: ["Python", "Q-Learning", "Optuna", "Streamlit"],
     links: [{ href: "https://github.com/ugo-roccamatisi/vrp-metaheuristics", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }, { href: "docs/rapport-ICO.pdf", label_fr: "Rapport", label_en: "Report" }],
     gallery: [
-      { src: "images/projects/vrp-routes.png", fr: "Tournées optimisées par recherche tabou : une couleur par véhicule", en: "Routes optimized by tabu search: one colour per vehicle" },
-      { src: "images/projects/vrp-benchmark.png", fr: "Convergence du système multi-agents (instance à 40 clients)", en: "Multi-agent system convergence (40-client instance)" },
-      { src: "images/projects/vrp-qlearning.png", fr: "Entraînement du Q-Learning en direct dans la démo Streamlit", en: "Live Q-Learning training in the Streamlit demo" }
+      { src: "images/projects/vrp-routes.webp", fr: "Tournées optimisées par recherche tabou : une couleur par véhicule", en: "Routes optimized by tabu search: one colour per vehicle" },
+      { src: "images/projects/vrp-benchmark.webp", fr: "Convergence du système multi-agents (instance à 40 clients)", en: "Multi-agent system convergence (40-client instance)" },
+      { src: "images/projects/vrp-qlearning.webp", fr: "Entraînement du Q-Learning en direct dans la démo Streamlit", en: "Live Q-Learning training in the Streamlit demo" }
     ],
     fr: {
       title: "Tournées de véhicules : méta-heuristiques & Q-Learning",
@@ -336,13 +336,13 @@ window.PROJECTS = [
   },
   {
     id: "prophet",
-    banner: "images/projects/pjm-map.png",
+    banner: "images/projects/pjm-map.webp",
     tech: ["Python", "Prophet", "pandas"],
     links: [{ href: "https://github.com/ugo-roccamatisi/energy-forecasting-prophet", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
-      { src: "images/projects/prophet-forecast.png", fr: "Mars 2017 : prédiction vs réalité", en: "March 2017: forecast vs reality" },
-      { src: "images/projects/prophet-histo.png", fr: "20 ans de données et zone de prévision", en: "20 years of data and the forecast zone" },
-      { src: "images/projects/prophet-saison.png", fr: "Composantes apprises : tendance et saisonnalités", en: "Learned components: trend and seasonalities" }
+      { src: "images/projects/prophet-forecast.webp", fr: "Mars 2017 : prédiction vs réalité", en: "March 2017: forecast vs reality" },
+      { src: "images/projects/prophet-histo.webp", fr: "20 ans de données et zone de prévision", en: "20 years of data and the forecast zone" },
+      { src: "images/projects/prophet-saison.webp", fr: "Composantes apprises : tendance et saisonnalités", en: "Learned components: trend and seasonalities" }
     ],
     fr: {
       title: "Prévision de consommation électrique",
