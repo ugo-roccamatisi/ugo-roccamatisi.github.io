@@ -416,3 +416,17 @@ footer { border-top: 0 !important; color: var(--m-muted); }
 .case-nav-btn { border: 0; border-radius: 20px; background: var(--m-surface); }
 .case-nav-btn:hover { background: var(--m-surface-hi); }
 .case-nav-btn span { color: var(--m-primary); font-weight: 500; }
+
+/* ---------- Couleurs par domaine (palette Google) ---------- */
+[data-domain="aero"]   { --d-ink: #0b57d0; --d-tone: #d3e3fd; --d-on: #041e49; }
+[data-domain="ia"]     { --d-ink: #146c2e; --d-tone: #c4eed0; --d-on: #072711; }
+[data-domain="signal"] { --d-ink: #b3261e; --d-tone: #ffdad6; --d-on: #410e0b; }
+[data-domain="optim"]  { --d-ink: #8a5a00; --d-tone: #ffdf99; --d-on: #2b1700; }
+.proj-card .proj-category, .case-intro .proj-category { display: inline-flex; padding: 0.3rem 0.75rem; border-radius: 8px; background: var(--d-tone); color: var(--d-on); font-size: 0.76rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
+.proj-card .proj-outcome strong { color: var(--d-ink); }
+.case-intro .case-kpi strong { color: var(--d-ink); }
+
+/* ---------- Section en cours dans la navigation ---------- */
+#site-header nav a.is-active { background: var(--m-tonal); color: var(--m-on-tonal); }
+#mobile-nav a.is-active { color: var(--m-primary); }
+#modal-box:focus, #modal-box:focus-visible { outline: none; }

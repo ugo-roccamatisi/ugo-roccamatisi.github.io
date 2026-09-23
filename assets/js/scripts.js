@@ -120,6 +120,9 @@ const PROJECT_META = {
     en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
   }
 };
+// Domaine de chaque projet : fixe la couleur de sa catégorie et de son résultat
+// aero = bleu, ia = vert, signal = rouge, optim = jaune
+const PROJECT_DOMAIN = { btem: 'aero', bwb: 'aero', saab: 'aero', pinn: 'ia', chu: 'ia', rsp: 'signal', prophet: 'signal', vrp: 'optim' };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
 const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
@@ -129,6 +132,7 @@ function projectCard(p, featured) {
   const meta = PROJECT_META[p.id][LANG];
   const card = document.createElement('article');
   card.className = 'proj-card' + (featured ? ' proj-card-featured' : ' proj-card-compact');
+  card.dataset.domain = PROJECT_DOMAIN[p.id] || 'aero';
   card.dataset.open = p.id;
   card.tabIndex = 0;
   card.setAttribute('role', 'button');
@@ -201,7 +205,7 @@ function openModal(id) {
   document.getElementById('modal-content').innerHTML =
     '<div class="case-hero proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" onerror="this.remove()"></div>' +
     '<div class="case-content">' +
-      '<header class="case-intro"><span class="proj-category">' + meta.category + '</span>' +
+      '<header class="case-intro" data-domain="' + (PROJECT_DOMAIN[id] || 'aero') + '"><span class="proj-category">' + meta.category + '</span>' +
         '<h3 id="modal-title">' + t.title + '</h3>' +
         '<p class="case-meta">' + t.meta + '</p>' +
         '<div class="case-highlight"><span class="case-role">' + meta.role + '</span><div class="case-kpi"><strong>' + meta.value + '</strong><span>' + meta.outcome + '</span></div></div>' +
@@ -313,4 +317,18 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   setLang(LANG);
   syncProjectHash();
+
+  /* Section en cours surlignée dans la navigation */
+  const navLinks = [...document.querySelectorAll('#site-header nav a[href^="#"], #mobile-nav a[href^="#"]')];
+  const spied = [...new Set(navLinks.map(a => a.getAttribute('href')))].map(h => document.querySelector(h)).filter(Boolean);
+  const markActive = id => navLinks.forEach(a => {
+    const on = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('is-active', on);
+    if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+  });
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) markActive(e.target.id); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  spied.forEach(sec => spy.observe(sec));
+  window.addEventListener('scroll', () => { if (window.scrollY < 200) markActive(''); }, { passive: true });
 });
