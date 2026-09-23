@@ -3,43 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ugo Roccamatisi · Aéronautique, data & IA</title>
+<title>Ugo Roccamatisi | Aéronautique, data et IA</title>
 <meta name="description" content="Portfolio d'Ugo Roccamatisi, élève-ingénieur Centrale Lille / Cranfield University. Modèles physiques et réseaux de neurones informés par la physique appliqués aux systèmes aéronautiques (Airbus A320, Air France Industries KLM).">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ugo-roccamatisi.github.io/">
-<meta property="og:title" content="Ugo Roccamatisi · Portfolio">
+<meta property="og:title" content="Ugo Roccamatisi | Portfolio">
 <meta property="og:description" content="Aéronautique, data et IA : modèles physiques, PINN, maintenance prédictive et optimisation.">
 <meta property="og:image" content="https://ugo-roccamatisi.github.io/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="assets/js/tailwind-config.js?v=59"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=83">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css">
+<link rel="stylesheet" href="assets/css/tailwind.css?v=1">
+<link rel="stylesheet" href="assets/css/styles.css?v=90">
 </head>
-<body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
+<body>
 
-<!-- ================= HEADER ================= -->
-<header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-transform duration-300 bg-white/90 backdrop-blur border-b border-zinc-200">
-  <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between gap-4">
-    <a href="#home" class="font-bold text-lg tracking-tight">Ugo Roccamatisi</a>
-    <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Navigation principale">
-      <a href="#about" class="hover:text-accblue transition-colors" data-i18n="nav.about">À propos</a>
-      <a href="#projects" class="hover:text-accblue transition-colors" data-i18n="nav.proj">Projets</a>
-      <a href="#resume" class="hover:text-accblue transition-colors" data-i18n="nav.resume">Parcours</a>
-      <a href="#skills" class="hover:text-accblue transition-colors" data-i18n="skills.h">Compétences</a>
-      <a href="#contact" class="hover:text-accblue transition-colors">Contact</a>
+<!-- ================= EN-TÊTE ================= -->
+<header id="site-header" class="site-header">
+  <div class="wrap header-bar">
+    <a href="#home" class="brand">Ugo Roccamatisi</a>
+    <nav class="main-nav hidden md:flex" aria-label="Navigation principale">
+      <a href="#about" data-i18n="nav.about">À propos</a>
+      <a href="#projects" data-i18n="nav.proj">Projets</a>
+      <a href="#resume" data-i18n="nav.resume">Parcours</a>
+      <a href="#skills" data-i18n="skills.h">Compétences</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="flex items-center gap-3">
-      <div class="text-sm font-semibold">
-        <button type="button" data-lang="fr" onclick="setLang('fr')" class="lang-btn px-1 text-accblue">FR</button><span class="text-zinc-400">/</span><button type="button" data-lang="en" onclick="setLang('en')" class="lang-btn px-1 text-zinc-400">EN</button>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr" onclick="setLang('fr')" class="lang-btn is-active">FR</button><span>/</span><button type="button" data-lang="en" onclick="setLang('en')" class="lang-btn">EN</button>
       </div>
       <button id="menu-toggle" type="button" class="menu-toggle md:hidden" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
         <span></span><span></span><span></span>
@@ -56,68 +57,61 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section id="home" class="relative min-h-[78vh] flex items-center overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-900"></div>
-  <img src="images/hero-bg.jpg" alt="" decoding="async" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/65"></div>
-  <div class="absolute inset-0 hero-color-wash" aria-hidden="true"></div>
-  <div class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-left">
+<section id="home" class="hero">
+  <img src="images/hero-bg.webp" alt="" decoding="async" fetchpriority="high" class="hero-img" onerror="this.style.display='none'">
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
     <p class="hero-eyebrow" data-i18n="hero.eyebrow">Aéronautique, modélisation physique et intelligence artificielle</p>
-    <h1 class="hero-title text-white font-extrabold tracking-tight text-5xl md:text-7xl leading-[1.05] mb-5">Ugo Roccamatisi</h1>
-    <p class="text-zinc-100 text-xl md:text-3xl leading-relaxed max-w-3xl mb-4" data-i18n="hero.tagline">Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.</p>
-    <p class="hero-proof text-sm md:text-base mb-9" data-i18n="hero.proof">École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France</p>
-    <div class="flex flex-wrap gap-3">
-      <a href="#projects" class="inline-flex bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.cta">Voir mes projets</a>
-      <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="inline-flex border border-white/50 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.github">Voir mon GitHub</a>
+    <h1 class="hero-title">Ugo Roccamatisi</h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.</p>
+    <p class="hero-proof" data-i18n="hero.proof">École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-tonal" data-i18n="hero.cta">Voir mes projets</a>
+      <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" data-i18n="hero.github">Voir mon GitHub</a>
     </div>
   </div>
 </section>
 
 <!-- ================= À PROPOS ================= -->
-<section id="about" class="section-light py-20 reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <p class="section-kicker" data-i18n="about.kicker">Profil</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10"><span data-i18n="about.h">À propos</span></h2>
-    <div class="about-grid max-w-5xl mx-auto">
-      <img src="images/portrait.jpg" alt="Ugo Roccamatisi" loading="lazy" class="about-photo" onerror="this.closest('.about-grid').classList.add('no-photo'); this.remove()">
-      <div class="about-txt text-zinc-600 leading-relaxed space-y-4">
-      <p data-i18n-html="about.p1">Diplômé du <b class="text-zinc-900">MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b class="text-zinc-900">Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.</p>
-      <p data-i18n-html="about.p2">Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class="text-zinc-900">Airbus</b> et aux flux hospitaliers avec le <b class="text-zinc-900">CHU de Lille</b>, jusqu'à une publication IEEE SMC.</p>
-      <p data-i18n-html="about.p3">À partir d'octobre 2026, je rejoins <b class="text-zinc-900">Air France Industries KLM E&amp;M</b> en stage de data analyse et maintenance prédictive.</p>
-    </div>
-    </div>
-    <div class="mt-12 border-y border-zinc-200 px-4 py-7">
-      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-        <img src="images/logos/centrale-lille.png" alt="École Centrale de Lille" class="h-14 w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
-        <img src="images/logos/cranfield.png" alt="Cranfield University" class="h-[76px] w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
-        <img src="images/logos/airbus.png" alt="Airbus" class="h-14 w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
-        <img src="images/logos/air-france.png" alt="Air France Industries KLM E&M" class="h-14 w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
-        <img src="images/logos/chu-lille.png" alt="CHU de Lille" class="h-14 w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
+<section id="about" class="section reveal">
+  <div class="wrap">
+    <h2 class="section-title" data-i18n="about.h">À propos</h2>
+    <div class="about-grid">
+      <img src="images/portrait.webp" alt="Ugo Roccamatisi" loading="lazy" class="about-photo" onerror="this.closest('.about-grid').classList.add('no-photo'); this.remove()">
+      <div class="about-txt">
+        <p data-i18n-html="about.p1">Diplômé du <b>MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b>Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.</p>
+        <p data-i18n-html="about.p2">Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b>Airbus</b> et aux flux hospitaliers avec le <b>CHU de Lille</b>, jusqu'à une publication IEEE SMC.</p>
+        <p data-i18n-html="about.p3">Depuis octobre 2026, je suis en stage de data analyse et maintenance prédictive chez <b>Air France Industries KLM E&amp;M</b>.</p>
       </div>
+    </div>
+    <div class="logo-band">
+      <img src="images/logos/centrale-lille.webp" alt="École Centrale de Lille" loading="lazy" onerror="this.style.display='none'">
+      <img src="images/logos/cranfield.webp" alt="Cranfield University" class="logo-tall" loading="lazy" onerror="this.style.display='none'">
+      <img src="images/logos/airbus.webp" alt="Airbus" loading="lazy" onerror="this.style.display='none'">
+      <img src="images/logos/air-france.webp" alt="Air France Industries KLM E&amp;M" loading="lazy" onerror="this.style.display='none'">
+      <img src="images/logos/chu-lille.webp" alt="CHU de Lille" loading="lazy" onerror="this.style.display='none'">
     </div>
   </div>
 </section>
 
 <!-- ================= PROJETS ================= -->
-<section id="projects" class="projects-section py-20 reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <p class="section-kicker" data-i18n="proj.kicker">Sélection</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-i18n="proj.h">Projets</h2>
-    <p class="text-center text-zinc-500 max-w-2xl mx-auto mb-12" data-i18n="proj.intro">Des études de cas concrètes, de la modélisation physique à l'IA appliquée.</p>
+<section id="projects" class="section reveal">
+  <div class="wrap">
+    <h2 class="section-title has-intro" data-i18n="proj.h">Projets</h2>
+    <p class="section-intro" data-i18n="proj.intro">Des études de cas concrètes, de la modélisation physique à l'IA appliquée.</p>
     <div id="featured-project-grid" class="grid md:grid-cols-2 gap-6"></div>
     <div class="other-projects-head">
       <h3 data-i18n="proj.other">Autres projets</h3>
-      <span data-i18n="proj.other_intro">Optimisation, conception aéronautique et prévision</span>
+      <span data-i18n="proj.other_intro">Signal, optimisation, conception aéronautique et prévision</span>
     </div>
     <div id="other-project-grid" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5"></div>
   </div>
 </section>
 
 <!-- ================= PARCOURS ================= -->
-<section id="resume" class="section-light py-20 reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <p class="section-kicker" data-i18n="resume.kicker">Formation &amp; expérience</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-14" data-i18n="resume.h">Parcours</h2>
+<section id="resume" class="section reveal">
+  <div class="wrap">
+    <h2 class="section-title" data-i18n="resume.h">Parcours</h2>
     <div class="timeline" aria-label="Frise chronologique du parcours">
       <article class="timeline-item timeline-education">
         <div class="timeline-marker" aria-hidden="true"></div>
@@ -137,7 +131,7 @@
       <article class="timeline-item timeline-education">
         <div class="timeline-marker" aria-hidden="true"></div>
         <div class="timeline-card">
-          <div class="timeline-logo"><span class="g-ini">C</span><img src="images/logos/centrale-lille.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-logo"><span class="g-ini">C</span><img src="images/logos/centrale-lille.webp" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg1">Formation</span>
@@ -153,7 +147,7 @@
       <article class="timeline-item timeline-education">
         <div class="timeline-marker" aria-hidden="true"></div>
         <div class="timeline-card">
-          <div class="timeline-logo"><span class="g-ini">Cr</span><img src="images/logos/cranfield.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-logo"><span class="g-ini">Cr</span><img src="images/logos/cranfield.webp" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg1">Formation</span>
@@ -169,7 +163,7 @@
       <article class="timeline-item timeline-experience">
         <div class="timeline-marker" aria-hidden="true"></div>
         <div class="timeline-card">
-          <div class="timeline-logo"><span class="g-ini">AF</span><img src="images/logos/air-france.png" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
+          <div class="timeline-logo"><span class="g-ini">AF</span><img src="images/logos/air-france.webp" alt="" loading="lazy" onload="this.previousElementSibling.remove()" onerror="this.remove()"></div>
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg2">Expérience</span>
@@ -184,12 +178,10 @@
   </div>
 </section>
 
-
 <!-- ================= COMPÉTENCES ================= -->
-<section id="skills" class="section-tint py-20 reveal">
-  <div class="max-w-6xl mx-auto px-5">
-    <p class="section-kicker" data-i18n="skills.kicker">Boîte à outils</p>
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-i18n="skills.h">Compétences</h2>
+<section id="skills" class="section reveal">
+  <div class="wrap">
+    <h2 class="section-title" data-i18n="skills.h">Compétences</h2>
     <div class="skills-grid">
       <article class="skill-group">
         <h3 data-i18n="sg1">Data Science &amp; IA</h3>
@@ -205,7 +197,7 @@
       <article class="skill-group">
         <h3 data-i18n="skills.modeling_h">Modélisation &amp; développement</h3>
         <div class="tool-grid">
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/scipy.png" alt="" loading="lazy"></span>SciPy</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/scipy.webp" alt="" loading="lazy"></span>SciPy</span>
           <span class="tool-chip"><i class="devicon-numpy-plain colored"></i>NumPy</span>
           <span class="tool-chip"><i class="devicon-jupyter-plain colored"></i>Jupyter</span>
           <span class="tool-chip"><i class="devicon-matlab-plain colored"></i>MATLAB</span>
@@ -219,12 +211,12 @@
       <article class="skill-group">
         <h3 data-i18n="sg3">Ingénierie &amp; simulation</h3>
         <div class="tool-grid">
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/catia.png" alt="" loading="lazy"></span>CATIA V5</span>
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/solidworks.png" alt="" loading="lazy"></span>SolidWorks</span>
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/3dexperience.png" alt="" loading="lazy"></span>3DEXPERIENCE</span>
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/starccm.png" alt="" loading="lazy"></span>Star-CCM+</span>
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/comsol.png" alt="" loading="lazy"></span>COMSOL</span>
-          <span class="tool-chip"><span class="tool-image"><img src="images/skills/nastran.png" alt="" loading="lazy"></span>Nastran/Patran</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/catia.webp" alt="" loading="lazy"></span>CATIA V5</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/solidworks.webp" alt="" loading="lazy"></span>SolidWorks</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/3dexperience.webp" alt="" loading="lazy"></span>3DEXPERIENCE</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/starccm.webp" alt="" loading="lazy"></span>Star-CCM+</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/comsol.webp" alt="" loading="lazy"></span>COMSOL</span>
+          <span class="tool-chip"><span class="tool-image"><img src="images/skills/nastran.webp" alt="" loading="lazy"></span>Nastran/Patran</span>
         </div>
       </article>
     </div>
@@ -232,38 +224,36 @@
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section-light py-20 reveal">
-  <div class="max-w-3xl mx-auto px-5 text-center">
-    <p class="section-kicker" data-i18n="contact.kicker">Échangeons</p>
-    <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact</h2>
-    <p class="text-zinc-600 mb-9" data-i18n="contact.p">Une question sur mes projets, une proposition ou une collaboration&nbsp;? Écrivez-moi, je réponds volontiers.</p>
-    <div class="flex flex-wrap justify-center gap-3">
-      <a href="mailto:ugo.roccamatisi@gmail.com" class="inline-flex items-center bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"><svg class="inline-block w-[18px] h-[18px] mr-2 align-[-3px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>ugo.roccamatisi@gmail.com</a>
-      <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center border border-zinc-300 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors"><svg class="inline-block w-[18px] h-[18px] mr-2 align-[-3px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>LinkedIn</a>
-      <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center border border-zinc-300 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors"><svg class="inline-block w-[18px] h-[18px] mr-2 align-[-3px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
+<section id="contact" class="section reveal">
+  <div class="wrap contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-p" data-i18n="contact.p">Une question sur mes projets, une proposition ou une collaboration&nbsp;? Écrivez-moi, je réponds volontiers.</p>
+    <div class="contact-actions">
+      <a href="mailto:ugo.roccamatisi@gmail.com" class="btn btn-primary"><svg class="btn-ico" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>ugo.roccamatisi@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><svg class="btn-ico" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>LinkedIn</a>
+      <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><svg class="btn-ico" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.082-.729.082-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.873.118 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.92.43.372.814 1.102.814 2.222 0 1.606-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>GitHub</a>
     </div>
   </div>
 </section>
 
-<footer class="py-8 text-center text-sm text-zinc-500 border-t border-zinc-200">
-  <span data-i18n="footer">© 2026 Ugo Roccamatisi · Paris, France</span>
+<footer class="site-footer">
+  <span data-i18n="footer">© 2026 Ugo Roccamatisi, Paris</span>
 </footer>
 
-<!-- ================= MODALE PROJET ================= -->
-<div id="modal-overlay" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-  <div id="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1" class="bg-white rounded-2xl shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
-    <button id="modal-close" type="button" aria-label="Fermer" class="absolute top-3 right-3 w-9 h-9 rounded-lg bg-black/55 hover:bg-black/75 text-white flex items-center justify-center z-10">✕</button>
+<!-- ================= FENÊTRE DE DÉTAIL D'UN PROJET ================= -->
+<div id="modal-overlay" class="modal-overlay hidden">
+  <div id="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1" class="modal-box">
+    <button id="modal-close" type="button" aria-label="Fermer" class="modal-close">✕</button>
     <div id="modal-content"></div>
   </div>
 </div>
 
-
 <!-- ================= VISIONNEUSE D'IMAGES ================= -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de l'image" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm cursor-zoom-out">
-  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu de l'image" class="lightbox hidden">
+  <img id="lightbox-img" src="" alt="">
 </div>
 
-<script src="assets/js/projects-data.js?v=70"></script>
-<script src="assets/js/scripts.js?v=74"></script>
+<script src="assets/js/projects-data.js?v=80"></script>
+<script src="assets/js/scripts.js?v=80"></script>
 </body>
 </html>
