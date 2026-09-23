@@ -18,11 +18,11 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="assets/js/tailwind-config.js?v=59"></script>
-<link rel="stylesheet" href="assets/css/styles.css?v=80">
+<link rel="stylesheet" href="assets/css/styles.css?v=82">
 </head>
 <body class="font-inter bg-lightbg text-zinc-800 transition-colors duration-300">
 
@@ -56,22 +56,19 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section id="home" class="hero-section">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="hero-index">UGO ROCCAMATISI <span> / </span> PORTFOLIO 2026</p>
-      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Aéronautique · Modélisation physique · Intelligence artificielle</p>
-      <h1 class="hero-title" data-i18n="hero.headline">La physique rencontre les données.</h1>
-      <p class="hero-tagline" data-i18n="hero.tagline">Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.</p>
-      <p class="hero-proof" data-i18n="hero.proof">Stage ingénieur data analyst et maintenance prédictive Air France — École Centrale de Lille, Cranfield University</p>
-      <div class="hero-actions">
-        <a href="#projects" class="button button-primary" data-i18n="hero.cta">Voir mes projets</a>
-        <a href="#about" class="button button-text" data-i18n="hero.discover">Découvrir mon profil ↗</a>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <img src="images/hero-bg.jpg" alt="" decoding="async" fetchpriority="high">
-      <div class="hero-visual-caption"><span>ENGINEERING / DATA / AI</span><span>01 — 08</span></div>
+<section id="home" class="relative min-h-[78vh] flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-800 to-zinc-900"></div>
+  <img src="images/hero-bg.jpg" alt="" decoding="async" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/65"></div>
+  <div class="absolute inset-0 hero-color-wash" aria-hidden="true"></div>
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-left">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Aéronautique, modélisation physique et intelligence artificielle</p>
+    <h1 class="hero-title text-white font-extrabold tracking-tight text-5xl md:text-7xl leading-[1.05] mb-5">Ugo Roccamatisi</h1>
+    <p class="text-zinc-100 text-xl md:text-3xl leading-relaxed max-w-3xl mb-4" data-i18n="hero.tagline">Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.</p>
+    <p class="hero-proof text-sm md:text-base mb-9" data-i18n="hero.proof">École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="#projects" class="inline-flex bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.cta">Voir mes projets</a>
+      <a href="https://github.com/ugo-roccamatisi" target="_blank" rel="noopener noreferrer" class="inline-flex border border-white/50 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-colors" data-i18n="hero.github">Voir mon GitHub</a>
     </div>
   </div>
 </section>
@@ -89,7 +86,6 @@
       <p data-i18n-html="about.p3">À partir d'octobre 2026, je rejoins <b class="text-zinc-900">Air France Industries KLM E&amp;M</b> en stage de data analyse et maintenance prédictive.</p>
     </div>
     </div>
-    <div class="about-note"><span class="about-note-mark">↗</span><span data-i18n="about.note">Des modèles qui relient la recherche à des applications concrètes.</span></div>
     <div class="mt-12 border-y border-zinc-200 px-4 py-7">
       <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
         <img src="images/logos/centrale-lille.png" alt="École Centrale de Lille" class="h-14 w-auto max-w-[190px] object-contain" loading="lazy" onerror="this.style.display='none'">
@@ -108,12 +104,12 @@
     <p class="section-kicker" data-i18n="proj.kicker">Sélection</p>
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-i18n="proj.h">Projets</h2>
     <p class="text-center text-zinc-500 max-w-2xl mx-auto mb-12" data-i18n="proj.intro">Des études de cas concrètes, de la modélisation physique à l'IA appliquée.</p>
-    <div id="featured-project-grid" class="featured-projects"></div>
+    <div id="featured-project-grid" class="grid md:grid-cols-2 gap-6"></div>
     <div class="other-projects-head">
       <h3 data-i18n="proj.other">Autres projets</h3>
       <span data-i18n="proj.other_intro">Optimisation, conception aéronautique et prévision</span>
     </div>
-    <div id="other-project-grid" class="other-projects"></div>
+    <div id="other-project-grid" class="grid sm:grid-cols-2 xl:grid-cols-4 gap-5"></div>
   </div>
 </section>
 
@@ -130,7 +126,7 @@
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg1">Formation</span>
-              <time class="timeline-date">2020 — 2023</time>
+              <time class="timeline-date">2020 – 2023</time>
             </div>
             <h3 data-i18n="edu3.t">Classe préparatoire PCSI / PC*</h3>
             <p class="timeline-place">Le Raincy</p>
@@ -145,7 +141,7 @@
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg1">Formation</span>
-              <time class="timeline-date">2023 — 2027</time>
+              <time class="timeline-date">2023 – 2027</time>
             </div>
             <h3>École Centrale de Lille</h3>
             <p class="timeline-place" data-i18n="g2.degree">Diplôme d'ingénieur</p>
@@ -161,10 +157,10 @@
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg1">Formation</span>
-              <time class="timeline-date">2025 — 2026</time>
+              <time class="timeline-date">2025 – 2026</time>
             </div>
             <h3>Cranfield University</h3>
-            <p class="timeline-place" data-i18n="g3.degree">MSc · Double diplôme</p>
+            <p class="timeline-place" data-i18n="g3.degree">MSc, double diplôme</p>
             <p class="timeline-details" data-i18n="g3.m">Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites</p>
           </div>
         </div>
@@ -177,10 +173,10 @@
           <div class="timeline-content">
             <div class="timeline-meta">
               <span class="timeline-type" data-i18n="g.leg2">Expérience</span>
-              <time class="timeline-date" data-i18n="g4.date">Oct. 2026 — Mars 2027</time>
+              <time class="timeline-date" data-i18n="g4.date">Oct. 2026 – Mars 2027</time>
             </div>
             <h3>Air France Industries KLM E&amp;M</h3>
-            <p class="timeline-place" data-i18n="g4.role">Stage · Maintenance prédictive</p>
+            <p class="timeline-place" data-i18n="g4.role">Stage en maintenance prédictive</p>
           </div>
         </div>
       </article>
@@ -240,7 +236,7 @@
   <div class="max-w-3xl mx-auto px-5 text-center">
     <p class="section-kicker" data-i18n="contact.kicker">Échangeons</p>
     <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact</h2>
-    <p class="text-zinc-600 mb-9" data-i18n="contact.p">Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.</p>
+    <p class="text-zinc-600 mb-9" data-i18n="contact.p">Une question sur mes projets, une proposition ou une collaboration&nbsp;? Écrivez-moi, je réponds volontiers.</p>
     <div class="flex flex-wrap justify-center gap-3">
       <a href="mailto:ugo.roccamatisi@gmail.com" class="inline-flex items-center bg-accblue hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"><svg class="inline-block w-[18px] h-[18px] mr-2 align-[-3px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>ugo.roccamatisi@gmail.com</a>
       <a href="https://www.linkedin.com/in/ugo-roccamatisi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center border border-zinc-300 hover:border-accblue font-semibold px-6 py-3 rounded-lg transition-colors"><svg class="inline-block w-[18px] h-[18px] mr-2 align-[-3px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>LinkedIn</a>
@@ -268,6 +264,6 @@
 </div>
 
 <script src="assets/js/projects-data.js?v=70"></script>
-<script src="assets/js/scripts.js?v=71"></script>
+<script src="assets/js/scripts.js?v=72"></script>
 </body>
 </html>
