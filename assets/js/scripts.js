@@ -2,46 +2,44 @@
 const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
-    'hero.eyebrow': 'Aéronautique · Modélisation physique · Intelligence artificielle',
+    'hero.eyebrow': 'Aéronautique, modélisation physique et intelligence artificielle',
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
-    'hero.proof': 'Stage ingénieur data analyst et maintenance prédictive Air France — École Centrale de Lille, Cranfield University',
+    'hero.proof': 'École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
     'about.h': 'À propos', 'about.kicker': 'Profil',
     'about.p1': "Diplômé du <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b class=\"text-zinc-900\">Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class=\"text-zinc-900\">Airbus</b> et aux flux hospitaliers avec le <b class=\"text-zinc-900\">CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "À partir d'octobre 2026, je rejoins <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> en stage de data analyse et maintenance prédictive.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
-    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc · Double diplôme', 'g4.date': 'Oct. 2026 — Mars 2027', 'g4.role': 'Stage · Maintenance prédictive',
+    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc, double diplôme', 'g4.date': 'Oct. 2026 – Mars 2027', 'g4.role': 'Stage en maintenance prédictive',
     'edu1.s': "MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.",
     'edu2.s': "Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).",
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
-    'proj.academic': 'Travaux pratiques', 'proj.academic_intro': 'Statistiques, apprentissage et optimisation · Centrale Lille', 'proj.academic_pending': 'Les dépôts sont créés ; les notebooks seront visibles après leur mise en ligne.',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
-    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
+    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration\u00a0? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
-    'hero.eyebrow': 'Aeronautics · Physical modelling · Artificial intelligence',
+    'hero.eyebrow': 'Aeronautics, physical modelling and artificial intelligence',
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
-    'hero.proof': 'Data analyst and predictive maintenance engineering internship at Air France — Centrale Lille, Cranfield University',
+    'hero.proof': 'Centrale Lille and Cranfield University, data and predictive maintenance intern at Air France',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
     'about.h': 'About', 'about.kicker': 'Profile',
     'about.p1': "A graduate of the <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b class=\"text-zinc-900\">Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b class=\"text-zinc-900\">Airbus</b> and to hospital flows with <b class=\"text-zinc-900\">CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "From October 2026, I will join <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> as a data analysis and predictive maintenance intern.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
-    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc · Double degree', 'g4.date': 'Oct. 2026 — Mar. 2027', 'g4.role': 'Internship · Predictive maintenance',
+    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc, double degree', 'g4.date': 'Oct. 2026 – Mar. 2027', 'g4.role': 'Predictive maintenance internship',
     'edu1.s': "MSc in Aerospace Vehicle Design, Aircraft Design option. Thesis with Airbus.",
     'edu2.s': "General engineering degree. ML, optimization, self-study (inverse problems, Markov, statistics).",
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Signal processing, optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
-    'proj.academic': 'Coursework', 'proj.academic_intro': 'Statistics, machine learning and optimization · Centrale Lille', 'proj.academic_pending': 'The repositories are ready; notebooks will appear once uploaded.',
     'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -120,28 +118,11 @@ const PROJECT_META = {
   prophet: {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: 'Préparation de 20 ans de données, entraînement et évaluation du modèle Prophet', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
-  },
-  "lab-decision": {
-    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Chiffres 3/5 : KNN à 97 % sur 400 images de test ; ACP et régression régularisée.", value: "97 %", outcome: "de bonnes réponses sur les chiffres 3/5 avec KNN" },
-    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Digits 3/5: KNN at 97% on 400 test images; PCA and regularized regression.", value: "97%", outcome: "test accuracy on digits 3/5 with KNN" }
-  },
-  "lab-estimation": {
-    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Mélange gaussien à deux composantes retenu par BIC sur 272 observations.", value: "K = 2", outcome: "composantes retenues par BIC (832,59)" },
-    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "BIC selects a two-component Gaussian mixture on 272 observations.", value: "K = 2", outcome: "components selected by BIC (832.59)" }
-  },
-  "lab-advanced": {
-    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Événement rare : variance divisée par ≈139 avec l'échantillonnage d'importance.", value: "×139", outcome: "de réduction de variance (Monte Carlo)" },
-    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Rare event: importance sampling cuts estimator variance by about 139×.", value: "×139", outcome: "lower Monte Carlo estimator variance" }
-  },
-  "lab-optimisation": {
-    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Uzawa, BFGS et L1 : 62 poids actifs sur 100 pour λ = 2 dans l'exercice.", value: "62/100", outcome: "poids non nuls à λ = 2 (L1)" },
-    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Uzawa, BFGS and L1: 62 of 100 active weights at λ = 2 in the exercise.", value: "62/100", outcome: "nonzero weights at λ = 2 (L1)" }
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
-const ACADEMIC_PROJECTS = ['lab-decision', 'lab-estimation', 'lab-advanced', 'lab-optimisation'];
-const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS, ...ACADEMIC_PROJECTS];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
 
 function projectCard(p, featured) {
   const t = p[LANG];
@@ -159,7 +140,7 @@ function projectCard(p, featured) {
       '<h3>' + t.title + '</h3>' +
       '<p class="proj-contribution">' + meta.contribution + '</p>' +
       '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
-      '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
+      '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">+</span></div>' +
     '</div>';
   const activate = () => {
     lastFocused = card;
@@ -176,15 +157,12 @@ function projectCard(p, featured) {
 function renderProjects() {
   const featuredGrid = document.getElementById('featured-project-grid');
   const otherGrid = document.getElementById('other-project-grid');
-  const academicGrid = document.getElementById('academic-project-grid');
-  if (!featuredGrid || !otherGrid || !academicGrid || !window.PROJECTS) return;
+  if (!featuredGrid || !otherGrid || !window.PROJECTS) return;
   featuredGrid.innerHTML = '';
   otherGrid.innerHTML = '';
-  academicGrid.innerHTML = '';
   const byId = id => window.PROJECTS.find(p => p.id === id);
   FEATURED_PROJECTS.map(byId).filter(Boolean).forEach(p => featuredGrid.appendChild(projectCard(p, true)));
   OTHER_PROJECTS.map(byId).filter(Boolean).forEach(p => otherGrid.appendChild(projectCard(p, false)));
-  ACADEMIC_PROJECTS.map(byId).filter(Boolean).forEach(p => academicGrid.appendChild(projectCard(p, false)));
 }
 
 /* ===================== Modale ===================== */
