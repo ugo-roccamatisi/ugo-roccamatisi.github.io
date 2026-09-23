@@ -18,6 +18,7 @@ const T = {
     'exp1.s': "Stage : ingénieur de maintenance prédictive, Roissy-CDG. Indicateurs de dégradation et modèle prédictif d'alertes sur les systèmes A220 et B777.",
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
+    'proj.academic': 'Travaux pratiques', 'proj.academic_intro': 'Statistiques, apprentissage et optimisation · Centrale Lille', 'proj.academic_pending': 'Les dépôts sont créés ; les notebooks seront visibles après leur mise en ligne.',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
     'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -40,6 +41,7 @@ const T = {
     'exp1.s': "Internship: predictive maintenance engineer, Roissy-CDG. Degradation indicators and a predictive alert model on A220 and B777 systems.",
     'proj.h': 'Projects', 'proj.kicker': 'Selected work',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Signal processing, optimisation, aircraft design and forecasting', 'proj.outcome': 'Outcome / scope',
+    'proj.academic': 'Coursework', 'proj.academic_intro': 'Statistics, machine learning and optimization · Centrale Lille', 'proj.academic_pending': 'The repositories are ready; notebooks will appear once uploaded.',
     'proj.more': 'View case study', 'proj.contribution': 'My contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects',
     'contact.kicker': 'Let’s talk', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
@@ -118,11 +120,28 @@ const PROJECT_META = {
   prophet: {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: 'Préparation de 20 ans de données, entraînement et évaluation du modèle Prophet', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: 'Preparation of 20 years of data, training and evaluation of the Prophet model', value: '9.7%', outcome: 'MAPE over a full test year' }
+  },
+  "lab-decision": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Chiffres 3/5 : KNN à 97 % sur 400 images de test ; ACP et régression régularisée.", value: "97 %", outcome: "de bonnes réponses sur les chiffres 3/5 avec KNN" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Digits 3/5: KNN at 97% on 400 test images; PCA and regularized regression.", value: "97%", outcome: "test accuracy on digits 3/5 with KNN" }
+  },
+  "lab-estimation": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Mélange gaussien à deux composantes retenu par BIC sur 272 observations.", value: "K = 2", outcome: "composantes retenues par BIC (832,59)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "BIC selects a two-component Gaussian mixture on 272 observations.", value: "K = 2", outcome: "components selected by BIC (832.59)" }
+  },
+  "lab-advanced": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Événement rare : variance divisée par ≈139 avec l'échantillonnage d'importance.", value: "×139", outcome: "de réduction de variance (Monte Carlo)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Rare event: importance sampling cuts estimator variance by about 139×.", value: "×139", outcome: "lower Monte Carlo estimator variance" }
+  },
+  "lab-optimisation": {
+    fr: { category: 'Travaux pratiques · Centrale Lille', role: 'Analyse de notebooks scientifiques', contribution: "Uzawa, BFGS et L1 : 62 poids actifs sur 100 pour λ = 2 dans l'exercice.", value: "62/100", outcome: "poids non nuls à λ = 2 (L1)" },
+    en: { category: 'Coursework · Centrale Lille', role: 'Scientific notebook analysis', contribution: "Uzawa, BFGS and L1: 62 of 100 active weights at λ = 2 in the exercise.", value: "62/100", outcome: "nonzero weights at λ = 2 (L1)" }
   }
 };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
-const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
+const ACADEMIC_PROJECTS = ['lab-decision', 'lab-estimation', 'lab-advanced', 'lab-optimisation'];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS, ...ACADEMIC_PROJECTS];
 
 function projectCard(p, featured) {
   const t = p[LANG];
@@ -157,12 +176,15 @@ function projectCard(p, featured) {
 function renderProjects() {
   const featuredGrid = document.getElementById('featured-project-grid');
   const otherGrid = document.getElementById('other-project-grid');
-  if (!featuredGrid || !otherGrid || !window.PROJECTS) return;
+  const academicGrid = document.getElementById('academic-project-grid');
+  if (!featuredGrid || !otherGrid || !academicGrid || !window.PROJECTS) return;
   featuredGrid.innerHTML = '';
   otherGrid.innerHTML = '';
+  academicGrid.innerHTML = '';
   const byId = id => window.PROJECTS.find(p => p.id === id);
   FEATURED_PROJECTS.map(byId).filter(Boolean).forEach(p => featuredGrid.appendChild(projectCard(p, true)));
   OTHER_PROJECTS.map(byId).filter(Boolean).forEach(p => otherGrid.appendChild(projectCard(p, false)));
+  ACADEMIC_PROJECTS.map(byId).filter(Boolean).forEach(p => academicGrid.appendChild(projectCard(p, false)));
 }
 
 /* ===================== Modale ===================== */

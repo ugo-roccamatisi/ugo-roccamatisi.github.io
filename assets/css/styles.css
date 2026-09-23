@@ -386,3 +386,9 @@ footer { background: #182b34; border-color: #364952 !important; color: #9eb1b8 !
   #home .flex.flex-wrap a, #contact .flex.flex-wrap a, .proj-card, .proj-banner img { transition: none; }
 }
 #home > .bg-gradient-to-b:first-child { background: #17232e; }
+
+/* Visuels typographiques des séries de travaux pratiques */
+.proj-banner-course { display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #10253f 0%, #214f86 60%, #2e88af 100%); }
+.proj-banner-course .course-mark { display: block; color: #fff; font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.065em; line-height: 1; opacity: 0.94; }
+.case-hero.proj-banner-course .course-mark { font-size: clamp(5rem, 14vw, 9rem); }
+
