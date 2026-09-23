@@ -2,16 +2,17 @@
 const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
-    'hero.eyebrow': 'Aéronautique, modélisation physique et intelligence artificielle',
+    'hero.eyebrow': 'Aéronautique · Modélisation physique · Intelligence artificielle',
+    'hero.headline': 'La physique rencontre les données.', 'hero.discover': 'Découvrir mon profil ↗',
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
-    'hero.proof': 'École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France',
+    'hero.proof': 'Stage ingénieur data analyst et maintenance prédictive Air France — École Centrale de Lille, Cranfield University',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
-    'about.h': 'À propos', 'about.kicker': 'Profil',
+    'about.h': 'À propos', 'about.kicker': 'Profil', 'about.note': 'Des modèles qui relient la recherche à des applications concrètes.',
     'about.p1': "Diplômé du <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b class=\"text-zinc-900\">Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b class=\"text-zinc-900\">Airbus</b> et aux flux hospitaliers avec le <b class=\"text-zinc-900\">CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "À partir d'octobre 2026, je rejoins <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> en stage de data analyse et maintenance prédictive.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': "Diplôme d'ingénieur · 2023 – 2027", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.d': 'MSc, double diplôme · 2025 – 2026', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g4.d': 'Stage maintenance prédictive · oct. 2026 – mars 2027', 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'stat1': 'Précision du modèle freins A320', 'stat2': 'Étudiants coordonnés (BWB)',
     'stat3': 'Patients analysés (MIMIC-IV)', 'stat4': 'Article publié (SMC)',
-    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc, double diplôme', 'g4.date': 'Oct. 2026 – Mars 2027', 'g4.role': 'Stage en maintenance prédictive',
+    'resume.h': 'Parcours', 'resume.kicker': 'Formation & expérience', 'sg1': 'Data Science & IA', 'sg2': 'Développement', 'sg3': 'Ingénierie & simulation', 'edu.h': 'Formation', 'exp.h': 'Expérience', 'skills.h': 'Compétences', 'skills.kicker': 'Boîte à outils', 'skills.modeling_h': 'Modélisation & développement', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc · Double diplôme', 'g4.date': 'Oct. 2026 — Mars 2027', 'g4.role': 'Stage · Maintenance prédictive',
     'edu1.s': "MSc in Aerospace Vehicle Design, option Aircraft Design. Mémoire avec Airbus.",
     'edu2.s': "Diplôme d'ingénieur généraliste. ML, optimisation, auto-formation (problèmes inverses, Markov, statistiques).",
     'edu3.t': 'Classe préparatoire PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -19,21 +20,22 @@ const T = {
     'proj.h': 'Projets', 'proj.kicker': 'Sélection',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision', 'proj.outcome': 'Résultat / portée',
     'proj.more': 'Voir l’étude de cas', 'proj.contribution': 'Ma contribution', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets',
-    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration\u00a0? Écrivez-moi, je réponds volontiers.",
+    'contact.kicker': 'Échangeons', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration ? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi · Paris, France'
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
-    'hero.eyebrow': 'Aeronautics, physical modelling and artificial intelligence',
+    'hero.eyebrow': 'Aeronautics · Physical modelling · Artificial intelligence',
+    'hero.headline': 'Where physics meets data.', 'hero.discover': 'Explore my profile ↗',
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
-    'hero.proof': 'Centrale Lille and Cranfield University, data and predictive maintenance intern at Air France',
+    'hero.proof': 'Data analyst and predictive maintenance engineering internship at Air France — Centrale Lille, Cranfield University',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
-    'about.h': 'About', 'about.kicker': 'Profile',
+    'about.h': 'About', 'about.kicker': 'Profile', 'about.note': 'Models that connect research with real-world applications.',
     'about.p1': "A graduate of the <b class=\"text-zinc-900\">MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b class=\"text-zinc-900\">Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b class=\"text-zinc-900\">Airbus</b> and to hospital flows with <b class=\"text-zinc-900\">CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "From October 2026, I will join <b class=\"text-zinc-900\">Air France Industries KLM E&M</b> as a data analysis and predictive maintenance intern.", 'g1.d': 'Le Raincy · 2020 – 2023', 'g2.d': 'Engineering degree · 2023 – 2027', 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.d': 'MSc, dual degree · 2025 – 2026', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g4.d': 'Predictive maintenance internship · Oct. 2026 – March 2027', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'stat1': 'A320 brake model accuracy', 'stat2': 'Students coordinated (BWB)',
     'stat3': 'Patients analyzed (MIMIC-IV)', 'stat4': 'Published paper (SMC)',
-    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc, double degree', 'g4.date': 'Oct. 2026 – Mar. 2027', 'g4.role': 'Predictive maintenance internship',
+    'resume.h': 'Resume', 'resume.kicker': 'Education & experience', 'sg1': 'Data Science & AI', 'sg2': 'Development', 'sg3': 'Engineering & simulation', 'edu.h': 'Education', 'exp.h': 'Experience', 'skills.h': 'Skills', 'skills.kicker': 'Toolkit', 'skills.modeling_h': 'Modelling & development', 'skills.data': 'Python, PyTorch, scikit-learn, pandas, TensorFlow, Streamlit', 'skills.modeling': 'SciPy, NumPy, Jupyter, MATLAB, C/C++, JavaScript, SQL, Git', 'skills.engineering': 'CATIA V5, SolidWorks, 3DEXPERIENCE, Star-CCM+, COMSOL, Nastran/Patran', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc · Double degree', 'g4.date': 'Oct. 2026 — Mar. 2027', 'g4.role': 'Internship · Predictive maintenance',
     'edu1.s': "MSc in Aerospace Vehicle Design, Aircraft Design option. Thesis with Airbus.",
     'edu2.s': "General engineering degree. ML, optimization, self-study (inverse problems, Markov, statistics).",
     'edu3.t': 'Preparatory classes PCSI / PC*', 'edu3.s': 'Lycée Albert Schweitzer, Le Raincy.',
@@ -128,19 +130,19 @@ function projectCard(p, featured) {
   const t = p[LANG];
   const meta = PROJECT_META[p.id][LANG];
   const card = document.createElement('article');
-  card.className = 'proj-card' + (featured ? ' proj-card-featured' : ' proj-card-compact');
+  card.className = 'proj-card proj-card-' + p.id + (featured ? ' proj-card-featured' : ' proj-card-compact');
   card.dataset.open = p.id;
   card.tabIndex = 0;
   card.setAttribute('role', 'button');
   card.setAttribute('aria-label', T[LANG]['proj.more'] + ' : ' + t.title);
+  const number = String(PROJECT_ORDER.indexOf(p.id) + 1).padStart(2, '0');
   card.innerHTML =
-    '<div class="proj-banner' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"></div>' +
+    '<div class="proj-visual' + (p.fit === 'contain' ? ' fit-contain' : '') + '"><img src="' + p.banner + '" alt="" loading="lazy" onerror="this.remove()"><span class="proj-visual-number">' + number + ' / 08</span></div>' +
     '<div class="proj-body">' +
-      '<div class="proj-meta"><span class="proj-category">' + meta.category + '</span></div>' +
+      '<div class="proj-topline"><span class="proj-category">' + meta.category + '</span><span class="proj-arrow" aria-hidden="true">↗</span></div>' +
       '<h3>' + t.title + '</h3>' +
       '<p class="proj-contribution">' + meta.contribution + '</p>' +
-      '<div class="proj-outcome"><span>' + T[LANG]['proj.outcome'] + '</span><div><strong>' + meta.value + '</strong><p>' + meta.outcome + '</p></div></div>' +
-      '<div class="proj-footer"><span class="proj-tech">' + p.tech.slice(0, featured ? 3 : 2).map(tech => '<span>' + tech + '</span>').join('') + '</span><span class="proj-arrow" aria-hidden="true">+</span></div>' +
+      '<div class="proj-bottom"><div class="proj-outcome"><strong>' + meta.value + '</strong><span>' + meta.outcome + '</span></div><span class="proj-read">' + T[LANG]['proj.more'] + ' <span aria-hidden="true">→</span></span></div>' +
     '</div>';
   const activate = () => {
     lastFocused = card;
