@@ -376,5 +376,202 @@ window.PROJECTS = [
         "Holiday effect measured and honestly documented: marginal gain, with identified improvements (weather as external regressor, gradient boosting)."
       ]
     }
+  },
+  {
+    id: "tpdec",
+    fit: "contain",
+    banner: "images/projects/tp-decision.webp",
+    tech: ["Python", "scikit-learn", "NumPy", "Matplotlib"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/TP_decision_apprentissage", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpdec-ridge.webp", fr: "Chemin de régularisation ridge : coefficients en fonction de α", en: "Ridge regularisation path: coefficients as a function of α" },
+      { src: "images/projects/tpdec-confusion.webp", fr: "Matrice de confusion de la régression logistique sur les chiffres 3 et 5", en: "Logistic regression confusion matrix on digits 3 and 5" },
+      { src: "images/projects/tpdec-regions.webp", fr: "Arbre de décision et régions de décision sur les pétales (Iris)", en: "Decision tree and decision regions on petal features (Iris)" },
+      { src: "images/projects/tpdec-reconstruction.webp", fr: "Visage original et reconstruction par ACP avec 300 composantes", en: "Original face and PCA reconstruction with 300 components" }
+    ],
+    fr: {
+      title: "Décision et apprentissage",
+      excerpt: "Quatre TP de machine learning : régression régularisée, classification, arbres et forêts, ACP.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Module de machine learning organisé en quatre travaux pratiques, qui parcourent les grandes familles de méthodes supervisées et non supervisées sur des jeux de données classiques : cancer de la prostate, chiffres manuscrits, Iris et visages Olivetti.",
+      task: "Compléter les quatre notebooks, justifier chaque choix de modèle et d'hyperparamètre, et livrer des notebooks exécutés de bout en bout, commentés en français.",
+      actions: [
+        "Régression linéaire et ridge, avec vérification de la solution fermée, choix de la régularisation par validation croisée et chemin Lasso en bonus.",
+        "Classification des chiffres 3 et 5 par régression logistique (précision, rappel et F1 selon le seuil), puis comparaison avec les k plus proches voisins.",
+        "Arbres de décision et régions de décision sur Iris, forêt aléatoire avec erreur out-of-bag, puis ACP des visages Olivetti : variance expliquée, classification et reconstruction."
+      ],
+      results: [
+        "Chiffres 3 et 5 : 93,8 % de bonnes classifications en régression logistique et 97 % avec les k plus proches voisins (k = 11).",
+        "Ridge : régularisation α ≈ 1,09 retenue par validation croisée, MSE de test de 0,52 contre 0,54 sans régularisation.",
+        "ACP : 123 composantes pour 95 % de la variance ; avec 50 composantes, la classification reste à 96,3 % (97,5 % sur les pixels bruts) pour un apprentissage environ six fois plus rapide.",
+        "Quatre notebooks exécutés, avec les données jointes pour une exécution hors ligne."
+      ]
+    },
+    en: {
+      title: "Decision and learning",
+      excerpt: "Four machine learning labs: regularised regression, classification, trees and forests, PCA.",
+      meta: "Centrale Lille · coursework labs",
+      situation: "A machine learning module organised as four labs covering the main families of supervised and unsupervised methods on classic datasets: prostate cancer, handwritten digits, Iris and Olivetti faces.",
+      task: "Complete the four notebooks, justify every model and hyperparameter choice, and deliver notebooks executed end to end with comments in French.",
+      actions: [
+        "Linear and ridge regression, with a check of the closed-form solution, cross-validated regularisation and a Lasso path as a bonus.",
+        "Classification of digits 3 and 5 with logistic regression (precision, recall and F1 as a function of the threshold), compared with k-nearest neighbours.",
+        "Decision trees and decision regions on Iris, random forest with out-of-bag error, then PCA on Olivetti faces: explained variance, classification and reconstruction."
+      ],
+      results: [
+        "Digits 3 and 5: 93.8% correctly classified with logistic regression and 97% with k-nearest neighbours (k = 11).",
+        "Ridge: α ≈ 1.09 selected by cross-validation, test MSE of 0.52 versus 0.54 without regularisation.",
+        "PCA: 123 components for 95% of the variance; with 50 components, classification stays at 96.3% (97.5% on raw pixels) with training about six times faster.",
+        "Four executed notebooks, with data included so they run offline."
+      ]
+    }
+  },
+  {
+    id: "tpest",
+    fit: "contain",
+    banner: "images/projects/tp-estimation.webp",
+    tech: ["Python", "NumPy", "SciPy", "scikit-learn"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/TP_estimation_statistique", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpest-em.webp", fr: "Algorithme EM : convergence de la log-vraisemblance et composantes du mélange", en: "EM algorithm: log-likelihood convergence and mixture components" },
+      { src: "images/projects/tpest-bic.webp", fr: "Critère BIC selon le nombre de composantes K", en: "BIC as a function of the number of components K" },
+      { src: "images/projects/tpest-noyaux.webp", fr: "Même largeur de bande, six noyaux différents", en: "Same bandwidth, six different kernels" },
+      { src: "images/projects/tpest-chiffres.webp", fr: "Images de chiffres générées par estimation par noyaux en dimension 64", en: "Digit images generated by kernel density estimation in 64 dimensions" }
+    ],
+    fr: {
+      title: "Introduction à l'estimation statistique",
+      excerpt: "Algorithme EM, mélanges gaussiens et estimation de densité par noyaux.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Deux travaux pratiques d'estimation de densité, principalement sur les données du geyser Old Faithful : modéliser une distribution inconnue, d'abord de façon paramétrique avec un mélange gaussien, puis de façon non paramétrique.",
+      task: "Implémenter les algorithmes, analyser l'influence de leurs réglages et livrer deux notebooks exécutés et commentés.",
+      actions: [
+        "Algorithme EM pour un mélange gaussien en 2D : initialisations multiples, suivi de la log-vraisemblance et choix du nombre de composantes par le critère BIC.",
+        "Histogrammes et estimation par noyaux en 1D : influence de la largeur de bande et comparaison de six noyaux (gaussien, Epanechnikov, triangulaire, cosinus…).",
+        "Estimation par noyaux en 2D, puis en dimension 64 utilisée comme modèle génératif pour produire de nouvelles images de chiffres manuscrits."
+      ],
+      results: [
+        "EM : log-vraisemblance portée de −745,8 à −385,5 ; le critère BIC retient deux composantes.",
+        "Dix initialisations comparées pour K = 3 : les optima locaux atteints vont de −381,8 à −374,4.",
+        "Densités vérifiées numériquement, avec une intégrale de 0,9997 pour l'estimateur 1D.",
+        "Une coquille de l'énoncé relevée et corrigée : le signe de l'exposant dans la densité de la loi normale."
+      ]
+    },
+    en: {
+      title: "Introduction to statistical estimation",
+      excerpt: "EM algorithm, Gaussian mixtures and kernel density estimation.",
+      meta: "Centrale Lille · coursework labs",
+      situation: "Two density estimation labs, mainly on the Old Faithful geyser data: modelling an unknown distribution, first parametrically with a Gaussian mixture, then non-parametrically.",
+      task: "Implement the algorithms, analyse how their settings affect the results and deliver two executed, commented notebooks.",
+      actions: [
+        "EM algorithm for a 2D Gaussian mixture: multiple initialisations, log-likelihood monitoring and selection of the number of components with BIC.",
+        "Histograms and 1D kernel density estimation: bandwidth effect and comparison of six kernels (Gaussian, Epanechnikov, linear, cosine…).",
+        "2D kernel density estimation, then a 64-dimensional estimator used as a generative model to produce new handwritten digit images."
+      ],
+      results: [
+        "EM: log-likelihood raised from −745.8 to −385.5; BIC selects two components.",
+        "Ten initialisations compared for K = 3: local optima range from −381.8 to −374.4.",
+        "Densities checked numerically, with an integral of 0.9997 for the 1D estimator.",
+        "A typo in the lab statement identified and fixed: the sign of the exponent in the normal density."
+      ]
+    }
+  },
+  {
+    id: "tpestav",
+    fit: "contain",
+    banner: "images/projects/tp-estimation-avancee.webp",
+    tech: ["Python", "NumPy", "SciPy", "scikit-learn"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/TP_estimation_avancee", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpestav-importance.webp", fr: "Monte Carlo standard et échantillonnage d'importance pour une probabilité rare", en: "Standard Monte Carlo and importance sampling for a rare-event probability" },
+      { src: "images/projects/tpestav-mh.webp", fr: "Metropolis-Hastings : traces et histogrammes pour trois échelles de proposition", en: "Metropolis-Hastings: traces and histograms for three proposal scales" },
+      { src: "images/projects/tpestav-gibbs.webp", fr: "Bayesian LASSO : lois a posteriori des coefficients et intervalles crédibles à 95 %", en: "Bayesian LASSO: coefficient posteriors and 95% credible intervals" },
+      { src: "images/projects/tpestav-lda.webp", fr: "LDA : part du thème dominant et nombre de thèmes par document", en: "LDA: dominant topic share and number of topics per document" }
+    ],
+    fr: {
+      title: "Estimation statistique avancée",
+      excerpt: "Monte Carlo, MCMC, échantillonnage de Gibbs et inférence variationnelle.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Quatre travaux pratiques de statistique computationnelle et bayésienne : simuler des lois, estimer par Monte Carlo, puis approcher des lois a posteriori qui n'ont pas de forme explicite.",
+      task: "Implémenter chaque méthode en NumPy, vérifier les résultats par rapport à la théorie et interpréter les diagnostics de convergence.",
+      actions: [
+        "Génération de variables aléatoires : transformée inverse, Box-Müller, acceptation-rejet et son effondrement en grande dimension, estimation de π et échantillonnage d'importance.",
+        "Régression logistique bayésienne par Metropolis-Hastings, puis Bayesian LASSO par échantillonnage de Gibbs (Park et Casella), avec intervalles crédibles et loi prédictive.",
+        "Modèle LDA et inférence variationnelle sur les 11 314 documents du corpus 20 Newsgroups, avec huit thèmes."
+      ],
+      results: [
+        "Échantillonnage d'importance : variance divisée par environ 139 pour estimer une probabilité de l'ordre de 1,3 × 10⁻³.",
+        "Acceptation-rejet : taux d'acceptation de 82 % en dimension 1, 13,5 % en dimension 10 et 2 × 10⁻⁹ en dimension 100.",
+        "Metropolis-Hastings : 74 % d'acceptation et intervalle crédible à 95 % de [−3,60 ; −1,26] pour le paramètre de la régression.",
+        "LDA : pour 65,5 % des documents, un seul thème représente plus de la moitié du contenu."
+      ]
+    },
+    en: {
+      title: "Advanced statistical estimation",
+      excerpt: "Monte Carlo, MCMC, Gibbs sampling and variational inference.",
+      meta: "Centrale Lille · coursework labs",
+      situation: "Four labs in computational and Bayesian statistics: simulating distributions, Monte Carlo estimation, then approximating posterior distributions that have no closed form.",
+      task: "Implement each method in NumPy, check the results against theory and interpret convergence diagnostics.",
+      actions: [
+        "Random variable generation: inverse transform, Box-Muller, rejection sampling and its collapse in high dimension, Monte Carlo estimation of π and importance sampling.",
+        "Bayesian logistic regression with Metropolis-Hastings, then Bayesian LASSO with Gibbs sampling (Park and Casella), with credible intervals and the predictive distribution.",
+        "LDA model and variational inference on the 11,314 documents of the 20 Newsgroups corpus, with eight topics."
+      ],
+      results: [
+        "Importance sampling: variance divided by about 139 when estimating a probability of about 1.3 × 10⁻³.",
+        "Rejection sampling: acceptance rate of 82% in dimension 1, 13.5% in dimension 10 and 2 × 10⁻⁹ in dimension 100.",
+        "Metropolis-Hastings: 74% acceptance and a 95% credible interval of [−3.60, −1.26] for the regression parameter.",
+        "LDA: for 65.5% of documents, a single topic accounts for more than half of the content."
+      ]
+    }
+  },
+  {
+    id: "tpopt",
+    fit: "contain",
+    banner: "images/projects/tp-optimisation.webp",
+    tech: ["Python", "NumPy", "Matplotlib"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/TP_optimisation", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpopt-conditionnement.webp", fr: "Gradient à pas optimal : zigzag quand le conditionnement augmente (C = 8)", en: "Optimal-step gradient descent: zigzagging as conditioning worsens (C = 8)" },
+      { src: "images/projects/tpopt-newton.webp", fr: "Itérés de la méthode de Newton vers le minimum (1, 1)", en: "Newton iterates converging to the minimum (1, 1)" },
+      { src: "images/projects/tpopt-contraintes.webp", fr: "Ensemble admissible et lignes de niveau du problème sous contraintes", en: "Feasible set and level lines of the constrained problem" },
+      { src: "images/projects/tpopt-anneau.webp", fr: "Classification en anneau utilisée pour l'entraînement stochastique avec pénalité L1", en: "Ring classification used for stochastic training with an L1 penalty" }
+    ],
+    fr: {
+      title: "Optimisation continue",
+      excerpt: "Gradient, Newton et BFGS, contraintes (KKT, points intérieurs, Uzawa) et ISTA.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Quatre travaux pratiques d'optimisation numérique, de la descente de gradient sur une fonction quadratique jusqu'à l'entraînement parcimonieux d'un petit réseau de neurones.",
+      task: "Compléter les notebooks, dont les trois premiers étaient partiellement corrigés, réparer ce qui empêchait leur exécution et analyser la convergence de chaque méthode.",
+      actions: [
+        "Descente de gradient à pas optimal et effet du conditionnement, puis recherche linéaire d'Armijo sur une fonction convexe régulière.",
+        "Méthode de Newton et approximation BFGS de l'inverse du Hessien ; problème sous contraintes traité par les conditions KKT, la méthode des points intérieurs et l'algorithme d'Uzawa.",
+        "Régularisation L1 par ISTA, puis version stochastique pour entraîner un réseau NumPy 2-8-8-8-1 sur une classification en anneau."
+      ],
+      results: [
+        "BFGS : convergence en 55 itérations vers le minimum (1, 1), à 1,2 × 10⁻¹⁰ près.",
+        "Uzawa : minimiseur et multiplicateurs de Lagrange retrouvés, avec un écart à l'optimum de 9 × 10⁻¹⁶.",
+        "ISTA : 38 coefficients sur 100 annulés pour λ = 2, et tous pour λ = 5.",
+        "Une valeur propre erronée de l'énoncé corrigée ; la bibliothèque manquante du TP4 remplacée par une expérience autonome, documentée comme telle."
+      ]
+    },
+    en: {
+      title: "Continuous optimisation",
+      excerpt: "Gradient, Newton and BFGS, constraints (KKT, interior points, Uzawa) and ISTA.",
+      meta: "Centrale Lille · coursework labs",
+      situation: "Four numerical optimisation labs, from gradient descent on a quadratic function to sparse training of a small neural network.",
+      task: "Complete the notebooks, the first three of which were partially solved, fix what prevented them from running and analyse the convergence of each method.",
+      actions: [
+        "Optimal-step gradient descent and the effect of conditioning, then Armijo line search on a smooth convex function.",
+        "Newton's method and the BFGS inverse-Hessian approximation; a constrained problem solved with KKT conditions, the interior-point method and the Uzawa algorithm.",
+        "L1 regularisation with ISTA, then a stochastic version to train a 2-8-8-8-1 NumPy network on a ring classification task."
+      ],
+      results: [
+        "BFGS: convergence in 55 iterations to the minimum (1, 1), within 1.2 × 10⁻¹⁰.",
+        "Uzawa: minimiser and Lagrange multipliers recovered, with a gap to the optimum of 9 × 10⁻¹⁶.",
+        "ISTA: 38 of 100 coefficients set to zero for λ = 2, and all of them for λ = 5.",
+        "An incorrect eigenvalue in the lab statement fixed; the missing library in lab 4 replaced by a standalone experiment, documented as such."
+      ]
+    }
   }
+
 ];

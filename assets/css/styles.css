@@ -174,10 +174,6 @@ section[id] { scroll-margin-top: 72px; }
 .proj-tech > span { padding: 0.28rem 0.6rem; border: 1px solid var(--outline); border-radius: 8px; color: var(--muted); font-size: 0.7rem; font-weight: 500; white-space: nowrap; }
 .proj-arrow { display: inline-flex; flex: 0 0 2rem; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--tonal); color: var(--on-tonal); font-size: 1rem; transition: background 0.2s, color 0.2s; }
 .proj-card:hover .proj-arrow { background: var(--primary); color: #fff; }
-/* Cartes des travaux pratiques : liens directs vers les dépôts GitHub */
-.tp-count { color: var(--muted); font-size: 0.75rem; font-weight: 500; }
-.tp-link { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.38rem 0.8rem; border-radius: 999px; background: var(--tonal); color: var(--on-tonal); font-size: 0.75rem; font-weight: 500; transition: background 0.2s, color 0.2s; }
-.tp-card:hover .tp-link { background: var(--primary); color: #fff; }
 .other-projects-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 4rem 0 1.2rem; }
 .other-projects-head h3 { color: var(--text); font-size: 1.6rem; font-weight: 400; }
 .other-projects-head span { color: var(--muted); font-size: 0.8rem; }
