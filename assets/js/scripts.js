@@ -2,11 +2,11 @@
 const T = {
   fr: {
     'nav.about': 'À propos', 'nav.resume': 'Parcours', 'nav.proj': 'Projets',
-    'hero.eyebrow': 'Aéronautique, modélisation physique et intelligence artificielle',
+    'hero.eyebrow': 'Aéronautique et intelligence artificielle',
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
     'hero.proof': 'École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
-    'tp.h': "Travaux pratiques", 'tp.intro': "Notebooks exécutés, en accès libre sur GitHub", 'tp1.cat': "Machine learning", 'tp1.t': "Décision et apprentissage", 'tp1.d': "Ridge, Lasso, classification, forêts aléatoires et ACP", 'tp1.n': "4 notebooks", 'tp2.cat': "Statistiques", 'tp2.t': "Introduction à l’estimation statistique", 'tp2.d': "Algorithme EM, mélanges gaussiens et estimation par noyaux", 'tp2.n': "2 notebooks", 'tp3.cat': "Statistiques bayésiennes", 'tp3.t': "Estimation statistique avancée", 'tp3.d': "MCMC, Gibbs et inférence variationnelle (LDA)", 'tp3.n': "4 notebooks", 'tp4.cat': "Optimisation", 'tp4.t': "Optimisation continue", 'tp4.d': "Gradient, Newton, BFGS, KKT, Uzawa et ISTA", 'tp4.n': "4 notebooks",
+    'tp.h': "Travaux pratiques", 'tp.intro': "Notebooks exécutés de bout en bout, disponibles sur GitHub",
     'tile.bwb': 'Avion BWB à hydrogène', 'tile.rsp': 'Problèmes inverses', 'tile.saab': 'Toucher du SAAB', 'tile.pinn': 'PINN thermique',
     'about.h': 'À propos',
     'about.p1': "Diplômé du <b>MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b>Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
@@ -20,11 +20,11 @@ const T = {
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
-    'hero.eyebrow': 'Aeronautics, physical modelling and artificial intelligence',
+    'hero.eyebrow': 'Aeronautics and artificial intelligence',
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
     'hero.proof': 'Centrale Lille and Cranfield University, data and predictive maintenance intern at Air France',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
-    'tp.h': "Coursework labs", 'tp.intro': "Executed notebooks, openly available on GitHub", 'tp1.cat': "Machine learning", 'tp1.t': "Decision and learning", 'tp1.d': "Ridge, Lasso, classification, random forests and PCA", 'tp1.n': "4 notebooks", 'tp2.cat': "Statistics", 'tp2.t': "Introduction to statistical estimation", 'tp2.d': "EM algorithm, Gaussian mixtures and kernel density estimation", 'tp2.n': "2 notebooks", 'tp3.cat': "Bayesian statistics", 'tp3.t': "Advanced statistical estimation", 'tp3.d': "MCMC, Gibbs sampling and variational inference (LDA)", 'tp3.n': "4 notebooks", 'tp4.cat': "Optimisation", 'tp4.t': "Continuous optimisation", 'tp4.d': "Gradient, Newton, BFGS, KKT, Uzawa and ISTA", 'tp4.n': "4 notebooks",
+    'tp.h': "Coursework labs", 'tp.intro': "Notebooks executed end to end, available on GitHub",
     'tile.bwb': 'Hydrogen BWB aircraft', 'tile.rsp': 'Inverse problems', 'tile.saab': 'SAAB touchdown', 'tile.pinn': 'Thermal PINN',
     'about.h': 'About',
     'about.p1': "A graduate of the <b>MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b>Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
@@ -109,14 +109,31 @@ const PROJECT_META = {
   prophet: {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: '20 ans de données, modèle Prophet entraîné et évalué', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: '20 years of data, Prophet model trained and evaluated', value: '9.7%', outcome: 'MAPE over a full test year' }
+  },
+  tpdec: {
+    fr: { category: 'Machine learning', role: 'Travaux pratiques, Centrale Lille', contribution: 'Régression, classification, arbres et ACP', value: '97 %', outcome: 'de bonnes classifications sur les chiffres 3 et 5' },
+    en: { category: 'Machine learning', role: 'Coursework labs, Centrale Lille', contribution: 'Regression, classification, trees and PCA', value: '97%', outcome: 'correct classification of digits 3 and 5' }
+  },
+  tpest: {
+    fr: { category: 'Statistiques', role: 'Travaux pratiques, Centrale Lille', contribution: 'Algorithme EM, mélanges gaussiens et noyaux', value: 'K = 2', outcome: 'composantes retenues par le critère BIC' },
+    en: { category: 'Statistics', role: 'Coursework labs, Centrale Lille', contribution: 'EM algorithm, Gaussian mixtures and kernels', value: 'K = 2', outcome: 'components selected by BIC' }
+  },
+  tpestav: {
+    fr: { category: 'Statistiques bayésiennes', role: 'Travaux pratiques, Centrale Lille', contribution: 'MCMC, Gibbs et inférence variationnelle', value: '÷139', outcome: "de variance par échantillonnage d'importance" },
+    en: { category: 'Bayesian statistics', role: 'Coursework labs, Centrale Lille', contribution: 'MCMC, Gibbs sampling and variational inference', value: '÷139', outcome: 'variance with importance sampling' }
+  },
+  tpopt: {
+    fr: { category: 'Optimisation', role: 'Travaux pratiques, Centrale Lille', contribution: 'Gradient, Newton, BFGS, KKT, Uzawa et ISTA', value: '10⁻¹⁰', outcome: "d'écart au minimum avec BFGS" },
+    en: { category: 'Optimisation', role: 'Coursework labs, Centrale Lille', contribution: 'Gradient, Newton, BFGS, KKT, Uzawa and ISTA', value: '10⁻¹⁰', outcome: 'gap to the minimum with BFGS' }
   }
 };
 // Domaine de chaque projet : fixe la couleur de sa catégorie et de son résultat
 // aero = bleu, ia = vert, signal = rouge, optim = jaune
-const PROJECT_DOMAIN = { btem: 'aero', bwb: 'aero', saab: 'aero', pinn: 'ia', chu: 'ia', rsp: 'signal', prophet: 'signal', vrp: 'optim' };
+const PROJECT_DOMAIN = { btem: 'aero', bwb: 'aero', saab: 'aero', pinn: 'ia', chu: 'ia', rsp: 'signal', prophet: 'signal', vrp: 'optim', tpdec: 'ia', tpest: 'stats', tpestav: 'stats', tpopt: 'optim' };
 const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
 const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
-const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS];
+const TP_PROJECTS = ['tpdec', 'tpest', 'tpestav', 'tpopt'];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS, ...TP_PROJECTS];
 
 // Outils affichés sur une carte : 3 pour les projets phares ; sur les petites cartes,
 // au plus 2 et 20 caractères au total, pour rester sur une seule ligne
@@ -171,6 +188,11 @@ function renderProjects() {
   const byId = id => window.PROJECTS.find(p => p.id === id);
   FEATURED_PROJECTS.map(byId).filter(Boolean).forEach(p => featuredGrid.appendChild(projectCard(p, true)));
   OTHER_PROJECTS.map(byId).filter(Boolean).forEach(p => otherGrid.appendChild(projectCard(p, false)));
+  const tpGrid = document.getElementById('tp-project-grid');
+  if (tpGrid) {
+    tpGrid.innerHTML = '';
+    TP_PROJECTS.map(byId).filter(Boolean).forEach(p => tpGrid.appendChild(projectCard(p, false)));
+  }
 }
 
 /* ===================== Modale ===================== */
