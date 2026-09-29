@@ -382,7 +382,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/tp-decision.webp",
     tech: ["Python", "scikit-learn", "NumPy", "Matplotlib"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/TP_decision_apprentissage", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/decision-and-machine-learning", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
       { src: "images/projects/tpdec-ridge.webp", fr: "Chemin de régularisation ridge : coefficients en fonction de α", en: "Ridge regularisation path: coefficients as a function of α" },
       { src: "images/projects/tpdec-confusion.webp", fr: "Matrice de confusion de la régression logistique sur les chiffres 3 et 5", en: "Logistic regression confusion matrix on digits 3 and 5" },
@@ -431,7 +431,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/tp-estimation.webp",
     tech: ["Python", "NumPy", "SciPy", "scikit-learn"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/TP_estimation_statistique", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/statistical-estimation", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
       { src: "images/projects/tpest-em.webp", fr: "Algorithme EM : convergence de la log-vraisemblance et composantes du mélange", en: "EM algorithm: log-likelihood convergence and mixture components" },
       { src: "images/projects/tpest-bic.webp", fr: "Critère BIC selon le nombre de composantes K", en: "BIC as a function of the number of components K" },
@@ -480,7 +480,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/tp-estimation-avancee.webp",
     tech: ["Python", "NumPy", "SciPy", "scikit-learn"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/TP_estimation_avancee", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/advanced-statistical-estimation", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
       { src: "images/projects/tpestav-importance.webp", fr: "Monte Carlo standard et échantillonnage d'importance pour une probabilité rare", en: "Standard Monte Carlo and importance sampling for a rare-event probability" },
       { src: "images/projects/tpestav-mh.webp", fr: "Metropolis-Hastings : traces et histogrammes pour trois échelles de proposition", en: "Metropolis-Hastings: traces and histograms for three proposal scales" },
@@ -529,7 +529,7 @@ window.PROJECTS = [
     fit: "contain",
     banner: "images/projects/tp-optimisation.webp",
     tech: ["Python", "NumPy", "Matplotlib"],
-    links: [{ href: "https://github.com/ugo-roccamatisi/TP_optimisation", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    links: [{ href: "https://github.com/ugo-roccamatisi/numerical-optimization", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
     gallery: [
       { src: "images/projects/tpopt-conditionnement.webp", fr: "Gradient à pas optimal : zigzag quand le conditionnement augmente (C = 8)", en: "Optimal-step gradient descent: zigzagging as conditioning worsens (C = 8)" },
       { src: "images/projects/tpopt-newton.webp", fr: "Itérés de la méthode de Newton vers le minimum (1, 1)", en: "Newton iterates converging to the minimum (1, 1)" },
