@@ -6,15 +6,15 @@ const T = {
     'hero.tagline': "Ingénieur aéronautique spécialisé en modèles physiques, data science et IA.",
     'hero.proof': 'École Centrale de Lille et Cranfield University, en stage data et maintenance prédictive chez Air France',
     'hero.cta': 'Voir mes projets', 'hero.github': 'Voir mon GitHub',
-    'tp.h': "Travaux pratiques", 'tp.intro': "Notebooks exécutés de bout en bout, disponibles sur GitHub",
-    'tile.bwb': 'Avion BWB à hydrogène', 'tile.rsp': 'Problèmes inverses', 'tile.saab': 'Toucher du SAAB', 'tile.pinn': 'PINN thermique',
+    'tp.h': "Travaux pratiques", 'tp.intro': "Centrale Lille et Cranfield University : deep learning, machine learning, signal, optimisation et statistiques",
+    'tile.bwb': 'Avion BWB à hydrogène', 'tile.chu': 'IA hospitalière', 'tile.vrp': 'Tournées de véhicules', 'tile.pinn': 'PINN thermique',
     'about.h': 'À propos',
     'about.p1': "Diplômé du <b>MSc in Aerospace Vehicle Design de Cranfield University</b> et élève-ingénieur à <b>Centrale Lille</b>, je travaille à l'interface entre aéronautique, physique et intelligence artificielle.",
     'about.p2': "Mon fil conducteur : transformer des phénomènes complexes en modèles utiles. Je l'ai appliqué aux freins de l'A320 avec <b>Airbus</b> et aux flux hospitaliers avec le <b>CHU de Lille</b>, jusqu'à une publication IEEE SMC.", 'about.p3': "Depuis octobre 2026, je suis en stage de data analyse et maintenance prédictive chez <b>Air France Industries KLM E&M</b>.", 'g2.m': 'Machine learning, deep learning, décision et apprentissage, optimisation combinatoire, programmation orientée objet', 'g3.m': "Maintenance prédictive et IVHM, systèmes de l'avion, fiabilité, sûreté et certification, conception d'aéronefs, stabilité et contrôle, structures composites", 'g.leg1': 'Formation', 'g.leg2': 'Expérience',
     'resume.h': 'Parcours', 'sg1': 'Data Science & IA', 'sg3': 'Ingénierie & simulation', 'skills.h': 'Compétences', 'skills.modeling_h': 'Modélisation & développement', 'g2.degree': "Diplôme d'ingénieur", 'g3.degree': 'MSc, double diplôme', 'g4.date': 'Oct. 2026 – Mars 2027', 'g4.role': 'Stage en maintenance prédictive',
     'edu3.t': 'Classe préparatoire PCSI / PC*',
     'proj.h': 'Projets',
-    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Signal, optimisation, conception aéronautique et prévision',
+    'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Conception aéronautique, optimisation et prévision',
     'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration\u00a0? Écrivez-moi, je réponds volontiers.",
     'footer': '© 2026 Ugo Roccamatisi, Paris'
   },
@@ -24,15 +24,15 @@ const T = {
     'hero.tagline': "Aeronautical engineer specialising in physical models, data science and AI.",
     'hero.proof': 'Centrale Lille and Cranfield University, data and predictive maintenance intern at Air France',
     'hero.cta': 'View my projects', 'hero.github': 'View my GitHub',
-    'tp.h': "Coursework labs", 'tp.intro': "Notebooks executed end to end, available on GitHub",
-    'tile.bwb': 'Hydrogen BWB aircraft', 'tile.rsp': 'Inverse problems', 'tile.saab': 'SAAB touchdown', 'tile.pinn': 'Thermal PINN',
+    'tp.h': "Coursework labs", 'tp.intro': "Centrale Lille and Cranfield University: deep learning, machine learning, signal processing, optimisation and statistics",
+    'tile.bwb': 'Hydrogen BWB aircraft', 'tile.chu': 'Hospital AI', 'tile.vrp': 'Vehicle routing', 'tile.pinn': 'Thermal PINN',
     'about.h': 'About',
     'about.p1': "A graduate of the <b>MSc in Aerospace Vehicle Design at Cranfield University</b> and an engineering student at <b>Centrale Lille</b>, I work at the intersection of aeronautics, physics and artificial intelligence.",
     'about.p2': "My common thread is turning complex phenomena into useful models. I have applied it to A320 brakes with <b>Airbus</b> and to hospital flows with <b>CHU de Lille</b>, leading to an IEEE SMC publication.", 'about.p3': "Since October 2026, I have been a data analysis and predictive maintenance intern at <b>Air France Industries KLM E&M</b>.", 'g2.m': 'Machine learning, deep learning, decision & learning, combinatorial optimization, object-oriented programming', 'g3.m': 'Predictive maintenance & IVHM, aircraft systems, reliability, safety & certification, aircraft design, stability & control, composite structures', 'g.leg1': 'Education', 'g.leg2': 'Experience',
     'resume.h': 'Resume', 'sg1': 'Data Science & AI', 'sg3': 'Engineering & simulation', 'skills.h': 'Skills', 'skills.modeling_h': 'Modelling & development', 'g2.degree': 'Engineering degree', 'g3.degree': 'MSc, double degree', 'g4.date': 'Oct. 2026 – Mar. 2027', 'g4.role': 'Predictive maintenance internship',
     'edu3.t': 'Preparatory classes PCSI / PC*',
     'proj.h': 'Projects',
-    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Signal processing, optimisation, aircraft design and forecasting',
+    'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Aircraft design, optimisation and forecasting',
     'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
     'footer': '© 2026 Ugo Roccamatisi, Paris'
   }
@@ -87,16 +87,16 @@ const PROJECT_META = {
     en: { category: 'Scientific AI · Thermal', role: 'Personal research project', contribution: 'Direct, parametric and inverse PINN development, including identifiability analysis', value: '±2 K', outcome: 'on the direct model · energy identified within 2%' }
   },
   saab: {
-    fr: { category: 'Données de vol · Signal', role: 'Analyse reproductible', contribution: 'Analyse spectrale, fusion des capteurs et détection de rupture', value: '±0,02 s', outcome: 'de résolution sur la détection du toucher' },
-    en: { category: 'Flight data · Signal', role: 'Reproducible analysis', contribution: 'Spectral analysis, sensor fusion and change-point detection', value: '±0.02 s', outcome: 'touchdown detection resolution' }
+    fr: { category: 'Données de vol · Signal', role: 'Travaux pratiques, Cranfield University', contribution: 'Analyse spectrale, fusion des capteurs et détection de rupture', value: '±0,02 s', outcome: 'de résolution sur la détection du toucher' },
+    en: { category: 'Flight data · Signal', role: 'Coursework, Cranfield University', contribution: 'Spectral analysis, sensor fusion and change-point detection', value: '±0.02 s', outcome: 'touchdown detection resolution' }
   },
   chu: {
     fr: { category: 'IA appliquée · Santé', role: 'Responsable du pôle prédiction', contribution: 'Pilotage du pôle prédiction et développement du classifieur', value: '73 %', outcome: 'de précision sur 26 950 séjours de test' },
     en: { category: 'Applied AI · Healthcare', role: 'Prediction team lead', contribution: 'Prediction team leadership and classifier development', value: '73%', outcome: 'accuracy across 26,950 test stays' }
   },
   rsp: {
-    fr: { category: 'Traitement du signal · Problèmes inverses', role: 'Projet académique, Centrale Lille', contribution: 'Reconstruction et validation de quatre notebooks', value: '4 labs', outcome: 'reproductibles, exécutés de bout en bout' },
-    en: { category: 'Signal processing · Inverse problems', role: 'Academic project, Centrale Lille', contribution: 'Rebuilt and validated four scientific notebooks', value: '4 labs', outcome: 'reproducible and executed end to end' }
+    fr: { category: 'Traitement du signal', role: 'Travaux pratiques, Centrale Lille', contribution: 'STFT, ondelettes, séparation de sources et inpainting', value: '93,5 %', outcome: 'des coefficients bien attribués en séparation de sources' },
+    en: { category: 'Signal processing', role: 'Coursework labs, Centrale Lille', contribution: 'STFT, wavelets, source separation and inpainting', value: '93.5%', outcome: 'of coefficients correctly assigned in source separation' }
   },
   bwb: {
     fr: { category: 'Conception aéronautique', role: 'Responsable intégration moteurs', contribution: 'Intégration propulsive, conception de la nacelle et conformité CS-25', value: '62', outcome: 'étudiants dans une équipe internationale' },
@@ -109,6 +109,18 @@ const PROJECT_META = {
   prophet: {
     fr: { category: 'Séries temporelles', role: 'Projet personnel', contribution: '20 ans de données, modèle Prophet entraîné et évalué', value: '9,7 %', outcome: 'de MAPE sur une année complète de test' },
     en: { category: 'Time series', role: 'Personal project', contribution: '20 years of data, Prophet model trained and evaluated', value: '9.7%', outcome: 'MAPE over a full test year' }
+  },
+  tpgpt: {
+    fr: { category: 'Deep learning', role: 'Travaux pratiques, Centrale Lille', contribution: 'Attention, GPT, ablations et fine-tuning', value: '10⁻⁷', outcome: "d'écart entre attention naïve et vectorisée" },
+    en: { category: 'Deep learning', role: 'Coursework lab, Centrale Lille', contribution: 'Attention, GPT, ablations and fine-tuning', value: '10⁻⁷', outcome: 'gap between naive and vectorised attention' }
+  },
+  tprnn: {
+    fr: { category: 'Deep learning · Séries temporelles', role: 'Travaux pratiques, Centrale Lille', contribution: 'RNN, GRU, LSTM et scheduled sampling', value: '2,5 °C', outcome: "d'erreur sur la température à 24 h" },
+    en: { category: 'Deep learning · Time series', role: 'Coursework lab, Centrale Lille', contribution: 'RNN, GRU, LSTM and scheduled sampling', value: '2.5 °C', outcome: 'temperature error at 24 h' }
+  },
+  tpfno: {
+    fr: { category: 'IA scientifique', role: 'Travaux pratiques, Centrale Lille', contribution: 'TFNO contre U-Net et super-résolution', value: '÷135', outcome: 'de paramètres face au U-Net, pour 30 % d’erreur en moins' },
+    en: { category: 'Scientific AI', role: 'Coursework lab, Centrale Lille', contribution: 'TFNO vs U-Net and super-resolution', value: '÷135', outcome: 'parameters versus the U-Net, with 30% lower error' }
   },
   tpdec: {
     fr: { category: 'Machine learning', role: 'Travaux pratiques, Centrale Lille', contribution: 'Régression, classification, arbres et ACP', value: '97 %', outcome: 'de bonnes classifications sur les chiffres 3 et 5' },
@@ -129,11 +141,10 @@ const PROJECT_META = {
 };
 // Domaine de chaque projet : fixe la couleur de sa catégorie et de son résultat
 // aero = bleu, ia = vert, signal = rouge, optim = jaune
-const PROJECT_DOMAIN = { btem: 'aero', bwb: 'aero', saab: 'aero', pinn: 'ia', chu: 'ia', rsp: 'signal', prophet: 'signal', vrp: 'optim', tpdec: 'ia', tpest: 'stats', tpestav: 'stats', tpopt: 'optim' };
-const FEATURED_PROJECTS = ['btem', 'pinn', 'saab', 'chu'];
-const OTHER_PROJECTS = ['rsp', 'bwb', 'vrp', 'prophet'];
-const TP_PROJECTS = ['tpdec', 'tpest', 'tpestav', 'tpopt'];
-const PROJECT_ORDER = [...FEATURED_PROJECTS, ...OTHER_PROJECTS, ...TP_PROJECTS];
+const PROJECT_DOMAIN = { btem: 'aero', bwb: 'aero', saab: 'aero', pinn: 'ia', chu: 'ia', rsp: 'signal', prophet: 'signal', vrp: 'optim', tpgpt: 'ia', tprnn: 'ia', tpfno: 'ia', tpdec: 'ia', tpest: 'stats', tpestav: 'stats', tpopt: 'optim' };
+const FEATURED_PROJECTS = ['btem', 'pinn', 'chu', 'bwb', 'vrp', 'prophet'];
+const TP_PROJECTS = ['tpgpt', 'tprnn', 'tpfno', 'tpdec', 'saab', 'rsp', 'tpopt', 'tpest', 'tpestav'];
+const PROJECT_ORDER = [...FEATURED_PROJECTS, ...TP_PROJECTS];
 
 // Outils affichés sur une carte : 3 pour les projets phares ; sur les petites cartes,
 // au plus 2 et 20 caractères au total, pour rester sur une seule ligne
@@ -181,13 +192,10 @@ function projectCard(p, featured) {
 
 function renderProjects() {
   const featuredGrid = document.getElementById('featured-project-grid');
-  const otherGrid = document.getElementById('other-project-grid');
-  if (!featuredGrid || !otherGrid || !window.PROJECTS) return;
+  if (!featuredGrid || !window.PROJECTS) return;
   featuredGrid.innerHTML = '';
-  otherGrid.innerHTML = '';
   const byId = id => window.PROJECTS.find(p => p.id === id);
   FEATURED_PROJECTS.map(byId).filter(Boolean).forEach(p => featuredGrid.appendChild(projectCard(p, true)));
-  OTHER_PROJECTS.map(byId).filter(Boolean).forEach(p => otherGrid.appendChild(projectCard(p, false)));
   const tpGrid = document.getElementById('tp-project-grid');
   if (tpGrid) {
     tpGrid.innerHTML = '';

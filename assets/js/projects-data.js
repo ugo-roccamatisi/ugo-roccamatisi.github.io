@@ -155,7 +155,7 @@ window.PROJECTS = [
     fr: {
       title: "Détection du toucher d’un SAAB par analyse des données de vol",
       excerpt: "Analyse spectrale et détection de rupture appliquées à des données FDR réelles.",
-      meta: "Projet personnel, Cranfield (IVHM) · 2025 à 2026",
+      meta: "Cranfield University (IVHM) · travaux pratiques · 2025 à 2026",
       situation: "Données d'essai en vol du Saab 340 de Cranfield (8 minutes autour de l'atterrissage, ≈49 Hz) : deux accéléromètres indépendants, une centrale montée en galley et le capteur du centre de gravité de l'avion, qui ne racontent pas la même histoire, et un toucher invisible à l'œil nu dans l'accélération brute.",
       task: "Évaluer la fiabilité relative des deux capteurs par méthodes spectrales, puis dater précisément le toucher en fusionnant les canaux de l'enregistreur de vol (FDR).",
       actions: [
@@ -171,7 +171,7 @@ window.PROJECTS = [
     en: {
       title: "SAAB touchdown detection from flight data",
       excerpt: "Spectral analysis and change-point detection applied to real FDR data.",
-      meta: "Personal project, Cranfield (IVHM) · 2025 to 2026",
+      meta: "Cranfield University (IVHM) · coursework · 2025 to 2026",
       situation: "Flight-test data from Cranfield's Saab 340 (8 minutes around landing, ≈49 Hz): two independent accelerometers, a galley-mounted IMU and the aircraft's centre-of-gravity sensor, telling different stories, and a touchdown invisible to the naked eye in the raw acceleration.",
       task: "Assess the relative reliability of both sensors with spectral methods, then precisely timestamp the touchdown by fusing flight data recorder (FDR) channels.",
       actions: [
@@ -256,7 +256,7 @@ window.PROJECTS = [
     fr: {
       title: "Représentation des signaux et problèmes inverses",
       excerpt: "Quatre notebooks reproductibles : analyse temps-fréquence, ondelettes, séparation de sources et reconstruction d'images.",
-      meta: "Centrale Lille · module scientifique · 2026",
+      meta: "Centrale Lille · travaux pratiques",
       situation: "Le module relie quatre familles de méthodes souvent étudiées séparément : représentations temps-fréquence, ondelettes, séparation aveugle de sources et résolution de problèmes inverses en imagerie. Les supports initiaux devaient être complétés et rendus entièrement reproductibles.",
       task: "Reconstruire et corriger les quatre travaux pratiques, expliciter les choix numériques et livrer des notebooks capables de s'exécuter de bout en bout dans un environnement documenté.",
       actions: [
@@ -268,13 +268,13 @@ window.PROJECTS = [
         "Débruitage par ondelettes : PSNR porté de 22,0 dB pour l'image bruitée à 27,9 dB avec la DWT et 29,0 dB avec la SWT.",
         "Séparation de trois sources à partir de deux mélanges : 93,5 % des coefficients temps-fréquence significatifs correctement attribués.",
         "Problèmes inverses : 29,5 dB en débruitage de Tikhonov et 24,4 dB en inpainting à partir de seulement 10 % des pixels.",
-        "Dépôt public bilingue avec quatre notebooks exécutés intégralement sans erreur et des instructions de reproduction."
+        "Quatre notebooks exécutés intégralement sans erreur, avec des instructions de reproduction."
       ]
     },
     en: {
       title: "Signal representations and inverse problems",
       excerpt: "Four reproducible notebooks covering time-frequency analysis, wavelets, source separation and image reconstruction.",
-      meta: "Centrale Lille · scientific module · 2026",
+      meta: "Centrale Lille · coursework labs",
       situation: "The module connects four families of methods that are often studied separately: time-frequency representations, wavelets, blind source separation and inverse problems in imaging. The initial material had to be completed and made fully reproducible.",
       task: "Rebuild and correct the four lab notebooks, explain the numerical choices and deliver notebooks that run end to end in a documented environment.",
       actions: [
@@ -286,7 +286,7 @@ window.PROJECTS = [
         "Wavelet denoising: PSNR improved from 22.0 dB for the noisy image to 27.9 dB with DWT and 29.0 dB with SWT.",
         "Three sources separated from two mixtures, with 93.5% of significant time-frequency coefficients assigned correctly.",
         "Inverse problems: 29.5 dB for Tikhonov denoising and 24.4 dB for inpainting from only 10% of the pixels.",
-        "Public bilingual repository with four notebooks executed end to end without errors and documented reproduction steps."
+        "Four notebooks executed end to end without errors, with documented reproduction steps."
       ]
     }
   },
@@ -378,6 +378,149 @@ window.PROJECTS = [
     }
   },
   {
+    id: "tpgpt",
+    fit: "contain",
+    banner: "images/projects/tp-gpt.webp",
+    tech: ["Python", "PyTorch", "Hugging Face"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/mini-gpt-transformers", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpgpt-ablations.webp", fr: "Ablations : courbes de validation et effet de chaque modification", en: "Ablations: validation curves and effect of each change" },
+      { src: "images/projects/tpgpt-loss.webp", fr: "Entraînement du mini-GPT de référence sur Tiny Shakespeare", en: "Training the reference mini-GPT on Tiny Shakespeare" }
+    ],
+    fr: {
+      title: "Transformers : un mini-GPT from scratch",
+      excerpt: "Attention causale, GPT au niveau caractère, ablations et fine-tuning de GPT-2.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Travail pratique du cours de deep learning : comprendre un Transformer en le construisant pièce par pièce, puis comparer un modèle entraîné from scratch à un modèle pré-entraîné adapté.",
+      task: "Implémenter un GPT causal au niveau caractère en PyTorch, l'entraîner sur Tiny Shakespeare, mesurer l'effet de chaque hyperparamètre et préparer le fine-tuning de GPT-2.",
+      actions: [
+        "Auto-attention causale construite d'abord tête par tête, puis en version multi-têtes vectorisée, avec un test de causalité sur les logits.",
+        "GPT complet : embeddings de tokens et de positions, blocs Transformer pre-norm, génération autorégressive avec température.",
+        "Ablations une modification à la fois (learning rate, profondeur, nombre de têtes, contexte, dropout), puis fine-tuning de GPT-2 avec Hugging Face et comparaison en bits par caractère."
+      ],
+      results: [
+        "Attention naïve et vectorisée identiques à 10⁻⁷ près ; les tokens futurs n'ont aucun effet sur les logits passés.",
+        "Loss de validation de 2,31 pour le modèle de référence après 300 itérations, 2,21 avec un contexte de 16.",
+        "En 300 itérations, ce qui accélère l'apprentissage (learning rate, contexte court, pas de dropout) compte bien plus que la capacité du modèle.",
+        "Chaîne de fine-tuning de GPT-2 validée de bout en bout."
+      ]
+    },
+    en: {
+      title: "Transformers: a mini-GPT from scratch",
+      excerpt: "Causal attention, a character-level GPT, ablations and GPT-2 fine-tuning.",
+      meta: "Centrale Lille · coursework lab",
+      situation: "A deep learning lab: understanding a Transformer by building it piece by piece, then comparing a model trained from scratch with an adapted pre-trained model.",
+      task: "Implement a character-level causal GPT in PyTorch, train it on Tiny Shakespeare, measure the effect of each hyperparameter and set up GPT-2 fine-tuning.",
+      actions: [
+        "Causal self-attention built head by head first, then as a vectorised multi-head version, with a causality test on the logits.",
+        "Full GPT: token and position embeddings, pre-norm Transformer blocks, autoregressive generation with temperature.",
+        "Ablations one change at a time (learning rate, depth, number of heads, context, dropout), then GPT-2 fine-tuning with Hugging Face, compared in bits per character."
+      ],
+      results: [
+        "Naive and vectorised attention agree to within 10⁻⁷; future tokens have no effect on past logits.",
+        "Validation loss of 2.31 for the reference model after 300 iterations, 2.21 with a context of 16.",
+        "Within 300 iterations, what speeds up learning (learning rate, short context, no dropout) matters far more than model capacity.",
+        "GPT-2 fine-tuning pipeline validated end to end."
+      ]
+    }
+  },
+  {
+    id: "tprnn",
+    fit: "contain",
+    banner: "images/projects/tp-rnn.webp",
+    tech: ["Python", "PyTorch", "NumPy"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/rnn-weather-forecasting", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tprnn-zoom.webp", fr: "Prévision de la température à 3 h sur six jours du jeu de test", en: "3-hour temperature forecast over six days of the test set" },
+      { src: "images/projects/tprnn-training.webp", fr: "Courbes d'apprentissage du GRU face à la persistance", en: "GRU learning curves against persistence" },
+      { src: "images/projects/tprnn-horizon.webp", fr: "Prévision libre : teacher forcing contre scheduled sampling selon l'horizon", en: "Free-running forecast: teacher forcing vs scheduled sampling by horizon" }
+    ],
+    fr: {
+      title: "Réseaux récurrents pour la prévision météo",
+      excerpt: "RNN, GRU et LSTM sur les mesures de la station d'Orly, jusqu'au scheduled sampling.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Travail pratique du cours de deep learning sur des données météo réelles : sept variables mesurées toutes les 3 heures à Orly entre 2010 et 2023.",
+      task: "Construire des modèles récurrents en PyTorch, les comparer à des références simples et rendre les prévisions à plusieurs pas robustes à leurs propres erreurs.",
+      actions: [
+        "Comparaison des cellules RNN, GRU et LSTM : formes, états et nombre de paramètres.",
+        "Préparation des données : normalisation sur le seul jeu d'entraînement, fenêtres glissantes qui évitent les trous de mesure, séparation chronologique.",
+        "Prévision à un pas puis prévision libre jusqu'à 45 h, face à la persistance et à la persistance journalière, puis entraînement par scheduled sampling."
+      ],
+      results: [
+        "Prévision à 3 h : erreur réduite d'environ 35 % par rapport à la persistance avec un petit GRU.",
+        "Scheduled sampling : erreur en prévision libre réduite de 15 % à architecture égale.",
+        "Meilleur résultat : 2,5 °C d'erreur sur la température à 24 h et 3,1 °C à 45 h.",
+        "Entraîné en teacher forcing, un petit modèle fait moins bien que la persistance journalière au-delà de 24 h."
+      ]
+    },
+    en: {
+      title: "Recurrent networks for weather forecasting",
+      excerpt: "RNN, GRU and LSTM on Orly weather station data, up to scheduled sampling.",
+      meta: "Centrale Lille · coursework lab",
+      situation: "A deep learning lab on real weather data: seven variables measured every 3 hours at Orly airport between 2010 and 2023.",
+      task: "Build recurrent models in PyTorch, compare them with simple baselines and make multi-step forecasts robust to their own errors.",
+      actions: [
+        "Comparison of RNN, GRU and LSTM cells: shapes, states and parameter counts.",
+        "Data preparation: normalisation on the training set only, sliding windows that skip measurement gaps, chronological split.",
+        "One-step forecasting, then free-running forecasts up to 45 h against persistence and daily persistence, then training with scheduled sampling."
+      ],
+      results: [
+        "3-hour forecast: error reduced by about 35% compared with persistence using a small GRU.",
+        "Scheduled sampling: free-running error reduced by 15% at equal architecture.",
+        "Best result: 2.5 °C temperature error at 24 h and 3.1 °C at 45 h.",
+        "Trained with teacher forcing, a small model does worse than daily persistence beyond 24 h."
+      ]
+    }
+  },
+  {
+    id: "tpfno",
+    fit: "contain",
+    banner: "images/projects/tp-fno.webp",
+    tech: ["Python", "PyTorch", "NeuralOperator"],
+    links: [{ href: "https://github.com/ugo-roccamatisi/fourier-neural-operator-darcy", label_fr: "Dépôt GitHub", label_en: "GitHub repo" }],
+    gallery: [
+      { src: "images/projects/tpfno-resolution.webp", fr: "Généralisation en résolution et effet du nombre de modes de Fourier", en: "Resolution generalisation and effect of the number of Fourier modes" },
+      { src: "images/projects/tpfno-zeroshot.webp", fr: "Test en 32×32 sans réentraînement : U-Net contre TFNO", en: "Zero-shot 32×32 test: U-Net vs TFNO" },
+      { src: "images/projects/tpfno-rollout.webp", fr: "Bonus Navier-Stokes : déroulé autorégressif sur 20 pas de temps", en: "Navier-Stokes bonus: autoregressive rollout over 20 time steps" }
+    ],
+    fr: {
+      title: "Fourier Neural Operator sur l'écoulement de Darcy",
+      excerpt: "Apprentissage d'opérateurs : TFNO contre U-Net et super-résolution sans réentraînement.",
+      meta: "Centrale Lille · travaux pratiques",
+      situation: "Travail pratique du cours de deep learning sur l'apprentissage d'opérateurs : apprendre la relation entre un champ de perméabilité et le champ de pression solution de l'équation de Darcy.",
+      task: "Comparer un Fourier Neural Operator tensorisé (TFNO) à un U-Net, y compris sur des grilles plus fines que celle d'entraînement, et isoler l'effet de chaque réglage.",
+      actions: [
+        "Entraînement d'un TFNO et d'un U-Net avec la bibliothèque NeuralOperator, puis évaluation en 16×16 et en 32×32 sans réentraînement.",
+        "Ablations sur deux graines, un paramètre à la fois : perte L2 ou H1, nombre de modes de Fourier, largeur, profondeur, TFNO ou FNO complet, volume de données.",
+        "Vérification physique sur le flux −a∇u, puis bonus Navier-Stokes : un FNO à un pas déroulé sur 20 pas de temps."
+      ],
+      results: [
+        "En 16×16, le TFNO réduit l'erreur L2 relative de 30 % (0,19 contre 0,27) avec 135 fois moins de paramètres.",
+        "En 32×32 sans réentraînement, le TFNO reste à 0,20 alors que l'erreur du U-Net triple (0,78).",
+        "Avec 1 000 échantillons et 50 époques, l'erreur du TFNO descend à 0,08 en 16×16.",
+        "Trop de modes de Fourier dégradent la généralisation en résolution."
+      ]
+    },
+    en: {
+      title: "Fourier Neural Operator on Darcy flow",
+      excerpt: "Operator learning: TFNO vs U-Net and zero-shot super-resolution.",
+      meta: "Centrale Lille · coursework lab",
+      situation: "A deep learning lab on operator learning: learning the map from a permeability field to the pressure field that solves the Darcy equation.",
+      task: "Compare a tensorised Fourier Neural Operator (TFNO) with a U-Net, including on grids finer than the training grid, and isolate the effect of each setting.",
+      actions: [
+        "Training a TFNO and a U-Net with the NeuralOperator library, then evaluating at 16×16 and at 32×32 without retraining.",
+        "Ablations over two seeds, one parameter at a time: L2 or H1 loss, number of Fourier modes, width, depth, TFNO or full FNO, data budget.",
+        "Physical check on the flux −a∇u, then a Navier-Stokes bonus: a one-step FNO rolled out over 20 time steps."
+      ],
+      results: [
+        "At 16×16, the TFNO lowers the relative L2 error by 30% (0.19 vs 0.27) with 135 times fewer parameters.",
+        "At 32×32 without retraining, the TFNO stays at 0.20 while the U-Net error triples (0.78).",
+        "With 1,000 samples and 50 epochs, the TFNO error drops to 0.08 at 16×16.",
+        "Too many Fourier modes hurt resolution generalisation."
+      ]
+    }
+  },
+  {
     id: "tpdec",
     fit: "contain",
     banner: "images/projects/tp-decision.webp",
@@ -394,7 +537,7 @@ window.PROJECTS = [
       excerpt: "Quatre TP de machine learning : régression régularisée, classification, arbres et forêts, ACP.",
       meta: "Centrale Lille · travaux pratiques",
       situation: "Module de machine learning organisé en quatre travaux pratiques, qui parcourent les grandes familles de méthodes supervisées et non supervisées sur des jeux de données classiques : cancer de la prostate, chiffres manuscrits, Iris et visages Olivetti.",
-      task: "Compléter les quatre notebooks, justifier chaque choix de modèle et d'hyperparamètre, et livrer des notebooks exécutés de bout en bout, commentés en français.",
+      task: "Compléter les quatre notebooks, justifier chaque choix de modèle et d'hyperparamètre, et livrer des notebooks exécutés et commentés de bout en bout.",
       actions: [
         "Régression linéaire et ridge, avec vérification de la solution fermée, choix de la régularisation par validation croisée et chemin Lasso en bonus.",
         "Classification des chiffres 3 et 5 par régression logistique (précision, rappel et F1 selon le seuil), puis comparaison avec les k plus proches voisins.",
@@ -404,7 +547,7 @@ window.PROJECTS = [
         "Chiffres 3 et 5 : 93,8 % de bonnes classifications en régression logistique et 97 % avec les k plus proches voisins (k = 11).",
         "Ridge : régularisation α ≈ 1,09 retenue par validation croisée, MSE de test de 0,52 contre 0,54 sans régularisation.",
         "ACP : 123 composantes pour 95 % de la variance ; avec 50 composantes, la classification reste à 96,3 % (97,5 % sur les pixels bruts) pour un apprentissage environ six fois plus rapide.",
-        "Quatre notebooks exécutés, avec les données jointes pour une exécution hors ligne."
+        "Quatre notebooks exécutés, avec leurs résultats et figures sauvegardés."
       ]
     },
     en: {
@@ -412,7 +555,7 @@ window.PROJECTS = [
       excerpt: "Four machine learning labs: regularised regression, classification, trees and forests, PCA.",
       meta: "Centrale Lille · coursework labs",
       situation: "A machine learning module organised as four labs covering the main families of supervised and unsupervised methods on classic datasets: prostate cancer, handwritten digits, Iris and Olivetti faces.",
-      task: "Complete the four notebooks, justify every model and hyperparameter choice, and deliver notebooks executed end to end with comments in French.",
+      task: "Complete the four notebooks, justify every model and hyperparameter choice, and deliver notebooks executed and commented end to end.",
       actions: [
         "Linear and ridge regression, with a check of the closed-form solution, cross-validated regularisation and a Lasso path as a bonus.",
         "Classification of digits 3 and 5 with logistic regression (precision, recall and F1 as a function of the threshold), compared with k-nearest neighbours.",
@@ -422,7 +565,7 @@ window.PROJECTS = [
         "Digits 3 and 5: 93.8% correctly classified with logistic regression and 97% with k-nearest neighbours (k = 11).",
         "Ridge: α ≈ 1.09 selected by cross-validation, test MSE of 0.52 versus 0.54 without regularisation.",
         "PCA: 123 components for 95% of the variance; with 50 components, classification stays at 96.3% (97.5% on raw pixels) with training about six times faster.",
-        "Four executed notebooks, with data included so they run offline."
+        "Four executed notebooks, with their results and figures saved."
       ]
     }
   },
