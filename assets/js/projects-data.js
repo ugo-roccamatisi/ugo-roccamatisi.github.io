@@ -16,7 +16,7 @@ window.PROJECTS = [
     fr: {
       title: "Température des freins de l'A320 en service",
       excerpt: "Modèle thermique à 14 nœuds, calibré et validé sur des données de vols commerciaux d’A320.",
-      meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026 · supervision : Dr Fakhre Ali",
+      meta: "Mémoire de recherche, Airbus & Cranfield · mai à août 2026",
       situation: "Airbus souhaite estimer la température des freins carbone de l'A320 tout au long d'une journée d'exploitation, à partir des seules données enregistrées sur des vols commerciaux en service. Mémoire de recherche mené à Cranfield University avec le soutien d'Airbus.",
       task: "Développer un modèle de prédiction complet sur les données de vols commerciaux d'A320 : un capteur de température échantillonné toutes les 30 secondes, et aucune mesure de couple de freinage, l'énergie devant être reconstruite par la cinématique.",
       actions: [
@@ -27,13 +27,13 @@ window.PROJECTS = [
       results: [
         "Précision de l'ordre de 3 °C au toucher sur les vols de validation.",
         "Pipeline complet livré : segmentation automatique des vols, calibration, prédiction sur la journée, en ligne de commande et application Streamlit.",
-        "Présentation dédiée de deux heures des travaux devant le Dr Stephen King (Advanced Analytics, 41 ans chez Rolls-Royce en surveillance de l'état des moteurs) et le Pr Ian Jennions (directeur technique du centre IVHM de Cranfield), en complément de la soutenance."
+        "Présentation dédiée de deux heures des travaux devant un expert en surveillance de l'état des moteurs (41 ans chez Rolls-Royce) et le directeur technique du centre IVHM de Cranfield, en complément de la soutenance."
       ]
     },
     en: {
       title: "In-service A320 brake temperature",
       excerpt: "A 14-node thermal model calibrated and validated on in-service A320 commercial flight data.",
-      meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026 · supervised by Dr Fakhre Ali",
+      meta: "Research thesis, Airbus & Cranfield · May to Aug. 2026",
       situation: "Airbus wants to estimate A320 carbon brake temperature throughout a full day of operations, from data recorded on in-service commercial flights alone. Research thesis conducted at Cranfield University with Airbus support.",
       task: "Build a complete prediction model on in-service A320 commercial flight data: a temperature sensor sampled every 30 seconds, and no brake torque measurement, so the braking energy must be reconstructed from kinematics.",
       actions: [
@@ -44,7 +44,7 @@ window.PROJECTS = [
       results: [
         "Accuracy of about 3 °C at touchdown on validation flights.",
         "Complete pipeline delivered: automatic flight segmentation, calibration, full-day prediction, as a command line and a Streamlit app.",
-        "Dedicated two-hour presentation of the work to Dr Stephen King (Advanced Analytics, 41 years at Rolls-Royce in engine health monitoring) and Prof. Ian Jennions (Technical Director of Cranfield's IVHM Centre), in addition to the thesis defence."
+        "Dedicated two-hour presentation of the work to an engine health monitoring expert (41 years at Rolls-Royce) and the Technical Director of Cranfield's IVHM Centre, in addition to the thesis defence."
       ]
     }
   },
