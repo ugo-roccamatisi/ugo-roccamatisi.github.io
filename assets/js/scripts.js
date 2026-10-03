@@ -16,7 +16,7 @@ const T = {
     'proj.h': 'Projets',
     'proj.intro': "Des études de cas concrètes, de la modélisation physique à l'IA appliquée.", 'proj.other': 'Autres projets', 'proj.other_intro': 'Conception aéronautique, optimisation et prévision',
     'proj.more': 'Voir l’étude de cas', 'modal.tech': 'Technologies', 'modal.gallery': 'Visuels du projet', 'modal.resources': 'Ressources', 'case.results': 'Résultats', 'case.problem': 'Situation', 'case.role': 'Tâche', 'case.approach': 'Actions', 'case.prev': 'Projet précédent', 'case.next': 'Projet suivant', 'case.back': 'Retour aux projets', 'contact.p': "Une question sur mes projets, une proposition ou une collaboration\u00a0? Écrivez-moi, je réponds volontiers.",
-    'footer': '© 2026 Ugo Roccamatisi, Paris'
+    'footer': '© 2026 Ugo Roccamatisi'
   },
   en: {
     'nav.about': 'About', 'nav.resume': 'Resume', 'nav.proj': 'Projects',
@@ -34,7 +34,7 @@ const T = {
     'proj.h': 'Projects',
     'proj.intro': 'Concrete case studies, from physical modelling to applied AI.', 'proj.other': 'Other projects', 'proj.other_intro': 'Aircraft design, optimisation and forecasting',
     'proj.more': 'View case study', 'modal.tech': 'Technologies', 'modal.gallery': 'Project visuals', 'modal.resources': 'Resources', 'case.results': 'Results', 'case.problem': 'Situation', 'case.role': 'Task', 'case.approach': 'Actions', 'case.prev': 'Previous project', 'case.next': 'Next project', 'case.back': 'Back to projects', 'contact.p': "A question about my projects, a proposal or a collaboration? Write to me, I'll be glad to answer.",
-    'footer': '© 2026 Ugo Roccamatisi, Paris'
+    'footer': '© 2026 Ugo Roccamatisi'
   }
 };
 
